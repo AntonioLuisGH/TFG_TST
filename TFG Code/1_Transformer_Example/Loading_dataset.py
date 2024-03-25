@@ -1,5 +1,6 @@
 # %% LIBRARIES
 
+from gluonts.dataset.multivariate_grouper import MultivariateGrouper
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 from gluonts.time_feature import get_seasonality
@@ -49,7 +50,7 @@ from datasets import load_dataset
 
 dataset = load_dataset("monash_tsf", "traffic_hourly")
 
-freq = "1M"
+freq = "1H"
 prediction_length = 48
 
 train_dataset = dataset["train"]
@@ -71,6 +72,23 @@ def transform_start_field(batch, freq):
 train_dataset.set_transform(partial(transform_start_field, freq=freq))
 test_dataset.set_transform(partial(transform_start_field, freq=freq))
 
+
+# %% Multivariate grouper
+num_of_variates = len(train_dataset)
+
+
+num_of_variates = len(train_dataset)
+
+train_grouper = MultivariateGrouper(max_target_dim=num_of_variates)
+test_grouper = MultivariateGrouper(
+    max_target_dim=num_of_variates,
+    # number of rolling test windows
+    num_test_dates=len(test_dataset) // num_of_variates,
+)
+
+multi_variate_train_dataset = train_grouper(train_dataset)
+multi_variate_test_dataset = test_grouper(test_dataset)
+
 # %% DEFINE MODEL
 
 lags_sequence = get_lags_for_frequency(freq)
@@ -81,6 +99,10 @@ config = TimeSeriesTransformerConfig(
     prediction_length=prediction_length,
     # context length:
     context_length=prediction_length * 2,
+
+    # in the multivariate setting, input_size is the number of variates in the time series per time step
+    input_size=num_of_variates,
+
     # lags coming from helper given the freq:
     lags_sequence=lags_sequence,
     # we'll add 2 time features ("month of year" and "age", see further):
@@ -359,7 +381,7 @@ def create_test_dataloader(
 train_dataloader = create_train_dataloader(
     config=config,
     freq=freq,
-    data=train_dataset,
+    data=multi_variate_train_dataset,
     batch_size=256,
     num_batches_per_epoch=100,
 )
@@ -367,7 +389,7 @@ train_dataloader = create_train_dataloader(
 test_dataloader = create_backtest_dataloader(
     config=config,
     freq=freq,
-    data=test_dataset,
+    data=multi_variate_test_dataset,
     batch_size=64,
 )
 
