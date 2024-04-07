@@ -1,0 +1,9 @@
+pip install gluonts
+pip install datasets
+pip install accelerate
+pip install evaluate
+
+from google.colab import drive
+drive.mount('/content/drive')
+%cd /content/drive/MyDrive/TFG_TST/TFG Code/2_Transformer_Example_Multivariate
+!python main.py
