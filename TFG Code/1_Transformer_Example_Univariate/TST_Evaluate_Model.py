@@ -42,7 +42,11 @@ def forecasting(model, test_dataloader):
 
 # %%
 
+<<<<<<< HEAD
 def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file):
+=======
+def see_metrics(forecasts, test_dataset, prediction_length, freq):
+>>>>>>> 5858acfe1f1758e3f28d9b766481bdd68d407f85
     mase_metric = load("evaluate-metric/mase")
     smape_metric = load("evaluate-metric/smape")
 
@@ -50,6 +54,7 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file):
 
     mase_metrics = []
     smape_metrics = []
+<<<<<<< HEAD
 
     with open(output_file, 'w') as f:
         f.write("MASE\t\t\tsMAPE\n")
@@ -73,6 +78,25 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file):
             f.write(f"{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
 
     plt.scatter(mase_metrics, smape_metrics, alpha=0.2)
+=======
+    for item_id, ts in enumerate(test_dataset):
+        training_data = ts["target"][:-prediction_length]
+        ground_truth = ts["target"][-prediction_length:]
+        mase = mase_metric.compute(
+            predictions=forecast_median[item_id],
+            references=np.array(ground_truth),
+            training=np.array(training_data),
+            periodicity=get_seasonality(freq))
+        mase_metrics.append(mase["mase"])
+
+        smape = smape_metric.compute(
+            predictions=forecast_median[item_id],
+            references=np.array(ground_truth),
+        )
+        smape_metrics.append(smape["smape"])
+
+    plt.scatter(mase_metrics, smape_metrics, alpha=0.3)
+>>>>>>> 5858acfe1f1758e3f28d9b766481bdd68d407f85
     plt.xlabel("MASE")
     plt.ylabel("sMAPE")
     plt.show()

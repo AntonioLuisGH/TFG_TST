@@ -1,11 +1,17 @@
 from accelerate import Accelerator
 from torch.optim import AdamW
+<<<<<<< HEAD
 import matplotlib.pyplot as plt
 import numpy as np
 
 
 def train_model(model, train_dataloader):
     loss_history = []
+=======
+
+
+def train_model(model, train_dataloader):
+>>>>>>> 5858acfe1f1758e3f28d9b766481bdd68d407f85
     accelerator = Accelerator()
     device = accelerator.device
 
@@ -20,7 +26,11 @@ def train_model(model, train_dataloader):
     )
 
     model.train()
+<<<<<<< HEAD
     for epoch in range(20):
+=======
+    for epoch in range(5):
+>>>>>>> 5858acfe1f1758e3f28d9b766481bdd68d407f85
         for idx, batch in enumerate(train_dataloader):
             optimizer.zero_grad()
             outputs = model(
@@ -47,6 +57,7 @@ def train_model(model, train_dataloader):
             if idx % 100 == 0:
                 print(loss.item())
 
+<<<<<<< HEAD
     # view training
     loss_history = np.array(loss_history).reshape(-1)
     x = range(loss_history.shape[0])
@@ -58,4 +69,6 @@ def train_model(model, train_dataloader):
     plt.ylabel("nll")
     plt.show()
 
+=======
+>>>>>>> 5858acfe1f1758e3f28d9b766481bdd68d407f85
     return model

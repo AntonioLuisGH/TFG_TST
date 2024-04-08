@@ -2,7 +2,11 @@
 
 from TST_Load_Dataset import load_and_preprocess_dataset
 from TST_Define_Model import define_my_model
+<<<<<<< HEAD
 from TST_Create_DataLoader import create_train_dataloader, create_backtest_dataloader
+=======
+from TST_Create_DataLoader import create_train_dataloader, create_backtest_dataloader, create_test_dataloader
+>>>>>>> 5858acfe1f1758e3f28d9b766481bdd68d407f85
 from TST_Train_Model import train_model
 from TST_Evaluate_Model import forecasting, see_metrics, plot
 
@@ -39,6 +43,30 @@ test_dataloader = create_backtest_dataloader(
     batch_size=64,
 )
 
+<<<<<<< HEAD
+=======
+batch = next(iter(train_dataloader))
+
+# %% FORWARD PASS
+
+# Let's perform a single forward pass with the batch we just created:
+outputs = model(
+    past_values=batch["past_values"],
+    past_time_features=batch["past_time_features"],
+    past_observed_mask=batch["past_observed_mask"],
+    static_categorical_features=batch["static_categorical_features"]
+    if model.config.num_static_categorical_features > 0
+    else None,
+    static_real_features=batch["static_real_features"]
+    if model.config.num_static_real_features > 0
+    else None,
+    future_values=batch["future_values"],
+    future_time_features=batch["future_time_features"],
+    future_observed_mask=batch["future_observed_mask"],
+    output_hidden_states=True,
+)
+
+>>>>>>> 5858acfe1f1758e3f28d9b766481bdd68d407f85
 # %% TRAIN MODEL
 
 train_model(model, train_dataloader)
@@ -47,5 +75,9 @@ train_model(model, train_dataloader)
 # %% INFERENCE
 
 forecasts = forecasting(model, test_dataloader)
+<<<<<<< HEAD
 see_metrics(forecasts, test_dataset, prediction_length, freq, "metrics.txt")
+=======
+see_metrics(forecasts, test_dataset, prediction_length, freq)
+>>>>>>> 5858acfe1f1758e3f28d9b766481bdd68d407f85
 plot(forecasts, 334, test_dataset, prediction_length, freq)

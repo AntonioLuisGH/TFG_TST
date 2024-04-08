@@ -1,0 +1,220 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {listasf}{Resumen}{III}{section*.4}%
+\contentsline {listasf}{Abstract}{V}{section*.6}%
+\contentsline {listasf}{Índice Abreviado}{VII}{section*.7}%
+\contentsline {listasf}{Notaci{\'o}n}{XI}{section*.12}%
+\contentsline {chapter}{\numberline {1}Instrucciones para la Cubierta y la Portada}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Guía de Uso}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cómo usar los estilos de documento de la ETSI}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Compilación}{4}{subsection.2.1.1}%
+\contentsline {subsubsection}{{Macintosh}\textsuperscript {\textregistered }}{4}{subsubsection*.13}%
+\contentsline {subsubsection}{Windows\textsuperscript {\textregistered }}{4}{subsubsection*.14}%
+\contentsline {subsubsection}{Lyx}{4}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {2.1.2}Texto en inglés}{4}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Elementos básicos de un libro}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Clase de documento}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Fichero de estilo LibroETSI.sty}{6}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Paquete Babel}{6}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Símbolos y fórmulas}{6}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Fuentes}{6}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Epígrafes}{7}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Figuras y tablas}{7}{subsection.2.4.5}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {2.4.6}Hiperenlaces}{8}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.7}Tabla de contenido}{8}{subsection.2.4.7}%
+\contentsline {subsection}{\numberline {2.4.8}Formatos de títulos, páginas y cabeceras y pies de páginas}{9}{subsection.2.4.8}%
+\contentsline {subsection}{\numberline {2.4.9}Teoremas, propiedades, definiciones y demás}{9}{subsection.2.4.9}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {2.4.10}Índices de palabras y glosarios}{10}{subsection.2.4.10}%
+\contentsline {subsubsection}{Índices de palabras}{10}{subsubsection*.18}%
+\contentsline {subsubsection}{Glosario}{10}{subsubsection*.19}%
+\contentsline {subsubsection}{Compilación de índices de palabras y glosarios}{10}{subsubsection*.20}%
+\contentsline {section}{\numberline {2.5}Antes del documento}{11}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Fichero de notación: notacion.sty}{11}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Fuente del texto}{11}{subsection.2.5.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {2.5.3}Cubierta y primeras páginas}{12}{subsection.2.5.3}%
+\contentsline {chapter}{\numberline {3}Notas sobre la Redacción del Texto}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Preliminares}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Cubierta}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Portada}{15}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Resumen}{15}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Prefacio o Introducción}{15}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Índice y/o Índice general}{16}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Lista de ilustraciones y tablas}{16}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Lista de abreviaturas y símbolos}{16}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Glosario}{16}{subsection.3.1.8}%
+\contentsline {section}{\numberline {3.2}Texto principal}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Bibliografía}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Anexos}{16}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Ejemplo de Capítulo}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Ejemplo de sección}{17}{section.4.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Ejemplo de subsección}{18}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Elementos del texto}{18}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Figuras}{18}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Tablas}{18}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Listados de programas}{18}{subsection.4.2.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {4.2.4}Ecuaciones}{20}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Ejemplos}{21}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Lemas, teoremas y similares}{21}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Resúmenes}{21}{subsection.4.2.7}%
+\contentsline {subsection}{Resumen de Teoría de Información}{21}{section*.24}%
+\contentsline {section}{\numberline {4.3}Una nueva sección después del resumen}{23}{section.4.3}%
+\contentsline {subchapter}{Problemas Propuestos}{25}{section.4.3}%
+\contentsline {subchapter}{Anexo}{27}{soln.1}%
+\contentsline {section}{\numberline {4.4}Señales: definición y clasificación}{27}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Clasificación de señales}{27}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}Ejemplo de Capítulo de Problemas}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ruido y sensibilidad}{29}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Temperatura y figura de ruido}{29}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Sensibilidad}{29}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}No linealidad}{30}{section.5.2}%
+\contentsline {problema}{\numberline {P. 5.1}Radioenlace del servicio fijo a 13 GHz}{30}{problema.5.1}%
+\contentsline {problema}{\numberline {P. 5.2}Radioenlace del servicio fijo a 13 GHz}{31}{problema.5.2}%
+\contentsline {section}{\numberline {5.3}...Ruido y sensibilidad}{32}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}...Temperatura y figura de ruido}{32}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}...Temperatura y figura de ruido}{33}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}...Temperatura y figura de ruido}{33}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Estilo tipográfico LibroETSI}{35}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Bloque 0}{35}{section.6.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {6.2}Bloque 1: Aspectos generales}{35}{section.6.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {6.3}Bloque 2: Idioma, Codificación y Fuentes}{36}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Idioma}{36}{subsection.6.3.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {6.3.2}Codificación}{37}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Fuentes del texto y comandos asociados}{37}{subsection.6.3.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {6.3.4}Fuentes matemáticas y símbolos}{39}{subsection.6.3.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {6.4}Bloque 3: Tabla de contenidos}{39}{section.6.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {6.5}Bloque 4: Estilos de Páginas y Títulos}{41}{section.6.5}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {6.6}Bloque 5: Gestión general del documento}{44}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Apéndices}{44}{subsection.6.6.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {6.6.2}Colores}{44}{subsection.6.6.2}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {6.6.3}Aspectos genéricos de tratamiento del texto}{45}{subsection.6.6.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {6.6.4}Elementos flotantes}{46}{subsection.6.6.4}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {6.6.5}Gestión de índices alfabéticos y glosario}{47}{subsection.6.6.5}%
+\contentsline {subsection}{\numberline {6.6.6}Ajustes en fórmulas}{47}{subsection.6.6.6}%
+\contentsline {subsection}{\numberline {6.6.7}Hiperenlaces}{48}{subsection.6.6.7}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {6.6.8}Listado de códigos}{48}{subsection.6.6.8}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {6.6.9}Entornos, teoremas y similares}{49}{subsection.6.6.9}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {subsection}{\numberline {6.6.10}Otros comandos}{50}{subsection.6.6.10}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {6.7}A modo de conclusión}{50}{section.6.7}%
+\mbox {}\hspace *{0pt}\par 
+\contentsline {listasb}{{\'I}ndice de Figuras}{51}{section*.31}%
+\contentsline {listasb}{{\'I}ndice de Tablas}{53}{section*.33}%
+\contentsline {listasb}{{\'I}ndice de C{\'o}digos}{55}{section*.35}%
+\contentsline {listasb}{Bibliograf\'{\i }a}{57}{section*.37}%
+\contentsline {listasb}{\'{I}ndice alfab\'{e}tico}{57}{section*.38}%
+\contentsline {listasb}{Glosario}{57}{section*.39}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
