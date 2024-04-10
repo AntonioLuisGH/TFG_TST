@@ -4,7 +4,8 @@ from scipy.signal import savgol_filter
 import numpy as np
 from datetime import datetime
 from pandas._libs.tslibs.timestamps import Timestamp
-import json
+from datasets import Dataset
+import optional
 # %%
 
 # Obtiene la ruta absoluta del directorio actual
@@ -67,6 +68,7 @@ array_validation = [a_temperatura, a_luminosidad,
 
 # %% Creamos diccionario de verdad
 
+"""
 # Crear el diccionario
 train = {}
 # Asignar valores al diccionario
@@ -82,46 +84,27 @@ for i, array in enumerate(array_train):
         'target': array.astype(np.float32)
     }
 
-# Crear el diccionario
-test = {}
-# Asignar valores al diccionario
-for i, array in enumerate(array_test):
-    test[i] = {
-        'feat_dynamic_real': None,
-        # 'feat_static_cat' corregido a Array of uint64
-        'feat_static_cat': np.array([i], dtype=np.uint64),
-        'item_id': f'T{i+1}',  # 'item_id' se ajusta según el índice
-        # 'start' corregido a _libs.tslibs.timestamps.Timestamp
-        'start': Timestamp('2015-01-01 00:00:01'),
-        # 'target' corregido a Array of float32
-        'target': array.astype(np.float32)
-    }
+"""
 
 # Crear el diccionario
-validation = {}
+train = {}
 # Asignar valores al diccionario
-for i, array in enumerate(array_validation):
-    validation[i] = {
-        'feat_dynamic_real': None,
+for i, array in enumerate(array_train):
+    train[i] = {
+        'feat_dynamic_real': 1,
         # 'feat_static_cat' corregido a Array of uint64
-        'feat_static_cat': np.array([i], dtype=np.uint64),
-        'item_id': f'T{i+1}',  # 'item_id' se ajusta según el índice
+        'feat_static_cat': 1,
+        'item_id': 1,  # 'item_id' se ajusta según el índice
         # 'start' corregido a _libs.tslibs.timestamps.Timestamp
-        'start': Timestamp('2015-01-01 00:00:01'),
+        'start': 1,
         # 'target' corregido a Array of float32
-        'target': array.astype(np.float32)
+        'target': 1
     }
 
-# %% creamos el json
 
-with open("train.jsonl", "w") as f:
-    for line in train:
-        f.write(json.dumps(line)+"\n")
+# %% creamos el pandas
 
-with open("test.jsonl", "w") as f:
-    for line in test:
-        f.write(json.dumps(line)+"\n")
+ds_train = pd.DataFrame.from_dict(df_dic)
 
-with open("validation.jsonl", "w") as f:
-    for line in validation:
-        f.write(json.dumps(line)+"\n")
+# %%
+dataset = Dataset.from_pandas(ds_train)

@@ -6,35 +6,14 @@ import pandas as pd
 from functools import lru_cache
 import matplotlib.pyplot as plt
 from datasets import load_dataset
+from Creating_my_dataset import load_my_own_dataset
 
 # %% LOAD AND PREPROCESS
 
 
-def load_and_preprocess_dataset(repo_name, dataset_name, freq, prediction_length):
-    # Load dataset
-    dataset = load_dataset(repo_name, dataset_name)
+def load_and_preprocess_dataset(freq, prediction_length):
 
-    # Check the prediction_length
-    validation_example = dataset['validation'][0]
-    train_example = dataset['train'][0]
-    assert len(train_example["target"]) + prediction_length == len(
-        validation_example["target"]
-    )
-
-    # Let's visualize this:
-    num_of_samples = 150
-    figure, axes = plt.subplots()
-    axes.plot(train_example["target"][-num_of_samples:], color="blue")
-    axes.plot(
-        validation_example["target"][-num_of_samples - prediction_length:],
-        color="red",
-        alpha=0.5,
-    )
-    plt.show()
-
-    # Split the data
-    train_dataset = dataset["train"]
-    test_dataset = dataset["test"]
+    validationtest_dataset, test_dataset, train_dataset = load_my_own_dataset()
 
     # Update start to pd.Period
     @lru_cache(10_000)

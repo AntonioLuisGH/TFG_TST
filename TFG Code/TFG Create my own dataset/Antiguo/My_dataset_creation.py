@@ -1,8 +1,11 @@
-from datasets import load_dataset
+from datasets import load_dataset, load_dataset_builder
 import matplotlib.pyplot as plt
 
 # %%
-traf = load_dataset("monash_tsf", "traffic_hourly")
+rotten_tomatos = load_dataset_builder("rotten_tomatoes")
+
+# %%
+traf = load_dataset("monash_tsf", "traffic_hourly", split='train')
 
 # %% Transform dataset in a DataFrame (Theres is json, pandas...)
 traf = traf.to_pandas()

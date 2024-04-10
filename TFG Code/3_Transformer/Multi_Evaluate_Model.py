@@ -42,7 +42,7 @@ def forecasting(model, test_dataloader):
 
 # %%
 
-def see_metrics(forecasts, test_dataset, prediction_length, freq):
+def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file):
     mase_metric = load("evaluate-metric/mase")
     smape_metric = load("evaluate-metric/smape")
 
