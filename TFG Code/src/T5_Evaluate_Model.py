@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from gluonts.dataset.field_names import FieldName
+import os
 
 # %%
 
@@ -79,21 +80,21 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file):
 # %%
 
 
-def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, prediction_length):
-    # Crea una figura y un eje para el gráfico
+def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, prediction_length, title):
+    # Create a figure and an axis for the plot
     fig, ax = plt.subplots()
 
-    # Genera un índice de tiempo basado en el inicio y la frecuencia del dataset
+    # Generate a time index based on the dataset's start and frequency
     index = pd.period_range(
         start=multi_variate_test_dataset[ts_index][FieldName.START],
         periods=10455,
         freq=multi_variate_test_dataset[ts_index][FieldName.START].freq,
     ).to_timestamp()
 
-    # Configura el localizador de horas menores en el eje x
+    # Configure the minor hour locator on the x-axis
     ax.xaxis.set_minor_locator(mdates.HourLocator())
 
-    # Dibuja la serie temporal real de los últimos '2 * prediction_length' puntos
+    # Plot the actual time series for the last '2 * prediction_length' points
     ax.plot(
         index[-2 * prediction_length:],
         multi_variate_test_dataset[ts_index]["target"][mv_index, -
@@ -101,14 +102,14 @@ def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, predic
         label="actual",
     )
 
-    # Dibuja la media de las predicciones para el último 'prediction_length'
+    # Plot the mean of the predictions for the last 'prediction_length'
     ax.plot(
         index[-prediction_length:],
         forecasts[ts_index, ..., mv_index].mean(axis=0),
         label="mean",
     )
 
-    # Rellena el área entre la media más/menos una desviación estándar
+    # Fill the area between the mean plus/minus one standard deviation
     ax.fill_between(
         index[-prediction_length:],
         forecasts[ts_index, ..., mv_index].mean(0)
@@ -120,4 +121,17 @@ def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, predic
         label="+/- 1-std",
     )
     ax.legend()
+    ax.set_title(title)
     fig.autofmt_xdate()
+
+    # Create the 'plots' folder if it doesn't exist
+    plots_folder = "plots"
+    if not os.path.exists(plots_folder):
+        os.makedirs(plots_folder)
+
+    # Save the image in the 'plots' folder
+    filename = os.path.join(plots_folder, title.replace(" ", "_") + ".png")
+    plt.savefig(filename)
+    print("Image saved as:", filename)
+
+    plt.show()

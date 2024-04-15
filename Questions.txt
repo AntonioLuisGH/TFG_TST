@@ -4,3 +4,9 @@
 3 - Sobre los datasets:
  Predice sobre el primer time series?
  Los mase metrics es en funcion del primero?
+
+4 - Preparar plots para que se impriman
+- Preparar datos mios de verdad
+Intentar indexar con el tiempo
+Investigar el multigrouper
+Preparar códigos para entrenar padres

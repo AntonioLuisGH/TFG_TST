@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def train_model(model, train_dataloader):
-    epochs = 25
+def train_model(num_of_epochs, model, train_dataloader):
+    epochs = num_of_epochs
     loss_history = []
 
     accelerator = Accelerator()

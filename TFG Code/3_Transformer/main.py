@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # %% DEFINE VARIABLES
 
-freq = "1H"
+freq = "8min"
 prediction_length = 48
 
 # %% LOAD, SPLIT AND PREPROCESS DATASET
@@ -48,21 +48,21 @@ train_model(model, train_dataloader)
 
 forecasts = forecasting(model, test_dataloader)
 see_metrics(forecasts, test_dataset, prediction_length, freq, "metrics.txt")
-plot(forecasts, 0, 5, multi_variate_test_dataset, freq, prediction_length)
-
+for i in range(0, num_of_variates-1):
+    plot(forecasts, 0, i, multi_variate_test_dataset, freq, prediction_length)
 
 # %%
 
 # Datos
 ts_index = 0  # Índice de la serie de tiempo
-mv_index = 0  # Índice de la variable multivariante
+mv_index = 5  # Índice de la variable multivariante
 
 
 # Vectores
 # Tomando solo los primeros 1000 elementos
-target_vector = multi_variate_test_dataset[ts_index]["target"][0][:1000]
+target_vector = multi_variate_test_dataset[ts_index]["target"][1][:1000]
 # Tomando solo los primeros 1000 elementos
-forecast_vector = forecasts[ts_index, ..., mv_index][0][:1000]
+forecast_vector = forecasts[ts_index, ..., mv_index][1][:1000]
 
 # Ajustar tamaño de la figura
 plt.figure(figsize=(10, 6))  # Especifica el tamaño de la figura (ancho, alto)
