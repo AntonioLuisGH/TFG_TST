@@ -8,12 +8,12 @@ from T5_Evaluate_Model import forecasting, see_metrics, plot
 
 # %% DEFINE VARIABLES
 
-# Choose between "transformer", "informer", "autoformer"
-model_variant = "autoformer"
+# Choose between "Transformer", "Informer", "Autoformer"
+model_variant = "Autoformer"
 
 freq = "8min"
-prediction_length = 200
-num_of_epochs = 20
+prediction_length = 100
+num_of_epochs = 5
 # %% LOAD, SPLIT AND PREPROCESS DATASET
 
 multi_variate_train_dataset, multi_variate_test_dataset, num_of_variates, test_dataset = load_and_preprocess_dataset(
@@ -30,7 +30,7 @@ train_dataloader = create_train_dataloader(
     config=model.config,
     freq=freq,
     data=multi_variate_train_dataset,
-    batch_size=256,
+    batch_size=128,
     num_batches_per_epoch=100,
     num_workers=2,
 )
@@ -58,8 +58,8 @@ plot(forecasts, 0, 1, multi_variate_test_dataset,
 plot(forecasts, 0, 2, multi_variate_test_dataset,
      freq, prediction_length, model_variant + " Relative humiduty")
 plot(forecasts, 0, 3, multi_variate_test_dataset,
-     freq, prediction_length, model_variant + " Soil Temp")
+     freq, prediction_length, model_variant + " Soil Temperature")
 plot(forecasts, 0, 4, multi_variate_test_dataset,
-     freq, prediction_length, model_variant + " Electrocondutivity")
+     freq, prediction_length, model_variant + " Electroconductivity")
 plot(forecasts, 0, 5, multi_variate_test_dataset,
      freq, prediction_length, model_variant + " Diameter")

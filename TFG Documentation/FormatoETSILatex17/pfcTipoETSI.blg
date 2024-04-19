@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: pfcTipoETSI.aux
+A level-1 auxiliary file: agradecimientos/agradecimientos.aux
+A level-1 auxiliary file: resumen/resumen.aux
+A level-1 auxiliary file: notacion/notacion.aux
+A level-1 auxiliary file: cubierta/cubierta.aux
+A level-1 auxiliary file: introduccion/introduccion.aux
+A level-1 auxiliary file: estructura/estructura.aux
+A level-1 auxiliary file: CapituloLibroETSI/CapituloLibroETSI.aux
+A level-1 auxiliary file: CapituloProblemasLibroETSI/CapituloProblemasETSI.aux
+A level-1 auxiliary file: CapituloEstilo/estilolibroetsi.aux
+The style file: amsplain.bst
+Database file #1: bibliografiaLibroETSI.bib
+Warning--entry type for "koma" isn't style-file defined
+--line 12 of file bibliografiaLibroETSI.bib
+Warning--entry type for "moser" isn't style-file defined
+--line 109 of file bibliografiaLibroETSI.bib
+You've used 7 entries,
+            2213 wiz_defined-function locations,
+            545 strings with 4957 characters,
+and the built_in function-call counts, 1578 in all, are:
+= -- 120
+> -- 55
+< -- 0
++ -- 24
+- -- 16
+* -- 93
+:= -- 264
+add.period$ -- 7
+call.type$ -- 7
+change.case$ -- 34
+chr.to.int$ -- 0
+cite$ -- 7
+duplicate$ -- 82
+empty$ -- 169
+format.name$ -- 16
+if$ -- 333
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 17
+newline$ -- 31
+num.names$ -- 14
+pop$ -- 58
+preamble$ -- 1
+purify$ -- 22
+quote$ -- 0
+skip$ -- 50
+stack$ -- 0
+substring$ -- 36
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 18
+warning$ -- 0
+while$ -- 14
+width$ -- 8
+write$ -- 68
+(There were 2 warnings)

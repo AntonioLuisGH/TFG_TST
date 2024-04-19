@@ -25,7 +25,7 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
         for time_feature in time_features
     ]
 
-    if (model_variant == "transformer"):
+    if (model_variant == "Transformer"):
         # Define config
         config = TimeSeriesTransformerConfig(
             # in the multivariate setting, input_size is the number of variates in the time series per time step:
@@ -46,7 +46,7 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
         )
         model = TimeSeriesTransformerForPrediction(config)
 
-    elif (model_variant == "informer"):
+    elif (model_variant == "Informer"):
         # Define config
         config = InformerConfig(
             # in the multivariate setting, input_size is the number of variates in the time series per time step
@@ -67,9 +67,9 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
             # project input from num_of_variates*len(lags_sequence)+num_time_features to:
             d_model=64,
         )
-        model = AutoformerForPrediction(config)
+        model = InformerForPrediction(config)
 
-    elif (model_variant == "autoformer"):
+    elif (model_variant == "Autoformer"):
         # Define config
         config = AutoformerConfig(
             # in the multivariate setting, input_size is the number of variates in the time series per time step
@@ -85,8 +85,8 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
 
             # informer params:
             dropout=0.1,
-            encoder_layers=2,
-            decoder_layers=2,
+            encoder_layers=6,
+            decoder_layers=4,
             # project input from num_of_variates*len(lags_sequence)+num_time_features to:
             d_model=64,
         )

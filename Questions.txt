@@ -1,7 +1,5 @@
-1 - sobra el batch = next(...) y el outputs -> Sí
-2 - sobra el test data loader? -> Sí
 
-3 - Sobre los datasets:
+- Sobre los datasets:
  Predice sobre el primer time series?
  Los mase metrics es en funcion del primero?
 

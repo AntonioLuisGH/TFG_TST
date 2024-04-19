@@ -1,12 +1,6 @@
 %:Clase del documento
 \documentclass[fontsize=10pt, Myfinal=true, twoside, numbers=noenddot]{scrbook}
-%Minion=true, English=true, Myfinal=true
-
-\makeatletter
-\let\alloc@latex\alloc@
-\def\alloc@#1#2#3#4{\newcount}% the current \newcount doesn't use \alloc@
-\makeatother
-
+%, Myfinal=true, Minion=true, English=true
 
 %:Paquete de estilos propuesto
 \usepackage{libroETSI}
@@ -18,18 +12,21 @@
 \usepackage{notacion}
 
 %:Paquete para incorporar aspectos concretos de la edición
-\usepackage{edicionPFC}
-
-\makeatletter
-\let\alloc@\alloc@latex
-\makeatother
+\usepackage{edicionLibro}
 
 %:Estas líneas de código son INNECESARIAS excepto para mostrar determinadas características en este manual. Pueden eliminarse o comentarse sin ningún problema.
 %Se usan para compilar el capítulo estilolibroetsi.tex
 \usepackage[final]{showexpl}
 \lstset{explpreset={frame=none,rframe={}, numbers=none,numbersep=3pt, columns=flexible,language={[LaTeX]TeX},basicstyle=\ttfamily,keywordstyle=\color{blue}}}%numberstyle=\tiny,
 
-%:Para modificar fácilmente la fuente del texto.
+\makeatletter
+\patchcmd{\SX@codeInput}{xleftmargin=0pt,xrightmargin=0pt}{}
+  {\typeout{***Successfully patched \protect\SX@codeInput***}}
+  {\typeout{***ERROR! Failed to patch \protect\SX@codeInput***}}
+\makeatother
+%:Hasta AQUI
+
+%:Para modificar fácilmente la fuente del texto. 
 \makeatletter
 \ifdtsc@Minion % Queremos utilizar la fuente Minion y lo hemos declarado al principio
 	\ifluatex
@@ -72,23 +69,24 @@
 \newacronym[type=main]{US}{US}{Universidad de Sevilla}
 \newacronym[type=main]{DMC}{DMC}{Canal Discreto sin Memoria}
 
-
 \makeindex
 \makeglossaries %Si no se quiere el glosario, comentar esta línea.
 
-% Formato A4
+%TAMAÑO LIBRO O A4
+%Para definir el tamaño del documento, hay que elegir uno de los siguientes y comentar el otro
+%Formato Libro
 \geometry
-{paperheight=297mm,%
-paperwidth=210mm,%
+{paperheight=240mm,%
+paperwidth=170mm,%
 top=25mm,%
-headsep=8.5mm,%
-includefoot, 
-textheight=240mm, 
-textwidth=150mm, 
-bindingoffset=0mm, 
+headsep=7.5mm,%
+footskip=10mm,%
+textheight=190mm,%
+textwidth=124mm,%
+bindingoffset=15mm,%
 twoside}
 
-\usepackage[a4,center]{crop}%para poner las cruces de esquina de página, poner la opción cross
+%\usepackage[a4,cross,center]{crop}%para poner las cruces de esquina de página, poner la opción cross. Comentar para que el fichero pdf se genere con el tamaño deseado
 
 %:Esquema de numeración por defecto
 \setenumerate[1]{label=\normalfont\bfseries{\arabic*.}, leftmargin=*, labelindent=\parindent}
@@ -99,66 +97,84 @@ twoside}
 
 \setcounter{tocdepth}{4}						% El nivel hasta el que se muestra el índice 
 
+%PARA ENVIAR MANUSCRITO
+%Para manuscrito a revisar, descomentar siguiente línea y así se pondrá el interlineado a 1.5 líneas
+%\onehalfspacing  %necesario setspace package
+%
+%
+%Para otros espaciados:
+%  Type \singlespacing, \onehalfspacing, or \doublespacing, depending on the spacing you want.
+%  Type \setstretch{x} where x is a number indicating the spacing you want.
+%
+ %  For example, the command \setstretch{3} produces triple spacing.
+%
 
 %:Empieza el documento
-
+\hypersetup{pageanchor=false}
 \begin{document}
-%:Para incluir toda la referencia bibliográfica aunque no se cite, descomente la siguiente línea
-%\nocite{*}
-
 
 %PORTADA
-%ver edicionPFC.sty para modificaciones
+%ver edicionLibro.sty para modificaciones
 
 %:Para crear la portada y la portada interior (pagina titular)
-\titulo{Artificial intelligence techniques and their application to time series forecast} %\mbox evita que se divida una palabra al cambiar de línea
-\autor{Antonio Luis González Hernández}
-\director{Juan Antonio Becerra González}
-\titulodirector{Profesor Titular}
+\titulo{Formato de Publicación de la Escuela Técnica Superior de Ingeniería}
+\subtitulo{Universidad de Sevilla} %Se puede usar en libro
+%\edicion{1ª Edición} %Se puede usar en libro
 
-\departamento{Dpto. Teoría de la Señal y  Comunicaciones}
+\autor{F. Javier Payán Somet, Juan José Murillo Fuentes}
+
+\departamento{Teoría de la Señal y  Comunicaciones}
 \centro{Escuela Técnica Superior de Ingeniería}
 \universidad{Universidad de Sevilla}
-\titulacion{Ingeniería Electrónica, Robótica y Mecatrónica}
-\fecha{2024}
-\nombretrabajo{Trabajo Fin de Grado} %Trabajo Fin de Grado, Proyecto fin de Máster,....
+\fecha{2014}
 
+% Para establecer palabras claves en el fichero pdf
 \hypersetup
 	{
  	linkcolor=black, %Tocar para poner color en enlaces
 	pdfauthor={\elautor},
-	pdftitle={\nombretrabajo,\eltitulo}, 
-	pdfkeywords={Latex, edición, formato de texto}	
+	pdftitle={\eltitulo}, 
+	citecolor=black, %Tocar para poner color en enlaces, eg refcolor o blue
+	pdfkeywords={Formato de Libro para la ETSI, Universidad de Sevilla}	
 	 }
 
-\portadaPFC{figuras/LogoUS.pdf}{figuras/LogoTSC.pdf} %logo de la Universidad y logo del departamento, si lo hubiera. Para cambiar el pie de página con los logos, debe editarse el fichero ediciónPFC.sty
+%:Construcción de la cubierta, páginas de título y copyright
+\cubiertalibro{figuras/imagenlibro.png} 
 
-%Fin Portada
+\paginatitulo
+
+\paginatituloautor{figuras/53.pdf} %Logo del Dep
+
+\copyright
 
 %:Todo lo que constituye la primera parte del libro que no es el cuerpo del libro en realidad
 \frontmatter
 \pagenumbering{Roman} %Pone la numeración en mayúscula (En español parece que es obligatorio)
 
-%\include{dedicatoria/dedicatoria}%¿Comentar para proyectos/tesis?
+%:La dedicatoria, si queremos ponerla
+\dedicatoria{A nuestras familias\\A nuestros maestros} 
+
 \include{agradecimientos/agradecimientos}
 
 %PFC/PFM/TESIS
-\include{resumen/resumen} 
+\include{resumen/resumen} %Descomentar para proyectos/tesis
+\include{prefacio/prefacio} %Comentar para proyectos/tesis
+
 
 % Índice abreviado 
 % El índice abreviado se incluye también en algunos libros, con menor detalle que el completo. Descomentar las siguientes líneas.
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{listasf}{Índice Abreviado}
-\pagestyle{especial}
-\shorttoc{Índice Abreviado}{1}
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{listasf}{Índice Abreviado}
+%\pagestyle{especial}
+%\shorttoc{Índice Abreviado}{1} %El uno indica que se incluye el nivel 0 (Capítulo) y 1 (Sección)
 
 %Índice normal, el completo
 \cleardoublepage
 \phantomsection
+\addcontentsline{toc}{listasf}{Índice}
 \pagestyle{especial}
 \tableofcontents
-
 
 \include{notacion/notacion} %No incluir si no se quiere, comentándolo
 
@@ -167,28 +183,26 @@ twoside}
 
 %:Página por defecto
 \pagestyle{esitscCD}
+\hypersetup{pageanchor=true}
+
+%:Para incluir toda la referencia bibliográfica aunque no se cite, descomente la siguiente línea
+%\nocite{*}
 
 %:Los diferentes capítulos, en carpetas separadas
-\include{cubierta/cubierta}
-%
-\include{introduccion/introduccion}%Guia uso
-%
-\include{estructura/estructura}
-%
-\include{CapituloLibroETSI/CapituloLibroETSI} 
-%
-\include{CapituloProblemasLibroETSI/CapituloProblemasETSI} 
+\include{introduccion/introduccion}
 
+\include{CapituloLibroETSI/CapituloLibroETSI} 
+
+\include{CapituloProblemasLibroETSI/CapituloProblemasETSI}  
+ 
 \include{CapituloEstilo/estilolibroetsi}
-% 
-%%:Empezamos con los apéndices, que irían en uno o más ficheros. Es necesario incluir estos ficheros entre el entorno \begin{appendices}....\end{appendices} debido a que se ha deseado utilizar un formato diferente para el título de los apéndices, incluyendo la palabra apéndice, para la numeración de los apéndices, alfabético, y para las cabeceras de las páginas.
-%
-%\begin{appendices}
-%
-%% Fichero en el que se incluyen los apéndices
-%\include{apendices/apendices} %Ver este fichero para incluir ahí los apéndices.
-%
-%\end{appendices}
+ 
+ %:Empezamos con los apéndices, que irían en uno o más ficheros. Es necesario incluir estos ficheros entre el entorno \begin{appendices}....\end{appendices} debido a que se ha deseado utilizar un formato diferente para el título de los apéndices, incluyendo la palabra apéndice, para la numeración de los apéndices, alfabético, y para las cabeceras de las páginas.
+
+\begin{appendices}
+% Fichero en el que se incluyen los apéndices
+\include{apendices/apendices} %Ver este fichero para incluir ahí los apéndices.
+\end{appendices}
 %:Fin de la inclusión de apéndices
 
 %:Empieza todo lo que no constituye el cuerpo en si del libro. Todo lo que va detrás
@@ -231,13 +245,12 @@ twoside}
 %:Fichero con la bibliografía, BIBTEX
 \bibliography{bibliografiaLibroETSI}
 
-%:Índice alfabético de palabras
+%:Índice alfabético
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{listasb}{\indexname}
 \chaptermark{\indexname}
 \printindex
-
 
 %:Acrónimos
 \cleardoublepage

@@ -4,6 +4,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{libroETSI}[2017/04/17 Manejando los estilos de la ETSI]
 
+%:Para que los objetos flotantes (tablas y figuras) puedan manejarse mejor
+\usepackage{floatrow} 
+\usepackage[figuresright]{rotating}	% Permite rotar figuras que ocupen una página horizontal
+
+
 %:Necesario únicamente para LuaLaTeX pero no hace daño para LaTeX. Es un parche a la espera que muchos paquetes se adapten a la nueva versión de LuaLaTeX. DEBE ESTAR AL PRINCIPIO DE TODO.
 \usepackage{luatex85}
 
@@ -28,8 +33,8 @@
 \usepackage{fixltx2e}
 
 %:Un problema interno de Tex equivalente al allocated de C para asignar espacio de memoria. En esta dirección está explicado: http://tex.stackexchange.com/questions/38607/no-room-for-a-new-dimen
-\usepackage{etex}
-\reserveinserts{28}
+
+
 
 %:Si estamos utilizando las clases KOMA
 \@ifundefined{KOMAClassName}
@@ -1030,10 +1035,6 @@ di-fe-ren-tes re-a-li-za-do ma-ne-ra}
 \DeclareCaptionLabelFormat{subfig}{\aheadteoremas{#1} \aheadteoremas{(#2)} }
 \captionsetup[subfigure]{labelformat=subfig }
 \def\sfx#1{\reffont{-\subref{#1}}}
-
-%:Para que los objetos flotantes (tablas y figuras) puedan manejarse mejor
-\usepackage{floatrow} 
-\usepackage[figuresright]{rotating}	% Permite rotar figuras que ocupen una página horizontal
 
 %:Para tablas que ocupan más de una página
 \usepackage{longtable} 

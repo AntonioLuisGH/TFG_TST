@@ -1,0 +1,36 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{gratzer}
+George Gr{\"a}tzer, \emph{More math into latex}, 4 ed., Springer, 2007.
+
+\bibitem{Hernando08}
+Jos{\'e}~Mar{\'\i}a Hernando-R{\'a}banos, \emph{Transmisi{\'o}n por radio}, 6ª
+  ed., Ed. Ram{\'o}n Areces, 2008.
+
+\bibitem{koma}
+Markus Kohm, \emph{A bundle of versatile classes and packages}, May 2012.
+
+\bibitem{moser}
+Stefan~M. Moser, \emph{How to typeset equations in latex}, February 2012.
+
+\bibitem{Murillo07}
+Juan~Jos{\'e} Murillo-Fuentes, \emph{Fundamentos de radiaci{\'o}n y
+  radiocomunicaci{\'o}n}, 1ª ed., Ed. ETSI. Universidad de Sevilla, 2007.
+
+\bibitem{oppenheim}
+A.V. Oppenheim and R.W. Schafer, \emph{Discrete-time signal processing}, 1 ed.,
+  Prentice Hall, Inc., 1989.
+
+\bibitem{wiener}
+N.~Wiener, \emph{Extrapolation, interpolation, and smoothing of stationary time
+  series, with engineering applications.}, reimpresi{\'o}n del trabajo original
+  publicado en el mit en 1942 ed., New York: Wiley, 1949.
+
+\end{thebibliography}
