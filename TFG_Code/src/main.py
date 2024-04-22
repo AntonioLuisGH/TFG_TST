@@ -10,7 +10,7 @@ from T5_Evaluate_Model import forecasting, see_metrics, plot
 # %% DEFINE VARIABLES
 
 # Choose between "Transformer", "Informer", "Autoformer"
-model_variant = "Informer"
+model_variant = "Transformer"
 
 freq = "8min"
 prediction_length = 200

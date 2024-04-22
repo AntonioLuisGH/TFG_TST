@@ -20,47 +20,47 @@ file_path = os.path.join(current_path, file_name)
 # Read the CSV file
 df = pd.read_csv(file_path, sep=";")
 
-
-# Selección de variables relevantes
+# Relevant variables selection
 data = df[['luminosidad', 'temperatura',
            'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
 
 
-def reemplazar_valores_incorrectos(serie):
+def replace_incorrect_values(serie, lim):
     for i in range(1, len(serie) - 1):
-        if serie[i] < 100:
+        if serie[i] < lim:
             serie[i] = serie[i - 1]
     return serie
 
 
 # Aplicar la función a la columna 'var_diam'
-data['var_diam'] = reemplazar_valores_incorrectos(data['var_diam'])
+data['var_diam'] = replace_incorrect_values(data['var_diam'], 100)
+data['temp_suelo'] = replace_incorrect_values(data['var_diam'], 0.6)
 
 # %%
-# Preprocesados de los datos
-datos = data[['var_diam']]
-ventana = 100  # Tamaño de la ventana de la media móvil
-# Eliminamos la pendiente de nuestros datos
-datos_sin = datos['var_diam']-datos['var_diam'].rolling(window=ventana).mean()
-# Eliminamos los valores NaN
-datos_sin_pendiente = datos_sin.dropna()
-# Suavizamos la señal
-datos_suavizados = savgol_filter(datos_sin_pendiente, 11, 2)
-df = df[99:]
-df['var_diam_sua_py'] = pd.Series(datos_suavizados, index=df.index)
+# Data preprocessing
 
-# Selección de variables relevantes
-data = df[['luminosidad', 'temperatura',
-           'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam_sua_py']]
+# Remove trend from our data
+for col in data.columns:
+    if col != 'var_diam':
+        data[col] = data[col] - data[col].rolling(window=100).mean()
+
+# Remove NaN values
+data = data.dropna()
+
+# Smooth the signal
+for col in data.columns:
+    if col != 'var_diam':
+        data[col] = savgol_filter(data[col], 11, 2)
 
 # %%
-# Normalización de los datos
+# Data normalization
 scaler = MinMaxScaler()
 scaled_data = scaler.fit_transform(data)
 data[['luminosidad', 'temperatura',
-      'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam_sua_py']] = scaled_data
+      'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']] = scaled_data
 
-# Relevant Variable Selection
+# %%
+# Data split
 data_validation = data
 data_test = data.iloc[:-prediction_length]
 data_train = data.iloc[:-2*prediction_length]
@@ -103,35 +103,24 @@ dataset_train = Dataset.from_pandas(dataframe_train)
 
 test_dataset = dataset_test
 train_dataset = dataset_train
-# for var in range(6):
-var = 5
+
 # Show data
-figure, axes = plt.subplots()
-ejex = list(range(len(test_dataset[var]["target"])))
-axes.plot(ejex[-prediction_length:], test_dataset[var]
-          ["target"][-prediction_length:], color="red")
-axes.plot(train_dataset[var]["target"], color="blue")
+for var in range(6):
 
-# ZOOM
+    figure, axes = plt.subplots(figsize=(12, 6))
+    ejex = list(range(len(test_dataset[var]["target"])))
+    plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
+    axes.plot(ejex[-prediction_length:], test_dataset[var]
+              ["target"][-prediction_length:], color="red")
+    axes.plot(train_dataset[var]["target"], color="blue")
+    axes.set_title(data.columns[var])  # Set title for main data plo
 
-# Show last values
-figure, axes = plt.subplots()
-ejex = list(range(len(test_dataset[var]["target"])))
-# axes.plot(ejex[-prediction_length:], test_dataset[var]
-#           ["target"][-prediction_length:], color="red")
-# axes.plot(ejex[-3*prediction_length:-prediction_length], train_dataset[var]
-#           ["target"][-2*prediction_length:], color="blue")
-
-axes.plot(ejex[:prediction_length], train_dataset[var]
-          ["target"][:prediction_length:], color="blue")
-
-
-# %%
-
-figure, ax = plt.subplots(figsize=(12, 6))  # Ancho de 12 pulgadas y alto de 6 pulgadas
-vector = data1[['var_diam']]  # Corregido: quita los corchetes adicionales
-plt.ylim(129, 132)
-# Corregido: utiliza comillas simples para el nombre de la columna
-ax.set_title("df['var_diam']")
-plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
-ax.plot(vector, color="blue")
+    # ZOOM
+    # Show last values
+    figure, axes = plt.subplots()
+    ejex = list(range(len(test_dataset[var]["target"])))
+    axes.plot(ejex[-prediction_length:], test_dataset[var]
+              ["target"][-prediction_length:], color="red")
+    axes.plot(ejex[-3*prediction_length:-prediction_length], train_dataset[var]
+              ["target"][-2*prediction_length:], color="blue")
+    axes.set_title(data.columns[var])

@@ -31,15 +31,6 @@ def load_and_preprocess_dataset(freq, prediction_length):
     train_dataset.set_transform(partial(transform_start_field, freq=freq))
     test_dataset.set_transform(partial(transform_start_field, freq=freq))
 
-    # Show data
-    figure, axes = plt.subplots()
-    axes.plot(
-        test_dataset[0]["target"][-len((train_dataset[0]["target"]))-prediction_length:],
-        color="red",
-        linewidth=0.9
-    )
-    axes.plot(train_dataset[0]["target"], color="blue")
-
     # Convert the dataset into a multivariate time series
     num_of_variates = len(train_dataset)
 
@@ -70,55 +61,45 @@ def load_my_own_dataset(prediction_length):
     # Read the CSV file
     df = pd.read_csv(file_path, sep=";")
 
-    # Selección de variables relevantes
-    data = df[['datetime', 'luminosidad', 'temperatura',
-               'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
-
-    # Selección de variables relevantes
+    # Relevant variables selection
     data = df[['luminosidad', 'temperatura',
                'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
 
-    def reemplazar_valores_incorrectos(serie):
+    def replace_incorrect_values(serie, lim):
         for i in range(1, len(serie) - 1):
-            if serie[i] < 100:
+            if serie[i] < lim:
                 serie[i] = serie[i - 1]
         return serie
 
     # Aplicar la función a la columna 'var_diam'
-    data['var_diam'] = reemplazar_valores_incorrectos(data['var_diam'])
+    data['var_diam'] = replace_incorrect_values(data['var_diam'], 100)
+    data['temp_suelo'] = replace_incorrect_values(data['var_diam'], 0.6)
 
-    date_var = df[['date']]
+    # %%
+    # Data preprocessing
 
-    # Preprocesados de los datos
-    datos = data[['var_diam']]
-    ventana = 100  # Tamaño de la ventana de la media móvil
-    # Eliminamos la pendiente de nuestros datos
-    datos_sin = datos['var_diam']-datos['var_diam'].rolling(window=ventana).mean()
-    # Eliminamos los valores NaN
-    datos_sin_pendiente = datos_sin.dropna()
-    # Suavizamos la señal
-    datos_suavizados = savgol_filter(datos_sin_pendiente, 11, 2)
-    df = df[99:]
-    df['var_diam_sua_py'] = pd.Series(datos_suavizados, index=df.index)
+    # Remove trend from our data
+    for col in data.columns:
+        if col != 'var_diam':
+            data[col] = data[col] - data[col].rolling(window=100).mean()
 
-    # Selección de variables relevantes
-    data = df[['datetime', 'luminosidad', 'temperatura',
-               'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam_sua_py']]
+    # Remove NaN values
+    data = data.dropna()
 
-    # Transformación de la variable 'date' en un objeto datetime
-    data['datetime'] = pd.to_datetime(data['datetime'])
-    date = data['datetime']
-    # Establecimiento de la variable 'date' como índice
-    data.set_index('datetime', inplace=True)
-    date_var = df[['date']]
+    # Smooth the signal
+    for col in data.columns:
+        if col != 'var_diam':
+            data[col] = savgol_filter(data[col], 11, 2)
 
-    # Normalización de los datos
-
+    # %%
+    # Data normalization
     scaler = MinMaxScaler()
     scaled_data = scaler.fit_transform(data)
     data[['luminosidad', 'temperatura',
-          'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam_sua_py']] = scaled_data
-    # Relevant Variable Selection
+          'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']] = scaled_data
+
+    # %%
+    # Data split
     data_validation = data
     data_test = data.iloc[:-prediction_length]
     data_train = data.iloc[:-2*prediction_length]
@@ -155,5 +136,31 @@ def load_my_own_dataset(prediction_length):
     dataset_validation = Dataset.from_pandas(dataframe_validation)
     dataset_test = Dataset.from_pandas(dataframe_test)
     dataset_train = Dataset.from_pandas(dataframe_train)
+
+    # %% SHOWING DATA
+
+    test_dataset = dataset_test
+    train_dataset = dataset_train
+
+    # Show data
+    for var in range(6):
+
+        figure, axes = plt.subplots(figsize=(12, 6))
+        ejex = list(range(len(test_dataset[var]["target"])))
+        plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
+        axes.plot(ejex[-prediction_length:], test_dataset[var]
+                  ["target"][-prediction_length:], color="red")
+        axes.plot(train_dataset[var]["target"], color="blue")
+        axes.set_title(data.columns[var])  # Set title for main data plo
+
+        # ZOOM
+        # Show last values
+        figure, axes = plt.subplots()
+        ejex = list(range(len(test_dataset[var]["target"])))
+        axes.plot(ejex[-prediction_length:], test_dataset[var]
+                  ["target"][-prediction_length:], color="red")
+        axes.plot(ejex[-3*prediction_length:-prediction_length], train_dataset[var]
+                  ["target"][-2*prediction_length:], color="blue")
+        axes.set_title(data.columns[var])
 
     return dataset_validation, dataset_test, dataset_train
