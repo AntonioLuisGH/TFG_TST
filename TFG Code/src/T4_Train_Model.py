@@ -2,9 +2,10 @@ from accelerate import Accelerator
 from torch.optim import AdamW
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 
-def train_model(num_of_epochs, model, train_dataloader):
+def train_model(num_of_epochs, model, train_dataloader, title):
     epochs = num_of_epochs
     loss_history = []
 
@@ -59,6 +60,17 @@ def train_model(num_of_epochs, model, train_dataloader):
     plt.legend(loc="upper right")
     plt.xlabel("iteration")
     plt.ylabel("nll")
+
+    # Create the 'plots' folder if it doesn't exist
+    plots_folder = "plots"
+    if not os.path.exists(plots_folder):
+        os.makedirs(plots_folder)
+
+    # Save the image in the 'plots' folder
+    filename = os.path.join(plots_folder, title.replace(" ", "_") + ".png")
+    plt.savefig(filename)
+    print("Image saved as:", filename)
+
     plt.show()
 
     return model

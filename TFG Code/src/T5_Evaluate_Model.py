@@ -43,7 +43,7 @@ def forecasting(model, test_dataloader):
 
 # %%
 
-def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file):
+def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, title):
     mase_metric = load("evaluate-metric/mase")
     smape_metric = load("evaluate-metric/smape")
 
@@ -75,6 +75,15 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file):
     plt.scatter(mase_metrics, smape_metrics, alpha=0.2)
     plt.xlabel("MASE")
     plt.ylabel("sMAPE")
+    # Create the 'plots' folder if it doesn't exist
+    plots_folder = "plots"
+    if not os.path.exists(plots_folder):
+        os.makedirs(plots_folder)
+
+    # Save the image in the 'plots' folder
+    filename = os.path.join(plots_folder, title.replace(" ", "_") + ".png")
+    plt.savefig(filename)
+    print("Image saved as:", filename)
     plt.show()
 
 # %%
@@ -87,7 +96,7 @@ def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, predic
     # Generate a time index based on the dataset's start and frequency
     index = pd.period_range(
         start=multi_variate_test_dataset[ts_index][FieldName.START],
-        periods=10455,
+        periods=len(multi_variate_test_dataset[0][FieldName.TARGET][0]),
         freq=multi_variate_test_dataset[ts_index][FieldName.START].freq,
     ).to_timestamp()
 
@@ -96,9 +105,9 @@ def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, predic
 
     # Plot the actual time series for the last '2 * prediction_length' points
     ax.plot(
-        index[-2 * prediction_length:],
+        index[-5 * prediction_length:],
         multi_variate_test_dataset[ts_index]["target"][mv_index, -
-                                                       2 * prediction_length:],
+                                                       5 * prediction_length:],
         label="actual",
     )
 
@@ -130,6 +139,17 @@ def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, predic
         os.makedirs(plots_folder)
 
     # Save the image in the 'plots' folder
+    filename = os.path.join(plots_folder, title.replace(" ", "_") + ".png")
+    plt.savefig(filename)
+    print("Image saved as:", filename)
+
+    # Create the 'plots' folder if it doesn't exist
+    plots_folder = "plots"
+    if not os.path.exists(plots_folder):
+        os.makedirs(plots_folder)
+
+    # Save the image in the 'plots' folder
+    title = "Metrics"
     filename = os.path.join(plots_folder, title.replace(" ", "_") + ".png")
     plt.savefig(filename)
     print("Image saved as:", filename)

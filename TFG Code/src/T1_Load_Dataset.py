@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import os
 from scipy.signal import savgol_filter
 from datasets import Dataset
+from sklearn.preprocessing import MinMaxScaler
 
 # %% LOAD AND PREPROCESS
 
@@ -32,12 +33,12 @@ def load_and_preprocess_dataset(freq, prediction_length):
 
     # Show data
     figure, axes = plt.subplots()
-    axes.plot(train_dataset[0]["target"], color="blue")
     axes.plot(
         test_dataset[0]["target"][-len((train_dataset[0]["target"]))-prediction_length:],
         color="red",
-        alpha=0.5
+        linewidth=0.9
     )
+    axes.plot(train_dataset[0]["target"], color="blue")
 
     # Convert the dataset into a multivariate time series
     num_of_variates = len(train_dataset)
@@ -59,6 +60,7 @@ def load_and_preprocess_dataset(freq, prediction_length):
 
 
 def load_my_own_dataset(prediction_length):
+
     # Get the absolute path of the current directory
     current_path = os.path.dirname(os.path.abspath(__file__))
     # CSV file name
@@ -68,28 +70,45 @@ def load_my_own_dataset(prediction_length):
     # Read the CSV file
     df = pd.read_csv(file_path, sep=";")
 
-    # Data Preprocessing
+    # Selección de variables relevantes
+    data = df[['datetime', 'luminosidad', 'temperatura',
+               'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
 
-    # Data preprocessing steps
-    data = df[['var_diam']]
-    window = 100  # Rolling mean window size
-    # Remove trend from the data
-    detrended_data = data['var_diam'] - \
-        data['var_diam'].rolling(window=window).mean()
-    # Remove NaN values
-    detrended_data = detrended_data.dropna()
-    # Smooth the signal
-    smoothed_data = savgol_filter(detrended_data, 11, 2)
+    date_var = df[['date']]
+
+    # Preprocesados de los datos
+    datos = df[['var_diam']]
+    ventana = 100  # Tamaño de la ventana de la media móvil
+    # Eliminamos la pendiente de nuestros datos
+    datos_sin = datos['var_diam']-datos['var_diam'].rolling(window=ventana).mean()
+    # Eliminamos los valores NaN
+    datos_sin_pendiente = datos_sin.dropna()
+    # Suavizamos la señal
+    datos_suavizados = savgol_filter(datos_sin_pendiente, 11, 2)
     df = df[99:]
-    df['var_diam_sua_py'] = pd.Series(smoothed_data, index=df.index)
+    df['var_diam_sua_py'] = pd.Series(datos_suavizados, index=df.index)
 
+    # Selección de variables relevantes
+    data = df[['datetime', 'luminosidad', 'temperatura',
+               'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam_sua_py']]
+
+    # Transformación de la variable 'date' en un objeto datetime
+    data['datetime'] = pd.to_datetime(data['datetime'])
+    date = data['datetime']
+    # Establecimiento de la variable 'date' como índice
+    data.set_index('datetime', inplace=True)
+    date_var = df[['date']]
+
+    # Normalización de los datos
+
+    scaler = MinMaxScaler()
+    scaled_data = scaler.fit_transform(data)
+    data[['luminosidad', 'temperatura',
+          'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam_sua_py']] = scaled_data
     # Relevant Variable Selection
-    data_validation = df[['luminosidad', 'temperatura',
-                          'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam_sua_py']]
-    data_test = df[['luminosidad', 'temperatura', 'humedad_rel',
-                    'temp_suelo', 'electrocond', 'var_diam_sua_py']].iloc[:-prediction_length]
-    data_train = df[['luminosidad', 'temperatura', 'humedad_rel',
-                     'temp_suelo', 'electrocond', 'var_diam_sua_py']].iloc[:-2*prediction_length]
+    data_validation = data
+    data_test = data.iloc[:-prediction_length]
+    data_train = data.iloc[:-2*prediction_length]
 
     # Create empty dictionaries to store the data
     dict_validation = {'start': [], 'target': [],

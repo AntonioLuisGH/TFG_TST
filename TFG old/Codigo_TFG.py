@@ -23,7 +23,8 @@ import time
 # %% Carga del dataset
 
 df = pd.read_csv(
-    'C:/Users/anton/OneDrive/Escritorio/TFG_Antonio_Luis/TFG antiguos/medidas_oct_2020.csv', sep=";")
+    'C:/Users/anton/OneDrive/Escritorio/TFG_TST/TFG Old/medidas_oct_2020.csv', sep=";")
+
 
 # %% Preprocesamiento
 
@@ -48,8 +49,7 @@ df['var_diam_sua_py'] = pd.Series(datos_suavizados, index=df.index)
 # Selección de variables relevantes
 data = df[['datetime', 'luminosidad', 'temperatura',
            'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam_sua_py']]
-
-
+data1 = data
 # %% Transformación de datos
 
 # Transformación de la variable 'date' en un objeto datetime
@@ -67,7 +67,6 @@ data.set_index('datetime', inplace=True)
 date_var = df[['date']]
 
 # date_test = date_var.iloc[1::16]
-
 
 # %% Normalización de los datos
 
@@ -185,7 +184,7 @@ model.summary()
 start_time = time.time()
 
 # Entrenamiento del modelo
-history = model.fit(X_train, y_train, epochs=100, batch_size=16,
+history = model.fit(X_train, y_train, epochs=30, batch_size=16,
                     validation_data=(X_test, y_test), verbose=1)
 
 # Finaliza el temporizador
@@ -259,3 +258,8 @@ plt.legend()
 
 val = history.history['val_loss']
 train = history.history['loss']
+
+# %%
+
+data1['var_diam_sua_py']
+plt.plot(data1['var_diam_sua_py'][::150])
