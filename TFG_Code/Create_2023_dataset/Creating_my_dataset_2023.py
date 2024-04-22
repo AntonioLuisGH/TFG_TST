@@ -6,6 +6,7 @@ from scipy.signal import savgol_filter
 from datasets import Dataset
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
+import numpy as np
 
 # prediction lenth
 prediction_length = 500
@@ -24,8 +25,20 @@ df = pd.read_csv(file_path, sep=";")
 data = df[['luminosidad', 'temperatura',
            'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
 
+
+def reemplazar_valores_incorrectos(serie):
+    for i in range(1, len(serie) - 1):
+        if serie[i] < 100:
+            serie[i] = serie[i - 1]
+    return serie
+
+
+# Aplicar la función a la columna 'var_diam'
+data['var_diam'] = reemplazar_valores_incorrectos(data['var_diam'])
+
+# %%
 # Preprocesados de los datos
-datos = df[['var_diam']]
+datos = data[['var_diam']]
 ventana = 100  # Tamaño de la ventana de la media móvil
 # Eliminamos la pendiente de nuestros datos
 datos_sin = datos['var_diam']-datos['var_diam'].rolling(window=ventana).mean()
@@ -111,3 +124,14 @@ ejex = list(range(len(test_dataset[var]["target"])))
 
 axes.plot(ejex[:prediction_length], train_dataset[var]
           ["target"][:prediction_length:], color="blue")
+
+
+# %%
+
+figure, ax = plt.subplots(figsize=(12, 6))  # Ancho de 12 pulgadas y alto de 6 pulgadas
+vector = data1[['var_diam']]  # Corregido: quita los corchetes adicionales
+plt.ylim(129, 132)
+# Corregido: utiliza comillas simples para el nombre de la columna
+ax.set_title("df['var_diam']")
+plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
+ax.plot(vector, color="blue")

@@ -23,13 +23,10 @@ import time
 # %% Carga del dataset
 
 df = pd.read_csv(
-    'C:/Users/anton/OneDrive/Escritorio/TFG_Antonio_Luis/TFG antiguos/medidas_oct_2020.csv', sep=";")
+    'C:/Users/anton/OneDrive/Escritorio/TFG_TST/TFG_Old/medidas_oct_2020.csv', sep=";")
 
 # %% Preprocesamiento
 
-# Selección de variables relevantes
-data = df[['datetime', 'luminosidad', 'temperatura',
-           'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
 
 date_var = df[['date']]
 
@@ -104,7 +101,7 @@ X_test, y_test = train_test_split(test_data, n_steps_in, n_steps_out)
 # date_test = date_test[train_size+n_steps_in+n_steps_out-2:]
 # date_test = date_var[train_size+n_steps_in+n_steps_out-2:]
 
-
+data1 = y_train
 # %% Definición de la arquitectura del modelo
 model = Sequential()
 model.add(LSTM(16, activation='tanh', input_shape=(n_steps_in, 5)))
@@ -259,3 +256,30 @@ plt.legend()
 
 val = history.history['val_loss']
 train = history.history['loss']
+
+# %%
+figure, axes = plt.subplots()
+axes.set_title("y_train")
+axes.plot(y_train, color="blue")
+
+# %%
+figure, ax = plt.subplots(figsize=(12, 6))  # Ancho de 12 pulgadas y alto de 6 pulgadas
+ax.set_title("data[['var_diam_sua_py']]")
+plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
+ax.plot(data[['var_diam_sua_py']], color="blue")
+
+# %%
+figure, ax = plt.subplots(figsize=(12, 6))  # Ancho de 12 pulgadas y alto de 6 pulgadas
+ax.set_title("y_train")
+plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
+ax.plot(y_train, color="blue")
+
+# %%
+figure, ax = plt.subplots(figsize=(12, 6))  # Ancho de 12 pulgadas y alto de 6 pulgadas
+vector_original = df['var_diam']  # Corregido: quita los corchetes adicionales
+vector_filtrado = [elemento for elemento in vector_original if elemento >= 100]
+plt.ylim(129, 132)
+# Corregido: utiliza comillas simples para el nombre de la columna
+ax.set_title("df['var_diam']")
+plt.setp(ax.get_xticklabels(), rotation=30, horizontalalignment='right')
+ax.plot(vector_filtrado, color="blue")

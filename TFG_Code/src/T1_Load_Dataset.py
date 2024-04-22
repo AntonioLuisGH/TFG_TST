@@ -74,10 +74,23 @@ def load_my_own_dataset(prediction_length):
     data = df[['datetime', 'luminosidad', 'temperatura',
                'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
 
+    # Selección de variables relevantes
+    data = df[['luminosidad', 'temperatura',
+               'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
+
+    def reemplazar_valores_incorrectos(serie):
+        for i in range(1, len(serie) - 1):
+            if serie[i] < 100:
+                serie[i] = serie[i - 1]
+        return serie
+
+    # Aplicar la función a la columna 'var_diam'
+    data['var_diam'] = reemplazar_valores_incorrectos(data['var_diam'])
+
     date_var = df[['date']]
 
     # Preprocesados de los datos
-    datos = df[['var_diam']]
+    datos = data[['var_diam']]
     ventana = 100  # Tamaño de la ventana de la media móvil
     # Eliminamos la pendiente de nuestros datos
     datos_sin = datos['var_diam']-datos['var_diam'].rolling(window=ventana).mean()
