@@ -65,13 +65,13 @@ def load_my_own_dataset(prediction_length):
     data = df[['luminosidad', 'temperatura',
                'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
 
+    # Replace wrong measurements
     def replace_incorrect_values(serie, lim):
         for i in range(1, len(serie) - 1):
             if serie[i] < lim:
                 serie[i] = serie[i - 1]
         return serie
 
-    # Aplicar la función a la columna 'var_diam'
     data['var_diam'] = replace_incorrect_values(data['var_diam'], 100)
     data['temp_suelo'] = replace_incorrect_values(data['var_diam'], 0.6)
 
@@ -80,16 +80,14 @@ def load_my_own_dataset(prediction_length):
 
     # Remove trend from our data
     for col in data.columns:
-        if col != 'var_diam':
-            data[col] = data[col] - data[col].rolling(window=100).mean()
+        data[col] = data[col] - data[col].rolling(window=100).mean()
 
     # Remove NaN values
     data = data.dropna()
 
     # Smooth the signal
     for col in data.columns:
-        if col != 'var_diam':
-            data[col] = savgol_filter(data[col], 11, 2)
+        data[col] = savgol_filter(data[col], 11, 2)
 
     # %%
     # Data normalization

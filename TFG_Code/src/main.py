@@ -13,7 +13,7 @@ from T5_Evaluate_Model import forecasting, see_metrics, plot
 model_variant = "Transformer"
 
 freq = "8min"
-prediction_length = 200
+prediction_length = 180
 num_of_epochs = 1
 # %% LOAD, SPLIT AND PREPROCESS DATASET
 

@@ -148,10 +148,4 @@ def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, predic
     if not os.path.exists(plots_folder):
         os.makedirs(plots_folder)
 
-    # Save the image in the 'plots' folder
-    title = "Metrics"
-    filename = os.path.join(plots_folder, title.replace(" ", "_") + ".png")
-    plt.savefig(filename)
-    print("Image saved as:", filename)
-
     plt.show()
