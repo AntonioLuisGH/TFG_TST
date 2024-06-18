@@ -7,7 +7,7 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{1}
 
-\bibitem{vaswani2023attention}
-Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin, \emph{Attention is all you need}, 2023.
+\bibitem{koma}
+Markus Kohm, \emph{A bundle of versatile classes and packages}, May 2012.
 
 \end{thebibliography}

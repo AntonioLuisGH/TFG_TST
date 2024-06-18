@@ -1,0 +1,36 @@
+INDICE:
+
+- Introducción
+	+ Que son los pronósticos de tiempo?
+	+ Nuestro objetivo
+		- Hablar de los cultivos que vamos a analizar y el por qué
+
+- Historia y Estado del arte
+		- Historia de formas mas clasicas -> Redes neuronales -> Transformers
+		- Gente que dudaba de sobre los Transformers
+		- Los ultimos transformers (Estado del arte)
+
+- Materiales y métodos
+	+ Librerías usadas
+
+- Transformers
+	+ ¿Que es un transformer?¿Cómo apareció?
+	+ Estructura básica de un transformer
+
+- Transformers para Series de Tiempo
+	+ Cómo se aplican los transformers a las series de tiempo
+
+- Informers
+	+ Introduccion
+	+ ProbSparse Attention
+	+ Distilling
+
+- Autoformers
+	+ Decomposition Layer
+	+ Attention (Autocorrelation) Mechanism
+
+- Diseño Experimental
+
+- Resultados Experimentales
+
+- Conclusiones

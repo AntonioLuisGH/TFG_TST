@@ -52,6 +52,12 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
     mase_metrics = []
     smape_metrics = []
 
+    # Create the 'plots' folder if it doesn't exist
+    plots_folder = "plots"
+    if not os.path.exists(plots_folder):
+        os.makedirs(plots_folder)
+        
+    output_file = os.path.join(plots_folder, output_file)
     with open(output_file, 'w') as f:
         f.write("MASE\t\t\tsMAPE\n")
 
@@ -75,10 +81,6 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
     plt.scatter(mase_metrics, smape_metrics, alpha=0.2)
     plt.xlabel("MASE")
     plt.ylabel("sMAPE")
-    # Create the 'plots' folder if it doesn't exist
-    plots_folder = "plots"
-    if not os.path.exists(plots_folder):
-        os.makedirs(plots_folder)
 
     # Save the image in the 'plots' folder
     filename = os.path.join(plots_folder, title.replace(" ", "_") + ".png")

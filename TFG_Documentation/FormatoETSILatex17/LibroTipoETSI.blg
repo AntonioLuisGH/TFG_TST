@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: LibroTipoETSI.aux
+A level-1 auxiliary file: agradecimientos/agradecimientos.aux
+A level-1 auxiliary file: resumen/resumen.aux
+A level-1 auxiliary file: prefacio/prefacio.aux
+A level-1 auxiliary file: notacion/notacion.aux
+A level-1 auxiliary file: introduccion/introduccion.aux
+A level-1 auxiliary file: CapituloLibroETSI/CapituloLibroETSI.aux
+A level-1 auxiliary file: CapituloProblemasLibroETSI/CapituloProblemasETSI.aux
+A level-1 auxiliary file: CapituloEstilo/estilolibroetsi.aux
+A level-1 auxiliary file: apendices/apendices.aux
+The style file: amsplain.bst
+Database file #1: bibliografiaLibroETSI.bib
+Warning--entry type for "koma" isn't style-file defined
+--line 12 of file bibliografiaLibroETSI.bib
+Warning--I didn't find a database entry for "moser"
+Warning--I didn't find a database entry for "gratzer"
+Warning--I didn't find a database entry for "oppenheim"
+Warning--I didn't find a database entry for "wiener"
+Warning--I didn't find a database entry for "Hernando08"
+Warning--I didn't find a database entry for "Murillo07"
+You've used 1 entry,
+            2213 wiz_defined-function locations,
+            520 strings with 4337 characters,
+and the built_in function-call counts, 244 in all, are:
+= -- 16
+> -- 7
+< -- 0
++ -- 4
+- -- 2
+* -- 13
+:= -- 41
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 11
+empty$ -- 25
+format.name$ -- 2
+if$ -- 46
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 13
+num.names$ -- 2
+pop$ -- 11
+preamble$ -- 1
+purify$ -- 3
+quote$ -- 0
+skip$ -- 7
+stack$ -- 0
+substring$ -- 6
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 0
+while$ -- 2
+width$ -- 2
+write$ -- 16
+(There were 7 warnings)

@@ -24,8 +24,6 @@ data = df[['luminosidad', 'temperatura',
            'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
 
 # Replace wrong measurements
-
-
 def replace_incorrect_values(serie, lim):
     for i in range(1, len(serie) - 1):
         if serie[i] < lim:

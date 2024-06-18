@@ -1,0 +1,46 @@
+% !TEX root =../LibroTipoETSI.tex
+\chapter{Transformer}\LABCHAP{CAPEJ}
+\pagestyle{esitscCD}
+
+\lettrine[lraise=-0.1, lines=2, loversize=0.25]{E}n este capitulo explicaremos qué es un transformer
+
+\section{What is a Transformer?}
+
+\subsection{Origin and Basic Concept of Transformers}
+
+Transformers were introduced by Vaswani et al. in their seminal 2017 paper titled "Attention is All You Need" \cite{vaswani2023attention}. The primary innovation of the Transformer model is its use of a mechanism called \textit{self-attention} or \textit{scaled dot-product attention}. This allows the model to weigh the importance of different words in a sentence regardless of their position, addressing the limitations of previous recurrent and convolutional neural networks which struggled with long-range dependencies and parallelization.
+
+\subsection{Fundamental Differences from Other Neural Models}
+
+Unlike Recurrent Neural Networks (RNNs) and Long Short-Term Memory networks (LSTMs), which process inputs sequentially, Transformers process the entire sequence of data at once. This parallelization significantly speeds up training and inference times. Additionally, the self-attention mechanism enables the model to capture dependencies between distant words more effectively than RNNs or Convolutional Neural Networks (CNNs), which are limited by their fixed-size receptive fields.
+
+\section{Basic Structure of a Transformer}
+
+\subsection{Attention Mechanism}
+
+The core component of the Transformer architecture is the attention mechanism. It allows the model to focus on different parts of the input sequence when producing each element of the output sequence. The attention mechanism computes a weighted sum of input values (the \textit{values}), with the weights derived from the similarity between a query and corresponding keys. Mathematically, this is expressed as:
+
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\end{equation}
+
+where \( Q \) represents the queries, \( K \) the keys, \( V \) the values, and \( d_k \) the dimensionality of the keys.
+
+\subsection{Encoder and Decoder}
+
+The Transformer architecture consists of two main components: the \textit{encoder} and the \textit{decoder}. 
+
+\par{Encoder:} The encoder is a stack of identical layers, each containing two main sub-layers: a multi-head self-attention mechanism and a position-wise fully connected feed-forward network. Layer normalization and residual connections are employed around each sub-layer to facilitate training.
+
+\par{Decoder:} The decoder is also composed of a stack of identical layers, but with an additional attention sub-layer that attends to the output of the encoder stack. This allows the decoder to condition its predictions on the entire input sequence, not just on the preceding elements of the target sequence.
+
+\subsection{Examples of Applications in Other Fields}
+
+Transformers have found applications beyond their original scope in Natural Language Processing (NLP). They are now widely used in various domains:
+
+\par{Natural Language Processing (NLP):} Models such as BERT \cite{devlin2018bert} and GPT-3 \cite{brown2020language} leverage the Transformer architecture for tasks including language modeling, translation, and text generation.
+
+\par{Computer Vision:} Vision Transformers (ViTs) \cite{dosovitskiy2020image} apply the Transformer architecture to image classification tasks, achieving state-of-the-art performance by treating image patches as sequences of tokens.
+
+\par{Other Fields:} Transformers have also been successfully applied in areas such as audio processing, protein structure prediction \cite{jumper2021highly}, and reinforcement learning, demonstrating the versatility and effectiveness of the model across various types of data and tasks.
+

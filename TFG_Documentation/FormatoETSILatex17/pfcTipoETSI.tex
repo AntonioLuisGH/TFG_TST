@@ -1,5 +1,5 @@
 %:Clase del documento
-\documentclass[fontsize=10pt, Myfinal=true, twoside, numbers=noenddot]{scrbook}
+\documentclass[fontsize=10pt, Myfinal=true, English=true, twoside, numbers=noenddot]{scrbook}
 %Minion=true, English=true, Myfinal=true
 
 \makeatletter
@@ -10,19 +10,18 @@
 
 %:Paquete de estilos propuesto
 \usepackage{libroETSI}
-
 %:Paquete específico para cargar tikz (y sus librerías) y pgfplots
 \usepackage{dtsc-creafig}
-
 %:Paquete para notaciones específicas
 \usepackage{notacion}
-
 %:Paquete para incorporar aspectos concretos de la edición
 \usepackage{edicionPFC}
+
 
 \makeatletter
 \let\alloc@\alloc@latex
 \makeatother
+
 
 %:Estas líneas de código son INNECESARIAS excepto para mostrar determinadas características en este manual. Pueden eliminarse o comentarse sin ningún problema.
 %Se usan para compilar el capítulo estilolibroetsi.tex
@@ -33,7 +32,7 @@
 \makeatletter
 \ifdtsc@Minion % Queremos utilizar la fuente Minion y lo hemos declarado al principio
 	\ifluatex
-		\setmainfont[Renderer=Basic, Ligatures=TeX,	% Fuente del texto 
+		\setmainfon$•$t[Renderer=Basic, Ligatures=TeX,	% Fuente del texto 
 		Scale=1.01,
 		]{Minion Pro}
    		% En este caso conviene modificar ligeramente el tamaño de las fuentes matemáticas
@@ -110,7 +109,7 @@ twoside}
 %PORTADA
 %ver edicionPFC.sty para modificaciones
 
-%:Para crear la portada y la portada interior (pagina titular)
+%:Para crear la portada y la portada interior (pagina titular) 
 \titulo{Artificial intelligence techniques and their application to time series forecast} %\mbox evita que se divida una palabra al cambiar de línea
 \autor{Antonio Luis González Hernández}
 \director{Juan Antonio Becerra González}
@@ -139,11 +138,11 @@ twoside}
 \frontmatter
 \pagenumbering{Roman} %Pone la numeración en mayúscula (En español parece que es obligatorio)
 
-%\include{dedicatoria/dedicatoria}%¿Comentar para proyectos/tesis?
-\include{agradecimientos/agradecimientos}
 
-%PFC/PFM/TESIS
-\include{resumen/resumen} 
+%\include{agradecimientos/agradecimientos}
+
+
+%\include{resumen/resumen} 
 
 % Índice abreviado 
 % El índice abreviado se incluye también en algunos libros, con menor detalle que el completo. Descomentar las siguientes líneas.
@@ -160,7 +159,7 @@ twoside}
 \tableofcontents
 
 
-\include{notacion/notacion} %No incluir si no se quiere, comentándolo
+%\include{notacion/notacion} %No incluir si no se quiere, comentándolo
 
 %:Empieza el contenido del libro
 \mainmatter
@@ -169,18 +168,18 @@ twoside}
 \pagestyle{esitscCD}
 
 %:Los diferentes capítulos, en carpetas separadas
-\include{cubierta/cubierta}
-%
-\include{introduccion/introduccion}%Guia uso
-%
-\include{estructura/estructura}
-%
-\include{CapituloLibroETSI/CapituloLibroETSI} 
-%
-\include{CapituloProblemasLibroETSI/CapituloProblemasETSI} 
+%\include{cubierta/cubierta}
 
-\include{CapituloEstilo/estilolibroetsi}
-% 
+
+%\include{introduccion/introduccion}%Guia uso
+
+
+%\include{estructura/estructura}
+
+\include{CapituloLibroETSI/CapituloLibroETSI} 
+
+\include{CapituloTransformer/CapituloTransformer} 
+
 %%:Empezamos con los apéndices, que irían en uno o más ficheros. Es necesario incluir estos ficheros entre el entorno \begin{appendices}....\end{appendices} debido a que se ha deseado utilizar un formato diferente para el título de los apéndices, incluyendo la palabra apéndice, para la numeración de los apéndices, alfabético, y para las cabeceras de las páginas.
 %
 %\begin{appendices}
