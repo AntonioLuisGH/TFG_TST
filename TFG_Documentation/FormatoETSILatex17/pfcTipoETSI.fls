@@ -1056,6 +1056,11 @@ OUTPUT CapituloTransformer/CapituloTransformer.aux
 INPUT ./CapituloTransformer/CapituloTransformer.tex
 INPUT ./CapituloTransformer/CapituloTransformer.tex
 INPUT CapituloTransformer/CapituloTransformer.tex
+INPUT ./introduccion/figuras/Transformer_architecture.pdf
+INPUT ./introduccion/figuras/Transformer_architecture.pdf
+INPUT ./introduccion/figuras/Transformer_architecture.pdf
+INPUT ./introduccion/figuras/Transformer_architecture.pdf
+INPUT ./introduccion/figuras/Transformer_architecture.pdf
 INPUT ./pfcTipoETSI.lof
 INPUT ./pfcTipoETSI.lof
 INPUT pfcTipoETSI.lof

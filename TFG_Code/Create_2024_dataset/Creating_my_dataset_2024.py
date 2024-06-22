@@ -10,7 +10,7 @@ from datasets import Dataset
 # Obtiene la ruta absoluta del directorio actual
 ruta_actual = os.path.dirname(os.path.abspath(__file__))
 # Nombre del archivo CSV
-nombre_archivo = 'Clay_1.csv'
+nombre_archivo = 'Sand_1.csv'
 # Une la ruta actual con el nombre del archivo CSV
 ruta_archivo = os.path.join(ruta_actual, nombre_archivo)
 # Lee el archivo CSV
@@ -29,7 +29,7 @@ datos_sin_pendiente = datos_sin.dropna()
 # Suavizamos la señal
 datos_suavizados = savgol_filter(datos_sin_pendiente, 11, 2)
 df = df[99:]
-df['Temperature'] = pd.Series(datos_suavizados, index=df.index)
+ df['Temperature'] = pd.Series(datos_suavizados, index=df.index)
 
 # Selección de variables relevantes
 data_validation = df[['Identificator', 'Date', 'Month', 'Day', 'Year', 'Hour', 'Minute', 'Second', 'Temperature', 'Relative_humidity',

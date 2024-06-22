@@ -19,11 +19,13 @@ file_path = os.path.join(current_path, file_name)
 # Read the CSV file
 df = pd.read_csv(file_path, sep=";")
 
-# Relevant variables selection
+# Relevant variable selection
 data = df[['luminosidad', 'temperatura',
            'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
 
 # Replace wrong measurements
+
+
 def replace_incorrect_values(serie, lim):
     for i in range(1, len(serie) - 1):
         if serie[i] < lim:

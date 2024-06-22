@@ -7,6 +7,18 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{1}
 
+\bibitem{brown2020language}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel~M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei, \emph{Language models are few-shot learners}, 2020.
+
+\bibitem{devlin2019bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova, \emph{Bert: Pre-training of deep bidirectional transformers for language understanding}, 2019.
+
+\bibitem{dosovitskiy2021image}
+Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby, \emph{An image is worth 16x16 words: Transformers for image recognition at scale}, 2021.
+
+\bibitem{Jumper2021HighlyAP}
+John~M. Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov, Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin Ž{\'i}dek, Anna Potapenko, Alex Bridgland, Clemens Meyer, Simon A~A Kohl, Andy Ballard, Andrew Cowie, Bernardino Romera-Paredes, Stanislav Nikolov, Rishub Jain, Jonas Adler, Trevor Back, Stig Petersen, David Reiman, Ellen Clancy, Michal Zielinski, Martin Steinegger, Michalina Pacholska, Tamas Berghammer, Sebastian Bodenstein, David Silver, Oriol Vinyals, Andrew~W. Senior, Koray Kavukcuoglu, Pushmeet Kohli, and Demis Hassabis, \emph{Highly accurate protein structure prediction with alphafold}, Nature \textbf{596} (2021), 583 -- 589.
+
 \bibitem{vaswani2023attention}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin, \emph{Attention is all you need}, 2023.
 

@@ -22,15 +22,17 @@
 \contentsline {section}{\numberline {2.1}What is a Transformer?}{13}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Origin and Basic Concept of Transformers}{13}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Fundamental Differences from Other Neural Models}{13}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Basic Structure of a Transformer}{13}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Attention Mechanism}{13}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Encoder and Decoder}{13}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Examples of Applications in Other Fields}{14}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.2}Basic Structure of a Transformer}{14}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Attention Mechanism}{14}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Encoder and Decoder}{14}{subsection.2.2.2}%
+\contentsline {subsubsection}{Encoder}{14}{subsubsection*.9}%
+\contentsline {subsubsection}{Decoder}{15}{subsubsection*.10}%
+\contentsline {section}{\numberline {2.3}Examples of Applications in Other Fields}{15}{section.2.3}%
 \mbox {}\hspace *{0pt}\par 
-\contentsline {listasb}{List of Figures}{15}{section*.9}%
-\contentsline {listasb}{List of Tables}{17}{section*.11}%
-\contentsline {listasb}{List of Codes}{19}{section*.13}%
-\contentsline {listasb}{Bibliography}{21}{section*.15}%
-\contentsline {listasb}{Index}{23}{section*.17}%
-\contentsline {listasb}{Glossary}{25}{section*.19}%
+\contentsline {listasb}{List of Figures}{17}{section*.12}%
+\contentsline {listasb}{List of Tables}{19}{section*.14}%
+\contentsline {listasb}{List of Codes}{21}{section*.16}%
+\contentsline {listasb}{Bibliography}{23}{section*.18}%
+\contentsline {listasb}{Index}{25}{section*.20}%
+\contentsline {listasb}{Glossary}{27}{section*.22}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,27 +1,27 @@
 # Fdb version 4
-["bibtex pfcTipoETSI"] 1718388706.86002 "pfcTipoETSI.aux" "pfcTipoETSI.bbl" "pfcTipoETSI" 1718388713.75306 0
-  "./bibliografiaLibroETSI.bib" 1718386490 1362 61255833510e91f05753e507e1a922a5 ""
-  "CapituloLibroETSI/CapituloLibroETSI.aux" 1718388711 9031 109af8bce2301eecce59ff5ee43b4dac "pdflatex"
-  "CapituloTransformer/CapituloTransformer.aux" 1718388712 4238 de4571a40287409e4d740d4caa498a8f "pdflatex"
+["bibtex pfcTipoETSI"] 1718904001.03275 "pfcTipoETSI.aux" "pfcTipoETSI.bbl" "pfcTipoETSI" 1718904008.7114 0
+  "./bibliografiaLibroETSI.bib" 1718897772 5273 b518a94e187fd84313abc2e3a8fcc4fb ""
+  "CapituloLibroETSI/CapituloLibroETSI.aux" 1718904006 9031 109af8bce2301eecce59ff5ee43b4dac "pdflatex"
+  "CapituloTransformer/CapituloTransformer.aux" 1718904006 4836 c27aee6359ec6a68fa611e884a12510f "pdflatex"
   "c:/texlive/2024/texmf-dist/bibtex/bst/amscls/amsplain.bst" 1712502983 25798 9b3546f2f237ee0ce4724eed95f954f4 ""
-  "pfcTipoETSI.aux" 1718388712 12620 dccfb472530721e501c3d84e891f042d "pdflatex"
+  "pfcTipoETSI.aux" 1718904006 13089 097b956de117635af4229646e4ce6cd1 "pdflatex"
   (generated)
   "pfcTipoETSI.bbl"
   "pfcTipoETSI.blg"
   (rewritten before read)
-["makeindex pfcTipoETSI.idx"] 1718387309.63181 "pfcTipoETSI.idx" "pfcTipoETSI.ind" "pfcTipoETSI" 1718388713.75251 0
-  "pfcTipoETSI.idx" 1718388712 793 d5e464072ce132376c9cb5bb5b18ff94 "pdflatex"
+["makeindex pfcTipoETSI.idx"] 1718903975.90329 "pfcTipoETSI.idx" "pfcTipoETSI.ind" "pfcTipoETSI" 1718904008.71071 0
+  "pfcTipoETSI.idx" 1718904006 793 d5e464072ce132376c9cb5bb5b18ff94 "pdflatex"
   (generated)
   "pfcTipoETSI.ilg"
   "pfcTipoETSI.ind"
   (rewritten before read)
-["pdflatex"] 1718388707.43605 "c:/Users/anton/OneDrive/Escritorio/TFG_TST/TFG_Documentation/FormatoETSILatex17/pfcTipoETSI.tex" "pfcTipoETSI.pdf" "pfcTipoETSI" 1718388713.75436 0
-  "CapituloLibroETSI/CapituloLibroETSI.aux" 1718388711 9031 109af8bce2301eecce59ff5ee43b4dac "pdflatex"
+["pdflatex"] 1718904001.69449 "c:/Users/anton/OneDrive/Escritorio/TFG_TST/TFG_Documentation/FormatoETSILatex17/pfcTipoETSI.tex" "pfcTipoETSI.pdf" "pfcTipoETSI" 1718904008.71304 0
+  "CapituloLibroETSI/CapituloLibroETSI.aux" 1718904006 9031 109af8bce2301eecce59ff5ee43b4dac "pdflatex"
   "CapituloLibroETSI/CapituloLibroETSI.tex" 1713806837 23260 7f6d12e7c2e178036a3cfe6474a5d8fe ""
   "CapituloLibroETSI/figuras/logoESI.pdf" 1713806837 6716 b52932c6b4d940bdf6a993e92c5bc044 ""
-  "CapituloTransformer/CapituloTransformer.aux" 1718388712 4238 de4571a40287409e4d740d4caa498a8f "pdflatex"
-  "CapituloTransformer/CapituloTransformer.tex" 1718388676 3817 80959e8aecbead80dda3e57f0c76a236 ""
-  "c:/Users/anton/OneDrive/Escritorio/TFG_TST/TFG_Documentation/FormatoETSILatex17/pfcTipoETSI.tex" 1718386610 7635 0060c60b1a394e18e8ece9b167637347 ""
+  "CapituloTransformer/CapituloTransformer.aux" 1718904006 4836 c27aee6359ec6a68fa611e884a12510f "pdflatex"
+  "CapituloTransformer/CapituloTransformer.tex" 1718903993 12986 5aceddb2c479b39cbf7950347894910c ""
+  "c:/Users/anton/OneDrive/Escritorio/TFG_TST/TFG_Documentation/FormatoETSILatex17/pfcTipoETSI.tex" 1718903543 7628 65fcc0bcf69a255dcce689443c5b767d ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1712505255 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1712504434 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec-sc.enc" 1712510746 2881 8e2aef9e38084b946e7656b60672fedb ""
@@ -506,19 +506,20 @@
   "figuras/LogoUS.pdf" 1713806837 26469 ecd512301a91f700010c11630d7adf09 ""
   "figuras/edificio01.pdf" 1713806837 162358 3e13d4b9f0f19ace3e8000d952b81fd0 ""
   "figuras/etsi.pdf" 1713806837 434520 421a30554556997a0cfcb52e3cff8c02 ""
+  "introduccion/figuras/Transformer_architecture.pdf" 1718902851 96702 df867140879a067e9cff2177d5a7b7f7 ""
   "kbordermatrix.sty" 1713806837 5674 bfa1a1f639d04118419d64fe784088b4 ""
   "libroETSI.sty" 1713806837 46676 75fa427adea18747d8389a404c648c08 ""
   "notacion.sty" 1713806837 15647 836e97b4e76c0403af418196dbcf2e9d ""
   "pfcTipoETSI.acr" 0 -1 0 ""
-  "pfcTipoETSI.aux" 1718388712 12620 dccfb472530721e501c3d84e891f042d "pdflatex"
-  "pfcTipoETSI.bbl" 1718388707 558 29ef9ddb6ef2a1f0aa1ae3bbf9f66b6f "bibtex pfcTipoETSI"
+  "pfcTipoETSI.aux" 1718904006 13089 097b956de117635af4229646e4ce6cd1 "pdflatex"
+  "pfcTipoETSI.bbl" 1718904001 2351 2a4fd1a6922769e94146622fddbec25b "bibtex pfcTipoETSI"
   "pfcTipoETSI.gls" 0 -1 0 ""
-  "pfcTipoETSI.ind" 1718387310 876 880060f1fa85f4e001c05a19ef187323 "makeindex pfcTipoETSI.idx"
-  "pfcTipoETSI.lof" 1718388712 355 19946617f11fb8b45df69b5a4af2969c "pdflatex"
-  "pfcTipoETSI.lol" 1718388712 406 01b24693c0c2b71104ce876485139054 "pdflatex"
-  "pfcTipoETSI.lot" 1718388712 265 522c58052b61dbf32fd1ef511e55bbd6 "pdflatex"
-  "pfcTipoETSI.tex" 1718386610 7635 0060c60b1a394e18e8ece9b167637347 ""
-  "pfcTipoETSI.toc" 1718388712 2699 033181c1c27824b07906c9bfacc7f731 "pdflatex"
+  "pfcTipoETSI.ind" 1718903976 876 880060f1fa85f4e001c05a19ef187323 "makeindex pfcTipoETSI.idx"
+  "pfcTipoETSI.lof" 1718904006 540 ac73df47ad0d88b752ce692832ca98cf "pdflatex"
+  "pfcTipoETSI.lol" 1718904006 406 01b24693c0c2b71104ce876485139054 "pdflatex"
+  "pfcTipoETSI.lot" 1718904006 265 522c58052b61dbf32fd1ef511e55bbd6 "pdflatex"
+  "pfcTipoETSI.tex" 1718903543 7628 65fcc0bcf69a255dcce689443c5b767d ""
+  "pfcTipoETSI.toc" 1718904006 2815 41733d33f60d21e78787af5c25121519 "pdflatex"
   (generated)
   "CapituloLibroETSI/CapituloLibroETSI.aux"
   "CapituloTransformer/CapituloTransformer.aux"
