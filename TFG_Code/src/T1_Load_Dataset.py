@@ -70,9 +70,8 @@ def load_my_own_dataset(prediction_length):
 
     # %%
     # Data preprocessing
-
     # Remove trend from our data
-    for col in ['Diameter']:
+    for col in data.columns:
         data[col] = data[col] - data[col].rolling(window=100).mean()
 
     # Remove NaN values

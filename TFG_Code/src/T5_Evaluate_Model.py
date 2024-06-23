@@ -59,7 +59,7 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
 
     output_file = os.path.join(plots_folder, output_file)
     with open(output_file, 'w') as f:
-        f.write("MASE\t\t\tsMAPE\n")
+        f.write("\t\tMASE\t\t\tsMAPE\n")
 
         for item_id, ts in enumerate(test_dataset):
             training_data = ts["target"][:-prediction_length]
@@ -76,8 +76,24 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
                 references=np.array(ground_truth),
             )
             smape_metrics.append(smape["smape"])
+            if item_id == 0:
+                f.write(f"Temperature\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+            elif item_id == 1:
+                f.write(
+                    f"Relative_humidity\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+            elif item_id == 2:
+                f.write(f"Light\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+            elif item_id == 3:
+                f.write(
+                    f"Soil_Temperature\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+            elif item_id == 4:
+                f.write(f"Permittivity\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+            elif item_id == 5:
+                f.write(
+                    f"Electroconductivity\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+            elif item_id == 6:
+                f.write(f"Diameter\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
 
-            f.write(f"{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
     plt.scatter(mase_metrics, smape_metrics, alpha=0.2)
     plt.xlabel("MASE")
     plt.ylabel("sMAPE")
@@ -144,10 +160,5 @@ def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, predic
     filename = os.path.join(plots_folder, title.replace(" ", "_") + ".png")
     plt.savefig(filename)
     print("Image saved as:", filename)
-
-    # Create the 'plots' folder if it doesn't exist
-    plots_folder = "plots"
-    if not os.path.exists(plots_folder):
-        os.makedirs(plots_folder)
 
     plt.show()

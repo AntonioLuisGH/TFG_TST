@@ -13,18 +13,24 @@ from T5_Evaluate_Model import forecasting, see_metrics, plot
 model_variant = "Transformer"
 
 freq = "8min"
-prediction_length = 180
-num_of_epochs = 1
+prediction_length = 360
+num_of_epochs = 30
 
 # %% LOAD, SPLIT AND PREPROCESS DATASET
 
-multi_variate_train_dataset, multi_variate_test_dataset, num_of_variates, test_dataset = load_and_preprocess_dataset(
-    freq, prediction_length)
+(multi_variate_train_dataset,
+ multi_variate_test_dataset,
+ num_of_variates,
+ test_dataset) = load_and_preprocess_dataset(freq,
+                                             prediction_length)
 
 # %% DEFINE MODEL
 
-model = define_my_model(num_of_variates, multi_variate_train_dataset,
-                        model_variant, freq, prediction_length)
+model = define_my_model(num_of_variates,
+                        multi_variate_train_dataset,
+                        model_variant,
+                        freq,
+                        prediction_length)
 
 # %% CREATE DATA LOADERS
 
@@ -46,23 +52,33 @@ test_dataloader = create_backtest_dataloader(
 
 # %% TRAIN MODEL
 
-train_model(num_of_epochs, model, train_dataloader,  model_variant + "_Loss")
+train_model(num_of_epochs,
+            model,
+            train_dataloader,
+            model_variant + "_Loss")
 
 # %% INFERENCE
 
-forecasts = forecasting(model, test_dataloader)
-see_metrics(forecasts, test_dataset, prediction_length,
-            freq, "metrics.txt", model_variant + "_Metrics")
+forecasts = forecasting(model,
+                        test_dataloader)
+see_metrics(forecasts,
+            test_dataset,
+            prediction_length,
+            freq,
+            "metrics.txt",
+            model_variant + "_Metrics")
 
 plot(forecasts, 0, 0, multi_variate_test_dataset,
-     freq, prediction_length, model_variant + "_Luminosity")
-plot(forecasts, 0, 1, multi_variate_test_dataset,
      freq, prediction_length, model_variant + "_Temperature")
+plot(forecasts, 0, 1, multi_variate_test_dataset,
+     freq, prediction_length, model_variant + "_Relative_humidity")
 plot(forecasts, 0, 2, multi_variate_test_dataset,
-     freq, prediction_length, model_variant + "_Relative humiduty")
+     freq, prediction_length, model_variant + "_Light")
 plot(forecasts, 0, 3, multi_variate_test_dataset,
-     freq, prediction_length, model_variant + "_Soil Temperature")
+     freq, prediction_length, model_variant + "_Soil_Temperature")
 plot(forecasts, 0, 4, multi_variate_test_dataset,
-     freq, prediction_length, model_variant + "_Electroconductivity")
+     freq, prediction_length, model_variant + "_Permittivity")
 plot(forecasts, 0, 5, multi_variate_test_dataset,
+     freq, prediction_length, model_variant + "_Electroconductivity")
+plot(forecasts, 0, 6, multi_variate_test_dataset,
      freq, prediction_length, model_variant + "_Diameter")

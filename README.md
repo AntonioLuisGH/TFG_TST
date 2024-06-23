@@ -28,6 +28,7 @@ This repository contains the code and resources for my final year project (TFG) 
 - [ ] Ensure the data is correctly indexed with time for accurate forecasting.
 - [ ] Research the use of multigrouper for handling multiple groups in the dataset.
 - [ ] Improve orginal dataset plots: Date format T-m-d, and speed, ...
+- [ ] Improve the metrics plot..
 
 ### General Questions
 - [ ] Why is tabulation used in the thesis report?
