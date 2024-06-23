@@ -14,7 +14,7 @@ This repository contains the code and resources for my final year project (TFG) 
 
     <img src="Diam_Gap_Sand_1.PNG" alt="drawing" width="500"/>
 
-    <img src="Light_Sand_2.PNG" alt="drawing" width="500"/>
+    <img src="Light_Gap_Sand_2.PNG" alt="drawing" width="500"/>
 
     <img src="No_Diam_Clay_1.PNG" alt="drawing" width="500"/>
 
