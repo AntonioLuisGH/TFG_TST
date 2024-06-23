@@ -15,7 +15,7 @@ prediction_length = 500
 # Get the absolute path of the current directory
 current_path = os.path.dirname(os.path.abspath(__file__))
 # CSV file name
-file_name = 'Sand_2.csv'
+file_name = 'Clay_2.csv'
 # Concatenate the current path with the CSV file name
 file_path = os.path.join(current_path, file_name)
 # Read the CSV file
@@ -28,28 +28,28 @@ data = df[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
 # %%
 # Data preprocessing
 
-# # Remove trend from our data
-# window_value = 50
-# for col in data.columns:
-#     data.loc[:, col] = data[col] - data[col].rolling(window=window_value).mean()
+# Remove trend from our data
+window_value = 100
+for col in data.columns:
+    data.loc[:, col] = data[col] - data[col].rolling(window=window_value).mean()
 
-# # Remove NaN values
-# index_nan = data[data.isna().any(axis=1)].index
-# data = data.dropna()
-# # Pplot nan index with
-# plt.figure(figsize=(10, 2))
-# plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
-# plt.title(f'Nan index distribution. \n Number of eliminated mesaurements: {len(index_nan)}')
-# plt.xlabel('Index')
-# plt.ylabel('Frecuency')
-# plt.yticks([])  # Ocultar etiquetas del eje y ya que no son informativas en este contexto
-# plt.grid(True)
-# plt.xlim(0, len(df))  # Establecer el límite del eje x hasta 20000
-# plt.show()
+# Remove NaN values
+index_nan = data[data.isna().any(axis=1)].index
+data = data.dropna()
+# Pplot nan index with
+plt.figure(figsize=(10, 2))
+plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
+plt.title(f'Nan index distribution. \n Number of eliminated mesaurements: {len(index_nan)}')
+plt.xlabel('Index')
+plt.ylabel('Frecuency')
+plt.yticks([])  # Ocultar etiquetas del eje y ya que no son informativas en este contexto
+plt.grid(True)
+plt.xlim(0, len(df))  # Establecer el límite del eje x hasta 20000
+plt.show()
 
-# # Smooth the signal
-# for col in data.columns:
-#     data[col] = savgol_filter(data[col], 11, 2)
+# Smooth the signal
+for col in data.columns:
+    data[col] = savgol_filter(data[col], 11, 2)
 
 # %%
 # Data normalization
@@ -99,58 +99,43 @@ dataset_train = Dataset.from_pandas(dataframe_train)
 
 
 # %% SHOWING DATA
-
-test_dataset = dataset_test
-train_dataset = dataset_train
-# Initial parameters
-start_date = "2023-01-01"  # start date in "YYYY-MM-DD" format
-frequency = '8min29s'  # frequency of observations ('D' for daily, 'M' for monthly, etc.)
-
-# Generate dates for the x-axis
-
-
-def generate_dates(start, num_periods, freq):
-    return pd.date_range(start=start, periods=num_periods, freq=freq)
-
+date_cleaned = df['Date'].drop(index=index_nan)
+train_dates = date_cleaned[:-2*prediction_length]
+test_dates = date_cleaned[:-prediction_length]
 
 # Show data
 for var in range(6):
-    # Generate dates for train and test data
-    num_periods_train = len(train_dataset[var]["target"])
-    num_periods_test = len(test_dataset[var]["target"])
 
-    train_dates = generate_dates(start_date, num_periods_train, frequency)
-    test_dates = generate_dates(start_date, num_periods_test, frequency)
-
-    # Plot full data
+    # PLOT FULL DATA
     figure, axes = plt.subplots(figsize=(12, 6))
     plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
 
     # Plot train data
-    axes.plot(train_dates, train_dataset[var]["target"], color="blue", label="Train")
+    axes.plot(train_dates, dataset_train[var]["target"], color="blue", label="Train")
     # Plot test data
-    axes.plot(test_dates[-prediction_length:], test_dataset[var]
+    axes.plot(test_dates[-prediction_length:], dataset_test[var]
               ["target"][-prediction_length:], color="red", label="Test")
 
     axes.set_title(data.columns[var])  # Set title for the plot
     axes.legend()  # Show legend
-    axes.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))  # Date format
-    figure.autofmt_xdate()  # Format dates
+    # Set x-ticks based on specified indices
+    axes.set_xticks(np.arange(0, len(dataset_test[var]
+                                     ["target"])+prediction_length, 1000))
 
-    # # Plot last segment (zoom)
-    # figure, axes = plt.subplots()
-    # plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
+    # Plot last segment (zoom)
+    figure, axes = plt.subplots()
+    plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
 
-    # # Plot train data (last 3*prediction_length)
-    # axes.plot(train_dates[-3*prediction_length:], train_dataset[var]
-    #           ["target"][-3*prediction_length:], color="blue", label="Train (zoom)")
-    # # Plot test data
-    # axes.plot(test_dates[-prediction_length:], test_dataset[var]["target"]
-    #           [-prediction_length:], color="red", label="Test (zoom)")
+    # Plot train data (last 3*prediction_length)
+    axes.plot(train_dates[-3*prediction_length:], dataset_train[var]
+              ["target"][-3*prediction_length:], color="blue", label="Train (zoom)")
+    # Plot test data
+    axes.plot(test_dates[-prediction_length:], dataset_test[var]["target"]
+              [-prediction_length:], color="red", label="Test (zoom)")
 
-    # axes.set_title(data.columns[var])  # Set title for the plot
-    # axes.legend()  # Show legend
-    # axes.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))  # Date format
-    # figure.autofmt_xdate()  # Format dates
+    axes.set_title(data.columns[var])  # Set title for the plot
+    axes.legend()  # Show legend
+    # Set x-ticks based every 1000 points
+    axes.set_xticks(np.arange(0, 4*prediction_length, 200))
 
 plt.show()
