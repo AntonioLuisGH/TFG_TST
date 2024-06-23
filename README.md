@@ -27,7 +27,7 @@ This repository contains the code and resources for my final year project (TFG) 
 - [ ] Prepare and preprocess real-world data for the model.
 - [ ] Ensure the data is correctly indexed with time for accurate forecasting.
 - [ ] Research the use of multigrouper for handling multiple groups in the dataset.
-- [ ] Prepare scripts to train the parent models.
+- [ ] Improve orginal dataset plots: Date format T-m-d, and speed, ...
 
 ### General Questions
 - [ ] Why is tabulation used in the thesis report?
