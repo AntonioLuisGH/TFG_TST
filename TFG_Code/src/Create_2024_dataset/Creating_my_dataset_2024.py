@@ -7,6 +7,7 @@ from datasets import Dataset
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+import numpy as np
 
 # prediction lenth
 prediction_length = 500
@@ -14,7 +15,7 @@ prediction_length = 500
 # Get the absolute path of the current directory
 current_path = os.path.dirname(os.path.abspath(__file__))
 # CSV file name
-file_name = 'Clay_2.csv'
+file_name = 'Sand_2.csv'
 # Concatenate the current path with the CSV file name
 file_path = os.path.join(current_path, file_name)
 # Read the CSV file
@@ -27,18 +28,28 @@ data = df[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
 # %%
 # Data preprocessing
 
-# Remove trend from our data
-window_value = 100
-for col in data.columns:
-    data.loc[:, col] = data[col] - data[col].rolling(window=window_value).mean()
+# # Remove trend from our data
+# window_value = 50
+# for col in data.columns:
+#     data.loc[:, col] = data[col] - data[col].rolling(window=window_value).mean()
 
-# Remove NaN values
-index_nan = data[data.isna().any(axis=1)].index
-data = data.dropna()
+# # Remove NaN values
+# index_nan = data[data.isna().any(axis=1)].index
+# data = data.dropna()
+# # Pplot nan index with
+# plt.figure(figsize=(10, 2))
+# plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
+# plt.title(f'Nan index distribution. \n Number of eliminated mesaurements: {len(index_nan)}')
+# plt.xlabel('Index')
+# plt.ylabel('Frecuency')
+# plt.yticks([])  # Ocultar etiquetas del eje y ya que no son informativas en este contexto
+# plt.grid(True)
+# plt.xlim(0, len(df))  # Establecer el límite del eje x hasta 20000
+# plt.show()
 
-# Smooth the signal
-for col in data.columns:
-    data[col] = savgol_filter(data[col], 11, 2)
+# # Smooth the signal
+# for col in data.columns:
+#     data[col] = savgol_filter(data[col], 11, 2)
 
 # %%
 # Data normalization

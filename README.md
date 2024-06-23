@@ -9,8 +9,18 @@ This repository contains the code and resources for my final year project (TFG) 
 - [ ] Are the MASE metrics calculated with respect to the first time series?
 - [ ] If battery voltage is discrete, does the preproscessing changes
 - [ ] Is diameter data empty in some datasets and there is a gap in others:
+- [ ] I want to show data with the real date index
+- [ ] Problems with original dataset
 
-    <img src="Problem_with_Sand_1.PNG" alt="drawing" width="500"/>
+    <img src="Diam_Gap_Sand_1.PNG" alt="drawing" width="500"/>
+
+    <img src="Light_Sand_2.PNG" alt="drawing" width="500"/>
+
+    <img src="No_Diam_Clay_1.PNG" alt="drawing" width="500"/>
+
+- [ ] Number of Nan values:
+
+    <img src="Nan_Clay_2.PNG" alt="drawing" width="500"/>
 
 ### Plot Preparation
 - [ ] Prepare plots for visualization.
@@ -20,37 +30,18 @@ This repository contains the code and resources for my final year project (TFG) 
 - [ ] Prepare scripts to train the parent models.
 
 ### General Questions
-- [ ] Why is tabulation used in the report?
+- [ ] Why is tabulation used in the thesis report?
 - [ ] Why is the bibliography ordered in a certain way? Does the order affect anything?
 - [ ] How to properly reference a figure taken from an article?
+
+### Ideas
+- [ ] Explain about training: GPU, vs CPU
+- [ ] Calculate aprox time of training
 
 ## Errors and Issues
 - [ ] Only the introduction folder is accessible.
 - [ ] Only PDF files are accessible.
 
-## Setup Instructions
-
-To set up the environment and run the code, follow these steps:
-
-1. **Install Required Libraries:**
-    ```
-    pip install gluonts
-    pip install datasets
-    pip install accelerate
-    pip install evaluate
-    ```
-2. **Mount Google Drive:**
-    ```
-    from google.colab import drive
-    drive.mount('/content/drive')
-     ```
-
-3. **Navigate to the Project Directory:**
-    ```
-    %cd /content/drive/MyDrive/TFG_TST/TFG Code/2_Transformer_Example_Multivariate
-    ```
-4. **Run the Main Script:**
-    ```
-    !python main.py
-    ```
+### Validation
+- [ ] The validation data changes by the prediction lenght
 
