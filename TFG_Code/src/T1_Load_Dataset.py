@@ -9,6 +9,7 @@ import os
 from scipy.signal import savgol_filter
 from datasets import Dataset
 from sklearn.preprocessing import MinMaxScaler
+import matplotlib.dates as mdates
 
 # %% LOAD AND PREPROCESS
 
@@ -54,32 +55,24 @@ def load_my_own_dataset(prediction_length):
 
     # Get the absolute path of the current directory
     current_path = os.path.dirname(os.path.abspath(__file__))
+    # Directory name where the CSV file is located
+    directory_name = 'Create_2024_dataset'
     # CSV file name
-    file_name = 'raw_data.csv'
-    # Concatenate the current path with the CSV file name
-    file_path = os.path.join(current_path, file_name)
+    file_name = 'Clay_2.csv'
+    # Concatenate the current path with the directory name and file name
+    file_path = os.path.join(current_path, directory_name, file_name)
     # Read the CSV file
     df = pd.read_csv(file_path, sep=";")
 
-    # Relevant variables selection
-    data = df[['luminosidad', 'temperatura',
-               'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']]
-
-    # Replace wrong measurements
-    def replace_incorrect_values(serie, lim):
-        for i in range(1, len(serie) - 1):
-            if serie[i] < lim:
-                serie[i] = serie[i - 1]
-        return serie
-
-    data['var_diam'] = replace_incorrect_values(data['var_diam'], 100)
-    data['temp_suelo'] = replace_incorrect_values(data['var_diam'], 0.6)
+    # Relevant variable selection
+    data = df[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
+               'Permittivity', 'Electroconductivity', 'Diameter']]
 
     # %%
     # Data preprocessing
 
     # Remove trend from our data
-    for col in data.columns:
+    for col in ['Diameter']:
         data[col] = data[col] - data[col].rolling(window=100).mean()
 
     # Remove NaN values
@@ -93,8 +86,8 @@ def load_my_own_dataset(prediction_length):
     # Data normalization
     scaler = MinMaxScaler()
     scaled_data = scaler.fit_transform(data)
-    data[['luminosidad', 'temperatura',
-          'humedad_rel', 'temp_suelo', 'electrocond', 'var_diam']] = scaled_data
+    data[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
+          'Permittivity', 'Electroconductivity', 'Diameter']] = scaled_data
 
     # %%
     # Data split
@@ -113,14 +106,14 @@ def load_my_own_dataset(prediction_length):
                   'feat_static_cat': [], 'feat_dynamic_real': [], 'item_id': []}
 
     # Populate the dictionaries with the corresponding data
-    for i in range(1, 7):
+    for i in range(1, 8):
 
         dict_validation['target'].append(data_validation.iloc[:, i-1].values.astype('float32'))
         dict_test['target'].append(data_test.iloc[:, i-1].values.astype('float32'))
         dict_train['target'].append(data_train.iloc[:, i-1].values.astype('float32'))
 
         for d in [dict_validation, dict_test, dict_train]:
-            d['start'].append(pd.Timestamp('2020-10-01 01:06:48'))
+            d['start'].append(pd.Timestamp('2020-01-01 00:03:47'))
             d['feat_static_cat'].append(i)
             d['feat_dynamic_real'].append(None)
             d['item_id'].append(f'T{i}')
@@ -139,26 +132,54 @@ def load_my_own_dataset(prediction_length):
 
     test_dataset = dataset_test
     train_dataset = dataset_train
+    # Initial parameters
+    start_date = "2023-01-01"  # start date in "YYYY-MM-DD" format
+    frequency = '8min30s'  # frequency of observations ('D' for daily, 'M' for monthly, etc.)
 
-    # Show data
-    for var in range(6):
+    # Generate dates for the x-axis
 
-        figure, axes = plt.subplots(figsize=(12, 6))
-        ejex = list(range(len(test_dataset[var]["target"])))
+    def generate_dates(start, num_periods, freq):
+        return pd.date_range(start=start, periods=num_periods, freq=freq)
+
+    for var in range(7):
+        # Generate dates for train and test data
+        num_periods_train = len(train_dataset[var]["target"])
+        num_periods_test = len(test_dataset[var]["target"])
+
+        train_dates = generate_dates(start_date, num_periods_train, frequency)
+        test_dates = generate_dates(start_date, num_periods_test, frequency)
+
+        # Plot full data
+        figure, axes = plt.subplots(figsize=(20, 6))
         plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
-        axes.plot(ejex[-prediction_length:], test_dataset[var]
-                  ["target"][-prediction_length:], color="red")
-        axes.plot(train_dataset[var]["target"], color="blue")
-        axes.set_title(data.columns[var])  # Set title for main data plo
 
-        # ZOOM
-        # Show last values
-        figure, axes = plt.subplots()
-        ejex = list(range(len(test_dataset[var]["target"])))
-        axes.plot(ejex[-prediction_length:], test_dataset[var]
-                  ["target"][-prediction_length:], color="red")
-        axes.plot(ejex[-3*prediction_length:-prediction_length], train_dataset[var]
-                  ["target"][-2*prediction_length:], color="blue")
-        axes.set_title(data.columns[var])
+        # Plot train data
+        axes.plot(train_dates, train_dataset[var]["target"], color="blue", label="Train")
+        # Plot test data
+        axes.plot(test_dates[-prediction_length:], test_dataset[var]
+                  ["target"][-prediction_length:], color="red", label="Test")
+
+        axes.set_title(data.columns[var])  # Set title for the plot
+        axes.legend()  # Show legend
+        axes.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))  # Date format
+        figure.autofmt_xdate()  # Format dates
+
+        # # Plot last segment (zoom)
+        # figure, axes = plt.subplots()
+        # plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
+
+        # # Plot train data (last 3*prediction_length)
+        # axes.plot(train_dates[-3*prediction_length:], train_dataset[var]
+        #           ["target"][-3*prediction_length:], color="blue", label="Train (zoom)")
+        # # Plot test data
+        # axes.plot(test_dates[-prediction_length:], test_dataset[var]["target"]
+        #           [-prediction_length:], color="red", label="Test (zoom)")
+
+        # axes.set_title(data.columns[var])  # Set title for the plot
+        # axes.legend()  # Show legend
+        # axes.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))  # Date format
+        # figure.autofmt_xdate()  # Format dates
+
+    plt.show()
 
     return dataset_validation, dataset_test, dataset_train

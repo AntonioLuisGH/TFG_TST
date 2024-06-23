@@ -35,7 +35,7 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
             # context length:
             context_length=prediction_length * 2,
             # lags value copied from 1 week before:
-            lags_sequence=lags_sequence,
+            lags_sequence=[1, 24*7],
             # we'll add 2 time features ("month of year" and "age", see further):
             num_time_features=len(time_features) + 1,
 
@@ -57,7 +57,7 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
             # context length:
             context_length=prediction_length * 2,
             # lags value copied from 1 week before:
-            lags_sequence=lags_sequence,
+            lags_sequence=[1, 24*7],
             # we'll add 5 time features ("hour_of_day", ..., and "age"):
             num_time_features=len(time_features) + 1,
 
@@ -80,7 +80,7 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
             # context length:
             context_length=prediction_length * 2,
             # lags value copied from 1 week before:
-            lags_sequence=lags_sequence,
+            lags_sequence=[1, 24*7],
             # we'll add 5 time features ("hour_of_day", ..., and "age"):
             num_time_features=len(time_features) + 1,
 
