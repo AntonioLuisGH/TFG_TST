@@ -56,7 +56,7 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
     plots_folder = "plots"
     if not os.path.exists(plots_folder):
         os.makedirs(plots_folder)
-        
+
     output_file = os.path.join(plots_folder, output_file)
     with open(output_file, 'w') as f:
         f.write("MASE\t\t\tsMAPE\n")
@@ -105,7 +105,7 @@ def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, predic
     # Configure the minor hour locator on the x-axis
     ax.xaxis.set_minor_locator(mdates.HourLocator())
 
-    # Plot the actual time series for the last '2 * prediction_length' points
+    # Plot the actual time series for the last '5 * prediction_length' points
     ax.plot(
         index[-5 * prediction_length:],
         multi_variate_test_dataset[ts_index]["target"][mv_index, -

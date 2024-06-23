@@ -91,8 +91,8 @@ def load_my_own_dataset(prediction_length):
 
     # %%
     # Data split
-    data_validation = data
-    data_test = data.iloc[:-prediction_length]
+    data_test = data
+    data_validation = data.iloc[:-prediction_length]
     data_train = data.iloc[:-2*prediction_length]
 
     # Create empty dictionaries to store the data

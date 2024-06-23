@@ -60,8 +60,8 @@ data[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
 
 # %%
 # Data split
-data_validation = data
-data_test = data.iloc[:-prediction_length]
+data_test = data
+data_validation = data.iloc[:-prediction_length]
 data_train = data.iloc[:-2*prediction_length]
 
 # Create empty dictionaries to store the data
@@ -101,7 +101,7 @@ dataset_train = Dataset.from_pandas(dataframe_train)
 # %% SHOWING DATA
 date_cleaned = df['Date'].drop(index=index_nan)
 train_dates = date_cleaned[:-2*prediction_length]
-test_dates = date_cleaned[:-prediction_length]
+validation_dates = date_cleaned[:-prediction_length]
 
 # Show data
 for var in range(6):
@@ -112,14 +112,14 @@ for var in range(6):
 
     # Plot train data
     axes.plot(train_dates, dataset_train[var]["target"], color="blue", label="Train")
-    # Plot test data
-    axes.plot(test_dates[-prediction_length:], dataset_test[var]
-              ["target"][-prediction_length:], color="red", label="Test")
+    # Plot validation data
+    axes.plot(validation_dates[-prediction_length:], dataset_validation[var]
+              ["target"][-prediction_length:], color="red", label="validation")
 
     axes.set_title(data.columns[var])  # Set title for the plot
     axes.legend()  # Show legend
     # Set x-ticks based on specified indices
-    axes.set_xticks(np.arange(0, len(dataset_test[var]
+    axes.set_xticks(np.arange(0, len(dataset_validation[var]
                                      ["target"])+prediction_length, 1000))
 
     # Plot last segment (zoom)
@@ -129,9 +129,9 @@ for var in range(6):
     # Plot train data (last 3*prediction_length)
     axes.plot(train_dates[-3*prediction_length:], dataset_train[var]
               ["target"][-3*prediction_length:], color="blue", label="Train (zoom)")
-    # Plot test data
-    axes.plot(test_dates[-prediction_length:], dataset_test[var]["target"]
-              [-prediction_length:], color="red", label="Test (zoom)")
+    # Plot validation data
+    axes.plot(validation_dates[-prediction_length:], dataset_validation[var]["target"]
+              [-prediction_length:], color="red", label="validation (zoom)")
 
     axes.set_title(data.columns[var])  # Set title for the plot
     axes.legend()  # Show legend

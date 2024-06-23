@@ -60,8 +60,8 @@ data[['luminosidad', 'temperatura',
 
 # %%
 # Data split
-data_validation = data
-data_test = data.iloc[:-prediction_length]
+data_test = data
+data_validation = data.iloc[:-prediction_length]
 data_train = data.iloc[:-2*prediction_length]
 
 # Create empty dictionaries to store the data
@@ -100,7 +100,7 @@ dataset_train = Dataset.from_pandas(dataframe_train)
 
 # %% SHOWING DATA
 
-test_dataset = dataset_test
+validation_dataset = dataset_validation
 train_dataset = dataset_train
 # Initial parameters
 start_date = "2023-01-01"  # start date in "YYYY-MM-DD" format
@@ -115,12 +115,12 @@ def generate_dates(start, num_periods, freq):
 
 # Show data
 for var in range(6):
-    # Generate dates for train and test data
+    # Generate dates for train and validation data
     num_periods_train = len(train_dataset[var]["target"])
-    num_periods_test = len(test_dataset[var]["target"])
+    num_periods_validation = len(validation_dataset[var]["target"])
 
     train_dates = generate_dates(start_date, num_periods_train, frequency)
-    test_dates = generate_dates(start_date, num_periods_test, frequency)
+    validation_dates = generate_dates(start_date, num_periods_validation, frequency)
 
     # Plot full data
     figure, axes = plt.subplots(figsize=(12, 6))
@@ -128,9 +128,9 @@ for var in range(6):
 
     # Plot train data
     axes.plot(train_dates, train_dataset[var]["target"], color="blue", label="Train")
-    # Plot test data
-    axes.plot(test_dates[-prediction_length:], test_dataset[var]
-              ["target"][-prediction_length:], color="red", label="Test")
+    # Plot validation data
+    axes.plot(validation_dates[-prediction_length:], validation_dataset[var]
+              ["target"][-prediction_length:], color="red", label="validation")
 
     axes.set_title(data.columns[var])  # Set title for the plot
     axes.legend()  # Show legend
@@ -144,9 +144,9 @@ for var in range(6):
     # # Plot train data (last 3*prediction_length)
     # axes.plot(train_dates[-3*prediction_length:], train_dataset[var]
     #           ["target"][-3*prediction_length:], color="blue", label="Train (zoom)")
-    # # Plot test data
-    # axes.plot(test_dates[-prediction_length:], test_dataset[var]["target"]
-    #           [-prediction_length:], color="red", label="Test (zoom)")
+    # # Plot validation data
+    # axes.plot(validation_dates[-prediction_length:], validation_dataset[var]["target"]
+    #           [-prediction_length:], color="red", label="validation (zoom)")
 
     # axes.set_title(data.columns[var])  # Set title for the plot
     # axes.legend()  # Show legend
