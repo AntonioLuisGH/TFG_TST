@@ -37,6 +37,7 @@ This repository contains the code and resources for my final year project (TFG) 
 ### Ideas
 - [ ] Explain about training: GPU, vs CPU
 - [ ] Calculate aprox time of training
+- [ ] It would be nice to have the frequency calculated from the values of date from csv
 
 ## Errors and Issues
 - [ ] Only the introduction folder is accessible.
