@@ -28,11 +28,15 @@
 \contentsline {subsubsection}{Encoder}{14}{subsubsection*.9}%
 \contentsline {subsubsection}{Decoder}{15}{subsubsection*.10}%
 \contentsline {section}{\numberline {2.3}Examples of Applications in Other Fields}{15}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Time series Transformer}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Overview}{17}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Enhancing Time Series Models with Transformers}{17}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}The Challenge of Quadratic Complexity}{17}{subsection.3.1.2}%
 \mbox {}\hspace *{0pt}\par 
-\contentsline {listasb}{List of Figures}{17}{section*.12}%
-\contentsline {listasb}{List of Tables}{19}{section*.14}%
-\contentsline {listasb}{List of Codes}{21}{section*.16}%
-\contentsline {listasb}{Bibliography}{23}{section*.18}%
-\contentsline {listasb}{Index}{25}{section*.20}%
-\contentsline {listasb}{Glossary}{27}{section*.22}%
+\contentsline {listasb}{List of Figures}{19}{section*.12}%
+\contentsline {listasb}{List of Tables}{21}{section*.14}%
+\contentsline {listasb}{List of Codes}{23}{section*.16}%
+\contentsline {listasb}{Bibliography}{25}{section*.18}%
+\contentsline {listasb}{Index}{27}{section*.20}%
+\contentsline {listasb}{Glossary}{29}{section*.22}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

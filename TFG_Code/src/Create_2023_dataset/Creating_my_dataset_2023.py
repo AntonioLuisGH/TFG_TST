@@ -7,6 +7,7 @@ from datasets import Dataset
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+import numpy as np
 
 # prediction lenth
 prediction_length = 500
@@ -40,16 +41,28 @@ data['temp_suelo'] = replace_incorrect_values(data['temp_suelo'], 0.6)
 # %%
 # Data preprocessing
 
-# # Remove trend from our data
-# for col in data.columns:
-#     data[col] = data[col] - data[col].rolling(window=100).mean()
+# Remove trend from our data
+for col in data.columns:
+    data[col] = data[col] - data[col].rolling(window=100).mean()
 
-# # Remove NaN values
-# data = data.dropna()
+# Remove NaN values
+index_nan = data[data.isna().any(axis=1)].index
+data = data.dropna()
 
-# # Smooth the signal
-# for col in data.columns:
-#     data[col] = savgol_filter(data[col], 11, 2)
+# Plot nan index with
+plt.figure(figsize=(10, 2))
+plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
+plt.title(f'Nan index distribution. \n Number of eliminated mesaurements: {len(index_nan)}')
+plt.xlabel('Index')
+plt.ylabel('Frecuency')
+plt.yticks([])  # Ocultar etiquetas del eje y ya que no son informativas en este contexto
+plt.grid(True)
+plt.xlim(0, len(df))  # Establecer el límite del eje x hasta 20000
+plt.show()
+
+# Smooth the signal
+for col in data.columns:
+    data[col] = savgol_filter(data[col], 11, 2)
 
 # %%
 # Data normalization

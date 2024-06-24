@@ -80,17 +80,17 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
                 f.write(f"Temperature\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 1:
                 f.write(
-                    f"Relative_humidity\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                    f"Relative_humidity\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 2:
-                f.write(f"Light\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                f.write(f"Light\t\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 3:
                 f.write(
-                    f"Soil_Temperature\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                    f"Soil_Temperature\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 4:
                 f.write(f"Permittivity\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 5:
                 f.write(
-                    f"Electroconductivity\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                    f"Electroconductivity\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 6:
                 f.write(f"Diameter\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
 

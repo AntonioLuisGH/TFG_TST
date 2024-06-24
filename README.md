@@ -20,7 +20,9 @@ This repository contains the code and resources for my final year project (TFG) 
 
 - [ ] Number of Nan values:
 
+    <img src="Nan_2023.PNG" alt="drawing" width="500"/>
     <img src="Nan_Clay_2.PNG" alt="drawing" width="500"/>
+    <img src="Nan_Clay_2_wrong.PNG" alt="drawing" width="500"/> 
 
 ### Plot Preparation
 - [ ] Prepare plots for visualization.

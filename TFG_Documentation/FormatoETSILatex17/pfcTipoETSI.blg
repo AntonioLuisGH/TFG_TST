@@ -3,6 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: pfcTipoETSI.aux
 A level-1 auxiliary file: CapituloLibroETSI/CapituloLibroETSI.aux
 A level-1 auxiliary file: CapituloTransformer/CapituloTransformer.aux
+A level-1 auxiliary file: CapituloTransformerTS/CapituloTransformerTS.aux
 The style file: amsplain.bst
 Database file #1: bibliografiaLibroETSI.bib
 Warning--I didn't find a database entry for "oppenheim"
@@ -10,7 +11,7 @@ Warning--I didn't find a database entry for "wiener"
 Warning--missing publisher in vaswani2023attention
 You've used 5 entries,
             2213 wiz_defined-function locations,
-            526 strings with 6127 characters,
+            527 strings with 6174 characters,
 and the built_in function-call counts, 3789 in all, are:
 = -- 262
 > -- 460

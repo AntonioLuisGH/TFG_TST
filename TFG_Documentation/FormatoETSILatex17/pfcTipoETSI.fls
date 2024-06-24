@@ -798,6 +798,9 @@ INPUT CapituloLibroETSI/CapituloLibroETSI.aux
 INPUT ./CapituloTransformer/CapituloTransformer.aux
 INPUT ./CapituloTransformer/CapituloTransformer.aux
 INPUT CapituloTransformer/CapituloTransformer.aux
+INPUT ./CapituloTransformerTS/CapituloTransformerTS.aux
+INPUT ./CapituloTransformerTS/CapituloTransformerTS.aux
+INPUT CapituloTransformerTS/CapituloTransformerTS.aux
 OUTPUT pfcTipoETSI.aux
 INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
@@ -930,6 +933,9 @@ INPUT ./pfcTipoETSI.toc
 INPUT ./pfcTipoETSI.toc
 INPUT pfcTipoETSI.toc
 OUTPUT pfcTipoETSI.toc
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvb8tn.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvb8tn.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvb8rn.tfm
 INPUT ./CapituloLibroETSI/CapituloLibroETSI.tex
 INPUT ./CapituloLibroETSI/CapituloLibroETSI.tex
 OUTPUT CapituloLibroETSI/CapituloLibroETSI.aux
@@ -986,7 +992,6 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/tex-gyre/ec-qtmr.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvb8tn.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvr8t.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm
 INPUT ./CapituloLibroETSI/figuras/logoESI.pdf
@@ -999,8 +1004,6 @@ INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvb8tn.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvb8rn.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvb8tn.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvb8rn.tfm
 INPUT ./CapituloLibroETSI/figuras/logoESI.pdf
 INPUT ./CapituloLibroETSI/figuras/logoESI.pdf
 INPUT ./CapituloLibroETSI/figuras/logoESI.pdf
@@ -1061,6 +1064,12 @@ INPUT ./introduccion/figuras/Transformer_architecture.pdf
 INPUT ./introduccion/figuras/Transformer_architecture.pdf
 INPUT ./introduccion/figuras/Transformer_architecture.pdf
 INPUT ./introduccion/figuras/Transformer_architecture.pdf
+INPUT ./CapituloTransformerTS/CapituloTransformerTS.tex
+INPUT ./CapituloTransformerTS/CapituloTransformerTS.tex
+OUTPUT CapituloTransformerTS/CapituloTransformerTS.aux
+INPUT ./CapituloTransformerTS/CapituloTransformerTS.tex
+INPUT ./CapituloTransformerTS/CapituloTransformerTS.tex
+INPUT CapituloTransformerTS/CapituloTransformerTS.tex
 INPUT ./pfcTipoETSI.lof
 INPUT ./pfcTipoETSI.lof
 INPUT pfcTipoETSI.lof
@@ -1087,6 +1096,9 @@ INPUT CapituloLibroETSI/CapituloLibroETSI.aux
 INPUT ./CapituloTransformer/CapituloTransformer.aux
 INPUT ./CapituloTransformer/CapituloTransformer.aux
 INPUT CapituloTransformer/CapituloTransformer.aux
+INPUT ./CapituloTransformerTS/CapituloTransformerTS.aux
+INPUT ./CapituloTransformerTS/CapituloTransformerTS.aux
+INPUT CapituloTransformerTS/CapituloTransformerTS.aux
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb

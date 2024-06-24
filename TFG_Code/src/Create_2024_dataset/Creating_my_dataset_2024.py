@@ -28,15 +28,19 @@ data = df[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
 # %%
 # Data preprocessing
 
+# Remove NaN values from original data
+index_nan = data[data.isna().any(axis=1)].index
+data = data.dropna()
+
 # Remove trend from our data
 window_value = 100
 for col in data.columns:
     data.loc[:, col] = data[col] - data[col].rolling(window=window_value).mean()
 
-# Remove NaN values
-index_nan = data[data.isna().any(axis=1)].index
+# Remove NaN values from removing the trend
 data = data.dropna()
-# Pplot nan index with
+
+# Plot nan index with
 plt.figure(figsize=(10, 2))
 plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
 plt.title(f'Nan index distribution. \n Number of eliminated mesaurements: {len(index_nan)}')

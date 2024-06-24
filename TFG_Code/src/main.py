@@ -14,7 +14,7 @@ model_variant = "Transformer"
 
 freq = "8min"
 prediction_length = 360
-num_of_epochs = 30
+num_of_epochs = 1
 
 # %% LOAD, SPLIT AND PREPROCESS DATASET
 
