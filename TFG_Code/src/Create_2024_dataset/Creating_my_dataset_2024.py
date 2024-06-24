@@ -56,6 +56,19 @@ for col in data.columns:
     data[col] = savgol_filter(data[col], 11, 2)
 
 # %%
+# Taking frequency from the dates
+dates = df['Date']
+dates = dates.drop(index_nan)
+dates = pd.to_datetime(dates)
+
+# Calculate the time intervals between consecutive dates
+intervals = dates.diff()
+
+# Calculate the average of the intervals
+mean_intervals = intervals.mean()
+print("Average of the intervals:", mean_intervals)
+
+# %%
 # Data normalization
 scaler = MinMaxScaler()
 scaled_data = scaler.fit_transform(data)

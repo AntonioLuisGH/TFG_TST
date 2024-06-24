@@ -10,11 +10,11 @@ from T5_Evaluate_Model import forecasting, see_metrics, plot
 # %% DEFINE VARIABLES
 
 # Choose between "Transformer", "Informer", "Autoformer"
-model_variant = "Transformer"
+model_variant = "Autoformer"
 
-freq = "8min"
+freq = "7min50s"
 prediction_length = 360
-num_of_epochs = 1
+num_of_epochs = 30
 
 # %% LOAD, SPLIT AND PREPROCESS DATASET
 
