@@ -18,7 +18,7 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
     # Let's also check the default time features that GluonTS provides us:
     time_features = time_features_from_frequency_str(freq)
     # we'll add these features as a scalar values
-    timestamp = pd.Period("2020-10-01 01:06:48", freq=freq)
+    timestamp = pd.Period("2020-01-01 00:03:47", freq=freq)
     timestamp_as_index = pd.PeriodIndex(data=period_array([timestamp]))
     additional_features = [
         (time_feature.__name__, time_feature(timestamp_as_index))
@@ -80,11 +80,12 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
             # context length:
             context_length=prediction_length * 2,
             # lags value copied from 1 week before:
-            lags_sequence=[1, 2, 3, 4, 180, 181, 182, 183, 184, 360, 361, 362, 363, 364],
+            lags_sequence=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 180, 181, 182, 183, 184, 185, 186,
+                           187, 188, 189, 190, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370],
             # we'll add 5 time features ("hour_of_day", ..., and "age"):
             num_time_features=len(time_features) + 1,
 
-            # informer params:
+            # autoformer params:
             dropout=0.1,
             encoder_layers=6,
             decoder_layers=4,

@@ -23,7 +23,7 @@ df = pd.read_csv(file_path, sep=";")
 
 # Relevant variable selection
 data = df[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
-           'Permittivity', 'Electroconductivity', 'Volumetric_water_content', 'Diameter']]
+           'Permittivity', 'Electroconductivity', 'Diameter']]
 
 # %%
 # Data preprocessing
@@ -40,15 +40,15 @@ for col in data.columns:
 # Remove NaN values from removing the trend
 data = data.dropna()
 
-# Plot nan index with
+# Plot nan index with Nan values
 plt.figure(figsize=(10, 2))
 plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
 plt.title(f'Nan index distribution. \n Number of eliminated mesaurements: {len(index_nan)}')
 plt.xlabel('Index')
 plt.ylabel('Frecuency')
-plt.yticks([])  # Ocultar etiquetas del eje y ya que no son informativas en este contexto
+plt.yticks([])
 plt.grid(True)
-plt.xlim(0, len(df))  # Establecer el límite del eje x hasta 20000
+plt.xlim(0, len(df))
 plt.show()
 
 # Smooth the signal
@@ -66,14 +66,14 @@ intervals = dates.diff()
 
 # Calculate the average of the intervals
 mean_intervals = intervals.mean()
-print("Average of the intervals:", mean_intervals)
+print("Average of the time intervals:", mean_intervals)
 
 # %%
 # Data normalization
 scaler = MinMaxScaler()
 scaled_data = scaler.fit_transform(data)
 data[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
-      'Permittivity', 'Electroconductivity', 'Volumetric_water_content', 'Diameter']] = scaled_data
+      'Permittivity', 'Electroconductivity', 'Diameter']] = scaled_data
 
 # %%
 # Data split
@@ -92,7 +92,7 @@ dict_train = {'start': [], 'target': [],
               'feat_static_cat': [], 'feat_dynamic_real': [], 'item_id': []}
 
 # Populate the dictionaries with the corresponding data
-for i in range(1, 9):
+for i in range(1, 8):
 
     dict_validation['target'].append(data_validation.iloc[:, i-1].values.astype('float32'))
     dict_test['target'].append(data_test.iloc[:, i-1].values.astype('float32'))
@@ -116,43 +116,57 @@ dataset_train = Dataset.from_pandas(dataframe_train)
 
 
 # %% SHOWING DATA
-date_cleaned = df['Date'].drop(index=index_nan)
-train_dates = date_cleaned[:-2*prediction_length]
-validation_dates = date_cleaned[:-prediction_length]
 
-# Show data
-for var in range(6):
+test_dataset = dataset_test
+train_dataset = dataset_train
+# Initial parameters
+start_date = "2020-01-01"  # start date in "YYYY-MM-DD" format
+frequency = '7min50s'  # frequency of observations ('D' for daily, 'M' for monthly, etc.)
 
-    # PLOT FULL DATA
-    figure, axes = plt.subplots(figsize=(12, 6))
+# Generate dates for the x-axis
+
+
+def generate_dates(start, num_periods, freq):
+    return pd.date_range(start=start, periods=num_periods, freq=freq)
+
+
+for var in range(7):
+    # Generate dates for train and test data
+    num_periods_train = len(train_dataset[var]["target"])
+    num_periods_test = len(test_dataset[var]["target"])
+
+    train_dates = generate_dates(start_date, num_periods_train, frequency)
+    test_dates = generate_dates(start_date, num_periods_test, frequency)
+
+    # Plot full data
+    figure, axes = plt.subplots(figsize=(20, 6))
     plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
 
     # Plot train data
-    axes.plot(train_dates, dataset_train[var]["target"], color="blue", label="Train")
-    # Plot validation data
-    axes.plot(validation_dates[-prediction_length:], dataset_validation[var]
-              ["target"][-prediction_length:], color="red", label="validation")
+    axes.plot(train_dates, train_dataset[var]["target"], color="blue", label="Train")
+    # Plot test data
+    axes.plot(test_dates[-2*prediction_length:], test_dataset[var]
+              ["target"][-2*prediction_length:], color="red", label="Test")
 
     axes.set_title(data.columns[var])  # Set title for the plot
     axes.legend()  # Show legend
-    # Set x-ticks based on specified indices
-    axes.set_xticks(np.arange(0, len(dataset_validation[var]
-                                     ["target"])+prediction_length, 1000))
+    axes.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))  # Date format
+    figure.autofmt_xdate()  # Format dates
 
     # Plot last segment (zoom)
     figure, axes = plt.subplots()
     plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
 
     # Plot train data (last 3*prediction_length)
-    axes.plot(train_dates[-3*prediction_length:], dataset_train[var]
+    axes.plot(train_dates[-3*prediction_length:], train_dataset[var]
               ["target"][-3*prediction_length:], color="blue", label="Train (zoom)")
-    # Plot validation data
-    axes.plot(validation_dates[-prediction_length:], dataset_validation[var]["target"]
-              [-prediction_length:], color="red", label="validation (zoom)")
+    # Plot test data
+    axes.plot(test_dates[-2*prediction_length:], test_dataset[var]["target"]
+              [-2*prediction_length:], color="red", label="Test (zoom)")
 
     axes.set_title(data.columns[var])  # Set title for the plot
     axes.legend()  # Show legend
-    # Set x-ticks based every 1000 points
-    axes.set_xticks(np.arange(0, 4*prediction_length, 200))
+    axes.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))  # Date format
+    figure.autofmt_xdate()  # Format dates
 
 plt.show()

@@ -74,12 +74,37 @@ def load_my_own_dataset(prediction_length):
     for col in data.columns:
         data[col] = data[col] - data[col].rolling(window=100).mean()
 
-    # Remove NaN values
+    # Remove NaN values from removing the trend
     data = data.dropna()
+
+    # Plot nan index with Nan values
+    plt.figure(figsize=(10, 2))
+    plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
+    plt.title(f'Nan index distribution. \n Number of eliminated mesaurements: {len(index_nan)}')
+    plt.xlabel('Index')
+    plt.ylabel('Frecuency')
+    plt.yticks([])
+    plt.grid(True)
+    plt.xlim(0, len(df))
+    plt.show()
+
 
     # Smooth the signal
     for col in data.columns:
         data[col] = savgol_filter(data[col], 11, 2)
+
+    # %%
+    # Taking frequency from the dates
+    dates = df['Date']
+    dates = dates.drop(index_nan)
+    dates = pd.to_datetime(dates)
+
+    # Calculate the time intervals between consecutive dates
+    intervals = dates.diff()
+
+    # Calculate the average of the intervals
+    mean_intervals = intervals.mean()
+    print("Average of the time intervals:", mean_intervals)
 
     # %%
     # Data normalization
@@ -132,8 +157,8 @@ def load_my_own_dataset(prediction_length):
     test_dataset = dataset_test
     train_dataset = dataset_train
     # Initial parameters
-    start_date = "2023-01-01"  # start date in "YYYY-MM-DD" format
-    frequency = '8min30s'  # frequency of observations ('D' for daily, 'M' for monthly, etc.)
+    start_date = "2020-01-01"  # start date in "YYYY-MM-DD" format
+    frequency = '7min50s'  # frequency of observations ('D' for daily, 'M' for monthly, etc.)
 
     # Generate dates for the x-axis
 
