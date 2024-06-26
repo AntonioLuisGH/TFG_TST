@@ -48,4 +48,5 @@ This repository contains the code and resources for my final year project (TFG) 
 
 ### Validation
 - [ ] The validation data changes by the prediction lenght
+- [ ] MSE and MAE may be better.
 

@@ -59,7 +59,7 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
 
     output_file = os.path.join(plots_folder, output_file)
     with open(output_file, 'w') as f:
-        f.write("\t\tMASE\t\t\tsMAPE\n")
+        f.write("\t\t\t\t\tMASE\t\t\tsMAPE\n")
 
         for item_id, ts in enumerate(test_dataset):
             training_data = ts["target"][:-prediction_length]
@@ -77,12 +77,13 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
             )
             smape_metrics.append(smape["smape"])
             if item_id == 0:
-                f.write(f"Temperature\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                f.write(
+                    f"Temperature\t\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 1:
                 f.write(
                     f"Relative_humidity\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 2:
-                f.write(f"Light\t\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                f.write(f"Light\t\t\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 3:
                 f.write(
                     f"Soil_Temperature\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
@@ -92,7 +93,7 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
                 f.write(
                     f"Electroconductivity\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
             elif item_id == 6:
-                f.write(f"Diameter\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                f.write(f"Diameter\t\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
 
     plt.scatter(mase_metrics, smape_metrics, alpha=0.2)
     plt.xlabel("MASE")
