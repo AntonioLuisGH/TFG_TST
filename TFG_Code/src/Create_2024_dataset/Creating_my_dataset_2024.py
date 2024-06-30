@@ -138,7 +138,7 @@ for var in range(7):
     test_dates = generate_dates(start_date, num_periods_test, frequency)
 
     # Plot full data
-    figure, axes = plt.subplots(figsize=(20, 6))
+    figure, axes = plt.subplots(figsize=(20, 6.4))
     plt.setp(axes.get_xticklabels(), rotation=30, horizontalalignment='right')
 
     # Plot train data
