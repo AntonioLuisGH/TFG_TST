@@ -67,7 +67,7 @@ def load_my_own_dataset(prediction_length):
 
     # Relevant variable selection
     data = df[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
-            'Permittivity', 'Electroconductivity', 'Diameter']]
+               'Permittivity', 'Electroconductivity', 'Diameter']]
 
     # %%
     # Data preprocessing
@@ -87,7 +87,8 @@ def load_my_own_dataset(prediction_length):
     # Plot nan index with Nan values
     plt.figure(figsize=(10, 2))
     plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
-    plt.title(f'Nan index distribution. \n Number of eliminated mesaurements: {len(index_nan)}')
+    plt.title(
+        f'Nan index distribution. \n Number of eliminated mesaurements: {len(index_nan)}')
     plt.xlabel('Index')
     plt.ylabel('Frecuency')
     plt.yticks([])
@@ -117,7 +118,7 @@ def load_my_own_dataset(prediction_length):
     scaler = MinMaxScaler()
     scaled_data = scaler.fit_transform(data)
     data[['Temperature', 'Relative_humidity', 'Light', 'Soil_temperature',
-        'Permittivity', 'Electroconductivity', 'Diameter']] = scaled_data
+          'Permittivity', 'Electroconductivity', 'Diameter']] = scaled_data
 
     # %%
     # Data split
@@ -127,13 +128,13 @@ def load_my_own_dataset(prediction_length):
 
     # Create empty dictionaries to store the data
     dict_validation = {'start': [], 'target': [],
-                    'feat_static_cat': [], 'feat_dynamic_real': [], 'item_id': []}
+                       'feat_static_cat': [], 'feat_dynamic_real': [], 'item_id': []}
 
     dict_test = {'start': [], 'target': [],
-                'feat_static_cat': [], 'feat_dynamic_real': [], 'item_id': []}
+                 'feat_static_cat': [], 'feat_dynamic_real': [], 'item_id': []}
 
     dict_train = {'start': [], 'target': [],
-                'feat_static_cat': [], 'feat_dynamic_real': [], 'item_id': []}
+                  'feat_static_cat': [], 'feat_dynamic_real': [], 'item_id': []}
 
     # Populate the dictionaries with the corresponding data
     for i in range(1, 8):
@@ -157,7 +158,6 @@ def load_my_own_dataset(prediction_length):
     dataset_validation = Dataset.from_pandas(dataframe_validation)
     dataset_test = Dataset.from_pandas(dataframe_test)
     dataset_train = Dataset.from_pandas(dataframe_train)
-
 
     # %% SHOWING DATA
 
@@ -188,9 +188,9 @@ def load_my_own_dataset(prediction_length):
         axes.plot(train_dates, train_dataset[var]["target"], color="blue", label="Train")
         # Plot test data
         axes.plot(test_dates[-2*prediction_length:], test_dataset[var]
-                ["target"][-2*prediction_length:], color="red", label="Test")
+                  ["target"][-2*prediction_length:], color="red", label="Test")
 
-        axes.set_title(data.columns[var])  # Set title for the plot
+        axes.set_title(data.columns[var].replace('_', ' '))  # Set title for the plot
         axes.legend()  # Show legend
         axes.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))  # Date format
         figure.autofmt_xdate()  # Format dates
@@ -201,12 +201,12 @@ def load_my_own_dataset(prediction_length):
 
         # Plot train data (last 3*prediction_length)
         axes.plot(train_dates[-3*prediction_length:], train_dataset[var]
-                ["target"][-3*prediction_length:], color="blue", label="Train (zoom)")
+                  ["target"][-3*prediction_length:], color="blue", label="Train (zoom)")
         # Plot test data
         axes.plot(test_dates[-2*prediction_length:], test_dataset[var]["target"]
-                [-2*prediction_length:], color="red", label="Test (zoom)")
+                  [-2*prediction_length:], color="red", label="Test (zoom)")
 
-        axes.set_title(data.columns[var])  # Set title for the plot
+        axes.set_title(data.columns[var].replace('_', ' '))  # Set title for the plot
         axes.legend()  # Show legend
         axes.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))  # Date format
         figure.autofmt_xdate()  # Format dates

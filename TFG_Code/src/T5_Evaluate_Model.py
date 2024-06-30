@@ -1,6 +1,6 @@
 import matplotlib.dates as mdates
 from evaluate import load
-from gluonts.time_feature import get_seasonality
+import math
 from accelerate import Accelerator
 import matplotlib.pyplot as plt
 import numpy as np
@@ -44,13 +44,13 @@ def forecasting(model, test_dataloader):
 # %%
 
 def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, title):
-    mase_metric = load("evaluate-metric/mase")
-    smape_metric = load("evaluate-metric/smape")
+    mse_metric = load("evaluate-metric/mse")
+    r_squared_metric = load("evaluate-metric/r_squared")
 
     forecast_median = np.median(forecasts, 1).squeeze(0).T
 
-    mase_metrics = []
-    smape_metrics = []
+    mse_metrics = []
+    r_squared_metrics = []
 
     # Create the 'plots' folder if it doesn't exist
     plots_folder = "plots"
@@ -59,45 +59,44 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
 
     output_file = os.path.join(plots_folder, output_file)
     with open(output_file, 'w') as f:
-        f.write("\t\t\t\t\tMASE\t\t\tsMAPE\n")
+        f.write("\t\t\t\t\tMSE\t\t\t\tR_squared\n")
 
         for item_id, ts in enumerate(test_dataset):
-            training_data = ts["target"][:-prediction_length]
-            ground_truth = ts["target"][-prediction_length:]
-            mase = mase_metric.compute(
-                predictions=forecast_median[item_id],
-                references=np.array(ground_truth),
-                training=np.array(training_data),
-                periodicity=get_seasonality(freq))
-            mase_metrics.append(mase["mase"])
 
-            smape = smape_metric.compute(
+            ground_truth = ts["target"][-prediction_length:]
+
+            mse = mse_metric.compute(
                 predictions=forecast_median[item_id],
-                references=np.array(ground_truth),
-            )
-            smape_metrics.append(smape["smape"])
+                references=np.array(ground_truth))
+            mse['mse'] = 10*10 * math.log10(mse['mse'])
+
+            r_squared = r_squared_metric.compute(
+                predictions=forecast_median[item_id],
+                references=np.array(ground_truth))
+
             if item_id == 0:
                 f.write(
-                    f"Temperature\t\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                    f"Temperature\t\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 1:
                 f.write(
-                    f"Relative_humidity\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                    f"Relative_humidity\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 2:
-                f.write(f"Light\t\t\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                f.write(f"Light\t\t\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 3:
                 f.write(
-                    f"Soil_Temperature\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                    f"Soil_Temperature\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 4:
-                f.write(f"Permittivity\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                f.write(f"Temperature\t\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 5:
                 f.write(
-                    f"Electroconductivity\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                    f"Electroconductivity\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 6:
-                f.write(f"Diameter\t\t\t{mase_metrics[-1]:.6f}\t\t{smape_metrics[-1]:.6f}\n")
+                f.write(
+                    f"Diameter\t\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
 
-    plt.scatter(mase_metrics, smape_metrics, alpha=0.2)
-    plt.xlabel("MASE")
-    plt.ylabel("sMAPE")
+    plt.scatter(mse_metrics, r_squared_metrics, alpha=0.2)
+    plt.xlabel("mse")
+    plt.ylabel("r_squared")
 
     # Save the image in the 'plots' folder
     filename = os.path.join(plots_folder, title.replace(" ", "_") + ".png")
@@ -149,7 +148,7 @@ def plot(forecasts, ts_index, mv_index, multi_variate_test_dataset, freq, predic
         label="+/- 1-std",
     )
     ax.legend()
-    ax.set_title(title)
+    ax.set_title(title.replace("_", " "))
     fig.autofmt_xdate()
 
     # Create the 'plots' folder if it doesn't exist
