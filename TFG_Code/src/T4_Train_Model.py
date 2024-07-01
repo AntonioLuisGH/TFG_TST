@@ -3,6 +3,7 @@ from torch.optim import AdamW
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import time
 
 
 def train_model(num_of_epochs, model, train_dataloader, title):
@@ -23,6 +24,10 @@ def train_model(num_of_epochs, model, train_dataloader, title):
     )
 
     model.train()
+
+    # Record start time
+    start_time = time.time()
+
     for epoch in range(epochs):
         for idx, batch in enumerate(train_dataloader):
             optimizer.zero_grad()
@@ -50,6 +55,22 @@ def train_model(num_of_epochs, model, train_dataloader, title):
             loss_history.append(loss.item())
             if idx % 100 == 0:
                 print(loss.item())
+
+    # Calculate and print training time
+    end_time = time.time()
+    training_time = end_time - start_time
+    print(f"\nTraining time: {training_time:.2f} seconds\n")
+
+    # Create the 'plots' folder if it doesn't exist
+    plots_folder = "plots"
+    if not os.path.exists(plots_folder):
+        os.makedirs(plots_folder)
+
+    output_file = os.path.join(plots_folder, "training_time.txt")
+
+    # Save training time in a text file
+    with open(output_file, "w") as f:
+        f.write(f"Training time for '{title}': {training_time:.2f} seconds")
 
     # view training
     loss_history = np.array(loss_history).reshape(-1)

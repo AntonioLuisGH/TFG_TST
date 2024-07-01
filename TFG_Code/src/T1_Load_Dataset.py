@@ -110,8 +110,8 @@ def load_my_own_dataset(prediction_length):
     intervals = dates.diff()
 
     # Calculate the average of the intervals
-    mean_intervals = intervals.mean()
-    print("Average of the time intervals:", mean_intervals)
+    sampling_period = intervals.mean()
+    print("\nAverage of the sampling period:\n", sampling_period)
 
     # %%
     # Data normalization
@@ -165,7 +165,7 @@ def load_my_own_dataset(prediction_length):
     train_dataset = dataset_train
     # Initial parameters
     start_date = "2020-01-01"  # start date in "YYYY-MM-DD" format
-    frequency = '7min50s'  # frequency of observations ('D' for daily, 'M' for monthly, etc.)
+    frequency = '7min52s'  # frequency of observations ('D' for daily, 'M' for monthly, etc.)
 
     # Generate dates for the x-axis
 

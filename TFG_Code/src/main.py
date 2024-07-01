@@ -14,7 +14,7 @@ model_variant = "Transformer"
 
 freq = "7min52s"
 prediction_length = 183
-num_of_epochs = 2
+num_of_epochs = 20
 
 # %% LOAD, SPLIT AND PREPROCESS DATASET
 
@@ -38,7 +38,7 @@ train_dataloader = create_train_dataloader(
     config=model.config,
     freq=freq,
     data=multi_variate_train_dataset,
-    batch_size=128,
+    batch_size=32,
     num_batches_per_epoch=100,
     num_workers=2,
 )
