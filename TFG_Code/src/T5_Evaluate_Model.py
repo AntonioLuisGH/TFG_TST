@@ -68,7 +68,7 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
             mse = mse_metric.compute(
                 predictions=forecast_median[item_id],
                 references=np.array(ground_truth))
-            mse['mse'] = 10*10 * math.log10(mse['mse'])
+            mse['mse'] = 10 * math.log10(mse['mse'])
 
             r_squared = r_squared_metric.compute(
                 predictions=forecast_median[item_id],

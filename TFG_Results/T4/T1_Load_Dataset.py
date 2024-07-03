@@ -144,7 +144,7 @@ def load_my_own_dataset(prediction_length):
         dict_train['target'].append(data_train.iloc[:, i-1].values.astype('float32'))
 
         for d in [dict_validation, dict_test, dict_train]:
-            d['start'].append(pd.Timestamp('2020-01-01 00:03:47'))
+            d['start'].append(pd.Timestamp('2022-01-01 13:14:26'))
             d['feat_static_cat'].append(i)
             d['feat_dynamic_real'].append(None)
             d['item_id'].append(f'T{i}')
@@ -164,7 +164,7 @@ def load_my_own_dataset(prediction_length):
     test_dataset = dataset_test
     train_dataset = dataset_train
     # Initial parameters
-    start_date = "2020-01-01"  # start date in "YYYY-MM-DD" format
+    start_date = "2022-01-01"  # start date in "YYYY-MM-DD" format
     frequency = '7min52s'  # frequency of observations ('D' for daily, 'M' for monthly, etc.)
 
     # Generate dates for the x-axis

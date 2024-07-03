@@ -13,17 +13,10 @@ import pandas as pd
 
 def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant, freq, prediction_length):
 
-    # Let's use the default lags provided by GluonTS for the given frequency:
+    # Default lags provided by GluonTS for the given frequency:
     lags_sequence = get_lags_for_frequency(freq)
-    # Let's also check the default time features that GluonTS provides us:
+    # Default time features that GluonTS provides us:
     time_features = time_features_from_frequency_str(freq)
-    # we'll add these features as a scalar values
-    timestamp = pd.Period("2020-01-01 00:03:47", freq=freq)
-    timestamp_as_index = pd.PeriodIndex(data=period_array([timestamp]))
-    additional_features = [
-        (time_feature.__name__, time_feature(timestamp_as_index))
-        for time_feature in time_features
-    ]
 
     if (model_variant == "Transformer"):
         # Define config
@@ -33,7 +26,7 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
             # prediction length:
             prediction_length=prediction_length,
             # context length:
-            context_length=prediction_length * 3,
+            context_length=1098,
             # lags value copied from ... week before:
             lags_sequence=[1],
             # we'll add 2 time features ("month of year" and "age", see further):
