@@ -1,1 +1,0 @@
-Training time for 'Transformer_Loss': 336.09 seconds
