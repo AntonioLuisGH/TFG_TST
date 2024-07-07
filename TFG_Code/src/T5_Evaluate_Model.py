@@ -59,7 +59,7 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
 
     output_file = os.path.join(plots_folder, output_file)
     with open(output_file, 'w') as f:
-        f.write("\t\t\t\t\tMSE\t\t\t\tR_squared\n")
+        f.write("\t\t\tMSE\t\t\tR_squared\n")
 
         for item_id, ts in enumerate(test_dataset):
 
@@ -76,23 +76,23 @@ def see_metrics(forecasts, test_dataset, prediction_length, freq, output_file, t
 
             if item_id == 0:
                 f.write(
-                    f"Temperature\t\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
+                    f"Temperature\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 1:
                 f.write(
                     f"Relative_humidity\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 2:
-                f.write(f"Light\t\t\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
+                f.write(f"Light\t\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 3:
                 f.write(
                     f"Soil_Temperature\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 4:
-                f.write(f"Temperature\t\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
+                f.write(f"Permittivity\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 5:
                 f.write(
                     f"Electroconductivity\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
             elif item_id == 6:
                 f.write(
-                    f"Diameter\t\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
+                    f"Diameter\t\t{mse['mse']:.6f}\t\t{r_squared:.6f}\n")
 
     plt.scatter(mse_metrics, r_squared_metrics, alpha=0.2)
     plt.xlabel("mse")

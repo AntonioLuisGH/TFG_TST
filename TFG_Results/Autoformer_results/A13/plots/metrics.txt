@@ -1,0 +1,8 @@
+			MSE			R_squared
+Temperature		-21.640310		0.825000
+Relative_humidity	-18.478137		0.719000
+Light			-11.334029		-0.285000
+Soil_Temperature	-21.414602		-0.920000
+Permittivity		-19.208040		-25.206000
+Electroconductivity	-28.349324		-17.023000
+Diameter		-22.354287		0.738000

@@ -3,6 +3,6 @@ Temperature			-23.8986738		0.896000
 Relative_humidity	-21.3973215		0.857000
 Light				-15.6045673		0.519000
 Soil_Temperature	-11.8342948		-16.427000
-Temperature			-21.1324292		-15.825000
+Permittivity			-21.1324292		-15.825000
 Electroconductivity	-23.9283909		-48.878000
 Diameter			-24.1355409		0.826000
