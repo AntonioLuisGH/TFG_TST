@@ -38,7 +38,7 @@ train_dataloader = create_train_dataloader(
     config=model.config,
     freq=freq,
     data=multi_variate_train_dataset,
-    batch_size=256,
+    batch_size=128,
     num_batches_per_epoch=100,
     num_workers=2,
 )

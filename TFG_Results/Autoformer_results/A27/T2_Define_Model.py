@@ -74,15 +74,15 @@ def define_my_model(num_of_variates, multi_variate_train_dataset, model_variant,
             # context length:
             context_length=prediction_length * 2,
             # lags value copied from 1 week before:
-            lags_sequence=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 180, 181, 182, 183, 184, 185, 186,
-                           187, 188, 189, 190, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370],
+            lags_sequence=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 183+1, 183+2,
+                           183+3, 183+4, 183+5, 183+6, 183+7, 183+8, 183+9, 183+10],
             # we'll add 5 time features ("hour_of_day", ..., and "age"):
             num_time_features=len(time_features) + 1,
 
             # autoformer params:
             dropout=0.1,
-            encoder_layers=6,
-            decoder_layers=4,
+            encoder_layers=4,
+            decoder_layers=6,
             # project input from num_of_variates*len(lags_sequence)+num_time_features to:
             d_model=64,
         )

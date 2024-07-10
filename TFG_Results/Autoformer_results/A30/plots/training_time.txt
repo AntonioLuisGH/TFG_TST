@@ -1,0 +1,1 @@
+Training time for 'Autoformer_Loss': 2585.23 seconds
