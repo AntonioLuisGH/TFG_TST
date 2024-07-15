@@ -1,0 +1,1 @@
+Training time for 'Informer_Loss': 154.30 seconds

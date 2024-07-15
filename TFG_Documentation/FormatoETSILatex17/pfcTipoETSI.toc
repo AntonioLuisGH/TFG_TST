@@ -1,42 +1,34 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {listasf}{Índice Abreviado}{I}{section*.1}%
-\contentsline {chapter}{\numberline {1}Ejemplo de Capítulo}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Ejemplo de sección}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Ejemplo de subsección}{2}{subsection.1.1.1}%
-\contentsline {section}{\numberline {1.2}Elementos del texto}{2}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Figuras}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Tablas}{2}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Listados de programas}{2}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Ecuaciones}{4}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}Ejemplos}{5}{subsection.1.2.5}%
-\contentsline {subsection}{\numberline {1.2.6}Lemas, teoremas y similares}{5}{subsection.1.2.6}%
-\contentsline {subsection}{\numberline {1.2.7}Resúmenes}{5}{subsection.1.2.7}%
-\contentsline {subsection}{Resumen de Teoría de Información}{5}{section*.8}%
-\contentsline {section}{\numberline {1.3}Una nueva sección después del resumen}{7}{section.1.3}%
-\contentsline {subchapter}{Problemas Propuestos}{9}{section.1.3}%
-\contentsline {subchapter}{Anexo}{11}{soln.1}%
-\contentsline {section}{\numberline {1.4}Señales: definición y clasificación}{11}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Clasificación de señales}{11}{subsection.1.4.1}%
-\contentsline {chapter}{\numberline {2}Transformer}{13}{chapter.2}%
-\contentsline {section}{\numberline {2.1}What is a Transformer?}{13}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Origin and Basic Concept of Transformers}{13}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Fundamental Differences from Other Neural Models}{13}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Basic Structure of a Transformer}{14}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Attention Mechanism}{14}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Encoder and Decoder}{14}{subsection.2.2.2}%
-\contentsline {subsubsection}{Encoder}{14}{subsubsection*.9}%
-\contentsline {subsubsection}{Decoder}{15}{subsubsection*.10}%
-\contentsline {section}{\numberline {2.3}Examples of Applications in Other Fields}{15}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Time series Transformer}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Overview}{17}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Enhancing Time Series Models with Transformers}{17}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}The Challenge of Quadratic Complexity}{17}{subsection.3.1.2}%
+\contentsline {chapter}{\numberline {1}History and State of the Art}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Evolution of Methods for Time Series Forecasting}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Traditional Methods}{1}{subsection.1.1.1}%
+\contentsline {subsubsection}{Autoregressive and Moving Average Models (AR, MA, ARMA)}{1}{subsubsection*.5}%
+\contentsline {subsubsection}{Autoregressive Integrated Moving Average (ARIMA) and SARIMA Models}{2}{subsubsection*.6}%
+\contentsline {subsubsection}{SARIMAX models}{3}{subsubsection*.7}%
+\contentsline {subsubsection}{VARMA and VARMAX Models}{3}{subsubsection*.8}%
+\contentsline {subsubsection}{Simple Exponential Smoothing (SES) and Holt-Winters Exponential Smoothing (HWES)}{3}{subsubsection*.9}%
+\contentsline {subsubsection}{ARCH and GARCH Models}{4}{subsubsection*.10}%
+\contentsline {subsection}{\numberline {1.1.2}Modern Methods}{5}{subsection.1.1.2}%
+\contentsline {subsubsection}{Recurrent Neural Networks (RNNs) and LSTMs}{5}{subsubsection*.11}%
+\contentsline {subsubsection}{Residual Networks (ResNet) and Fully Convolutional Networks (FCN)}{6}{subsubsection*.12}%
+\contentsline {subsubsection}{ROCKET}{6}{subsubsection*.13}%
+\contentsline {subsubsection}{Matrix Factorization with DTW}{7}{subsubsection*.14}%
+\contentsline {subsubsection}{XGBoost}{7}{subsubsection*.15}%
+\contentsline {subsubsection}{Prophet}{7}{subsubsection*.16}%
+\contentsline {subsubsection}{TS-Chief and HIVE-COTE}{8}{subsubsection*.17}%
+\contentsline {section}{\numberline {1.2}Evolution of Transformers as a Method for Time Series Forecasting}{8}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Introduction of Transformers (2017)}{8}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Application to Time Series (2019)}{8}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Enhancements and New Variants (2020)}{9}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Further Innovations (2021 - 2022)}{9}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Recent Advances (2023 - 2024)}{10}{subsection.1.2.5}%
 \mbox {}\hspace *{0pt}\par 
-\contentsline {listasb}{List of Figures}{19}{section*.12}%
-\contentsline {listasb}{List of Tables}{21}{section*.14}%
-\contentsline {listasb}{List of Codes}{23}{section*.16}%
-\contentsline {listasb}{Bibliography}{25}{section*.18}%
-\contentsline {listasb}{Index}{27}{section*.20}%
-\contentsline {listasb}{Glossary}{29}{section*.22}%
+\contentsline {listasb}{List of Figures}{11}{section*.18}%
+\contentsline {listasb}{List of Tables}{13}{section*.20}%
+\contentsline {listasb}{List of Codes}{15}{section*.22}%
+\contentsline {listasb}{Bibliography}{17}{section*.24}%
+\contentsline {listasb}{Index}{19}{section*.26}%
+\contentsline {listasb}{Glossary}{19}{section*.27}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

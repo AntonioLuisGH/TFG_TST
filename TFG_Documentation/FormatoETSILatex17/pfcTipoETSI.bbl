@@ -5,21 +5,81 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{brown2020language}
-Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel~M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei, \emph{Language models are few-shot learners}, 2020.
+\bibitem{bringmann2023dynamicdynamictimewarping}
+Karl Bringmann, Nick Fischer, Ivor van~der Hoog, Evangelos Kipouridis, Tomasz Kociumaka, and Eva Rotenberg, \emph{Dynamic dynamic time warping}, 2023.
 
-\bibitem{devlin2019bert}
-Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova, \emph{Bert: Pre-training of deep bidirectional transformers for language understanding}, 2019.
+\bibitem{Cao_Huang_Yao_Wang_He_Wang_2023}
+Haizhou Cao, Zhenhao Huang, Tiechui Yao, Jue Wang, Hui He, and Yangang Wang, \emph{Inparformer: Evolutionary decomposition transformers with interactive parallel attention for long-term time series forecasting}, Proceedings of the AAAI Conference on Artificial Intelligence \textbf{37} (2023), no.~6, 6906--6915.
 
-\bibitem{dosovitskiy2021image}
-Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby, \emph{An image is worth 16x16 words: Transformers for image recognition at scale}, 2021.
+\bibitem{Chen_2016}
+Tianqi Chen and Carlos Guestrin, \emph{Xgboost: A scalable tree boosting system}, Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD ’16, ACM, August 2016.
 
-\bibitem{Jumper2021HighlyAP}
-John~M. Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov, Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin Ž{\'i}dek, Anna Potapenko, Alex Bridgland, Clemens Meyer, Simon A~A Kohl, Andy Ballard, Andrew Cowie, Bernardino Romera-Paredes, Stanislav Nikolov, Rishub Jain, Jonas Adler, Trevor Back, Stig Petersen, David Reiman, Ellen Clancy, Michal Zielinski, Martin Steinegger, Michalina Pacholska, Tamas Berghammer, Sebastian Bodenstein, David Silver, Oriol Vinyals, Andrew~W. Senior, Koray Kavukcuoglu, Pushmeet Kohli, and Demis Hassabis, \emph{Highly accurate protein structure prediction with alphafold}, Nature \textbf{596} (2021), 583 -- 589.
+\bibitem{Dempster_2020}
+Angus Dempster, François Petitjean, and Geoffrey~I. Webb, \emph{Rocket: exceptionally fast and accurate time series classification using random convolutional kernels}, Data Mining and Knowledge Discovery \textbf{34} (2020), no.~5, 1454–1495.
+
+\bibitem{LSTM}
+Sepp Hochreiter and Jürgen Schmidhuber, \emph{Long short-term memory}, Neural computation \textbf{9} (1997), 1735--80.
+
+\bibitem{ilbert2024samformerunlockingpotentialtransformers}
+Romain Ilbert, Ambroise Odonnat, Vasilii Feofanov, Aladin Virmaux, Giuseppe Paolo, Themis Palpanas, and Ievgen Redko, \emph{Samformer: Unlocking the potential of transformers in time series forecasting with sharpness-aware minimization and channel-wise attention}, 2024.
+
+\bibitem{kitaev2020reformerefficienttransformer}
+Nikita Kitaev, Łukasz Kaiser, and Anselm Levskaya, \emph{Reformer: The efficient transformer}, 2020.
+
+\bibitem{li2020enhancinglocalitybreakingmemory}
+Shiyang Li, Xiaoyong Jin, Yao Xuan, Xiyou Zhou, Wenhu Chen, Yu-Xiang Wang, and Xifeng Yan, \emph{Enhancing the locality and breaking the memory bottleneck of transformer on time series forecasting}, 2020.
+
+\bibitem{lim2020temporalfusiontransformersinterpretable}
+Bryan Lim, Sercan~O. Arik, Nicolas Loeff, and Tomas Pfister, \emph{Temporal fusion transformers for interpretable multi-horizon time series forecasting}, 2020.
+
+\bibitem{7837946}
+Jason Lines, Sarah Taylor, and Anthony Bagnall, \emph{Hive-cote: The hierarchical vote collective of transformation-based ensembles for time series classification}, 2016 IEEE 16th International Conference on Data Mining (ICDM), 2016, pp.~1041--1046.
+
+\bibitem{liu2022pyraformer}
+Shizhan Liu, Hang Yu, Cong Liao, Jianguo Li, Weiyao Lin, Alex~X. Liu, and Schahram Dustdar, \emph{Pyraformer: Low-complexity pyramidal attention for long-range time series modeling and forecasting}, International Conference on Learning Representations, 2022.
+
+\bibitem{long2015fullyconvolutionalnetworkssemantic}
+Jonathan Long, Evan Shelhamer, and Trevor Darrell, \emph{Fully convolutional networks for semantic segmentation}, 2015.
+
+\bibitem{nie2023timeseriesworth64}
+Yuqi Nie, Nam~H. Nguyen, Phanwadee Sinthong, and Jayant Kalagnanam, \emph{A time series is worth 64 words: Long-term forecasting with transformers}, 2023.
+
+\bibitem{Shifaz_2020}
+Ahmed Shifaz, Charlotte Pelletier, François Petitjean, and Geoffrey~I. Webb, \emph{Ts-chief: a scalable and accurate forest algorithm for time series classification}, Data Mining and Knowledge Discovery \textbf{34} (2020), no.~3, 742–775.
+
+\bibitem{sun2023stecformerspatiotemporalencodingcascaded}
+Zheng Sun, Yi~Wei, Wenxiao Jia, and Long Yu, \emph{Stecformer: Spatio-temporal encoding cascaded transformer for multivariate long-term time series forecasting}, 2023.
+
+\bibitem{prophet}
+Sean~J. Taylor and Benjamin Letham, \emph{Prophet: Forecasting at scale}, \url{https://facebook.github.io/prophet/}, 2017, Accedido: 14 de julio de 2024.
 
 \bibitem{vaswani2023attention}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin, \emph{Attention is all you need}, 2023.
+
+\bibitem{wang2021crossformerversatilevisiontransformer}
+Wenxiao Wang, Lu~Yao, Long Chen, Binbin Lin, Deng Cai, Xiaofei He, and Wei Liu, \emph{Crossformer: A versatile vision transformer hinging on cross-scale attention}, 2021.
+
+\bibitem{wen2023transformerstimeseriessurvey}
+Qingsong Wen, Tian Zhou, Chaoli Zhang, Weiqi Chen, Ziqing Ma, Junchi Yan, and Liang Sun, \emph{Transformers in time series: A survey}, 2023.
+
+\bibitem{woo2022etsformerexponentialsmoothingtransformers}
+Gerald Woo, Chenghao Liu, Doyen Sahoo, Akshat Kumar, and Steven Hoi, \emph{Etsformer: Exponential smoothing transformers for time-series forecasting}, 2022.
+
+\bibitem{wu2022autoformerdecompositiontransformersautocorrelation}
+Haixu Wu, Jiehui Xu, Jianmin Wang, and Mingsheng Long, \emph{Autoformer: Decomposition transformers with auto-correlation for long-term series forecasting}, 2022.
+
+\bibitem{xue2024cardchannelalignedrobust}
+Wang Xue, Tian Zhou, Qingsong Wen, Jinyang Gao, Bolin Ding, and Rong Jin, \emph{Card: Channel aligned robust blend transformer for time series forecasting}, 2024.
+
+\bibitem{zhang2023sageformerseriesawareframeworklongterm}
+Zhenwei Zhang, Linghang Meng, and Yuantao Gu, \emph{Sageformer: Series-aware framework for long-term multivariate time series forecasting}, 2023.
+
+\bibitem{zhou2021informerefficienttransformerlong}
+Haoyi Zhou, Shanghang Zhang, Jieqi Peng, Shuai Zhang, Jianxin Li, Hui Xiong, and Wancai Zhang, \emph{Informer: Beyond efficient transformer for long sequence time-series forecasting}, 2021.
+
+\bibitem{zhou2022fedformerfrequencyenhanceddecomposed}
+Tian Zhou, Ziqing Ma, Qingsong Wen, Xue Wang, Liang Sun, and Rong Jin, \emph{Fedformer: Frequency enhanced decomposed transformer for long-term series forecasting}, 2022.
 
 \end{thebibliography}

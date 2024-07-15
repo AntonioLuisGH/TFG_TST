@@ -1,53 +1,49 @@
 This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: pfcTipoETSI.aux
-A level-1 auxiliary file: CapituloLibroETSI/CapituloLibroETSI.aux
-A level-1 auxiliary file: CapituloTransformer/CapituloTransformer.aux
-A level-1 auxiliary file: CapituloTransformerTS/CapituloTransformerTS.aux
+A level-1 auxiliary file: 2_ChapterHistory/2_ChapterHistory.aux
 The style file: amsplain.bst
 Database file #1: bibliografiaLibroETSI.bib
-Warning--I didn't find a database entry for "oppenheim"
-Warning--I didn't find a database entry for "wiener"
 Warning--missing publisher in vaswani2023attention
-You've used 5 entries,
+You've used 25 entries,
             2213 wiz_defined-function locations,
-            527 strings with 6174 characters,
-and the built_in function-call counts, 3789 in all, are:
-= -- 262
-> -- 460
+            612 strings with 9137 characters,
+and the built_in function-call counts, 8901 in all, are:
+= -- 691
+> -- 675
 < -- 0
-+ -- 184
-- -- 178
-* -- 409
-:= -- 690
-add.period$ -- 5
-call.type$ -- 5
-change.case$ -- 104
++ -- 266
+- -- 240
+* -- 730
+:= -- 1480
+add.period$ -- 25
+call.type$ -- 25
+change.case$ -- 195
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 56
-empty$ -- 127
-format.name$ -- 178
-if$ -- 673
+cite$ -- 26
+duplicate$ -- 295
+empty$ -- 650
+format.name$ -- 240
+if$ -- 1793
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 8
-newline$ -- 25
-num.names$ -- 10
-pop$ -- 131
+int.to.str$ -- 25
+missing$ -- 34
+newline$ -- 85
+num.names$ -- 50
+pop$ -- 329
 preamble$ -- 1
-purify$ -- 99
+purify$ -- 170
 quote$ -- 0
-skip$ -- 33
+skip$ -- 189
 stack$ -- 0
-substring$ -- 53
-swap$ -- 6
+substring$ -- 270
+swap$ -- 36
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 18
+type$ -- 98
 warning$ -- 1
-while$ -- 11
-width$ -- 6
-write$ -- 45
-(There were 3 warnings)
+while$ -- 56
+width$ -- 27
+write$ -- 199
+(There was 1 warning)

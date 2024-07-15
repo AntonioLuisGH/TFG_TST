@@ -7,18 +7,7 @@
 
 %% Saved with string encoding Unicode (UTF-8) 
 
-
-@webpage{koma,
-  author        = {Markus Kohm},
-  date-added    = {2012-07-24 15:53:27 +0000},
-  date-modified = {2012-07-24 15:56:46 +0000},
-  month         = {May},
-  title         = {A bundle of versatile classes and packages},
-  url           = {http://www.ctan.org/pkg/koma-script/},
-  urldate       = {http://www.ctan.org/pkg/koma-script/},
-  year          = {2012}
-}
-
+% - Transformers
 @book{vaswani2023attention,
   title         = {Attention Is All You Need},
   author        = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
@@ -28,6 +17,289 @@
   primaryclass  = {id='cs.CL' full_name='Computation and Language' is_active=True alt_name='cmp-lg' in_archive='cs' is_general=False description='Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.'}
 }
 
+%%% --- Modern methods
+% - LSTM
+@article{LSTM,
+  author  = {Hochreiter, Sepp and Schmidhuber, Jürgen},
+  year    = {1997},
+  month   = {12},
+  pages   = {1735-80},
+  title   = {Long Short-term Memory},
+  volume  = {9},
+  journal = {Neural computation},
+  doi     = {10.1162/neco.1997.9.8.1735}
+}
+
+% - FCN
+@misc{long2015fullyconvolutionalnetworkssemantic,
+  title         = {Fully Convolutional Networks for Semantic Segmentation},
+  author        = {Jonathan Long and Evan Shelhamer and Trevor Darrell},
+  year          = {2015},
+  eprint        = {1411.4038},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  url           = {https://arxiv.org/abs/1411.4038}
+}
+
+% - ROCKET
+@article{Dempster_2020,
+  title     = {ROCKET: exceptionally fast and accurate time series classification using random convolutional kernels},
+  volume    = {34},
+  issn      = {1573-756X},
+  url       = {http://dx.doi.org/10.1007/s10618-020-00701-z},
+  doi       = {10.1007/s10618-020-00701-z},
+  number    = {5},
+  journal   = {Data Mining and Knowledge Discovery},
+  publisher = {Springer Science and Business Media LLC},
+  author    = {Dempster, Angus and Petitjean, François and Webb, Geoffrey I.},
+  year      = {2020},
+  month     = jul,
+  pages     = {1454–1495}
+}
+
+% - Dynamic Time Wrapping
+@misc{bringmann2023dynamicdynamictimewarping,
+  title         = {Dynamic Dynamic Time Warping},
+  author        = {Karl Bringmann and Nick Fischer and Ivor van der Hoog and Evangelos Kipouridis and Tomasz Kociumaka and Eva Rotenberg},
+  year          = {2023},
+  eprint        = {2310.18128},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CG},
+  url           = {https://arxiv.org/abs/2310.18128}
+}
+
+% - XGBoost
+@inproceedings{Chen_2016,
+  series     = {KDD ’16},
+  title      = {XGBoost: A Scalable Tree Boosting System},
+  url        = {http://dx.doi.org/10.1145/2939672.2939785},
+  doi        = {10.1145/2939672.2939785},
+  booktitle  = {Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  publisher  = {ACM},
+  author     = {Chen, Tianqi and Guestrin, Carlos},
+  year       = {2016},
+  month      = aug,
+  collection = {KDD ’16}
+}
+
+
+% - Prophet
+@misc{prophet,
+  author       = {Sean J. Taylor and Benjamin Letham},
+  title        = {Prophet: Forecasting at Scale},
+  year         = {2017},
+  howpublished = {\url{https://facebook.github.io/prophet/}},
+  note         = {Accedido: 14 de julio de 2024}
+}
+
+% - TS-CHIEF
+@article{Shifaz_2020,
+  title     = {TS-CHIEF: a scalable and accurate forest algorithm for time series classification},
+  volume    = {34},
+  issn      = {1573-756X},
+  url       = {http://dx.doi.org/10.1007/s10618-020-00679-8},
+  doi       = {10.1007/s10618-020-00679-8},
+  number    = {3},
+  journal   = {Data Mining and Knowledge Discovery},
+  publisher = {Springer Science and Business Media LLC},
+  author    = {Shifaz, Ahmed and Pelletier, Charlotte and Petitjean, François and Webb, Geoffrey I.},
+  year      = {2020},
+  month     = mar,
+  pages     = {742–775}
+}
+
+% - HIVE-COTE
+@inproceedings{7837946,
+  author    = {Lines, Jason and Taylor, Sarah and Bagnall, Anthony},
+  booktitle = {2016 IEEE 16th International Conference on Data Mining (ICDM)},
+  title     = {HIVE-COTE: The Hierarchical Vote Collective of Transformation-Based Ensembles for Time Series Classification},
+  year      = {2016},
+  volume    = {},
+  number    = {},
+  pages     = {1041-1046},
+  keywords  = {Time series analysis;Machine learning;Machine learning algorithms;Training;Classification algorithms;Prediction algorithms;Dictionaries;time series classification;time series;ensemble classifiers;deep learning},
+  doi       = {10.1109/ICDM.2016.0133}
+}
+
+%%% --- Evolution of Transformers
+% - Survey
+@misc{wen2023transformerstimeseriessurvey,
+  title         = {Transformers in Time Series: A Survey},
+  author        = {Qingsong Wen and Tian Zhou and Chaoli Zhang and Weiqi Chen and Ziqing Ma and Junchi Yan and Liang Sun},
+  year          = {2023},
+  eprint        = {2202.07125},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2202.07125}
+}
+
+% - Temporal Fusion Transformers
+@misc{lim2020temporalfusiontransformersinterpretable,
+  title         = {Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting},
+  author        = {Bryan Lim and Sercan O. Arik and Nicolas Loeff and Tomas Pfister},
+  year          = {2020},
+  eprint        = {1912.09363},
+  archiveprefix = {arXiv},
+  primaryclass  = {stat.ML},
+  url           = {https://arxiv.org/abs/1912.09363}
+}
+
+% - Informers
+@misc{zhou2021informerefficienttransformerlong,
+  title         = {Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting},
+  author        = {Haoyi Zhou and Shanghang Zhang and Jieqi Peng and Shuai Zhang and Jianxin Li and Hui Xiong and Wancai Zhang},
+  year          = {2021},
+  eprint        = {2012.07436},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2012.07436}
+}
+
+% - LongFormer
+@misc{li2020enhancinglocalitybreakingmemory,
+  title         = {Enhancing the Locality and Breaking the Memory Bottleneck of Transformer on Time Series Forecasting},
+  author        = {Shiyang Li and Xiaoyong Jin and Yao Xuan and Xiyou Zhou and Wenhu Chen and Yu-Xiang Wang and Xifeng Yan},
+  year          = {2020},
+  eprint        = {1907.00235},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/1907.00235}
+}
+
+% -  Reformer
+@misc{kitaev2020reformerefficienttransformer,
+  title         = {Reformer: The Efficient Transformer},
+  author        = {Nikita Kitaev and Łukasz Kaiser and Anselm Levskaya},
+  year          = {2020},
+  eprint        = {2001.04451},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2001.04451}
+}
+
+% - Autoformers
+@misc{wu2022autoformerdecompositiontransformersautocorrelation,
+  title         = {Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting},
+  author        = {Haixu Wu and Jiehui Xu and Jianmin Wang and Mingsheng Long},
+  year          = {2022},
+  eprint        = {2106.13008},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2106.13008}
+}
+
+% - FEDformer
+@misc{zhou2022fedformerfrequencyenhanceddecomposed,
+  title         = {FEDformer: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting},
+  author        = {Tian Zhou and Ziqing Ma and Qingsong Wen and Xue Wang and Liang Sun and Rong Jin},
+  year          = {2022},
+  eprint        = {2201.12740},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2201.12740}
+}
+
+% - Pyraformer
+@inproceedings{liu2022pyraformer,
+  title     = {Pyraformer: Low-Complexity Pyramidal Attention for Long-Range Time Series Modeling and Forecasting},
+  author    = {Shizhan Liu and Hang Yu and Cong Liao and Jianguo Li and Weiyao Lin and Alex X. Liu and Schahram Dustdar},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2022},
+  url       = {https://openreview.net/forum?id=0EXmFzUn5I}
+}
+
+% - ETSformer
+@misc{woo2022etsformerexponentialsmoothingtransformers,
+  title         = {ETSformer: Exponential Smoothing Transformers for Time-series Forecasting},
+  author        = {Gerald Woo and Chenghao Liu and Doyen Sahoo and Akshat Kumar and Steven Hoi},
+  year          = {2022},
+  eprint        = {2202.01381},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2202.01381}
+}
+
+% - Crossformer
+@misc{wang2021crossformerversatilevisiontransformer,
+  title         = {CrossFormer: A Versatile Vision Transformer Hinging on Cross-scale Attention},
+  author        = {Wenxiao Wang and Lu Yao and Long Chen and Binbin Lin and Deng Cai and Xiaofei He and Wei Liu},
+  year          = {2021},
+  eprint        = {2108.00154},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2108.00154}
+}
+
+% - PatchTST
+@misc{nie2023timeseriesworth64,
+  title         = {A Time Series is Worth 64 Words: Long-term Forecasting with Transformers},
+  author        = {Yuqi Nie and Nam H. Nguyen and Phanwadee Sinthong and Jayant Kalagnanam},
+  year          = {2023},
+  eprint        = {2211.14730},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2211.14730}
+}
+
+% - CARD
+@misc{xue2024cardchannelalignedrobust,
+  title         = {CARD: Channel Aligned Robust Blend Transformer for Time Series Forecasting},
+  author        = {Wang Xue and Tian Zhou and Qingsong Wen and Jinyang Gao and Bolin Ding and Rong Jin},
+  year          = {2024},
+  eprint        = {2305.12095},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2305.12095}
+}
+
+% - Sageformer
+@misc{zhang2023sageformerseriesawareframeworklongterm,
+  title         = {SageFormer: Series-Aware Framework for Long-term Multivariate Time Series Forecasting},
+  author        = {Zhenwei Zhang and Linghang Meng and Yuantao Gu},
+  year          = {2023},
+  eprint        = {2307.01616},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2307.01616}
+}
+
+% - InParformer
+@article{Cao_Huang_Yao_Wang_He_Wang_2023,
+  title   = {InParformer: Evolutionary Decomposition Transformers with Interactive Parallel Attention for Long-Term Time Series Forecasting},
+  volume  = {37},
+  url     = {https://ojs.aaai.org/index.php/AAAI/article/view/25845},
+  doi     = {10.1609/aaai.v37i6.25845},
+  number  = {6},
+  journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  author  = {Cao, Haizhou and Huang, Zhenhao and Yao, Tiechui and Wang, Jue and He, Hui and Wang, Yangang},
+  year    = {2023},
+  month   = {Jun.},
+  pages   = {6906-6915}
+}
+
+% - Stecformer
+@misc{sun2023stecformerspatiotemporalencodingcascaded,
+  title         = {Stecformer: Spatio-temporal Encoding Cascaded Transformer for Multivariate Long-term Time Series Forecasting},
+  author        = {Zheng Sun and Yi Wei and Wenxiao Jia and Long Yu},
+  year          = {2023},
+  eprint        = {2305.16370},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2305.16370}
+}
+
+% - SAMformer
+@misc{ilbert2024samformerunlockingpotentialtransformers,
+  title         = {SAMformer: Unlocking the Potential of Transformers in Time Series Forecasting with Sharpness-Aware Minimization and Channel-Wise Attention},
+  author        = {Romain Ilbert and Ambroise Odonnat and Vasilii Feofanov and Aladin Virmaux and Giuseppe Paolo and Themis Palpanas and Ievgen Redko},
+  year          = {2024},
+  eprint        = {2402.10198},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2402.10198}
+}
+
+% - BERT
 @misc{devlin2019bert,
   title         = {BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding},
   author        = {Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova},
@@ -37,6 +309,7 @@
   primaryclass  = {id='cs.CL' full_name='Computation and Language' is_active=True alt_name='cmp-lg' in_archive='cs' is_general=False description='Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.'}
 }
 
+% - Language Models
 @misc{brown2020language,
   title         = {Language Models are Few-Shot Learners},
   author        = {Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie Subbiah and Jared Kaplan and Prafulla Dhariwal and Arvind Neelakantan and Pranav Shyam and Girish Sastry and Amanda Askell and Sandhini Agarwal and Ariel Herbert-Voss and Gretchen Krueger and Tom Henighan and Rewon Child and Aditya Ramesh and Daniel M. Ziegler and Jeffrey Wu and Clemens Winter and Christopher Hesse and Mark Chen and Eric Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess and Jack Clark and Christopher Berner and Sam McCandlish and Alec Radford and Ilya Sutskever and Dario Amodei},
@@ -46,6 +319,7 @@
   primaryclass  = {id='cs.CL' full_name='Computation and Language' is_active=True alt_name='cmp-lg' in_archive='cs' is_general=False description='Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.'}
 }
 
+% - Transformers for Image Recognition
 @misc{dosovitskiy2021image,
   title         = {An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale},
   author        = {Alexey Dosovitskiy and Lucas Beyer and Alexander Kolesnikov and Dirk Weissenborn and Xiaohua Zhai and Thomas Unterthiner and Mostafa Dehghani and Matthias Minderer and Georg Heigold and Sylvain Gelly and Jakob Uszkoreit and Neil Houlsby},
@@ -55,6 +329,7 @@
   primaryclass  = {id='cs.CV' full_name='Computer Vision and Pattern Recognition' is_active=True alt_name=None in_archive='cs' is_general=False description='Covers image processing, computer vision, pattern recognition, and scene understanding. Roughly includes material in ACM Subject Classes I.2.10, I.4, and I.5.'}
 }
 
+% - Protein structure prediction
 @article{Jumper2021HighlyAP,
   title   = {Highly accurate protein structure prediction with AlphaFold},
   author  = {John M. Jumper and Richard Evans and Alexander Pritzel and Tim Green and Michael Figurnov and Olaf Ronneberger and Kathryn Tunyasuvunakool and Russ Bates and Augustin Ž{\'i}dek and Anna Potapenko and Alex Bridgland and Clemens Meyer and Simon A A Kohl and Andy Ballard and Andrew Cowie and Bernardino Romera-Paredes and Stanislav Nikolov and Rishub Jain and Jonas Adler and Trevor Back and Stig Petersen and David Reiman and Ellen Clancy and Michal Zielinski and Martin Steinegger and Michalina Pacholska and Tamas Berghammer and Sebastian Bodenstein and David Silver and Oriol Vinyals and Andrew W. Senior and Koray Kavukcuoglu and Pushmeet Kohli and Demis Hassabis},
