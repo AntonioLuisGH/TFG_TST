@@ -1,4 +1,19 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The Transformer - model architecture}}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Scaled Dot-Product Attention}}{15}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Scaled Dot-Product Attention}}{16}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Illustration of Iterated Multi-Step (IMS) Forecasting}}{17}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Illustration of Direct Multi-Step (DMS) Forecasting}}{17}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of embedding of time series xi from the temporal space (left) into the pairwise space (right). In this example, a pair of time series (x1, x2) is projected into the pairwise space as a vector x12 described by p = 3 basic metrics: x12 = [d1(x1, x2), d2(x1, x2), d3(x1, x2)] T, from "Multiple Metric Learning for large margin kNN Classification of time series" \cite {inproceedings}}}{18}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces The input representation of a Time Series Transformer, from Informer (Zhou, et al., 2019)\cite {zhou2021informerefficienttransformerlong}}}{19}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Ilustration of Probabilistic Forecasting}}{20}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Vanilla self attention vs ProbSparse attention, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{21}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces The illustration of ProbSparse Attention, from Informer (Zhou, et al., 2019)\cite {zhou2021informerefficienttransformerlong}}}{22}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Autoformer architecture. The encoder eliminates the long-term trend-cyclical part by series decomposition blocks (\textcolor {blue}{blue} blocks) and focuses on seasonal patterns modeling. The decoder accumulates the trend part extracted from hidden variables progressively. The past seasonal information from encoder is utilized by the encoder-decoder Auto-Correlation (center \textcolor [rgb]{0.15,0.7,0.15}{green} block in decoder), from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{23}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Vanilla self attention vs Autocorrelation mechanism, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{24}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Attention weights computation in frequency domain using FFT, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{24}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Aggregation by time delay, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{25}{figure.caption.42}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

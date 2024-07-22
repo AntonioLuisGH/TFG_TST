@@ -10,7 +10,9 @@ Time series forecasting is a fundamental discipline in various fields such as ec
 \subsection{Traditional Methods}
 
 Traditional time series forecasting methods have been the cornerstone of predictive analytics for decades. These methods typically rely on well-established statistical principles to analyze historical data and make future predictions based on observed patterns and relationships. A common feature of traditional methods is their emphasis on linear relationships and the assumption that historical patterns will persist into the future. They are grounded in mathematical theories and formulas, providing a structured and straightforward approach to forecasting. This simplicity contributes to their ease of interpretation, making it easier for practitioners to understand and communicate results.
+
 Moreover, traditional methods often assume that the time series data is stationary, meaning its statistical properties, such as mean and variance, do not change over time. As a result, techniques within these methods frequently involve transforming non-stationary data into a stationary format. They focus on capturing dependencies between current and past values of the time series, often through lagged values, and incorporate mechanisms to handle seasonality and trends, adjusting for periodic fluctuations and long-term movements in the data. Parameter estimation is a key aspect, with these methods typically involving the calculation of a set number of parameters based on historical data.
+\vspace{10pt}
 
 \subsubsection{Autoregressive and Moving Average Models (AR, MA, ARMA)}
 
@@ -51,6 +53,7 @@ where:
     \item \( \theta_j \) are the moving average coefficients.
     \item \( \epsilon_t \) is the error term in time \( t \).
 \end{itemize}
+\vspace{10pt}
 
 \subsubsection{Autoregressive Integrated Moving Average (ARIMA) and SARIMA Models}
 
@@ -86,6 +89,7 @@ where:
     \item \( \Theta_l \) are the seasonal moving average coefficients.
     \item \( \epsilon_t \) is the error term at time \( t \).
 \end{itemize}
+\vspace{10pt}
 
 \subsubsection{SARIMAX models}
 
@@ -102,6 +106,7 @@ where:
     \item \( X_{i,t} \) are the exogenous variables at time \( t \).
     \item \( \beta_i \) are the coefficients of the exogenous variables.
 \end{itemize}
+\vspace{10pt}
 
 \subsubsection{VARMA and VARMAX Models}
 
@@ -116,10 +121,12 @@ where:
     \item \( \Theta_i \) are moving average coefficient matrices.
     \item \( \epsilon_t \) is a vector of error terms at time \( t \).
 \end{itemize}
+\vspace{10pt}
 
 \subsubsection{Simple Exponential Smoothing (SES) and Holt-Winters Exponential Smoothing (HWES)}
 
 Simple Exponential Smoothing (SES) and Holt-Winters Exponential Smoothing (HWES) are time series forecasting methods that use exponential smoothing techniques to capture patterns in the data. These methods are especially useful for time series with trend and seasonality components.
+\vspace{10pt}
 
 Simple Exponential Smoothing (SES) is a forecasting technique that assigns exponentially decreasing weights to past observations. The general formula for SES is:
 \[
@@ -136,26 +143,25 @@ where:
 Holt-Winters Exponential Smoothing (HWES) is an extension of SES that incorporates trend and seasonality components. There are two main variants of the Holt-Winters method: additive and multiplicative.
 
 The Additive Method is suitable for time series with constant seasonality over time. The equations of the additive method are:
+\begin{itemize}
+    \item Level:
+    \[
+    L_t = \alpha (Y_t - S_{t-m}) + (1-\alpha)(L_{t-1} + T_{t-1})
+    \]
+    \item Trend:
+    \[
+    T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}
+    \]
+    \item Seasonality:
+    \[
+    S_t = \gamma (Y_t - L_t) + (1-\gamma) S_{t-m}
+    \]
+    \item Forecast:
+    \[
+    \hat{Y}_{t+h} = L_t + h T_t + S_{t+h-m(k+1)}
+    \]
+\end{itemize}
 
-Level:
-\[
-L_t = \alpha (Y_t - S_{t-m}) + (1-\alpha)(L_{t-1} + T_{t-1})
-\]
-
-Trend:
-\[
-T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}
-\]
-
-Seasonality:
-\[
-S_t = \gamma (Y_t - L_t) + (1-\gamma) S_{t-m}
-\]
-
-Forecast:
-\[
-\hat{Y}_{t+h} = L_t + h T_t + S_{t+h-m(k+1)}
-\]
 where:
 \begin{itemize}
     \item \( L_t \) is the level at time \( t \).
@@ -168,29 +174,30 @@ where:
 
 The Multiplicative Method is suitable for time series with seasonality that varies proportionally with the level of the series. The equations of the multiplicative method are:
 
-Level:
-\[
-L_t = \alpha \frac{Y_t}{S_{t-m}} + (1-\alpha)(L_{t-1} + T_{t-1})
-\]
-
-Trend:
-\[
-T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}
-\]
-
-Seasonality:
-\[
-S_t = \gamma \frac{Y_t}{L_t} + (1-\gamma) S_{t-m}
-\]
-
-Forecast:
-\[
-\hat{Y}_{t+h} = (L_t + h T_t) S_{t+h-m(k+1)}
-\]
+\begin{itemize}
+    \item Level:
+    \[
+    L_t = \alpha \frac{Y_t}{S_{t-m}} + (1-\alpha)(L_{t-1} + T_{t-1})
+    \]
+    \item Trend:
+    \[
+    T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}
+    \]
+    \item Seasonality:
+    \[
+    S_t = \gamma \frac{Y_t}{L_t} + (1-\gamma) S_{t-m}
+    \]
+    \item Forecast:
+    \[
+    \hat{Y}_{t+h} = (L_t + h T_t) S_{t+h-m(k+1)}
+    \]
+\end{itemize}
+\vspace{10pt}
 
 \subsubsection{ARCH and GARCH Models}
 
 ARCH (Autoregressive Conditional Heteroskedasticity) and GARCH (Generalized ARCH) models are widely used in financial time series analysis, where the volatility of the data can change over time. These models are especially useful for capturing conditional variability in financial data, such as stock prices or exchange rates.
+\vspace{10pt}
 
 The ARCH model, proposed by Robert Engle in 1982, models the conditional variance of a time series as a function of past errors. The general structure of an ARCH(p) model can be expressed as follows:
 \[
@@ -241,15 +248,13 @@ Modern methods rely heavily on data-driven techniques, utilizing vast amounts of
 
 \subsubsection{Recurrent Neural Networks (RNNs) and LSTMs}
 Recurrent Neural Networks (RNN) and their Long Short-Term Memory (LSTM) variants have revolutionized the field of time series forecasting. These deep learning techniques are capable of capturing long-term dependencies in data, which makes them especially useful for this type of task.
-
-RNNs were introduced in the 1980s as an extension of traditional neural networks, designed to process sequences of data. Unlike feedforward networks, RNNs have recurrent connections that allow information to persist. This means that they can use their internal memory to process sequences of inputs, which is crucial for tasks where temporal context is important.
 \vspace{10pt}
 
-\textbf{RNNs} are used in a variety of time series applications, such as stock price forecasting, energy demand, and weather data analysis. However, traditional RNNs have limitations when it comes to capturing long-term dependencies due to the gradient fading problem.
+\textbf{RNNs} were introduced in the 1980s as an extension of traditional neural networks, designed to process sequences of data. Unlike feedforward networks, RNNs have recurrent connections that allow information to persist. This means that they can use their internal memory to process sequences of inputs, which is crucial for tasks where temporal context is important.
+RNNs are used in a variety of time series applications, such as stock price forecasting, energy demand, and weather data analysis. However, traditional RNNs have limitations when it comes to capturing long-term dependencies due to the gradient fading problem.
+\vspace{10pt}
 
-To overcome the limitations of traditional RNNs, Sepp Hochreiter and Jürgen Schmidhuber proposed \textbf{LSTMs} in 1997\cite{LSTM}. LSTMs are a variant of RNNs that include a memory architecture designed to handle long-term dependencies more efficiently. The key to LSTMs is their structure of memory cells, which can maintain and update information over many time steps.
-
-LSTMs are composed of memory cells that have three gates: the input gate, the forget gate, and the output gate. These gates control the flow of information in and out of the memory cell, allowing the network to remember or ignore information as needed.
+To overcome the limitations of traditional RNNs, Sepp Hochreiter and Jürgen Schmidhuber proposed \textbf{LSTMs} in 1997\cite{LSTM}. LSTMs are a variant of RNNs that include a memory architecture designed to handle long-term dependencies more efficiently. The key to LSTMs is their structure of memory cells, which can maintain and update information over many time steps. LSTMs are composed of memory cells that have three gates: the input gate, the forget gate, and the output gate. These gates control the flow of information in and out of the memory cell, allowing the network to remember or ignore information as needed.
 
 LSTMs have proven to be extremely effective in time series forecasting. They are used in applications such as traffic forecasting, financial data anomaly detection, and sales forecasting. Thanks to their ability to handle long-term dependencies, LSTMs outperform traditional RNNs in many time series tasks.
 \vspace{10pt}
@@ -335,11 +340,13 @@ TS-Chief\cite{Shifaz_2020} and HIVE-COTE\cite{7837946} are advanced time series 
 
 \section{Evolution of Transformers as a Method for Time Series Forecasting}
 
-The advent of Transformer models has revolutionized various fields of artificial intelligence, particularly natural language processing (NLP). Introduced by Vaswani et al. in 2017, the original Transformer architecture demonstrated unprecedented capabilities in handling sequential data, leading to significant advancements in machine translation, text generation, and more. However, the potential of Transformers extends far beyond NLP, finding promising applications in the domain of time series forecasting.
-Traditional methods for time series forecasting, such as ARIMA and exponential smoothing, have been effective but often struggle with capturing complex patterns and long-range dependencies in data.
-The application of Transformers to time series forecasting began to gain traction around 2019, with researchers exploring how the self-attention mechanism could be leveraged to model temporal dependencies more effectively. Since then, a variety of Transformer-based models have been proposed, each addressing specific challenges associated with time series data, such as scalability, interpretability, and handling of seasonality and trends. Much of this information is compiled in the article “Transformers in Time Series: A Survey”\cite{wen2023transformerstimeseriessurvey}, which provides a comprehensive overview of the evolution of Transformers in time series analysis.
+The advent of Transformer models has revolutionized various fields of artificial intelligence, particularly natural language processing (NLP). Introduced by Vaswani et al. in 2017\cite{vaswani2023attention}, the original Transformer architecture demonstrated unprecedented capabilities in handling sequential data, leading to significant advancements in machine translation, text generation, and more. 
 
-This section delves into the evolution of Transformers in the context of time series forecasting. We will explore the chronological development of key Transformer variants, highlighting their unique contributions and innovations. From the Temporal Fusion Transformer (TFT) to recent advancements like Crossformer and PatchTST, this section provides a comprehensive overview of how Transformers have been adapted and enhanced to meet the demands of time series forecasting.
+Initially, some researchers concluded that Transformers might not be well-suited for time series forecasting. For instance, the article “Are Transformers Effective for Time Series Forecasting?”\cite{zeng2022transformerseffectivetimeseries} argues that simpler models, like the one-layer linear model LTSF-Linear, often outperform Transformer-based models in this specific task. The authors suggest that the permutation-invariant nature of the self-attention mechanism in Transformers can lead to a loss of temporal information, which is crucial for time series forecasting.
+
+However, this perspective has been evolving with the development of new models and advancements in the field. The application of Transformers to time series forecasting began to gain traction around 2019, with researchers exploring how the self-attention mechanism could be leveraged to model temporal dependencies more effectively. Since then, a variety of Transformer-based models have been proposed, each addressing specific challenges associated with time series data, such as scalability, interpretability, and handling of seasonality and trends. Much of this information is compiled in the article “Transformers in Time Series: A Survey”\cite{wen2023transformerstimeseriessurvey}, which provides a comprehensive overview of the evolution of Transformers in time series analysis.
+
+This section delves into the evolution of Transformers in the context of time series forecasting. We will explore the chronological development of key Transformer variants, highlighting their unique contributions and innovations. From the Original Transformer to recent advancements like Crossformer and PatchTST, this section provides a comprehensive overview of how Transformers have been adapted and enhanced to meet the demands of time series forecasting.
 
 \subsection{Introduction of Transformers (2017)}
 
@@ -395,7 +402,7 @@ Introduced by Vaswani et al.\cite{vaswani2023attention}, the original Transforme
 \noindent\textbf
 {Pyraformer}
 
-Developed by Liu et al.\cite{liu2022pyraformer}, Pyraformer aims to improve the efficiency of Transformers for long sequence time series forecasting. It introduces a pyramidal attention mechanism that progressively reduces the sequence length at each layer, focusing on the most relevant parts of the input. This hierarchical approach allows Pyraformer to handle long sequences more efficiently, reducing computational complexity while maintaining high forecasting accuracy.
+\noindent Developed by Liu et al.\cite{liu2022pyraformer}, Pyraformer aims to improve the efficiency of Transformers for long sequence time series forecasting. It introduces a pyramidal attention mechanism that progressively reduces the sequence length at each layer, focusing on the most relevant parts of the input. This hierarchical approach allows Pyraformer to handle long sequences more efficiently, reducing computational complexity while maintaining high forecasting accuracy.
 \vspace{10pt}
 
 

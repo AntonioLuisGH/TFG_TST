@@ -8,27 +8,53 @@
 \contentsline {subsubsection}{Autoregressive Integrated Moving Average (ARIMA) and SARIMA Models}{2}{subsubsection*.6}%
 \contentsline {subsubsection}{SARIMAX models}{3}{subsubsection*.7}%
 \contentsline {subsubsection}{VARMA and VARMAX Models}{3}{subsubsection*.8}%
-\contentsline {subsubsection}{Simple Exponential Smoothing (SES) and Holt-Winters Exponential Smoothing (HWES)}{3}{subsubsection*.9}%
-\contentsline {subsubsection}{ARCH and GARCH Models}{4}{subsubsection*.10}%
+\contentsline {subsubsection}{Simple Exponential Smoothing (SES) and Holt-Winters Exponential Smoothing (HWES)}{4}{subsubsection*.9}%
+\contentsline {subsubsection}{ARCH and GARCH Models}{5}{subsubsection*.10}%
 \contentsline {subsection}{\numberline {1.1.2}Modern Methods}{5}{subsection.1.1.2}%
-\contentsline {subsubsection}{Recurrent Neural Networks (RNNs) and LSTMs}{5}{subsubsection*.11}%
+\contentsline {subsubsection}{Recurrent Neural Networks (RNNs) and LSTMs}{6}{subsubsection*.11}%
 \contentsline {subsubsection}{Residual Networks (ResNet) and Fully Convolutional Networks (FCN)}{6}{subsubsection*.12}%
-\contentsline {subsubsection}{ROCKET}{6}{subsubsection*.13}%
+\contentsline {subsubsection}{ROCKET}{7}{subsubsection*.13}%
 \contentsline {subsubsection}{Matrix Factorization with DTW}{7}{subsubsection*.14}%
 \contentsline {subsubsection}{XGBoost}{7}{subsubsection*.15}%
-\contentsline {subsubsection}{Prophet}{7}{subsubsection*.16}%
+\contentsline {subsubsection}{Prophet}{8}{subsubsection*.16}%
 \contentsline {subsubsection}{TS-Chief and HIVE-COTE}{8}{subsubsection*.17}%
 \contentsline {section}{\numberline {1.2}Evolution of Transformers as a Method for Time Series Forecasting}{8}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Introduction of Transformers (2017)}{8}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Application to Time Series (2019)}{8}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.1}Introduction of Transformers (2017)}{9}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Application to Time Series (2019)}{9}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Enhancements and New Variants (2020)}{9}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}Further Innovations (2021 - 2022)}{9}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5}Recent Advances (2023 - 2024)}{10}{subsection.1.2.5}%
+\contentsline {chapter}{\numberline {2}Transformers, Informers and Autoformers.}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Transformer architecture}{13}{section.2.1}%
+\contentsline {subsubsection}{Encoder-Decoder Structure}{14}{subsubsection*.19}%
+\contentsline {subsubsection}{Self-Attention Mechanism}{15}{subsubsection*.20}%
+\contentsline {section}{\numberline {2.2}Time Series Transformer}{16}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Time Series Forecasting (TSF) Problem Formulation}{16}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Embedding}{18}{subsection.2.2.2}%
+\contentsline {subsubsection}{Channel Projection}{18}{subsubsection*.25}%
+\contentsline {subsubsection}{Fixed Position Embedding}{18}{subsubsection*.27}%
+\contentsline {subsubsection}{Local Timestamp Embedding}{18}{subsubsection*.28}%
+\contentsline {subsubsection}{Global Timestamp Embedding}{18}{subsubsection*.29}%
+\contentsline {subsection}{\numberline {2.2.3}Encoder}{19}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Decoder}{19}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Training Methodology}{19}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Probabilistic Forecasting}{20}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}Informer}{20}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}ProbSparse Attention}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Distilling}{21}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Autoformer}{22}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Decomposition Layer}{22}{subsection.2.4.1}%
+\contentsline {subsubsection}{Concept of Decomposition in Time Series}{22}{subsubsection*.34}%
+\contentsline {subsubsection}{Decomposition in Autoformer}{22}{subsubsection*.35}%
+\contentsline {subsection}{\numberline {2.4.2}Attention (Autocorrelation) Mechanism}{23}{subsection.2.4.2}%
+\contentsline {subsubsection}{Understanding Autocorrelation}{23}{subsubsection*.37}%
+\contentsline {subsubsection}{Implementing Autocorrelation with FFT}{23}{subsubsection*.39}%
+\contentsline {subsubsection}{Time Delay Aggregation}{24}{subsubsection*.41}%
 \mbox {}\hspace *{0pt}\par 
-\contentsline {listasb}{List of Figures}{11}{section*.18}%
-\contentsline {listasb}{List of Tables}{13}{section*.20}%
-\contentsline {listasb}{List of Codes}{15}{section*.22}%
-\contentsline {listasb}{Bibliography}{17}{section*.24}%
-\contentsline {listasb}{Index}{19}{section*.26}%
-\contentsline {listasb}{Glossary}{19}{section*.27}%
+\contentsline {listasb}{List of Figures}{27}{section*.43}%
+\contentsline {listasb}{List of Tables}{29}{section*.45}%
+\contentsline {listasb}{List of Codes}{31}{section*.47}%
+\contentsline {listasb}{Bibliography}{33}{section*.49}%
+\contentsline {listasb}{Index}{35}{section*.51}%
+\contentsline {listasb}{Glossary}{35}{section*.52}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
