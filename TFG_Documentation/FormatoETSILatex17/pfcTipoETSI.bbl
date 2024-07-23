@@ -145,4 +145,9 @@ R.~Ilbert, A.~Odonnat, V.~Feofanov, A.~Virmaux, G.~Paolo, T.~Palpanas, and I.~Re
 \bibitem{inproceedings}
 C.~T. Do, A.~Douzal, S.~Marie, and M.~Rombaut, ``Multiple metric learning for large margin knn classification of time series,'' 09 2015.
 
+\bibitem{raftery2014usecommunicationprobabilisticforecasts}
+\BIBentryALTinterwordspacing
+A.~E. Raftery, ``Use and communication of probabilistic forecasts,'' 2014. [Online]. Available: \url{https://arxiv.org/abs/1408.4812}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

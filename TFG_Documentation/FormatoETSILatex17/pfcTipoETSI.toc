@@ -39,17 +39,17 @@
 \contentsline {subsection}{\numberline {2.2.4}Decoder}{19}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Training Methodology}{19}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}Probabilistic Forecasting}{20}{subsection.2.2.6}%
-\contentsline {section}{\numberline {2.3}Informer}{20}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}ProbSparse Attention}{20}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Distilling}{21}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.3}Informer}{21}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}ProbSparse Attention}{21}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Distilling}{22}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}Autoformer}{22}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Decomposition Layer}{22}{subsection.2.4.1}%
-\contentsline {subsubsection}{Concept of Decomposition in Time Series}{22}{subsubsection*.34}%
-\contentsline {subsubsection}{Decomposition in Autoformer}{22}{subsubsection*.35}%
+\contentsline {subsection}{\numberline {2.4.1}Decomposition Layer}{23}{subsection.2.4.1}%
+\contentsline {subsubsection}{Concept of Decomposition in Time Series}{23}{subsubsection*.34}%
+\contentsline {subsubsection}{Decomposition in Autoformer}{23}{subsubsection*.35}%
 \contentsline {subsection}{\numberline {2.4.2}Attention (Autocorrelation) Mechanism}{23}{subsection.2.4.2}%
-\contentsline {subsubsection}{Understanding Autocorrelation}{23}{subsubsection*.37}%
-\contentsline {subsubsection}{Implementing Autocorrelation with FFT}{23}{subsubsection*.39}%
-\contentsline {subsubsection}{Time Delay Aggregation}{24}{subsubsection*.41}%
+\contentsline {subsubsection}{Understanding Autocorrelation}{24}{subsubsection*.37}%
+\contentsline {subsubsection}{Implementing Autocorrelation with FFT}{24}{subsubsection*.39}%
+\contentsline {subsubsection}{Time Delay Aggregation}{25}{subsubsection*.41}%
 \mbox {}\hspace *{0pt}\par 
 \contentsline {listasb}{List of Figures}{27}{section*.43}%
 \contentsline {listasb}{List of Tables}{29}{section*.45}%

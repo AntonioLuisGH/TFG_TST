@@ -17,45 +17,45 @@ Warning--missing publisher in vaswani2023attention
 Warning--empty booktitle in inproceedings
 
 Done.
-You've used 27 entries,
+You've used 28 entries,
             4087 wiz_defined-function locations,
-            959 strings with 13629 characters,
-and the built_in function-call counts, 16278 in all, are:
-= -- 1197
-> -- 564
+            964 strings with 13778 characters,
+and the built_in function-call counts, 16642 in all, are:
+= -- 1226
+> -- 568
 < -- 37
-+ -- 278
-- -- 128
-* -- 784
-:= -- 2526
-add.period$ -- 54
-call.type$ -- 27
-change.case$ -- 27
++ -- 280
+- -- 129
+* -- 797
+:= -- 2596
+add.period$ -- 56
+call.type$ -- 28
+change.case$ -- 28
 chr.to.int$ -- 75
-cite$ -- 29
-duplicate$ -- 1226
-empty$ -- 1368
-format.name$ -- 155
-if$ -- 3699
+cite$ -- 30
+duplicate$ -- 1256
+empty$ -- 1404
+format.name$ -- 156
+if$ -- 3778
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 296
-newline$ -- 148
-num.names$ -- 27
-pop$ -- 864
+int.to.str$ -- 28
+missing$ -- 303
+newline$ -- 153
+num.names$ -- 28
+pop$ -- 886
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1213
+skip$ -- 1241
 stack$ -- 0
-substring$ -- 245
-swap$ -- 869
+substring$ -- 246
+swap$ -- 885
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 27
+type$ -- 28
 warning$ -- 2
-while$ -- 38
-width$ -- 29
-write$ -- 299
+while$ -- 39
+width$ -- 30
+write$ -- 309
 (There were 2 warnings)

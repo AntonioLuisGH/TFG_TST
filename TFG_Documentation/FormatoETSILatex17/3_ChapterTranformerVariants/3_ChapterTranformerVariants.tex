@@ -4,15 +4,13 @@
 
 Of the Transformer variants that have been previously exposed, three pivotal models have been selected for this thesis: the Original Transformer, the Informer, and the Autoformer. These models have been chosen due to their foundational impact and the significant advancements they introduced in the field of time series forecasting.
 
-Analyzing these three models is crucial because the Original Transformer laid the groundwork for all subsequent Transformer models. Understanding its architecture and innovations provides essential insights into the core principles that underpin all Transformer-based models.
+Firstly, analyzing the Original Transformer is crucial because it laids the groundwork for all subsequent Transformer models. Understanding its architecture and innovations provides essential insights into the core principles that underpin all Transformer-based models.
 
-Moreover, each of these models introduced significant advancements that addressed critical challenges in time series forecasting. The Informer improved efficiency and scalability, while the Autoformer brought a novel approach to decomposing time series data. Studying these innovations helps in understanding how the field has evolved to tackle specific issues.
+Secondly, the Informer and Autoformer models introduced relevant advancements that addressed critical challenges in time series forecasting. The Informer improved efficiency and scalability, while the Autoformer brought a novel approach to decomposing time series data. Studying these innovations helps in understanding how the field has evolved to tackle specific issues.
 
 Furthermore, these three models have served as the basis for many other variants. By analyzing them, one can trace the evolution of ideas and techniques that have shaped the development of more specialized and advanced models. This historical perspective is essential for appreciating the progress and future directions in the field.
 
-Additionally, focusing on these models allows for a comprehensive understanding of the essence of time series Transformers. They encapsulate the major breakthroughs and provide a clear picture of how Transformer models have been adapted and optimized for time series forecasting.
-
-Finally, these models are not only theoretically significant but also practically relevant. They have been widely adopted and tested in various applications, making them valuable case studies for real-world time series forecasting challenges. By focusing on the Original Transformer, the Informer, and the Autoformer, this thesis aims to build upon their strengths and explore their applications in time series forecasting. This approach ensures a deep and nuanced understanding of the fundamental principles and innovations that drive the effectiveness of Transformer models in this domain.
+Finally, these models are not only theoretically significant but also practically relevant. They have been widely adopted and tested in various applications, making them valuable case studies for real-world time series forecasting challenges. By focusing on the Original Transformer, the Informer, and the Autoformer, this thesis aims to build upon their strengths and explore their applications in time series forecasting.
 
 In this chapter, we are going to first explain what the Transformer architecture is in general. Following that, we will delve into the specifics of the time series-oriented Transformer, then the Informer, and finally the Autoformer. This structured approach will provide a clear and comprehensive understanding of each model's architecture and innovations, highlighting their contributions to the field of time series forecasting.
 
@@ -20,11 +18,12 @@ In this chapter, we are going to first explain what the Transformer architecture
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Transformer architecture}
 
-The Transformer architecture, introduced by Vaswani et al. in 2017, has revolutionized the field of natural language processing (NLP). Unlike traditional recurrent neural networks (RNNs) and convolutional neural networks (CNNs), the Transformer relies entirely on self-attention mechanisms, eliminating the need for sequential data processing. This chapter delves into the intricacies of the Transformer architecture, highlighting its components, mechanisms, and advantages.
+The introduction of the Transformer architecture by Vaswani et al. in 2017 marked a significant breakthrough in the field of natural language processing (NLP), fundamentally altering how machines process and understand human language. By leveraging a novel approach centered around self-attention mechanisms, the Transformer model overcame the limitations of traditional neural networks, such as recurrent neural networks (RNNs) and convolutional neural networks (CNNs), which struggled with parallelization and long-range dependencies.
 
-This architecture is composed of an encoder-decoder structure, both of which are built from layers of self-attention and feed-forward neural networks. This architecture allows for efficient parallelization and better handling of long-range dependencies in sequences, making it particularly suitable for tasks such as translation, text summarization, and question answering.
+The architecture's revolutionary nature lies in its ability to eschew sequential data processing, allowing for the parallelization of operations and significantly improving computational efficiency. Composed of an encoder-decoder structure built from layers of self-attention and feed-forward neural networks, the Transformer excels at handling long-range dependencies within sequences. This makes it exceptionally well-suited for complex NLP tasks such as machine translation, text summarization, and question answering, where understanding context and maintaining coherence across lengthy texts are paramount.
 
-The Transformer model is built on a sophisticated encoder-decoder architecture, which is crucial for tasks such as machine translation and text summarization. This architecture consists of a stack of encoders and decoders that work together to transform an input sequence into an output sequence.
+Next, we will delve into the intricacies of the Transformer's encoder-decoder architecture, detailing the role of each component and how they work together to enable high-performance language processing. We will also explore the self-attention mechanism, which lies at the heart of the Transformer's success, allowing it to dynamically weigh the importance of different elements in an input sequence and capture intricate dependencies within the data. This section will further highlight the advantages of multi-head attention and explain how these innovations contribute to the model's robustness and versatility.
+
 
 \begin{figure}[htbp]
     \centering
@@ -56,7 +55,7 @@ Similar to the encoder, each of these sub-layers in the decoder is followed by l
 \vspace{10pt}
 
 \subsubsection{Self-Attention Mechanism}
-At the core of the Transformer architecture is the self-attention mechanism, which enables the model to weigh the importance of different elements in an input sequence dynamically. The self-attention mechanism computes a set of attention scores for each word, determining how much focus each word should have on every other word in the sequence.
+At the core of the Transformer architecture is the self-attention mechanism, which enables the model to weigh the importance of different elements in an input sequence dynamically. The self-attention mechanism computes a set of attention scores for each element in the sequence, determining how much focus each element should have on every element in the sequence.
 \vspace{10pt}
 
 \noindent\textbf{Scaled Dot-Product Attention}
@@ -64,11 +63,11 @@ At the core of the Transformer architecture is the self-attention mechanism, whi
 \noindent The self-attention mechanism operates through a process called scaled dot-product attention, which can be broken down into several key steps:
 
 \begin{enumerate}
-    \item \textbf{Calculate Query (Q), Key (K), and Value (V) Vectors}: For each word in the input sequence, the model generates three vectors: a query vector (Q), a key vector (K), and a value vector (V). These vectors are derived from the word embeddings using learned linear transformations.
-    \item \textbf{Compute Attention Scores}: The attention score for each word pair is computed by taking the dot product of the query vector of the current word with the key vector of another word. This measures the relevance of one word to another.
+    \item \textbf{Calculate Query (Q), Key (K), and Value (V) Vectors}: For each element in the input sequence, the model generates three vectors: a query vector (Q), a key vector (K), and a value vector (V). These vectors are derived from the element embeddings using learned linear transformations.
+    \item \textbf{Compute Attention Scores}: The attention score for each element pair is computed by taking the dot product of the query vector of the current element with the key vector of another element. This measures the relevance of one element to another.
     \item \textbf{Scale the Attention Scores}: To prevent the dot product values from becoming too large and destabilizing the learning process, the attention scores are scaled by dividing by the square root of the dimensionality of the key vectors ($\sqrt{d_k}$).
-    \item \textbf{Apply Softmax Function}: The scaled attention scores are then passed through a softmax function to convert them into probabilities, ensuring that the scores for each word sum to 1. These probabilities are known as attention weights.
-    \item \textbf{Weighted Sum of Value Vectors}: The final attention output for each word is obtained by taking a weighted sum of the value vectors, using the attention weights as coefficients.
+    \item \textbf{Apply Softmax Function}: The scaled attention scores are then passed through a softmax function to convert them into probabilities, ensuring that the scores for each element sum to 1. These probabilities are known as attention weights.
+    \item \textbf{Weighted Sum of Value Vectors}: The final attention output for each element is obtained by taking a weighted sum of the value vectors, using the attention weights as coefficients.
 \end{enumerate}
 
 The entire process is summarized by the following formula:
@@ -80,13 +79,13 @@ The entire process is summarized by the following formula:
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=3 cm]{3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png}
-    \caption{Scaled Dot-Product Attention}
+    \caption{Scaled Dot-Product Attention, from \textit{"Attention Is All You Need"} (Vaswani, et al., 2017) \cite{vaswani2023attention}}
     \LABFIG{FIG}
     \end{figure}
 
 \noindent\textbf{Multi-Head Attention}
 
-\noindent Instead of performing a single attention function, the Transformer employs multiple attention heads. Each head performs its own attention operation in parallel, allowing the model to capture different aspects of relationships between words. The outputs of all heads are then concatenated and linearly transformed to produce the final attention output.
+\noindent Instead of performing a single attention function, the Transformer employs multiple attention heads. Each head performs its own attention operation in parallel, allowing the model to capture different aspects of relationships between different elements in sequence. The outputs of all heads are then concatenated and linearly transformed to produce the final attention output.
 
 \[
 \text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h) W^O
@@ -101,7 +100,7 @@ The entire process is summarized by the following formula:
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=5cm]{3_ChapterTranformerVariants/figuras/MultiHeadAttention.png}
-    \caption{Scaled Dot-Product Attention}
+    \caption{Multi-Head Attention, from \textit{"Attention Is All You Need"} (Vaswani, et al., 2017) \cite{vaswani2023attention}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -113,8 +112,6 @@ Previously, we explored the Transformer architecture. Now, we turn our focus to 
 Time series forecasting involves predicting future values based on historical data. The Time Series Transformer tackles this through embeddings, which convert categorical data into continuous vectors, capturing temporal dependencies effectively. These embeddings include channel projection and timestamp embeddings, which help the model understand both local and global temporal dynamics.
 
 Training the model involves a method called teacher-forcing, where the model learns correct sequence patterns by using actual previous values during training. Additionally, the Time Series Transformer employs probabilistic forecasting to quantify uncertainty in predictions, which is crucial for real-world decision-making.
-
-In this section, we will dive into the specifics of the Encoder and Decoder, the role of embeddings, and the training methodologies that make the Time Series Transformer a powerful tool for accurate and reliable time series forecasting.
 
 \subsection{Time Series Forecasting (TSF) Problem Formulation}
 Time series forecasting (TSF) involves predicting future values based on previously observed data. For a time series containing \(C\) variates, the historical data can be represented as:
@@ -157,7 +154,7 @@ Channel projection is the process of transforming the input time series data int
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=13cm]{3_ChapterTranformerVariants/figuras/ChannelProjection.png}
-    \caption{Example of embedding of time series xi from the temporal space (left) into the pairwise space (right). In this example, a pair of time series (x1, x2) is projected into the pairwise space as a vector x12 described by p = 3 basic metrics: x12 = [d1(x1, x2), d2(x1, x2), d3(x1, x2)] T, from "Multiple Metric Learning for large margin kNN Classification of time series" \cite{inproceedings}}
+    \caption{Example of embedding of time series xi from the temporal space (left) into the pairwise space (right). In this example, a pair of time series (x1, x2) is projected into the pairwise space as a vector x12 described by p = 3 basic metrics: x12 = [d1(x1, x2), d2(x1, x2), d3(x1, x2)] T, from \textit{"Multiple Metric Learning for large margin kNN Classification of time series"} \cite{inproceedings}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -212,14 +209,27 @@ Here's a step-by-step breakdown of how we train the Time Series Transformer:
         \item The last value of \textit{past\_values} is used as the initial input for the Decoder.
         \item This value acts as the starting point for generating the first prediction in the \textit{future\_values} sequence.
     \end{itemize}
+    \item \textbf{Training with Teacher-Forcing:}
+    \begin{itemize}
+        \item During training, the model uses the actual previous value from the \textit{future\_values} sequence as the input for the next time step.
+        \item This ensures that the model is conditioned on the correct context at each step, helping it learn the dependencies more accurately.
+    \end{itemize}
+    \item \textbf{Loss Calculation and Backpropagation:}
+    \begin{itemize}
+        \item The model's predictions are compared to the actual \textit{future\_values} to calculate the loss.
+        \item The loss is then backpropagated through the model to update the weights and improve the predictions.
+    \end{itemize}
 \end{enumerate}
+
+The use of teacher-forcing in training Time Series Transformers is essential for achieving accurate and stable predictions. By providing the model with the correct context at each step, we ensure that it learns the correct sequence patterns and dependencies, leading to better performance in time series forecasting tasks.
+
 
 \subsection{Probabilistic Forecasting}
 Unlike classical point forecasting methods that output a single value per time step, the Time Series Transformer is designed for probabilistic forecasting. This approach models a distribution from which predictions can be sampled, providing a measure of uncertainty in the forecasts. This is particularly useful in real-world decision-making processes where understanding the range of possible outcomes is crucial.
 
 Deep learning models, including Transformers, excel in this context by learning from multiple related time series and modeling data uncertainty effectively. Probabilistic forecasting can be implemented by learning future parameters of a parametric distribution or using techniques like conformal prediction adapted for time series.
 
-According to Adrian E. Raftery, probabilistic forecasts are becoming increasingly available and are essential for various types of users, including general assessors, change assessors, risk avoiders, and decision theorists. These forecasts provide valuable insights by quantifying the uncertainty and offering a range of possible outcomes, which can be summarized using probabilities of adverse events and percentiles of the predictive distribution. Effective communication of probabilistic forecasts involves interacting with users to understand their goals and minimizing cognitive load by presenting the information in a clear and concise manner. This ensures that the forecasts are not only accurate but also trusted and actionable in practical applications.
+According to the paper \textit{"Use and Communication of Probabilistic Forecasts"} (Adrian E. Raftery)\cite{raftery2014usecommunicationprobabilisticforecasts}, probabilistic forecasts are becoming increasingly available and are essential for various types of users, including general assessors, change assessors, risk avoiders, and decision theorists. These forecasts provide valuable insights by quantifying the uncertainty and offering a range of possible outcomes, which can be summarized using probabilities of adverse events and percentiles of the predictive distribution. Effective communication of probabilistic forecasts involves interacting with users to understand their goals and minimizing cognitive load by presenting the information in a clear and concise manner. This ensures that the forecasts are not only accurate but also trusted and actionable in practical applications.
 
 \begin{figure}[htbp]
     \centering
@@ -306,7 +316,9 @@ By applying this operation, the input size of each subsequent layer is reduced b
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Autoformer}
-Autoformer is a significant advancement in the realm of time series forecasting, building on the transformer architecture by integrating time series decomposition and a novel auto-correlation mechanism. In the following, we will explain the main contributions of Autoformer, focusing on the Decomposition Layer and the Attention (Autocorrelation) Mechanism. These innovations allow Autoformer to capture and leverage period-based dependencies, enhancing its performance over traditional transformer models.
+In June 2021, Haixu Wu, Jiehui Xu, Jianmin Wang, and Mingsheng Long introduced an innovative paper titled \textit{``Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting’'}. This paper has been widely recognized for its significant contributions to the field of long-term time series forecasting.
+
+Autoformer enhances the transformer architecture by incorporating time series decomposition and a unique auto-correlation mechanism. In the following, we will explain the main contributions of Autoformer, focusing on the Decomposition Layer and the Attention (Autocorrelation) Mechanism. These innovations allow Autoformer to capture and leverage period-based dependencies, enhancing its performance over traditional transformer models.
 
 \subsection{Decomposition Layer}
 \subsubsection{Concept of Decomposition in Time Series}
@@ -339,11 +351,22 @@ This decomposition layer allows Autoformer to explicitly model the trend and sea
 Autoformer introduces an innovative approach to the attention mechanism used in traditional transformers. Instead of the conventional self-attention, which calculates attention weights directly in the time domain, Autoformer utilizes an autocorrelation mechanism that operates in the frequency domain using the Fast Fourier Transform (FFT). This method helps the model better capture periodic dependencies in the data, thereby enhancing its forecasting performance.
 
 \subsubsection{Understanding Autocorrelation}
-Autocorrelation measures how a time series correlates with a lagged version of itself. For a given time lag \( \tau \), autocorrelation quantifies the relationship (often measured by Pearson correlation) between the current value of the series at time \( t \) and its past value at time \( t - \tau \). Mathematically, it is expressed as:
+Autocorrelation, also known as serial correlation, measures how a time series correlates with a lagged version of itself over successive time intervals. It is a crucial concept in time series analysis, as it helps identify patterns, trends, and periodic fluctuations within the data.
+
+For a given time lag \( \tau \), autocorrelation quantifies the relationship (often measured by Pearson correlation) between the current value of the series at time \( t \) and its past value at time \( t - \tau \). Mathematically, it is expressed as:
 \[
 \text{Autocorrelation}(\tau) = \text{Corr}(y_t, y_{t-\tau})
 \]
-In the context of Autoformer, this concept replaces the traditional dot-product attention. Instead of directly comparing queries (Q) and keys (K) through dot-products, Autoformer uses autocorrelation to capture dependencies over different time lags.
+where \( y_t \) represents the value of the time series at time \( t \), and \( y_{t-\tau} \) represents the value at time \( t - \tau \).
+
+Autocorrelation values range from -1 to 1:
+\begin{itemize}
+    \item A value of 1 indicates perfect positive correlation, meaning the series is perfectly aligned with its past values.
+    \item A value of -1 indicates perfect negative correlation, meaning the series is perfectly inversely aligned with its past values.
+    \item A value of 0 indicates no correlation, meaning there is no linear relationship between the current and past values.
+\end{itemize}
+
+In the context of Autoformer, this concept replaces the traditional dot-product attention mechanism used in transformers. Instead of directly comparing queries (Q) and keys (K) through dot-products, Autoformer leverages autocorrelation to capture dependencies over different time lags. This approach allows Autoformer to effectively model long-term dependencies and seasonal patterns in time series data, leading to improved forecasting performance.
 
 \begin{figure}[htbp]
     \centering
@@ -353,16 +376,16 @@ In the context of Autoformer, this concept replaces the traditional dot-product 
     \end{figure}
 
 
-
 \subsubsection{Implementing Autocorrelation with FFT}
-The autocorrelation mechanism computes the attention weights using FFT. This approach allows all lags’ autocorrelations to be calculated simultaneously, making the process efficient with a time complexity of \( O(L \log L) \), where \( L \) is the length of the input time series.
+The autocorrelation mechanism computes the attention weights using the Fast Fourier Transform (FFT). The FFT is an efficient algorithm to compute the Discrete Fourier Transform (DFT) and its inverse. It transforms a sequence of complex numbers into another sequence, representing the original sequence in the frequency domain. This approach allows all lags’ autocorrelations to be calculated simultaneously, making the process efficient with a time complexity of \( O(L \log L) \), where \( L \) is the length of the input time series.
+
 Here’s how it works in practice:
 \begin{enumerate}
-    \item \textbf{FFT Transformation:} Convert the queries (Q) and keys (K) to the frequency domain using FFT.
-    \item \textbf{Frequency Domain Multiplication:} Multiply the transformed Q and K element-wise.
-    \item \textbf{Inverse FFT:} Apply the inverse FFT to transform the results back to the time domain, yielding the autocorrelations.
+    \item \textbf{FFT Transformation:} Convert the queries (Q) and keys (K) from the time domain to the frequency domain using FFT. This involves decomposing the input sequences into a sum of sinusoids of different frequencies, which represent the original data in the frequency domain.
+    \item \textbf{Frequency Domain Multiplication:} Multiply the transformed Q and K element-wise in the frequency domain. This step leverages the convolution theorem, which states that convolution in the time domain corresponds to point-wise multiplication in the frequency domain.
+    \item \textbf{Inverse FFT:} Apply the inverse FFT to transform the results back from the frequency domain to the time domain. This step reconstructs the autocorrelations from the frequency domain representation, yielding the desired autocorrelation values.
 \end{enumerate}
-This function computes the autocorrelation by performing FFT on the queries and keys, multiplying them in the frequency domain, and then applying the inverse FFT to obtain the autocorrelations.
+    
 
 \begin{figure}[htbp]
     \centering
@@ -374,12 +397,16 @@ This function computes the autocorrelation by performing FFT on the queries and 
 
 
 \subsubsection{Time Delay Aggregation}
-Once the autocorrelation weights (referred to as \textit{attn\_weights}) are computed, they need to be aggregated with the values (V) to produce the final attention output. This process, known as Time Delay Aggregation, involves the following steps:
+Time Delay Aggregation (TDA) is a crucial step in the Autoformer model, designed to effectively capture the periodic dependencies in time series data. By aggregating information over different time delays, TDA ensures that the model can efficiently utilize the data, leading to better forecasting performance and improved accuracy for long-term time series forecasting.
+
+Once the autocorrelation weights (referred to as \textit{attn\_weights}) are computed, they need to be aggregated with the values (V) to produce the final attention output. This process involves the following steps:
+
 \begin{enumerate}
-    \item \textbf{Rolling:} For each time delay \( \tau \), align the values (V) by shifting them by \( \tau \). This process is called rolling.
-    \item \textbf{Element-wise Multiplication:} Multiply the rolled values by the corresponding autocorrelation weights.
-    \item \textbf{Summation:} Sum the weighted values to get the final attention output.
+    \item \textbf{Rolling:} For each time delay \( \tau \), align the values (V) by shifting them by \( \tau \). This process is called rolling. It helps in aligning the values with their corresponding time delays, ensuring that the periodic patterns are captured accurately.
+    \item \textbf{Element-wise Multiplication:} Multiply the rolled values by the corresponding autocorrelation weights. This step ensures that the influence of each time delay is weighted according to its importance, as determined by the autocorrelation weights.
+    \item \textbf{Summation:} Sum the weighted values to get the final attention output. This aggregation step combines the information from different time delays, providing a comprehensive representation of the periodic dependencies in the data.
 \end{enumerate}
+
 The aggregation process can be formalized with the following equations:
 
 \begin{enumerate}
