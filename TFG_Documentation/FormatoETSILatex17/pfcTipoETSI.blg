@@ -3,6 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: pfcTipoETSI.aux
 A level-1 auxiliary file: 2_ChapterHistory/2_ChapterHistory.aux
 A level-1 auxiliary file: 3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux
+A level-1 auxiliary file: 4_ChapterMaterials/4_ChapterMaterials.aux
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -17,45 +18,45 @@ Warning--missing publisher in vaswani2023attention
 Warning--empty booktitle in inproceedings
 
 Done.
-You've used 28 entries,
+You've used 29 entries,
             4087 wiz_defined-function locations,
-            964 strings with 13778 characters,
-and the built_in function-call counts, 16642 in all, are:
-= -- 1226
-> -- 568
+            970 strings with 13965 characters,
+and the built_in function-call counts, 17052 in all, are:
+= -- 1262
+> -- 572
 < -- 37
-+ -- 280
-- -- 129
-* -- 797
-:= -- 2596
-add.period$ -- 56
-call.type$ -- 28
-change.case$ -- 28
++ -- 282
+- -- 130
+* -- 813
+:= -- 2676
+add.period$ -- 58
+call.type$ -- 29
+change.case$ -- 30
 chr.to.int$ -- 75
-cite$ -- 30
-duplicate$ -- 1256
-empty$ -- 1404
-format.name$ -- 156
-if$ -- 3778
+cite$ -- 31
+duplicate$ -- 1289
+empty$ -- 1441
+format.name$ -- 157
+if$ -- 3867
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 303
-newline$ -- 153
-num.names$ -- 28
-pop$ -- 886
+int.to.str$ -- 29
+missing$ -- 311
+newline$ -- 158
+num.names$ -- 29
+pop$ -- 908
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1241
+skip$ -- 1273
 stack$ -- 0
-substring$ -- 246
-swap$ -- 885
+substring$ -- 249
+swap$ -- 904
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 28
+type$ -- 29
 warning$ -- 2
-while$ -- 39
-width$ -- 30
-write$ -- 309
+while$ -- 40
+width$ -- 31
+write$ -- 320
 (There were 2 warnings)

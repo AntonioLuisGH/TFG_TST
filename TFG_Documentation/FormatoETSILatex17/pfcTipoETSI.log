@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.7)  23 JUL 2024 13:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.7)  26 JUL 2024 20:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1868,6 +1868,19 @@ LaTeX Warning: Label `fig:FIG' multiply defined.
 
 LaTeX Warning: Label `fig:FIG' multiply defined.
 
+) (./4_ChapterMaterials/4_ChapterMaterials.aux
+
+LaTeX Warning: Label `fig:FIG' multiply defined.
+
+
+LaTeX Warning: Label `fig:FIG' multiply defined.
+
+
+LaTeX Warning: Label `fig:FIG' multiply defined.
+
+
+LaTeX Warning: Label `fig:FIG' multiply defined.
+
 ))
 \openout1 = `pfcTipoETSI.aux'.
 
@@ -2239,7 +2252,7 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              that will remove this deprecated code.
 
 [13]
-<3_ChapterTranformerVariants/figuras/Transformer_architecture.png, id=451, 366.168pt x 539.3751pt>
+<3_ChapterTranformerVariants/figuras/Transformer_architecture.png, id=499, 366.168pt x 539.3751pt>
 File: 3_ChapterTranformerVariants/figuras/Transformer_architecture.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/Transformer_architecture.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Transformer_architecture.png  used on input line 30.
@@ -2248,24 +2261,24 @@ Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Transformer_archite
 Underfull \vbox (badness 1590) has occurred while \output is active []
 
  [14 <./3_ChapterTranformerVariants/figuras/Transformer_architecture.png>]
-<3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png, id=459, 107.2005pt x 212.9556pt>
+<3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png, id=507, 107.2005pt x 212.9556pt>
 File: 3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png  used on input line 81.
 (pdftex.def)             Requested size: 85.35826pt x 169.57182pt.
  [15 <./3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png>]
-<3_ChapterTranformerVariants/figuras/MultiHeadAttention.png, id=476, 201.1515pt x 271.2534pt>
+<3_ChapterTranformerVariants/figuras/MultiHeadAttention.png, id=524, 201.1515pt x 271.2534pt>
 File: 3_ChapterTranformerVariants/figuras/MultiHeadAttention.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/MultiHeadAttention.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/MultiHeadAttention.png  used on input line 102.
 (pdftex.def)             Requested size: 142.26378pt x 191.85037pt.
-<3_ChapterTranformerVariants/figuras/IMS.pdf, id=479, 2599.46156pt x 1592.19844pt>
+<3_ChapterTranformerVariants/figuras/IMS.pdf, id=527, 2599.46156pt x 1592.19844pt>
 File: 3_ChapterTranformerVariants/figuras/IMS.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/IMS.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/IMS.pdf  used on input line 132.
 (pdftex.def)             Requested size: 369.88582pt x 226.5505pt.
  [16 <./3_ChapterTranformerVariants/figuras/MultiHeadAttention.png>]
-<3_ChapterTranformerVariants/figuras/DMS.pdf, id=486, 2599.46156pt x 1592.19844pt>
+<3_ChapterTranformerVariants/figuras/DMS.pdf, id=534, 2599.46156pt x 1592.19844pt>
 File: 3_ChapterTranformerVariants/figuras/DMS.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/DMS.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/DMS.pdf  used on input line 140.
@@ -2277,19 +2290,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 pdfTeX warning: pdflatex.exe (file ./3_ChapterTranformerVariants/figuras/DMS.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<3_ChapterTranformerVariants/figuras/ChannelProjection.png, id=584, 839.135pt x 431.6125pt>
+<3_ChapterTranformerVariants/figuras/ChannelProjection.png, id=633, 839.135pt x 431.6125pt>
 File: 3_ChapterTranformerVariants/figuras/ChannelProjection.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/ChannelProjection.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/ChannelProjection.png  used on input line 156.
 (pdftex.def)             Requested size: 369.88582pt x 190.25255pt.
  [18 <./3_ChapterTranformerVariants/figuras/ChannelProjection.png>]
-<3_ChapterTranformerVariants/figuras/Embbeding.pdf, id=595, 382.42876pt x 304.88907pt>
+<3_ChapterTranformerVariants/figuras/Embbeding.pdf, id=643, 382.42876pt x 304.88907pt>
 File: 3_ChapterTranformerVariants/figuras/Embbeding.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/Embbeding.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Embbeding.pdf  used on input line 176.
 (pdftex.def)             Requested size: 284.52756pt x 226.84721pt.
  [19 <./3_ChapterTranformerVariants/figuras/Embbeding.pdf>]
-<3_ChapterTranformerVariants/figuras/Probabilistic.png, id=616, 441.14813pt x 249.18094pt>
+<3_ChapterTranformerVariants/figuras/Probabilistic.png, id=664, 441.14813pt x 249.18094pt>
 File: 3_ChapterTranformerVariants/figuras/Probabilistic.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/Probabilistic.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Probabilistic.png  used on input line 236.
@@ -2297,41 +2310,88 @@ Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Probabilistic.png  
  [20 <./3_ChapterTranformerVariants/figuras/Probabilistic.png>]
 
 pdfTeX warning: pdflatex.exe (file ./3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf, id=627, 1412.17688pt x 289.81274pt>
+<3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf, id=675, 1412.17688pt x 289.81274pt>
 File: 3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf  used on input line 258.
 (pdftex.def)             Requested size: 426.79134pt x 87.58571pt.
 [21 <./3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf>]
-<3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png, id=674, 1149.5447pt x 619.56468pt>
+<3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png, id=724, 1149.5447pt x 619.56468pt>
 File: 3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png  used on input line 299.
 (pdftex.def)             Requested size: 341.43306pt x 184.01788pt.
  [22 <./3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png>]
-<3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf, id=682, 3826.76036pt x 1510.4221pt>
+<3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf, id=732, 3826.76036pt x 1510.4221pt>
 File: 3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf  used on input line 343.
 (pdftex.def)             Requested size: 426.79134pt x 168.45166pt.
  [23 <./3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf>]
-<3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf, id=745, 3038.35126pt x 636.12656pt>
+<3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf, id=794, 3038.35126pt x 636.12656pt>
 File: 3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf  used on input line 373.
 (pdftex.def)             Requested size: 426.79134pt x 89.3483pt.
-<3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf, id=748, 355.3275pt x 355.3275pt>
+<3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf, id=797, 355.3275pt x 355.3275pt>
 File: 3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf  used on input line 392.
 (pdftex.def)             Requested size: 227.62204pt x 227.62569pt.
  [24 <./3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf>]
-<3_ChapterTranformerVariants/figuras/TimeDelay.pdf, id=815, 1284.79988pt x 685.56119pt>
+<3_ChapterTranformerVariants/figuras/TimeDelay.pdf, id=865, 1284.79988pt x 685.56119pt>
 File: 3_ChapterTranformerVariants/figuras/TimeDelay.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/TimeDelay.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/TimeDelay.pdf  used on input line 429.
 (pdftex.def)             Requested size: 341.43306pt x 182.18542pt.
 ) [25 <./3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf>] [26 <./3_ChapterTranformerVariants/figuras/TimeDelay.pdf>]
+\openout2 = `4_ChapterMaterials/4_ChapterMaterials.aux'.
+
+ (./4_ChapterMaterials/4_ChapterMaterials.tex
+chapter 3.
+
+Class scrbook Warning: Redefinition of \@makechapterhead detected.
+(scrbook)              Note: KOMA-Script does use styles for commands like
+(scrbook)              \chapter. Currently it internally still provides and
+(scrbook)              uses \@makechapterhead, but a completely different
+(scrbook)              definition compared to the standard classes.
+(scrbook)              So redefining or using internal \@makechapterhead
+(scrbook)              by users or package authors may already break
+(scrbook)              KOMA-Script and will not work with a coming version,
+(scrbook)              that will remove this deprecated code.
+
+<4_ChapterMaterials/figuras/DCDornavera.pdf, id=1062, 217.74857pt x 313.48285pt>
+File: 4_ChapterMaterials/figuras/DCDornavera.pdf Graphic file (type pdf)
+<use 4_ChapterMaterials/figuras/DCDornavera.pdf>
+Package pdftex.def Info: 4_ChapterMaterials/figuras/DCDornavera.pdf  used on input line 12.
+(pdftex.def)             Requested size: 170.71652pt x 245.788pt.
+[27
+
+
+
+
+ <./4_ChapterMaterials/figuras/DCDornavera.pdf>]
+<4_ChapterMaterials/figuras/SHT20.jpg, id=1079, 642.4pt x 642.4pt>
+File: 4_ChapterMaterials/figuras/SHT20.jpg Graphic file (type jpg)
+<use 4_ChapterMaterials/figuras/SHT20.jpg>
+Package pdftex.def Info: 4_ChapterMaterials/figuras/SHT20.jpg  used on input line 32.
+(pdftex.def)             Requested size: 170.71652pt x 170.7155pt.
+<4_ChapterMaterials/figuras/VEML7700.jpeg, id=1082, 642.4pt x 642.4pt>
+File: 4_ChapterMaterials/figuras/VEML7700.jpeg Graphic file (type jpg)
+<use 4_ChapterMaterials/figuras/VEML7700.jpeg>
+Package pdftex.def Info: 4_ChapterMaterials/figuras/VEML7700.jpeg  used on input line 40.
+(pdftex.def)             Requested size: 170.71652pt x 170.7155pt.
+<4_ChapterMaterials/figuras/MEC10.png, id=1085, 803.0pt x 803.0pt>
+File: 4_ChapterMaterials/figuras/MEC10.png Graphic file (type png)
+<use 4_ChapterMaterials/figuras/MEC10.png>
+Package pdftex.def Info: 4_ChapterMaterials/figuras/MEC10.png  used on input line 48.
+(pdftex.def)             Requested size: 170.71652pt x 170.71794pt.
+ [28 <./4_ChapterMaterials/figuras/SHT20.jpg> <./4_ChapterMaterials/figuras/VEML7700.jpeg>] [29 <./4_ChapterMaterials/figuras/MEC10.png>] [30]) [31] [32
+
+
+
+
+]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -2343,7 +2403,7 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-Package tocbasic Info: character protrusion at lof deactivated on input line 209.
+Package tocbasic Info: character protrusion at lof deactivated on input line 210.
 (./pfcTipoETSI.lof
 LaTeX Font Info:    Font shape `T1/phv/c/it' in size <10> not available
 (Font)              Font shape `T1/phv/c/sl' tried instead on input line 6.
@@ -2351,14 +2411,10 @@ LaTeX Font Info:    Font shape `T1/phv/c/it' in size <10> not available
 \tf@lof=\write10
 \openout10 = `pfcTipoETSI.lof'.
 
- [27
+ [33
 
 
-
-
-
-
-] [28
+] [34
 
 ]
 
@@ -2372,14 +2428,14 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-Package tocbasic Info: character protrusion at lot deactivated on input line 216.
+Package tocbasic Info: character protrusion at lot deactivated on input line 217.
 (./pfcTipoETSI.lot)
 \tf@lot=\write11
 \openout11 = `pfcTipoETSI.lot'.
 
- [29
+ [35
 
-] [30
+] [36
 
 ]
 
@@ -2393,14 +2449,14 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-Package tocbasic Info: character protrusion at lol deactivated on input line 223.
+Package tocbasic Info: character protrusion at lol deactivated on input line 224.
 (./pfcTipoETSI.lol)
 \tf@lol=\write12
 \openout12 = `pfcTipoETSI.lol'.
 
- [31
+ [37
 
-] [32
+] [38
 
 ] (./pfcTipoETSI.bbl
 
@@ -2414,9 +2470,9 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-[33
+[39
 
-]) [34] (./pfcTipoETSI.ind)
+]) [40] (./pfcTipoETSI.ind)
 No file pfcTipoETSI.gls.
 No file pfcTipoETSI.acr.
 
@@ -2427,7 +2483,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 1275.
 See the caption package documentation for explanation.
 
-[35
+[41
 
 
 
@@ -2440,7 +2496,7 @@ See the caption package documentation for explanation.
 Package imakeidx Warning: Remember to run (pdf)latex again after calling
 (imakeidx)                `texindy pfcTipoETSI.idx'.
 
-(./pfcTipoETSI.aux (./2_ChapterHistory/2_ChapterHistory.aux) (./3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux))
+(./pfcTipoETSI.aux (./2_ChapterHistory/2_ChapterHistory.aux) (./3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux) (./4_ChapterMaterials/4_ChapterMaterials.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2452,18 +2508,18 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \ifx on line 14 was incomplete) 
 Here is how much of TeX's memory you used:
- 64518 strings out of 474103
- 1489275 string characters out of 5747482
+ 64619 strings out of 474103
+ 1492385 string characters out of 5747482
  2311150 words of memory out of 5000000
- 85110 multiletter control sequences out of 15000+600000
- 652443 words of font info for 248 fonts, out of 8000000 for 9000
+ 85173 multiletter control sequences out of 15000+600000
+ 652649 words of font info for 250 fonts, out of 8000000 for 9000
  1162 hyphenation exceptions out of 8191
  118i,8n,136p,10986b,836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pfcTipoETSI.pdf (45 pages, 2419708 bytes).
+Output written on pfcTipoETSI.pdf (51 pages, 8946119 bytes).
 PDF statistics:
- 1416 PDF objects out of 1440 (max. 8388607)
- 1151 compressed objects within 12 object streams
- 165 named destinations out of 1000 (max. 500000)
- 68759 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1575 PDF objects out of 1728 (max. 8388607)
+ 1293 compressed objects within 13 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 68891 words of extra memory for PDF output out of 74296 (max. 10000000)
 

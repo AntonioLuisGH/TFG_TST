@@ -2,7 +2,7 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The Transformer - model architecture}}{14}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The Transformer - model architecture, }}{14}{figure.caption.18}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Scaled Dot-Product Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{15}{figure.caption.21}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Multi-Head Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{16}{figure.caption.22}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Illustration of Iterated Multi-Step (IMS) Forecasting}}{17}{figure.caption.23}%
@@ -16,4 +16,9 @@
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Vanilla self attention vs Autocorrelation mechanism, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{24}{figure.caption.38}%
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Attention weights computation in frequency domain using FFT, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{25}{figure.caption.40}%
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Aggregation by time delay, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{26}{figure.caption.42}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces ORNAVERA Data Collection Device (DCD)\cite {ornavera2020dcd}}}{27}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Temperature and Humidity Probe: SHT20 from Sensirion\cite {ornavera2020dcd}}}{28}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Soil Probe: MEC-10 from Dalian Endeavour Technology Co. \cite {ornavera2020dcd}}}{28}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Light Sensor: VEML7700 from Vishay.\cite {ornavera2020dcd}}}{29}{figure.caption.46}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
