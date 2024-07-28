@@ -19,4 +19,3 @@ function mat_to_csv(mat_file, csv_file)
     % Write the data to a .csv file
     writetable(val_table, csv_file, 'Delimiter', ';');
 end
-
