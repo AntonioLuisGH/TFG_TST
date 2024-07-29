@@ -72,9 +72,9 @@ At the core of the Transformer architecture is the self-attention mechanism, whi
 
 The entire process is summarized by the following formula:
 
-\[
+\begin{equation}
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-\]
+\end{equation}
 
 \begin{figure}[htbp]
     \centering
@@ -87,15 +87,15 @@ The entire process is summarized by the following formula:
 
 \noindent Instead of performing a single attention function, the Transformer employs multiple attention heads. Each head performs its own attention operation in parallel, allowing the model to capture different aspects of relationships between different elements in sequence. The outputs of all heads are then concatenated and linearly transformed to produce the final attention output.
 
-\[
+\begin{equation}
 \text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h) W^O
-\]
+\end{equation}
 
 \noindent where each head is defined as:
 
-\[
+\begin{equation}
 \text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
-\]
+\end{equation}
 
 \begin{figure}[htbp]
     \centering
@@ -115,13 +115,17 @@ Training the model involves a method called teacher-forcing, where the model lea
 
 \subsection{Time Series Forecasting (TSF) Problem Formulation}
 Time series forecasting (TSF) involves predicting future values based on previously observed data. For a time series containing \(C\) variates, the historical data can be represented as:
-\[
+
+\begin{equation}
 X = \{X^t_1, \ldots, X^t_C\}_{t=1}^L
-\]
+\end{equation}
+
 where \(L\) is the look-back window size and \(X^t_i\) is the value of the \(i\)-th variate at the \(t\)-th time step. The goal of TSF is to predict the future values:
-\[
+
+\begin{equation}
 \hat{X} = \{\hat{X}^t_1, \ldots, \hat{X}^t_C\}_{t=L+1}^{L+T}
-\]
+\end{equation}
+
 for the next \(T\) time steps.
 
 When \(T > 1\), there are two main approaches to multi-step forecasting:
@@ -262,9 +266,9 @@ Given the distinction between ``active'' and ``lazy'' queries, ProbSparse attent
 
 To illustrate this, let’s revisit the canonical self-attention formula:
 
-\[
+\begin{equation}
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-\]
+\end{equation}
 
 where \( Q \in \mathbb{R}^{L_Q \times d} \), \( K \in \mathbb{R}^{L_K \times d} \), and \( V \in \mathbb{R}^{L_V \times d} \). In practice, the input lengths of queries and keys are typically equivalent in self-attention computation, i.e., \( L_Q = L_K = T \), where \( T \) is the time series length. Consequently, the \( QK^T \) multiplication has a computational complexity of \( O(T^2 \cdot d) \).
 
@@ -286,9 +290,9 @@ The next step is to determine how to select the top \( u \) ``active'' queries t
 
 In practical terms, the measurement is defined as:
 
-\[
+\begin{equation}
 M(q_i, K) = \max_j \left( \frac{q_i k_j^T}{\sqrt{d}} \right) - \frac{1}{L_k} \sum_{j=1}^{L_k} \left( \frac{q_i k_j^T}{\sqrt{d}} \right)
-\]
+\end{equation}
 
 The key insight here is that a larger \( M(q_i, K) \) value indicates that the query \( q_i \) should be included in \( Q_{\text{reduced}} \), while a smaller value suggests otherwise.
 
@@ -306,9 +310,9 @@ The Informer model employs a ProbSparse self-attention mechanism, which introduc
 
 Let \( X_n \) be the output of the \( n \)-th encoder layer. The distilling operation is then defined as:
 
-\[
+\begin{equation}
 X_{n+1} = \text{MaxPool}(\text{ELU}(\text{Conv1d}(X_n)))
-\]
+\end{equation}
 
 By applying this operation, the input size of each subsequent layer is reduced by half. This reduction leads to a more efficient memory usage. Specifically, the memory usage is reduced from \( O(N \cdot T^2) \) to \( O(N \cdot T \log T) \), where \( N \) is the number of encoder/decoder layers and \( T \) is the sequence length. This optimization is crucial for handling long sequence time-series forecasting tasks efficiently.
 
@@ -330,12 +334,15 @@ Decomposition can be either additive, where the components are summed, or multip
 Autoformer incorporates a decomposition block within its architecture. This block enables the model to progressively aggregate the trend-cyclical part and extract the seasonal part from the series. The encoder and decoder of Autoformer use this decomposition block, significantly enhancing the model’s ability to capture and utilize these components.
 
 Formally, for an input series \( X \in \mathbb{R}^{L \times d} \) with length \( L \), the decomposition layer returns \( X_{\text{trend}} \) and \( X_{\text{seasonal}} \) defined as:
-\[
+
+\begin{equation}
 X_{\text{trend}} = \text{AvgPool}(\text{Padding}(X))
-\]
-\[
+\end{equation}
+
+\begin{equation}
 X_{\text{seasonal}} = X - X_{\text{trend}}
-\]
+\end{equation}
+
 This decomposition layer allows Autoformer to explicitly model the trend and seasonal components, which has proven beneficial in various time series forecasting applications.
 
 \begin{figure}[htbp]
@@ -354,9 +361,11 @@ Autoformer introduces an innovative approach to the attention mechanism used in 
 Autocorrelation, also known as serial correlation, measures how a time series correlates with a lagged version of itself over successive time intervals. It is a crucial concept in time series analysis, as it helps identify patterns, trends, and periodic fluctuations within the data.
 
 For a given time lag \( \tau \), autocorrelation quantifies the relationship (often measured by Pearson correlation) between the current value of the series at time \( t \) and its past value at time \( t - \tau \). Mathematically, it is expressed as:
-\[
+
+\begin{equation}
 \text{Autocorrelation}(\tau) = \text{Corr}(y_t, y_{t-\tau})
-\]
+\end{equation}
+
 where \( y_t \) represents the value of the time series at time \( t \), and \( y_{t-\tau} \) represents the value at time \( t - \tau \).
 
 Autocorrelation values range from -1 to 1:
@@ -411,17 +420,17 @@ The aggregation process can be formalized with the following equations:
 
 \begin{enumerate}
     \item Identify the top-k lags with the highest autocorrelation values:
-    \[
+    \begin{equation}
     \tau_1, \tau_2, \ldots, \tau_k = \text{arg Top-k}(R_{Q,K}(\tau))
-    \]
+    \end{equation}
     \item Apply softmax to normalize the autocorrelation values:
-    \[
+    \begin{equation}
     \hat{R}_{Q,K}(\tau_1), \hat{R}_{Q,K}(\tau_2), \ldots, \hat{R}_{Q,K}(\tau_k) = \text{Softmax}(R_{Q,K}(\tau_1), R_{Q,K}(\tau_2), \ldots, R_{Q,K}(\tau_k))
-    \]
+    \end{equation}
     \item Compute the final attention output by summing the element-wise products of the rolled values and the normalized autocorrelation weights:
-    \[
+    \begin{equation}
     \text{Autocorrelation-Attention} = \sum_{i=1}^{k} \text{Roll}(V, \tau_i) \cdot \hat{R}_{Q,K}(\tau_i)
-    \]
+    \end{equation}
 \end{enumerate}
 
 \begin{figure}[htbp]

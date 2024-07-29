@@ -155,7 +155,25 @@ A.~E. Raftery, ``Use and communication of probabilistic forecasts,'' 2014. [Onli
 Ornavera, ``Ornavera data collection device (dcd) datasheet,'' 2020, accessed: 2024-07-26. [Online]. Available: \url{https://ornavera.com/wp-content/uploads/dcd-ornavera.pdf}
 \BIBentrySTDinterwordspacing
 
+\bibitem{sensirion2020sht20}
+\BIBentryALTinterwordspacing
+Sensirion, ``Sht20 humidity and temperature sensor,'' 2020. [Online]. Available: \url{https://sensirion.com/products/catalog/SHT20}
+\BIBentrySTDinterwordspacing
+
+\bibitem{endeavour2020mec10}
+\BIBentryALTinterwordspacing
+D.~E.~T. Co., ``Mec-10 soil moisture, ec, and temperature sensor,'' 2020. [Online]. Available: \url{https://www.infwin.com/mec10-soil-moisture-ec-and-temperature-sensor-rs485-modbus/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vishay2020veml7700}
+\BIBentryALTinterwordspacing
+Vishay, ``Veml7700 high accuracy ambient light sensor,'' 2020. [Online]. Available: \url{https://www.vishay.com/docs/84286/veml7700.pdf}
+\BIBentrySTDinterwordspacing
+
 \bibitem{FernandezYepes2022}
 P.~Fernández~Yepes, ``Modelado de crecimiento de plantas con técnicas estadísticas,'' Seville, 2022.
+
+\bibitem{nvidia_t4_image}
+N.~Corporation, ``Nvidia t4 tensor core gpu,'' \url{https://www.nvidia.com/es-es/data-center/tesla-t4/}, 2024, imagen de la GPU NVIDIA T4.
 
 \end{thebibliography}

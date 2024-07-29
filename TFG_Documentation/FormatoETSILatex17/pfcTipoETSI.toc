@@ -10,7 +10,7 @@
 \contentsline {subsubsection}{VARMA and VARMAX Models}{3}{subsubsection*.8}%
 \contentsline {subsubsection}{Simple Exponential Smoothing (SES) and Holt-Winters Exponential Smoothing (HWES)}{4}{subsubsection*.9}%
 \contentsline {subsubsection}{ARCH and GARCH Models}{5}{subsubsection*.10}%
-\contentsline {subsection}{\numberline {1.1.2}Modern Methods}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.2}Modern Methods}{6}{subsection.1.1.2}%
 \contentsline {subsubsection}{Recurrent Neural Networks (RNNs) and LSTMs}{6}{subsubsection*.11}%
 \contentsline {subsubsection}{Residual Networks (ResNet) and Fully Convolutional Networks (FCN)}{6}{subsubsection*.12}%
 \contentsline {subsubsection}{ROCKET}{7}{subsubsection*.13}%
@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {1.2.1}Introduction of Transformers (2017)}{9}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Application to Time Series (2019)}{9}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Enhancements and New Variants (2020)}{9}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Further Innovations (2021 - 2022)}{9}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.4}Further Innovations (2021 - 2022)}{10}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5}Recent Advances (2023 - 2024)}{10}{subsection.1.2.5}%
 \contentsline {chapter}{\numberline {2}Transformers, Informers and Autoformers.}{13}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Transformer architecture}{13}{section.2.1}%
@@ -53,40 +53,40 @@
 \contentsline {chapter}{\numberline {3}Materials and Methods}{27}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Datasets}{27}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}ORNAVERA Data Collection Device (DCD)}{27}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}Available Variables}{29}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Available Variables}{28}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Temperature (t1)}{29}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Relative Humidity (rh1)}{29}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Vapor Pressure Deficit (vpd1)}{30}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Light Intensity (lux)}{30}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.3}Vapor Pressure Deficit (vpd1)}{29}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Light Intensity (lux)}{29}{subsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.2.5}Soil Temperature (st1)}{30}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Permittivity (p1)}{31}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {3.2.7}Electrical Conductivity (ec1)}{31}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.6}Permittivity (p1)}{30}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Electrical Conductivity (ec1)}{30}{subsection.3.2.7}%
 \contentsline {subsection}{\numberline {3.2.8}Volumetric Water Content (vwc1)}{31}{subsection.3.2.8}%
-\contentsline {subsection}{\numberline {3.2.9}Diameter (diam1)}{32}{subsection.3.2.9}%
-\contentsline {subsection}{\numberline {3.2.10}Photosynthetically Active Radiation (par)}{32}{subsection.3.2.10}%
+\contentsline {subsection}{\numberline {3.2.9}Diameter (diam1)}{31}{subsection.3.2.9}%
+\contentsline {subsection}{\numberline {3.2.10}Photosynthetically Active Radiation (par)}{31}{subsection.3.2.10}%
 \contentsline {section}{\numberline {3.3}Variable selection}{32}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Software Implementation}{33}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Anaconda and Spyder}{34}{subsection.3.4.1}%
-\contentsline {subsubsection}{Anaconda}{34}{subsubsection*.58}%
-\contentsline {subsubsection}{Spyder}{34}{subsubsection*.59}%
+\contentsline {subsection}{\numberline {3.4.1}Anaconda and Spyder}{33}{subsection.3.4.1}%
+\contentsline {subsubsection}{Anaconda}{33}{subsubsection*.58}%
+\contentsline {subsubsection}{Spyder}{33}{subsubsection*.59}%
 \contentsline {subsection}{\numberline {3.4.2}Google Colab}{34}{subsection.3.4.2}%
 \contentsline {subsubsection}{T4 Hosted Runtime Environment}{34}{subsubsection*.60}%
 \contentsline {section}{\numberline {3.5}Python Libraries}{35}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Experimental Design}{37}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Dataset Preprocessing}{37}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Structure}{38}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Structure}{37}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Signal smoothing}{38}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Elimination of the Trend}{40}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Elimination of NaN Values}{42}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Normalization of data}{42}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Regularise irregular time series}{43}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Hyperparameter Tuning}{43}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Experiments Diagram}{46}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Prediction Length and Context Length}{47}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Lags Sequence}{47}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Dropout}{48}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers}{48}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Batch Size and Number of Epochs}{49}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.1.3}Elimination of the Trend}{39}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Elimination of NaN Values}{42}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Normalization of data}{42}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Transforming Irregular Time Series to Regular Time Series}{43}{subsection.4.1.6}%
+\contentsline {section}{\numberline {4.2}Error Metrics}{44}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Hyperparameter Tuning}{46}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Prediction Length and Context Length}{46}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Lags Sequence}{46}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Dropout}{47}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers}{48}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Batch Size and Number of Epochs}{49}{subsection.4.3.5}%
 \mbox {}\hspace *{0pt}\par 
 \contentsline {listasb}{List of Figures}{51}{section*.85}%
 \contentsline {listasb}{List of Tables}{53}{section*.87}%

@@ -13,7 +13,7 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliografiaLibroETSI.bib
 Warning--entry type for "FernandezYepes2022" isn't style-file defined
---line 397 of file bibliografiaLibroETSI.bib
+--line 422 of file bibliografiaLibroETSI.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -21,45 +21,45 @@ Warning--missing publisher in vaswani2023attention
 Warning--empty booktitle in inproceedings
 
 Done.
-You've used 30 entries,
+You've used 34 entries,
             4087 wiz_defined-function locations,
-            978 strings with 14166 characters,
-and the built_in function-call counts, 17407 in all, are:
-= -- 1291
-> -- 576
+            995 strings with 14706 characters,
+and the built_in function-call counts, 18900 in all, are:
+= -- 1414
+> -- 592
 < -- 37
-+ -- 284
-- -- 131
-* -- 823
-:= -- 2741
-add.period$ -- 60
-call.type$ -- 30
-change.case$ -- 31
++ -- 292
+- -- 135
+* -- 875
+:= -- 3026
+add.period$ -- 68
+call.type$ -- 34
+change.case$ -- 36
 chr.to.int$ -- 75
-cite$ -- 32
-duplicate$ -- 1320
-empty$ -- 1478
-format.name$ -- 158
-if$ -- 3947
+cite$ -- 36
+duplicate$ -- 1444
+empty$ -- 1624
+format.name$ -- 162
+if$ -- 4274
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 318
-newline$ -- 161
-num.names$ -- 30
-pop$ -- 927
+int.to.str$ -- 34
+missing$ -- 347
+newline$ -- 179
+num.names$ -- 34
+pop$ -- 1013
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1303
+skip$ -- 1420
 stack$ -- 0
-substring$ -- 250
-swap$ -- 921
+substring$ -- 256
+swap$ -- 989
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 30
+type$ -- 34
 warning$ -- 2
-while$ -- 41
-width$ -- 32
-write$ -- 328
+while$ -- 45
+width$ -- 36
+write$ -- 367
 (There were 3 warnings)

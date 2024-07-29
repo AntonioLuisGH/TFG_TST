@@ -4,27 +4,28 @@
 
 This section describes the preprocessing steps applied to the time series datasets used in this study. Initially, we had access to four different datasets: two containing measurements taken on sand and two on clay. Each dataset included various variables representing different environmental conditions and characteristics. However, during the data exploration phase, significant inconsistencies were identified in three of the datasets.
 
-The errors detected included abrupt increases in the values of certain variables from one day to the next. In the sand datasets, it was observed that for diameter measurements, the values unexpectedly doubled or tripled overnight. This phenomenon could be explained by a possible change of sensors, which might have altered the measurements without prior notice.
+Errors detected included abrupt increases in the values of certain variables from one day to the next. In the sand datasets, it was observed that diameter measurements unexpectedly doubled or tripled overnight. This phenomenon could be explained by a possible change of sensors, which might have altered the measurements without prior notice (see Figure \ref{Diameter_Sand_1}).
+
+Similarly, the data related to light intensity showed sudden variations in lumens. It is likely that the sensor was either cleaned or repositioned, which could have caused a significant change in light measurements from one day to the next (see Figure \ref{Light_Sand_2}).
+
+Due to these inconsistencies and after a thorough evaluation of the data, we decided to use one of the clay datasets, which presented more reasonable and consistent measurements over time. This dataset was selected for further analysis as it offered a more stable and reliable framework for studying time series data.
+
+However, even the selected dataset required significant preprocessing to transform its structure and ensure data quality. This preprocessing process included steps such as normalizing values, handling missing data, and removing potential outliers. The detailed steps carried out in this phase are presented below.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/1_DatasetIssues/Diameter_Sand_1}
     \caption{Example of Diameter Measurement Error in the First Sand Dataset}
-    \LABFIG{FIG}
-    \end{figure}
-
-Similarly, the data related to light intensity showed sudden variations in lumens. In this case, it is likely that the sensor was either cleaned or repositioned, which could have caused a significant change in light measurements from one day to the next. The following image illustrates an example of these abrupt changes:
+    \label{Diameter_Sand_1}
+\end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2}
     \caption{Example of Light Measurement Error in the Second Sand Dataset}
-    \LABFIG{FIG}
-    \end{figure}
+    \label{Light_Sand_2}
+\end{figure}
 
-Due to these inconsistencies and after a thorough evaluation of the data, we decided to use one of the clay datasets, which presented more reasonable and consistent measurements over time. This dataset was selected for further analysis as it offered a more stable and reliable framework for studying time series data.
-
-However, even the selected dataset required significant preprocessing to transform its structure and ensure data quality. This preprocessing process included steps such as normalizing values, handling missing data, and removing potential outliers. The detailed steps carried out in this phase are presented below.
 
 \subsection{Structure}
 
@@ -62,56 +63,55 @@ The code effectively transformed the data from a complex structure into a more u
 
 To achieve the signal smoothing, we use a Savitzky-Golay filter with a window size of 11 and a polynomial order of 2. In this case, we start with the data signal after removing the initial slope. The window size is set to 11, meaning that 11 adjacent data points are used to calculate each smoothed value. This implies that the filter takes these 11 points and fits a second-degree polynomial, also known as a parabola, to the data within each window, allowing the signal to be smoothed without losing its essential characteristics.
 
-The \texttt{savgol\_filter} function generates a smoothed version of the input signal. By applying this filter, the smoothed signal exhibits a significant reduction in noise, making it more continuous and less fluctuating than the original signal. The smoothing process enhances the visualization and analysis of the underlying trends in the data, allowing important features to stand out more clearly. This can be clearly observed in the graphs presented below.
-
+The \texttt{savgol\_filter} function generates a smoothed version of the input signal. By applying this filter, the smoothed signal exhibits a significant reduction in noise, making it more continuous and less fluctuating than the original signal. The smoothing process enhances the visualization and analysis of the underlying trends in the data, allowing important features to stand out more clearly. This can be clearly observed in the graphs presented in Figures \ref{Smoothing_Temperature}, \ref{Smoothing_Relative_humidity}, \ref{Smoothing_Light}, \ref{Smoothing_Soil_temperature}, \ref{Smoothing_Permittivity}, \ref{Smoothing_Electroconductivity}, and \ref{Smoothing_Diameter}.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/2_Smoothing/Smoothing_Temperature}
     \caption{Original Temperature data (top) versus the Temperature smoothed data (bottom) after applying a Savitzky-Golay filter}
-    \LABFIG{FIG}
+    \label{Smoothing_Temperature}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/2_Smoothing/Smoothing_Relative_humidity}
     \caption{Original Relative humidity data (top) versus the Relative humidity smoothed data (bottom) after applying a Savitzky-Golay filter}
-    \LABFIG{FIG}
+    \label{Smoothing_Relative_humidity}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/2_Smoothing/Smoothing_Light}
     \caption{Original Light data (top) versus the Light smoothed data (bottom) after applying a Savitzky-Golay filter}
-    \LABFIG{FIG}
+    \label{Smoothing_Light}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/2_Smoothing/Smoothing_Soil_temperature}
     \caption{Original Soil temperature data (top) versus the Soil temperature smoothed data (bottom) after applying a Savitzky-Golay filter}
-    \LABFIG{FIG}
+    \label{Smoothing_Soil_temperature}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/2_Smoothing/Smoothing_Permittivity}
     \caption{Original Permittivity data (top) versus the Permittivity smoothed data (bottom) after applying a Savitzky-Golay filter}
-    \LABFIG{FIG}
+    \label{Smoothing_Permittivity}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/2_Smoothing/Smoothing_Electroconductivity}
     \caption{Original Electroconductivity data (top) versus the Electroconductivity smoothed data (bottom) after applying a Savitzky-Golay filter}
-    \LABFIG{FIG}
+    \label{Smoothing_Electroconductivity}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/2_Smoothing/Smoothing_Diameter}
     \caption{Original Diameter data (top) versus the Diameter smoothed data (bottom) after applying a Savitzky-Golay filter}
-    \LABFIG{FIG}
+    \label{Smoothing_Diameter}
 \end{figure}
 
 This type of smoothing is commonly used in signal processing to reduce noise in datasets and facilitate the identification of patterns and trends. By decreasing background noise, trends emerge more clearly, which is crucial for accurate analysis.
@@ -126,25 +126,25 @@ On the other hand, the trend should be retained when it has significant interpre
 
 In this project, we evaluated each variable individually to decide if trend elimination was appropriate.
 
-For the variable \texttt{Temperature}, we chose to retain the trend. Temperature often shows seasonal trends that are relevant for analysis. The trend in this variable may reflect natural and seasonal climate changes, so removing it could lead to the loss of crucial information about these patterns.
+For the variable \textbf{Temperature}, we chose to retain the trend. Temperature often shows seasonal trends that are relevant for analysis. The trend in this variable may reflect natural and seasonal climate changes, so removing it could lead to the loss of crucial information about these patterns.
 
-For the variable \texttt{Relative Humidity}, we chose to retain the trend. Relative humidity presents significant seasonal variations that may be affected by climate changes, and the trend in this variable provides valuable information on how environmental conditions evolve over time.
+For the variable \textbf{Relative Humidity}, we chose to retain the trend. Relative humidity presents significant seasonal variations that may be affected by climate changes, and the trend in this variable provides valuable information on how environmental conditions evolve over time.
 
-For the variable \texttt{Light}, we chose to retain the trend. Ambient light is a factor that can show significant diurnal and seasonal trends, and analyzing these trends is vital for understanding how light availability affects plant growth and overall health.
+For the variable \textbf{Light}, we chose to retain the trend. Ambient light is a factor that can show significant diurnal and seasonal trends, and analyzing these trends is vital for understanding how light availability affects plant growth and overall health.
 
-For the variable \texttt{Soil Temperature}, we chose to retain the trend. This variable follows patterns similar to air temperature, with important seasonal variations for plant health. The trend may indicate seasonal changes influencing soil biological activity.
+For the variable \textbf{Soil Temperature}, we chose to retain the trend. This variable follows patterns similar to air temperature, with important seasonal variations for plant health. The trend may indicate seasonal changes influencing soil biological activity.
 
-For the variable \texttt{Permittivity}, we chose to retain the trend. Soil permittivity reflects the soil's ability to store moisture, and its change over time can indicate changes in soil conditions. Retaining the trend helps us observe these natural variations, which are crucial for soil condition analysis.
+For the variable \textbf{Permittivity}, we chose to retain the trend. Soil permittivity reflects the soil's ability to store moisture, and its change over time can indicate changes in soil conditions. Retaining the trend helps us observe these natural variations, which are crucial for soil condition analysis.
 
-For the variable \texttt{Electroconductivity}, we chose to retain the trend. We did not remove the trend because soil electrical conductivity is related to the amount of dissolved salts in the soil and can change with the application of fertilizers or irrigation. The trend in this variable can provide information on the evolution of soil salinity, which is vital for agricultural management.
+For the variable \textbf{Electroconductivity}, we chose to retain the trend. We did not remove the trend because soil electrical conductivity is related to the amount of dissolved salts in the soil and can change with the application of fertilizers or irrigation. The trend in this variable can provide information on the evolution of soil salinity, which is vital for agricultural management.
 
-However, for the variable \texttt{Diameter}, we decided to remove the trend. Our main interest was in analyzing diameter variations to detect signs of disease or stress in the plant rather than its constant growth. By removing the trend, we could focus on fluctuations in diameter around its general trend, identifying possible anomalies that might indicate plant health issues.
+However, for the variable \textbf{Diameter}, we decided to remove the trend. Our main interest was in analyzing diameter variations to detect signs of disease or stress in the plant rather than its constant growth. By removing the trend, we could focus on fluctuations in diameter around its general trend, identifying possible anomalies that might indicate plant health issues.
 
-To remove the trend in the \texttt{Diameter} variable, we applied a smoothing method using a moving average. This approach involves calculating the average of the data within a fixed-size window and subtracting that average from the original values. The mathematical formula describing this process is:
+To remove the trend in the \textbf{Diameter} variable, we applied a smoothing method using a moving average. This approach involves calculating the average of the data within a fixed-size window and subtracting that average from the original values. The mathematical formula describing this process is:
 
-\[
+\begin{equation}
 D_t^{\text{adjusted}} = D_t - \frac{1}{n} \sum_{i=t-n+1}^{t} D_i
-\]
+\end{equation}
 
 where:
 \begin{itemize}
@@ -154,29 +154,29 @@ where:
     \item $\sum$ represents the sum of the values within the moving window.
 \end{itemize}
 
-In our case, we used a window of 100 data points. Below is a comparison of the diameter before and after removing the trend:
+In our case, we used a window of 100 data points. Below is a comparison of the diameter before and after removing the trend (see Figure \ref{WithoutTrend_Diameter}).
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/3_Trend/WithoutTrend_Diameter}
-    \caption{Original Diameter data (top) versus the Diameter without trend(bottom)}
-    \LABFIG{FIG}
+    \caption{Original Diameter data (top) versus the Diameter without trend (bottom)}
+    \label{WithoutTrend_Diameter}
 \end{figure}
 
 
-\section{Elimination of NaN Values}
+\subsection{Elimination of NaN Values}
 
 The elimination of NaN values is a crucial step in data preprocessing for time series. In our case, two main reasons for the presence of NaN values in the dataset were identified.
 
 First, when applying a moving window of 100 data points to remove trends, the first 100 data points of the series resulted in NaN values. This occurred because, when calculating the moving average, there were not enough preceding data points to determine a value for the initial points in the series, leading to NaN values at those positions.
 
-The second reason for NaN values was the presence of errors in the measurement sensors. During data collection, failures or disconnections in the sensors caused incomplete records, resulting in NaN values in the original dataset. Below there is an image indicating the location of the 51 specific measurements where NaN values were detected due to sensor errors.
+The second reason for NaN values was the presence of errors in the measurement sensors. During data collection, failures or disconnections in the sensors caused incomplete records, resulting in NaN values in the original dataset. Below is an image indicating the location of the 51 specific measurements where NaN values were detected due to sensor errors (see Figure \ref{nan_index_distribution}).
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/4_IndexNan/nan_index_distribution.pdf}
     \caption{}
-    \LABFIG{FIG}
+    \label{nan_index_distribution}
 \end{figure}
 
 
@@ -191,109 +191,107 @@ The MinMaxScaler class performs Min-Max normalization, which adjusts the data to
 
 Normalizing input data is vital for improving the accuracy and performance of machine learning models. Without proper normalization, variables with extremely high or low values can dominate the training process, potentially resulting in a less effective model. Additionally, normalizing the data can accelerate the convergence of the neural network during training, reducing the time needed for the model to achieve optimal performance.
 
-\subsection{Regularise irregular time series}
+\subsection{Transforming Irregular Time Series to Regular Time Series}
 
 Another significant challenge was that the measurements in the dataset were taken at irregular time intervals, resulting in an irregular time series. In such a series, data points do not occur at consistent, predictable intervals, complicating analysis and model training. The time intervals between measurements varied, which is common in real-world data collection due to various operational constraints. Some periods had dense data collection, while others were sparse, affecting the analysis and modeling of temporal patterns.
 
 To address this challenge, it was essential to transform the irregular time series into a regular one, compatible with the Hugging Face Transformers library. This library requires time series data to be defined with a start date and continuous time intervals. To achieve this, we employed a process known as time resampling.
 
-We began by determining a suitable resampling frequency that aligned with the average interval between consecutive measurements. This frequency became the foundation for reconstructing a uniform time series, allowing us to create regular intervals throughout the dataset. With the frequency established, we utilized the resample method on our dataset. This method allowed us to aggregate data points into the new regular intervals by calculating the mean of the measurements within each interval. By computing the mean, we smoothed out the variations within the intervals and retained the central tendency of the measurements, ensuring a more consistent time series.
+We started by determining a suitable resampling frequency based on the average interval between consecutive measurements. With this frequency set, we used the resample method to aggregate data points into the new regular intervals by calculating the mean within each interval. This process smoothed out variations and preserved the central tendency of the data, resulting in a more consistent time series.
 
 After resampling, we addressed the issue of missing values that often arise during this process. To maintain continuity in the dataset, we applied interpolation, which estimates intermediate values between data points. This step ensured that the time series was continuous and free of gaps, preserving the temporal structure and making the dataset ready for further analysis.
-While this approach introduces a degree of approximation, the disadvantages are minimal, and the method provides a reasonably accurate representation of the underlying data. This approximation allowed us to maintain essential temporal patterns while smoothing out irregularities in the data collection process. The resulting uniform time series simplified the dataset, making it easier to handle with various analytical tools and libraries while enabling accurate model training and forecasting.
 
-In the following illustrations, we present comparisons of the measurements with both the original irregular time series and the resampled uniform time series.
+While this approach introduces a degree of approximation, the disadvantages are minimal, and the method provides a reasonably accurate representation of the underlying data. The resulting uniform time series simplified the dataset, making it easier to handle with various analytical tools and libraries while enabling accurate model training and forecasting.
+
+Figures \ref{comparison_Temperature}, \ref{comparison_Relative_humidity}, \ref{comparison_Light}, \ref{comparison_Soil_temperature}, \ref{comparison_Permittivity}, \ref{comparison_Electroconductivity}, and \ref{comparison_Diameter} present comparisons of the measurements with both the original irregular time series and the resampled uniform time series.
+
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/5_Irregular/comparison_Temperature.pdf}
     \caption{Comparison of the original Temperature irregular time series and the resampled Temperature uniform time series}
-    \LABFIG{FIG}
+    \label{comparison_Temperature}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/5_Irregular/comparison_Relative_humidity.pdf}
     \caption{Comparison of the original Relative Humidity irregular time series and the resampled Relative Humidity uniform time series}
-    \LABFIG{FIG}
+    \label{comparison_Relative_humidity}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/5_Irregular/comparison_Light.pdf}
     \caption{Comparison of the original Light irregular time series and the resampled Light uniform time series}
-    \LABFIG{FIG}
+    \label{comparison_Light}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/5_Irregular/comparison_Soil_temperature.pdf}
     \caption{Comparison of the original Soil Temperature irregular time series and the resampled Soil Temperature uniform time series}
-    \LABFIG{FIG}
+    \label{comparison_Soil_temperature}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/5_Irregular/comparison_Permittivity.pdf}
     \caption{Comparison of the original Permittivity irregular time series and the resampled Permittivity uniform time series}
-    \LABFIG{FIG}
+    \label{comparison_Permittivity}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/5_Irregular/comparison_Electroconductivity.pdf}
     \caption{Comparison of the original Electroconductivity irregular time series and the resampled Electroconductivity uniform time series}
-    \LABFIG{FIG}
+    \label{comparison_Electroconductivity}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/5_Irregular/comparison_Diameter.pdf}
     \caption{Comparison of the original Diameter irregular time series and the resampled Diameter uniform time series}
-    \LABFIG{FIG}
+    \label{comparison_Diameter}
 \end{figure}
 
-\section{Hyperparameter Tuning}
-
-To design an experiment that identifies a suitable time series forecasting model and analyze different hyperparameters, the technique commonly known as ``sequential hyperparameter tuning'' or ``manual hyperparameter tuning'' has been chosen. In this approach, hyperparameters are adjusted one at a time, selecting the best model at each step before proceeding to the next hyperparameter.
-
-Although this method is intuitive and can be effective, it may not be as efficient as other more automated methods, such as grid search or random search. However, sequential tuning can be useful when one has a good intuition about the relative importance of the hyperparameters and desires finer control over the tuning process. Additionally, one of the advantages of this method is that it allows for a deeper study and understanding of the hyperparameters, as it directly observes how each one affects the model's performance.
-
-The metrics chosen to determine the best model among those tested and the diagram created for this project will be explained below.
-
-\section*{Comparison Metrics}
+\section{Error Metrics}
 
 This section focuses on using error measures, such as MSE and \( R^2 \), to evaluate and compare the results obtained in our study. These metrics provide a quantitative assessment of the model's accuracy and its ability to explain the variability in the observed data.
 
 The Mean Squared Error (MSE) is a metric that quantifies the difference between the values predicted by our model and the actual observed values. It calculates the average of the squared errors and offers a measure of prediction accuracy and quality. In this context, it is transformed to a logarithmic scale to facilitate easier comparison, expressed in decibels. A more negative MSE indicates a better model. The MSE is defined as follows:
 
-\[
+\begin{equation}
 \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (\text{ypred}_i - \text{yreali})^2
-\]
+\end{equation}
 
 where \( n \) represents the number of observations, \( \text{ypred}_i \) is the model's predicted value for observation \( i \), and \( \text{yreali} \) is the actual observed value for observation \( i \).
 
 On the other hand, the coefficient of determination, \( R^2 \), provides insight into the model's ability to explain the variability in the observed data. This measure is calculated by comparing the sum of squared residuals with the total sum of squares. An \( R^2 \) value close to 1 indicates a good model fit and high explanatory power, while a value near 0 suggests that the model does not adequately explain the data. The calculation of \( R^2 \) is given by:
 
-\[
+\begin{equation}
 R^2 = 1 - \frac{\text{SSE}}{\text{SST}}
-\]
+\end{equation}
 
 where SSE (Sum of Squared Errors) is the sum of the squared errors between the model's predictions and the actual observed values, and SST (Total Sum of Squares) is the sum of the squared errors between the actual values and their mean.
 
 Relating both errors, we have:
 
-\[
+\begin{equation}
 R^2 = 1 - \frac{\text{MSE} \cdot n}{\text{SST}}
-\]
+\end{equation}
 
 Additionally, training time and the number of parameters are critical aspects in the development of neural networks. Training time impacts the model's efficiency and practical viability, affecting processing capacity, scalability, and hyperparameter optimization.
 
 Finally, the number of parameters indicates the model's capacity to learn complex patterns but can influence overfitting, storage efficiency, and inference time. Balancing training time and the number of parameters is crucial for achieving efficient and high-performance models according to the application’s requirements and constraints.
 
-\section{Experiments Diagram}
+\section{Hyperparameter Tuning}
 
-Sequential hyperparameter tuning is a systematic process in which the parameters of a machine learning model are optimized iteratively. The key to this approach is to adjust one hyperparameter at a time, keeping the others constant until finding the value that provides the best performance for the model at that moment. Then, the process moves to the next hyperparameter, repeating the cycle. This method simplifies the search in the hyperparameter space, allowing us to identify how each hyperparameter individually affects the model's performance. While this method might be slower than other approaches like random search or evolutionary algorithms, its main advantage lies in the clarity it provides regarding the influence of each hyperparameter, which is crucial in applications like time series forecasting.
+To design an experiment for identifying a suitable time series forecasting model and analyzing various hyperparameters, we have chosen the technique known as sequential hyperparameter tuning or manual hyperparameter tuning. In this approach, we adjust one hyperparameter at a time, selecting the best model at each step before proceeding to the next hyperparameter.
+
+This method is intuitive and offers finer control over the tuning process, which can be particularly beneficial if you have a good intuition about the relative importance of each hyperparameter. It allows for a deeper understanding of how each hyperparameter impacts the model's performance. While sequential tuning can be slower and less efficient than automated methods like grid search or random search, it simplifies the exploration of the hyperparameter space by focusing on one parameter at a time.
+
+Sequential hyperparameter tuning is a systematic process that iteratively optimizes the parameters of a machine learning model. By keeping other parameters constant and adjusting one at a time, it helps to identify the optimal value for each hyperparameter, providing clear insights into their influence on the model's performance. This clarity is particularly valuable in applications like time series forecasting, where understanding the impact of each hyperparameter is crucial.
 
 In this study, we conducted an experimental design involving 30 different models, changing a series of hyperparameters one by one and selecting the best at each step. Given that the study focuses on the Vanilla Transformer, Informer, and Autoformer, a total of 90 experiments were performed.
 
@@ -307,7 +305,7 @@ The first step in designing our experimental diagram is to choose the hyperparam
     \item \textbf{Batch Size and Number of Epochs}
 \end{itemize}
 
-Below, the selected hyperparameters are described, along with how their values can affect the model's performance:
+Below, the selected hyperparameters are described, along with how their values can affect the model's performance.
 
 
 \subsection{Prediction Length and Context Length}
