@@ -85,16 +85,6 @@ for col in ['Diameter']:
 # Remove NaN values from removing the trend
 data = data.dropna()
 
-# Plot nan index with NaN values
-plt.figure(figsize=(10, 2))
-plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
-plt.title(f'Nan index distribution. \n Number of eliminated measurements: {len(index_nan)}')
-plt.xlabel('Index')
-plt.ylabel('Frequency')
-plt.yticks([])
-plt.grid(True)
-plt.xlim(0, len(df))
-
 # Save the plot to a PDF file
 plt.savefig('nan_index_distribution.pdf', format='pdf')
 plt.show()
@@ -114,6 +104,22 @@ intervals = data['Date'].diff()
 mean_intervals = intervals.mean()
 print("Average of the time intervals:", mean_intervals)
 
+# %% Resample the data to a regular frequency
+
+# Define the resampling frequency
+resampling_frequency = '7min52s'
+
+# Set the Date column as the index
+data.set_index('Date', inplace=True)
+
+# Resample the data
+resampled_data = data.resample(resampling_frequency).mean().interpolate()
+
+# Set the Date column as the index
+TrendData.set_index('Date', inplace=True)
+
+# Resample the data
+resampled_data = TrendData.resample(resampling_frequency).mean().interpolate()
 
 # %% Plotting Original vs. TrendData Data
 

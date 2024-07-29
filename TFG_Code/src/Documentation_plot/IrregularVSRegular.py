@@ -48,16 +48,6 @@ for col in ['Diameter']:
 # Remove NaN values from removing the trend
 data = data.dropna()
 
-# Plot nan index with NaN values
-plt.figure(figsize=(10, 2))
-plt.plot(index_nan, np.ones_like(index_nan), 'ro', markersize=2)
-plt.title(f'Nan index distribution. \n Number of eliminated measurements: {len(index_nan)}')
-plt.xlabel('Index')
-plt.ylabel('Frequency')
-plt.yticks([])
-plt.grid(True)
-plt.xlim(0, len(df))
-
 # Save the plot to a PDF file
 plt.savefig('nan_index_distribution.pdf', format='pdf')
 plt.show()
