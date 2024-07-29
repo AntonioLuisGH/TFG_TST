@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.7)  29 JUL 2024 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.7)  29 JUL 2024 19:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2476,24 +2476,29 @@ File: 4_ChapterMaterials/figuras/Correlation_matrix.png Graphic file (type png)
 <use 4_ChapterMaterials/figuras/Correlation_matrix.png>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/Correlation_matrix.png  used on input line 180.
 (pdftex.def)             Requested size: 284.52756pt x 241.14493pt.
- [32 <./4_ChapterMaterials/figuras/train_data_Diameter.pdf> <./4_ChapterMaterials/figuras/train_data_Photosynthetically_Active_Radiation.pdf> <./4_ChapterMaterials/figuras/Correlation_matrix.png>] [33]
+ [32 <./4_ChapterMaterials/figuras/train_data_Diameter.pdf> <./4_ChapterMaterials/figuras/train_data_Photosynthetically_Active_Radiation.pdf> <./4_ChapterMaterials/figuras/Correlation_matrix.png>]
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+ [33]
 <4_ChapterMaterials/figuras/T4.png, id=1588, 803.0pt x 410.53375pt>
 File: 4_ChapterMaterials/figuras/T4.png Graphic file (type png)
 <use 4_ChapterMaterials/figuras/T4.png>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/T4.png  used on input line 222.
 (pdftex.def)             Requested size: 170.71652pt x 87.27954pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [34 <./4_ChapterMaterials/figuras/T4.png>]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [35{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]) [36]
+) [35{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 \openout2 = `5_ChapterDesign/5_ChapterDesign.aux'.
 
- (./5_ChapterDesign/5_ChapterDesign.tex
+ (./5_ChapterDesign/5_ChapterDesign.tex [36
+
+
+
+
+]
 chapter 4.
 
 Class scrbook Warning: Redefinition of \@makechapterhead detected.
@@ -2516,12 +2521,7 @@ File: 5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf Graphic file (typ
 <use 5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf  used on input line 24.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
-[37
-
-
-
-
- <./5_ChapterDesign/figuras/1_DatasetIssues/Diameter_Sand_1.pdf> <./5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf>] (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+[37 <./5_ChapterDesign/figuras/1_DatasetIssues/Diameter_Sand_1.pdf> <./5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf>] (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/03/11 1.10a listings language file
 )
 
@@ -2778,7 +2778,7 @@ Here is how much of TeX's memory you used:
  1162 hyphenation exceptions out of 8191
  118i,8n,136p,10986b,1875s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfit1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pfcTipoETSI.pdf (71 pages, 10990222 bytes).
+Output written on pfcTipoETSI.pdf (71 pages, 10989114 bytes).
 PDF statistics:
  3183 PDF objects out of 3580 (max. 8388607)
  1964 compressed objects within 20 object streams

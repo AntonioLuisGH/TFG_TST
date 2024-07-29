@@ -1,26 +1,26 @@
 # Fdb version 4
-["bibtex pfcTipoETSI"] 1722269919.73253 "pfcTipoETSI.aux" "pfcTipoETSI.bbl" "pfcTipoETSI" 1722269928.32897 0
+["bibtex pfcTipoETSI"] 1722274536.69049 "pfcTipoETSI.aux" "pfcTipoETSI.bbl" "pfcTipoETSI" 1722275737.27096 0
   "./bibliografiaLibroETSI.bib" 1722259312 18841 35f175b0727ef57ba9508780aa10513d ""
-  "2_ChapterHistory/2_ChapterHistory.aux" 1722269924 7274 b8e6cc038b0971c28e956a552b8706f4 "pdflatex"
-  "3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux" 1722269925 14740 589061a25f3700a1628a55cb0a8c2fcd "pdflatex"
-  "4_ChapterMaterials/4_ChapterMaterials.aux" 1722269925 10835 a1e0e89dc278ed6a946015dfc9031f23 "pdflatex"
-  "5_ChapterDesign/5_ChapterDesign.aux" 1722269926 14275 86896455908574dc67e1592ef451d98f "pdflatex"
+  "2_ChapterHistory/2_ChapterHistory.aux" 1722275733 7274 b8e6cc038b0971c28e956a552b8706f4 "pdflatex"
+  "3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux" 1722275734 14740 589061a25f3700a1628a55cb0a8c2fcd "pdflatex"
+  "4_ChapterMaterials/4_ChapterMaterials.aux" 1722275734 10815 ee6699cc62d29d18a5d2f00e119fc204 "pdflatex"
+  "5_ChapterDesign/5_ChapterDesign.aux" 1722275735 14275 86896455908574dc67e1592ef451d98f "pdflatex"
   "c:/texlive/2024/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1712506665 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "pfcTipoETSI.aux" 1722269926 39040 88e166464c244eac298a9e56e12c023f "pdflatex"
+  "pfcTipoETSI.aux" 1722275735 39040 88e166464c244eac298a9e56e12c023f "pdflatex"
   (generated)
   "pfcTipoETSI.bbl"
   "pfcTipoETSI.blg"
   (rewritten before read)
-["makeindex pfcTipoETSI.idx"] 1722267961.03037 "pfcTipoETSI.idx" "pfcTipoETSI.ind" "pfcTipoETSI" 1722269928.32839 0
-  "pfcTipoETSI.idx" 1722269923 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex pfcTipoETSI.idx"] 1722267961.03037 "pfcTipoETSI.idx" "pfcTipoETSI.ind" "pfcTipoETSI" 1722275737.27033 0
+  "pfcTipoETSI.idx" 1722275732 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "pfcTipoETSI.ilg"
   "pfcTipoETSI.ind"
   (rewritten before read)
-["pdflatex"] 1722269920.26096 "c:/Users/anton/OneDrive/Escritorio/TFG_TST/TFG_Documentation/FormatoETSILatex17/pfcTipoETSI.tex" "pfcTipoETSI.pdf" "pfcTipoETSI" 1722269928.33103 0
-  "2_ChapterHistory/2_ChapterHistory.aux" 1722269924 7274 b8e6cc038b0971c28e956a552b8706f4 "pdflatex"
+["pdflatex"] 1722275728.04996 "c:/Users/anton/OneDrive/Escritorio/TFG_TST/TFG_Documentation/FormatoETSILatex17/pfcTipoETSI.tex" "pfcTipoETSI.pdf" "pfcTipoETSI" 1722275737.27317 0
+  "2_ChapterHistory/2_ChapterHistory.aux" 1722275733 7274 b8e6cc038b0971c28e956a552b8706f4 "pdflatex"
   "2_ChapterHistory/2_ChapterHistory.tex" 1722267511 38630 94a7df2f77b082641fc531dce1b86392 ""
-  "3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux" 1722269925 14740 589061a25f3700a1628a55cb0a8c2fcd "pdflatex"
+  "3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux" 1722275734 14740 589061a25f3700a1628a55cb0a8c2fcd "pdflatex"
   "3_ChapterTranformerVariants/3_ChapterTranformerVariants.tex" 1722267813 39776 96c6c9c6e7a71936a43420c71bc167bc ""
   "3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf" 1721657938 50915 410db17c7d151518ecfdcbf0c161ac2a ""
   "3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf" 1635901388 119922 3a57667cac6d584fb61f0592c8169b11 ""
@@ -36,8 +36,8 @@
   "3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png" 1512620616 26323 b9863582890816cdedcd90bdaa46deed ""
   "3_ChapterTranformerVariants/figuras/TimeDelay.pdf" 1721658427 380365 cac0a2b0fe8acce7d5db4fb0622a9561 ""
   "3_ChapterTranformerVariants/figuras/Transformer_architecture.png" 1512620616 159152 9d694981d475c49bc6d37771164fdd39 ""
-  "4_ChapterMaterials/4_ChapterMaterials.aux" 1722269925 10835 a1e0e89dc278ed6a946015dfc9031f23 "pdflatex"
-  "4_ChapterMaterials/4_ChapterMaterials.tex" 1722259412 30386 8ddec3fad1fc9a086203347a572ff884 ""
+  "4_ChapterMaterials/4_ChapterMaterials.aux" 1722275734 10815 ee6699cc62d29d18a5d2f00e119fc204 "pdflatex"
+  "4_ChapterMaterials/4_ChapterMaterials.tex" 1722275727 29665 66ec9dee5ffa5c983880babb91888414 ""
   "4_ChapterMaterials/figuras/Correlation_matrix.png" 1722078254 61418 ba002ffc811d6c0462aee3fac72e7ef0 ""
   "4_ChapterMaterials/figuras/DCDornavera.pdf" 1722012724 6259923 c93d6edb96f0ab0c98336bf96f460e5a ""
   "4_ChapterMaterials/figuras/MEC10.png" 1722018015 164463 d7fddb0050bfe55eabf22d8853e86181 ""
@@ -54,7 +54,7 @@
   "4_ChapterMaterials/figuras/train_data_Temperature.pdf" 1722077904 45487 b83256b469b25bd5a6b5eb8ebb66d4b9 ""
   "4_ChapterMaterials/figuras/train_data_Vapor_Pressure_Deficit.pdf" 1722077906 37101 a16cbffa7abfe5565161b01d1d699723 ""
   "4_ChapterMaterials/figuras/train_data_Volumetric_water_content.pdf" 1722077908 43267 df5419f4a6f35c731a4626caa23aa00b ""
-  "5_ChapterDesign/5_ChapterDesign.aux" 1722269926 14275 86896455908574dc67e1592ef451d98f "pdflatex"
+  "5_ChapterDesign/5_ChapterDesign.aux" 1722275735 14275 86896455908574dc67e1592ef451d98f "pdflatex"
   "5_ChapterDesign/5_ChapterDesign.tex" 1722269910 32892 a63b4448edb5522c64f645a12191564e ""
   "5_ChapterDesign/figuras/1_DatasetIssues/Diameter_Sand_1.pdf" 1722193747 25959 763aa18dc90bb92b2720ed723b80e0f2 ""
   "5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf" 1722193747 62772 2a11bd838b8cc84a5a76858fdf41d010 ""
@@ -567,15 +567,15 @@
   "libroETSI.sty" 1713806837 46676 75fa427adea18747d8389a404c648c08 ""
   "notacion.sty" 1713806837 15647 836e97b4e76c0403af418196dbcf2e9d ""
   "pfcTipoETSI.acr" 0 -1 0 ""
-  "pfcTipoETSI.aux" 1722269926 39040 88e166464c244eac298a9e56e12c023f "pdflatex"
-  "pfcTipoETSI.bbl" 1722269920 10664 b91c4e72aebc484af5e6f85217da3f8d "bibtex pfcTipoETSI"
+  "pfcTipoETSI.aux" 1722275735 39040 88e166464c244eac298a9e56e12c023f "pdflatex"
+  "pfcTipoETSI.bbl" 1722274537 10664 b91c4e72aebc484af5e6f85217da3f8d "bibtex pfcTipoETSI"
   "pfcTipoETSI.gls" 0 -1 0 ""
   "pfcTipoETSI.ind" 1722267961 0 d41d8cd98f00b204e9800998ecf8427e "makeindex pfcTipoETSI.idx"
-  "pfcTipoETSI.lof" 1722269926 10211 aeefbe27de10bec6cf7b0fac9b58a03a "pdflatex"
-  "pfcTipoETSI.lol" 1722269926 332 5e820f6b04b5fc237fe8d181fc83152c "pdflatex"
-  "pfcTipoETSI.lot" 1722269926 205 ba0ae76d583c57922fe9a481c46d6901 "pdflatex"
+  "pfcTipoETSI.lof" 1722275735 10201 5fb848d7bd87cd838a66360c19fdaa7d "pdflatex"
+  "pfcTipoETSI.lol" 1722275735 332 5e820f6b04b5fc237fe8d181fc83152c "pdflatex"
+  "pfcTipoETSI.lot" 1722275735 205 ba0ae76d583c57922fe9a481c46d6901 "pdflatex"
   "pfcTipoETSI.tex" 1722266992 7729 5291d4f54a5b53aabf16e01ad2900c40 ""
-  "pfcTipoETSI.toc" 1722269926 8255 a914e1d3d5e2ddd0b63e4841ff894f98 "pdflatex"
+  "pfcTipoETSI.toc" 1722275735 8255 eb9e0c03a1d4d9707573eb8a98061dad "pdflatex"
   (generated)
   "2_ChapterHistory/2_ChapterHistory.aux"
   "3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux"
