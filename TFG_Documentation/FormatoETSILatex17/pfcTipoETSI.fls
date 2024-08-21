@@ -767,6 +767,8 @@ INPUT c:/texlive/2024/texmf-dist/tex/generic/hologo/hologo.sty
 INPUT c:/texlive/2024/texmf-dist/tex/generic/hologo/hologo.sty
 INPUT ./edicionPFC.sty
 INPUT edicionPFC.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/colortbl/colortbl.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/colortbl/colortbl.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/showexpl/showexpl.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/showexpl/showexpl.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty
@@ -804,6 +806,9 @@ INPUT 4_ChapterMaterials/4_ChapterMaterials.aux
 INPUT ./5_ChapterDesign/5_ChapterDesign.aux
 INPUT ./5_ChapterDesign/5_ChapterDesign.aux
 INPUT 5_ChapterDesign/5_ChapterDesign.aux
+INPUT ./6_ChapterResults/6_ChapterResults.aux
+INPUT ./6_ChapterResults/6_ChapterResults.aux
+INPUT 6_ChapterResults/6_ChapterResults.aux
 OUTPUT pfcTipoETSI.aux
 INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
@@ -1262,6 +1267,12 @@ INPUT ./5_ChapterDesign/figuras/Diagrams/D5.pdf
 INPUT ./5_ChapterDesign/figuras/Diagrams/D5.pdf
 INPUT ./5_ChapterDesign/figuras/Diagrams/D5.pdf
 INPUT ./5_ChapterDesign/figuras/Diagrams/D5.pdf
+INPUT ./6_ChapterResults/6_ChapterResults.tex
+INPUT ./6_ChapterResults/6_ChapterResults.tex
+OUTPUT 6_ChapterResults/6_ChapterResults.aux
+INPUT ./6_ChapterResults/6_ChapterResults.tex
+INPUT ./6_ChapterResults/6_ChapterResults.tex
+INPUT 6_ChapterResults/6_ChapterResults.tex
 INPUT ./pfcTipoETSI.lof
 INPUT ./pfcTipoETSI.lof
 INPUT pfcTipoETSI.lof
@@ -1272,6 +1283,11 @@ OUTPUT pfcTipoETSI.lof
 INPUT ./pfcTipoETSI.lot
 INPUT ./pfcTipoETSI.lot
 INPUT pfcTipoETSI.lot
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1phv.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1phv.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ts1phv.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/helvetic/phvr8cn.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/helvetic/phvr8cn.vf
 OUTPUT pfcTipoETSI.lot
 INPUT ./pfcTipoETSI.lol
 INPUT ./pfcTipoETSI.lol
@@ -1297,6 +1313,9 @@ INPUT 4_ChapterMaterials/4_ChapterMaterials.aux
 INPUT ./5_ChapterDesign/5_ChapterDesign.aux
 INPUT ./5_ChapterDesign/5_ChapterDesign.aux
 INPUT 5_ChapterDesign/5_ChapterDesign.aux
+INPUT ./6_ChapterResults/6_ChapterResults.aux
+INPUT ./6_ChapterResults/6_ChapterResults.aux
+INPUT 6_ChapterResults/6_ChapterResults.aux
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb

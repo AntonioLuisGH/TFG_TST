@@ -57,4 +57,5 @@
 \contentsline {figure}{\numberline {4.21}{\ignorespaces Third Phase of the Experimental Diagram with the different Dropout configurations}}{48}{figure.caption.82}%
 \contentsline {figure}{\numberline {4.22}{\ignorespaces Fourth Phase of the Experimental Diagram with the different Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers configurations}}{49}{figure.caption.83}%
 \contentsline {figure}{\numberline {4.23}{\ignorespaces Last Phase of the Experimental Diagram with the different Batch Size and Number of Epochs configurations}}{50}{figure.caption.84}%
+\addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
