@@ -1,4 +1,7 @@
-\chapter{Experimental Design}
+\chapter{Experimental Design}\LABCHAP{CAP5}
+\pagestyle{esitscCD}
+
+This chapter outlines the experimental design and methodology of the study, describing the overall process and plan for preparing and analyzing the data. It begins by discussing the steps taken to preprocess the dataset, ensuring that it is suitable for time series forecasting. The chapter also explains the methods used to evaluate model performance and the strategies applied to optimize hyperparameters for improved accuracy. By detailing these procedures, this chapter provides a clear framework for the practical implementation of the forecasting models and sets the foundation for analyzing their effectiveness.
 
 \section{Dataset Preprocessing}
 
@@ -61,7 +64,7 @@ The code effectively transformed the data from a complex structure into a more u
 
 \subsection{Signal smoothing}
 
-To achieve the signal smoothing, we use a Savitzky-Golay filter with a window size of 11 and a polynomial order of 2. In this case, we start with the data signal after removing the initial slope. The window size is set to 11, meaning that 11 adjacent data points are used to calculate each smoothed value. This implies that the filter takes these 11 points and fits a second-degree polynomial, also known as a parabola, to the data within each window, allowing the signal to be smoothed without losing its essential characteristics.
+To achieve the signal smoothing, we use a Savitzky-Golay filter with a window size of 11 and a polynomial order of 2. The window size is set to 11, meaning that 11 adjacent data points are used to calculate each smoothed value. This implies that the filter takes these 11 points and fits a second-degree polynomial, also known as a parabola, to the data within each window, allowing the signal to be smoothed without losing its essential characteristics.
 
 The \texttt{savgol\_filter} function generates a smoothed version of the input signal. By applying this filter, the smoothed signal exhibits a significant reduction in noise, making it more continuous and less fluctuating than the original signal. The smoothing process enhances the visualization and analysis of the underlying trends in the data, allowing important features to stand out more clearly. This can be clearly observed in the graphs presented in Figures \ref{Smoothing_Temperature}, \ref{Smoothing_Relative_humidity}, \ref{Smoothing_Light}, \ref{Smoothing_Soil_temperature}, \ref{Smoothing_Permittivity}, \ref{Smoothing_Electroconductivity}, and \ref{Smoothing_Diameter}.
 
@@ -114,8 +117,6 @@ The \texttt{savgol\_filter} function generates a smoothed version of the input s
     \label{Smoothing_Diameter}
 \end{figure}
 
-This type of smoothing is commonly used in signal processing to reduce noise in datasets and facilitate the identification of patterns and trends. By decreasing background noise, trends emerge more clearly, which is crucial for accurate analysis.
-
 \subsection{Elimination of the Trend}
 
 In time series analysis, the elimination of the trend is a preprocessing technique used to make the series more stationary by removing long-term trends that could bias the analysis. The trend in a time series represents a systematic direction that can interfere with detecting relevant patterns, such as cycles or seasonalities. However, trend elimination is not always necessary or convenient, as some series require retaining their trend to obtain accurate and useful results in the analysis.
@@ -143,7 +144,7 @@ However, for the variable \textbf{Diameter}, we decided to remove the trend. Our
 To remove the trend in the \textbf{Diameter} variable, we applied a smoothing method using a moving average. This approach involves calculating the average of the data within a fixed-size window and subtracting that average from the original values. The mathematical formula describing this process is:
 
 \begin{equation}
-D_t^{\text{adjusted}} = D_t - \frac{1}{n} \sum_{i=t-n+1}^{t} D_i
+D_t^{\text{adjusted}} = D_t - \frac{1}{n} \sum_{i=t-n+1}^{t} D_i \text{ ,}
 \end{equation}
 
 where:
@@ -175,7 +176,7 @@ The second reason for NaN values was the presence of errors in the measurement s
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15 cm]{5_ChapterDesign/figuras/4_IndexNan/nan_index_distribution.pdf}
-    \caption{}
+    \caption{Measurements with NaN values distribution}
     \label{nan_index_distribution}
 \end{figure}
 
@@ -189,13 +190,13 @@ To prepare the data, we applied a normalization process using the MinMaxScaler c
 
 The MinMaxScaler class performs Min-Max normalization, which adjusts the data to a specific range, typically between 0 and 1. In our case, we used this class to rescale all the variables in the data matrix to this 0 to 1 range.
 
-Normalizing input data is vital for improving the accuracy and performance of machine learning models. Without proper normalization, variables with extremely high or low values can dominate the training process, potentially resulting in a less effective model. Additionally, normalizing the data can accelerate the convergence of the neural network during training, reducing the time needed for the model to achieve optimal performance.
+Normalizing input data is vital for improving the accuracy and performance of machine learning models. Without proper normalization, variables with extremely high or low values can dominate the training process, potentially resulting in a less effective model. Additionally, normalizing the data can accelerate the convergence of the neural network during training, reducing the time needed for this process.
 
 \subsection{Transforming Irregular Time Series to Regular Time Series}
 
-Another significant challenge was that the measurements in the dataset were taken at irregular time intervals, resulting in an irregular time series. In such a series, data points do not occur at consistent, predictable intervals, complicating analysis and model training. The time intervals between measurements varied, which is common in real-world data collection due to various operational constraints. Some periods had dense data collection, while others were sparse, affecting the analysis and modeling of temporal patterns.
+Another significant challenge was that the measurements in the dataset were taken at irregular time intervals, resulting in an "irregular time series". In such a series, data points do not occur at consistent, predictable intervals, complicating analysis and model training. The time intervals between measurements varied, which is common in real-world data collection due to various operational constraints. Some periods had dense data collection, while others were sparse, affecting the analysis and modeling of temporal patterns.
 
-To address this challenge, it was essential to transform the irregular time series into a regular one, compatible with the Hugging Face Transformers library. This library requires time series data to be defined with a start date and continuous time intervals. To achieve this, we employed a process known as time resampling.
+To address this challenge, it was essential to transform the irregular time series into a regular one, compatible with the Hugging Face Transformers library. This library requires time series data to be defined with a start date and uniform time intervals. To achieve this, we employed a process known as time resampling.
 
 We started by determining a suitable resampling frequency based on the average interval between consecutive measurements. With this frequency set, we used the resample method to aggregate data points into the new regular intervals by calculating the mean within each interval. This process smoothed out variations and preserved the central tendency of the data, resulting in a more consistent time series.
 
@@ -262,10 +263,10 @@ This section focuses on using error measures, such as MSE and \( R^2 \), to eval
 The Mean Squared Error (MSE) is a metric that quantifies the difference between the values predicted by our model and the actual observed values. It calculates the average of the squared errors and offers a measure of prediction accuracy and quality. In this context, it is transformed to a logarithmic scale to facilitate easier comparison, expressed in decibels. A more negative MSE indicates a better model. The MSE is defined as follows:
 
 \begin{equation}
-\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (\text{ypred}_i - \text{yreali})^2
+    \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( \text{y}_{\text{pred}_i} - \text{y}_{\text{real}_i} \right)^2
 \end{equation}
-
-where \( n \) represents the number of observations, \( \text{ypred}_i \) is the model's predicted value for observation \( i \), and \( \text{yreali} \) is the actual observed value for observation \( i \).
+    
+where \( n \) represents the number of observations, \( \text{y}_{\text{pred}_i} \) is the model's predicted value for observation \( i \), and \( \text{y}_{\text{real}_i} \) is the actual observed value for observation \( i \).
 
 On the other hand, the coefficient of determination, \( R^2 \), provides insight into the model's ability to explain the variability in the observed data. This measure is calculated by comparing the sum of squared residuals with the total sum of squares. An \( R^2 \) value close to 1 indicates a good model fit and high explanatory power, while a value near 0 suggests that the model does not adequately explain the data. The calculation of \( R^2 \) is given by:
 

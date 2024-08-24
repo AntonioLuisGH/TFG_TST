@@ -1,11 +1,12 @@
 % !TEX root =../LibroTipoETSI.tex
-\chapter{History and State of the Art}\LABCHAP{CAPEJ}
+\chapter{History and State of the Art}\LABCHAP{CAP2}
 \pagestyle{esitscCD}
+
+This chapter explores the evolution of methods for time series forecasting, from traditional statistical models like ARIMA and GARCH to modern machine learning techniques such as RNNs, LSTMs, and XGBoost. It also covers the recent rise of Transformer architectures in this field, detailing their development from their initial introduction to their current state as powerful tools for capturing complex temporal patterns. This overview highlights both the historical foundations and the cutting-edge advancements in time series forecasting.
 
 \section{Evolution of Methods for Time Series Forecasting}
 
-Time series forecasting is a fundamental discipline in various fields such as economics, meteorology, engineering, and social sciences. Throughout history, this discipline has evolved significantly, developing increasingly sophisticated methods to improve the accuracy and reliability of predictions. In this chapter, we will explore the evolution of time series forecasting methods, from the most traditional approaches to the most modern ones based on machine learning techniques and neural networks.
-
+This section provides an overview of the development of methods for time series forecasting, tracing the progression from traditional statistical techniques to modern machine learning approaches. It covers the foundational models such as ARIMA and GARCH, which have long been used for analyzing time-dependent data, as well as the advent of more sophisticated algorithms like RNNs and LSTMs that leverage deep learning to improve forecasting accuracy. This evolution reflects the continuous effort to enhance predictive performance and handle the increasing complexity of time series data.
 
 \subsection{Traditional Methods}
 
@@ -21,7 +22,7 @@ The first time series forecasting models included autoregressive (AR) and moving
 Autoregressive Models (AR) of order \( p \) (AR(p)) uses the \( p \) previous values of the time series to make predictions. The general formula for an AR(p) model is:
 
 \begin{equation}
-X_t = c + \sum_{i=1}^{p} \phi_i X_{t-i} + \epsilon_t
+X_t = c + \sum_{i=1}^{p} \phi_i X_{t-i} + \epsilon_t \text{ ,}
 \end{equation}
 
 where:
@@ -35,7 +36,7 @@ where:
 Moving Average Models (MA) of order \( q \) (MA(q)) uses \( q \) previous error terms to make predictions. The general formula for an MA(q) model is:
 
 \begin{equation}
-X_t = \mu + \epsilon_t + \sum_{j=1}^{q} \theta_j \epsilon_{t-j}
+X_t = \mu + \epsilon_t + \sum_{j=1}^{q} \theta_j \epsilon_{t-j} \text{ ,}
 \end{equation}
 
 where:
@@ -47,8 +48,9 @@ where:
 
 Autoregressive Moving Average (ARMA) models combines both approaches to capture both autoregressive and moving average dependence. The general formula for an ARMA(p,q) model is:
 \begin{equation}
-X_t = c + \sum_{i=1}^{p} \phi_i X_{t-i} + \epsilon_t + \sum_{j=1}^{q} \theta_j \epsilon_{t-j}
+X_t = c + \sum_{i=1}^{p} \phi_i X_{t-i} + \epsilon_t + \sum_{j=1}^{q} \theta_j \epsilon_{t-j} \text{ ,}
 \end{equation}
+
 where:
 \begin{itemize}
     \item \( X_t \) is the value of the time series at time \( t \).
@@ -66,7 +68,7 @@ For non-stationary time series, integrated autoregressive moving average (ARIMA)
 Autoregressive Moving Average Integrated Models (ARIMA) combines the autoregressive (AR), differencing (I), and moving average (MA) components. The general formula for an ARIMA(p,d,q) model is:
 
 \begin{equation}
-\Delta^d X_t = c + \sum_{i=1}^{p} \phi_i \Delta^d X_{t-i} + \epsilon_t + \sum_{j=1}^{q} \theta_j \epsilon_{t-j}
+\Delta^d X_t = c + \sum_{i=1}^{p} \phi_i \Delta^d X_{t-i} + \epsilon_t + \sum_{j=1}^{q} \theta_j \epsilon_{t-j} \text{ ,}
 \end{equation}
 
 where:
@@ -82,7 +84,7 @@ where:
 The SARIMA model extends the ARIMA model by including seasonal components. The general formula for a SARIMA(p,d,q)(P,D,Q,m) model is:
 
 \begin{equation}
-\Delta^d \Delta_m^D X_t = c + \sum_{i=1}^{p} \phi_i \Delta^d \Delta_m^D X_{t-i} + \sum_{j=1}^{q} \theta_j \epsilon_{t-j} + \sum_{k=1}^{P} \Phi_k \Delta_m^D X_{t-km} + \sum_{l=1}^{Q} \Theta_l \epsilon_{t-lm}
+\Delta^d \Delta_m^D X_t = c + \sum_{i=1}^{p} \phi_i \Delta^d \Delta_m^D X_{t-i} + \sum_{j=1}^{q} \theta_j \epsilon_{t-j} + \sum_{k=1}^{P} \Phi_k \Delta_m^D X_{t-km} + \sum_{l=1}^{Q} \Theta_l \epsilon_{t-lm} \text{ ,}
 \end{equation}
 
 where:
@@ -104,7 +106,7 @@ where:
 SARIMAX models (Seasonal ARIMA with eXogenous regressors) are an extension of SARIMA models that allow the inclusion of exogenous variables in time series analysis. These exogenous variables are external factors that can influence the time series and, by incorporating them, the accuracy of the predictions is improved. The general structure of a SARIMAX model can be expressed as:
 
 \begin{equation}
-Y_t = \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots + \theta_q \epsilon_{t-q} + \beta_1 X_{1,t} + \beta_2 X_{2,t} + \cdots + \beta_k X_{k,t} + \epsilon_t
+Y_t = \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots + \theta_q \epsilon_{t-q} + \beta_1 X_{1,t} + \beta_2 X_{2,t} + \cdots + \beta_k X_{k,t} + \epsilon_t \text{ ,}
 \end{equation}
 
 where:
@@ -123,7 +125,7 @@ where:
 VARMA (Vector AutoRegressive Moving Average) models are a multivariate extension of ARMA models, suitable for analyzing time series with multiple interrelated variables. VARMAX (Vector AutoRegressive Moving Average with eXogenous regressors) models include additional exogenous variables, allowing the incorporation of external information that can influence the time series. VARMA models are useful when you have multiple time series that can influence each other. The general structure of a VARMA(p, q) model can be expressed as:
 
 \begin{equation}
-Y_t = \Phi_1 Y_{t-1} + \Phi_2 Y_{t-2} + \cdots + \Phi_p Y_{t-p} + \Theta_1 \epsilon_{t-1} + \Theta_2 \epsilon_{t-2} + \cdots + \Theta_q \epsilon_{t-q} + \epsilon_t
+Y_t = \Phi_1 Y_{t-1} + \Phi_2 Y_{t-2} + \cdots + \Phi_p Y_{t-p} + \Theta_1 \epsilon_{t-1} + \Theta_2 \epsilon_{t-2} + \cdots + \Theta_q \epsilon_{t-q} + \epsilon_t \text{ ,}
 \end{equation}
 
 where:
@@ -143,7 +145,7 @@ Simple Exponential Smoothing (SES) and Holt-Winters Exponential Smoothing (HWES)
 Simple Exponential Smoothing (SES) is a forecasting technique that assigns exponentially decreasing weights to past observations. The general formula for SES is:
 
 \begin{equation}
-\hat{Y}_{t+1} = \alpha Y_t + (1-\alpha) \hat{Y}_t
+\hat{Y}_{t+1} = \alpha Y_t + (1-\alpha) \hat{Y}_t \text{ ,}
 \end{equation}
 
 where:
@@ -217,15 +219,15 @@ ARCH (Autoregressive Conditional Heteroskedasticity) and GARCH (Generalized ARCH
 The ARCH model, proposed by Robert Engle in 1982, models the conditional variance of a time series as a function of past errors. The general structure of an ARCH(p) model can be expressed as follows:
 
 \begin{equation}
-Y_t = \mu + \epsilon_t
+Y_t = \mu + \epsilon_t \text{ ,}
 \end{equation}
 
 \begin{equation}
-\epsilon_t = \sigma_t Z_t
+\epsilon_t = \sigma_t Z_t \text{ ,}
 \end{equation}
 
 \begin{equation}
-\sigma_t^2 = \alpha_0 + \alpha_1 \epsilon_{t-1}^2 + \alpha_2 \epsilon_{t-2}^2 + \cdots + \alpha_p \epsilon_{t-p}^2
+\sigma_t^2 = \alpha_0 + \alpha_1 \epsilon_{t-1}^2 + \alpha_2 \epsilon_{t-2}^2 + \cdots + \alpha_p \epsilon_{t-p}^2 \text{ ,}
 \end{equation}
 
 where:
@@ -243,7 +245,7 @@ The GARCH model, developed by Tim Bollerslev in 1986, is an extension of the ARC
 The general structure of a GARCH(p, q) model can be expressed as:
 
 \begin{equation}
-\sigma_t^2 = \alpha_0 + \sum_{i=1}^p \alpha_i \epsilon_{t-i}^2 + \sum_{j=1}^q \beta_j \sigma_{t-j}^2
+\sigma_t^2 = \alpha_0 + \sum_{i=1}^p \alpha_i \epsilon_{t-i}^2 + \sum_{j=1}^q \beta_j \sigma_{t-j}^2 \text{ ,}
 \end{equation}
 
 where:
@@ -331,9 +333,10 @@ Prophet\cite{prophet} is an open source tool developed by Facebook's Data Scienc
 
 Prophet uses an additive model where the time series observations are decomposed into three main components: trend, seasonality, and holidays. The basic formula of the model is:
 \begin{equation}
-y(t) = g(t) + s(t) + h(t) + \epsilon_t
+y(t) = g(t) + s(t) + h(t) + \epsilon_t \text{ ,}
 \end{equation}
-Where:
+
+where:
 \begin{itemize}
     \item \textbf{Trend} \(g(t)\): Captures the long-term evolution of the time series. It can be linear or logarithmic, and Prophet allows the inclusion of change points to model sudden changes in the trend.
     \item \textbf{Seasonality} \(s(t)\): Models recurring patterns over different time periods, such as annual, weekly, or daily.

@@ -1,0 +1,28 @@
+\chapter{Introduction}\LABCHAP{CAP1}
+\pagestyle{esitscCD}
+
+Time series forecasting is a critical area of research with broad applications across numerous domains, including finance, meteorology, and agriculture. At its core, time series forecasting involves predicting future values based on previously observed data points collected over time. This process is essential for making informed decisions and planning, particularly in contexts where temporal dynamics play a crucial role.
+
+This dissertation builds upon a series of previous research projects that focused on forecasting plant diameter variations. The foundational work by Paula Fernández Yepes\cite{FernandezYepes2022} employed statistical methods to model the growth of plant diameter, while Andrés Benítez González\cite{BenitezGonzalez2023} expanded on this by utilizing neural network models to predict variations in plant diameter. The primary objective of these studies was not merely to track growth but to anticipate changes in diameter variation that could signal plant health issues, such as disease.
+
+In pursuit of advancing this research, the present study explores the application of the Transformer architecture for time series forecasting. The choice of the Transformer model was motivated by its novel and emerging role in various domains, particularly natural language processing, where it has demonstrated remarkable performance. However, its efficacy in the realm of time series forecasting remains largely unexplored and is therefore of significant scientific interest.
+
+The Transformer architecture, while not yet fully established as the definitive method for time series forecasting, offers promising potential. It represents a departure from traditional approaches and could provide new insights into forecasting techniques. This dissertation aims to investigate the applicability and effectiveness of Transformers in forecasting plant diameter variations within a multivariate context, thereby contributing to the broader understanding of their utility and limitations in this field.
+
+A particularly challenging aspect of this research is the prediction of multivariate time series. Unlike previous studies that focused solely on predicting diameter variation, this research aims to predict all relevant environmental variables simultaneously. This multivariate approach not only complicates the optimization of diameter variation forecasting but also enhances the explainability of the model by considering the interdependencies between multiple factors. Furthermore, the study of multivariate time series forecasting is of scientific interest for understanding the trade-offs between different variables.
+
+\section{Organisation of the Document}
+
+The document is structured to offer a thorough examination of time series forecasting methods and their advancements, with a particular emphasis on recent developments in machine learning architectures.
+
+Chapter 1 begins with a historical overview of time series forecasting methods. It covers traditional techniques such as Autoregressive (AR), Moving Average (MA), and Autoregressive Moving Average (ARMA) models, and then transitions to modern approaches like Recurrent Neural Networks (RNNs) and Long Short-Term Memory networks (LSTMs). The chapter also highlights the evolution of Transformer architectures, detailing their development from 2017 to the most recent advancements in 2024.
+
+Chapter 2 focuses on the Transformer architecture, explaining its core components, including the encoder-decoder structure and self-attention mechanism. It further explores the application of Transformers to time series forecasting, introducing variants such as Informer and Autoformer and discussing their specific contributions.
+
+In Chapter 3, the document describes the datasets used in the study, including the sensors involved in data collection, and outlines the available variables along with the variable selection process. Additionally, it covers the software tools and Python libraries employed, providing insights into the computational environment used for the research.
+
+Chapter 4 details the experimental design, including data preprocessing and hyperparameter tuning. The preprocessing involved tasks such as data structuring, signal smoothing, trend elimination, handling missing values, and normalization. Hyperparameter tuning was conducted not only to optimize model performance but also to gain a better understanding of the hyperparameters' impact on the Transformer, Informer, and Autoformer models.
+
+Chapter 5 presents the experimental results, analyzing the performance of the models under various configurations. The results are categorized based on changes in key parameters, following the phases outlined in the Experimental Design chapter.
+
+Finally, Chapter 6 summarizes the key findings and insights from the research. It evaluates the effectiveness and limitations of the Transformer, Informer, and Autoformer models for multivariate forecasting and assesses their potential for broader applications. The chapter also suggests directions for future research, focusing on refining Transformer-based architectures to enhance their performance and applicability in various data prediction tasks.

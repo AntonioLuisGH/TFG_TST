@@ -1,11 +1,13 @@
 This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: pfcTipoETSI.aux
+A level-1 auxiliary file: 1_ChapterIntroduction/1_ChapterIntroduction.aux
 A level-1 auxiliary file: 2_ChapterHistory/2_ChapterHistory.aux
 A level-1 auxiliary file: 3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux
 A level-1 auxiliary file: 4_ChapterMaterials/4_ChapterMaterials.aux
 A level-1 auxiliary file: 5_ChapterDesign/5_ChapterDesign.aux
 A level-1 auxiliary file: 6_ChapterResults/6_ChapterResults.aux
+A level-1 auxiliary file: 7_ChapterConclusions/7_ChapterConclusions.aux
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -15,6 +17,8 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliografiaLibroETSI.bib
 Warning--entry type for "FernandezYepes2022" isn't style-file defined
 --line 422 of file bibliografiaLibroETSI.bib
+Warning--entry type for "BenitezGonzalez2023" isn't style-file defined
+--line 432 of file bibliografiaLibroETSI.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -22,45 +26,45 @@ Warning--missing publisher in vaswani2023attention
 Warning--empty booktitle in inproceedings
 
 Done.
-You've used 34 entries,
+You've used 35 entries,
             4087 wiz_defined-function locations,
-            996 strings with 14743 characters,
-and the built_in function-call counts, 18900 in all, are:
-= -- 1414
-> -- 592
+            1002 strings with 15010 characters,
+and the built_in function-call counts, 19255 in all, are:
+= -- 1443
+> -- 596
 < -- 37
-+ -- 292
-- -- 135
-* -- 875
-:= -- 3026
-add.period$ -- 68
-call.type$ -- 34
-change.case$ -- 36
++ -- 294
+- -- 136
+* -- 885
+:= -- 3091
+add.period$ -- 70
+call.type$ -- 35
+change.case$ -- 37
 chr.to.int$ -- 75
-cite$ -- 36
-duplicate$ -- 1444
-empty$ -- 1624
-format.name$ -- 162
-if$ -- 4274
+cite$ -- 37
+duplicate$ -- 1475
+empty$ -- 1661
+format.name$ -- 163
+if$ -- 4354
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 347
-newline$ -- 179
-num.names$ -- 34
-pop$ -- 1013
+int.to.str$ -- 35
+missing$ -- 354
+newline$ -- 182
+num.names$ -- 35
+pop$ -- 1032
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1420
+skip$ -- 1450
 stack$ -- 0
-substring$ -- 256
-swap$ -- 989
+substring$ -- 257
+swap$ -- 1006
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 34
+type$ -- 35
 warning$ -- 2
-while$ -- 45
-width$ -- 36
-write$ -- 367
-(There were 3 warnings)
+while$ -- 46
+width$ -- 37
+write$ -- 375
+(There were 4 warnings)

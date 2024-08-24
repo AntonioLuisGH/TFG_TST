@@ -1,5 +1,5 @@
 % !TEX root =../LibroTipoETSI.tex
-\chapter{Transformers, Informers and Autoformers.}\LABCHAP{CAPEJ}
+\chapter{Transformers, Informers and Autoformers.}\LABCHAP{CAP3}
 \pagestyle{esitscCD}
 
 Of the Transformer variants that have been previously exposed, three pivotal models have been selected for this thesis: the Original Transformer, the Informer, and the Autoformer. These models have been chosen due to their foundational impact and the significant advancements they introduced in the field of time series forecasting.
@@ -88,7 +88,7 @@ The entire process is summarized by the following formula:
 \noindent Instead of performing a single attention function, the Transformer employs multiple attention heads. Each head performs its own attention operation in parallel, allowing the model to capture different aspects of relationships between different elements in sequence. The outputs of all heads are then concatenated and linearly transformed to produce the final attention output.
 
 \begin{equation}
-\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h) W^O
+\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h) W^O \text{ ,}
 \end{equation}
 
 \noindent where each head is defined as:
@@ -117,7 +117,7 @@ Training the model involves a method called teacher-forcing, where the model lea
 Time series forecasting (TSF) involves predicting future values based on previously observed data. For a time series containing \(C\) variates, the historical data can be represented as:
 
 \begin{equation}
-X = \{X^t_1, \ldots, X^t_C\}_{t=1}^L
+X = \{X^t_1, \ldots, X^t_C\}_{t=1}^L \text{ ,}
 \end{equation}
 
 where \(L\) is the look-back window size and \(X^t_i\) is the value of the \(i\)-th variate at the \(t\)-th time step. The goal of TSF is to predict the future values:
@@ -267,7 +267,7 @@ Given the distinction between ``active'' and ``lazy'' queries, ProbSparse attent
 To illustrate this, let’s revisit the canonical self-attention formula:
 
 \begin{equation}
-\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V \text{ ,}
 \end{equation}
 
 where \( Q \in \mathbb{R}^{L_Q \times d} \), \( K \in \mathbb{R}^{L_K \times d} \), and \( V \in \mathbb{R}^{L_V \times d} \). In practice, the input lengths of queries and keys are typically equivalent in self-attention computation, i.e., \( L_Q = L_K = T \), where \( T \) is the time series length. Consequently, the \( QK^T \) multiplication has a computational complexity of \( O(T^2 \cdot d) \).
@@ -325,7 +325,7 @@ In June 2021, Haixu Wu, Jiehui Xu, Jianmin Wang, and Mingsheng Long introduced a
 Autoformer enhances the transformer architecture by incorporating time series decomposition and a unique auto-correlation mechanism. In the following, we will explain the main contributions of Autoformer, focusing on the Decomposition Layer and the Attention (Autocorrelation) Mechanism. These innovations allow Autoformer to capture and leverage period-based dependencies, enhancing its performance over traditional transformer models.
 
 \subsection{Decomposition Layer}
-\subsubsection{Concept of Decomposition in Time Series}
+
 Time series decomposition is a method of breaking down a time series into three systematic components: trend-cycle, seasonal variation, and random fluctuations. The trend component reflects the long-term direction of the series, which can be increasing, decreasing, or stable. The seasonal component captures recurring patterns within the series, such as yearly or quarterly cycles. The random component represents the noise that cannot be explained by the trend or seasonal components.
 
 Decomposition can be either additive, where the components are summed, or multiplicative, where the components are multiplied. This technique, commonly implemented in libraries like \textit{statsmodels}, helps in understanding and modeling the underlying patterns in the data.
@@ -363,7 +363,7 @@ Autocorrelation, also known as serial correlation, measures how a time series co
 For a given time lag \( \tau \), autocorrelation quantifies the relationship (often measured by Pearson correlation) between the current value of the series at time \( t \) and its past value at time \( t - \tau \). Mathematically, it is expressed as:
 
 \begin{equation}
-\text{Autocorrelation}(\tau) = \text{Corr}(y_t, y_{t-\tau})
+\text{Autocorrelation}(\tau) = \text{Corr}(y_t, y_{t-\tau}) \text{ ,}
 \end{equation}
 
 where \( y_t \) represents the value of the time series at time \( t \), and \( y_{t-\tau} \) represents the value at time \( t - \tau \).
