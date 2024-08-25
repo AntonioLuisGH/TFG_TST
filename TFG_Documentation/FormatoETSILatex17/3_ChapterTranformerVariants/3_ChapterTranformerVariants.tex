@@ -73,7 +73,7 @@ At the core of the Transformer architecture is the self-attention mechanism, whi
 The entire process is summarized by the following formula:
 
 \begin{equation}
-\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V \text{ .}
 \end{equation}
 
 \begin{figure}[htbp]
@@ -94,7 +94,7 @@ The entire process is summarized by the following formula:
 \noindent where each head is defined as:
 
 \begin{equation}
-\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
+\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V) \text{ .}
 \end{equation}
 
 \begin{figure}[htbp]
@@ -275,7 +275,7 @@ where \( Q \in \mathbb{R}^{L_Q \times d} \), \( K \in \mathbb{R}^{L_K \times d} 
 In ProbSparse attention, the goal is to create a new \( Q_{\text{reduced}} \) matrix and define:
 
 \begin{equation}
-\text{ProbSparseAttention}(Q, K, V) = \text{softmax}\left(\frac{Q_{\text{reduced}} K^T}{\sqrt{d_k}}\right)V
+\text{ProbSparseAttention}(Q, K, V) = \text{softmax}\left(\frac{Q_{\text{reduced}} K^T}{\sqrt{d_k}}\right)V \text{ .}
 \end{equation}
 
 The \( Q_{\text{reduced}} \) matrix selects only the top \( u \) ``active'' queries, where \( u = c \cdot \log L_Q \) and \( c \) is the sampling factor hyperparameter for ProbSparse attention. Since \( Q_{\text{reduced}} \) selects only the top \( u \) queries, its size is \( c \cdot \log L_Q \times d \). Therefore, the multiplication \( Q_{\text{reduced}} K^T \) has a computational complexity of \( O(L_K \log L_Q) = O(T \log T) \).
@@ -291,7 +291,7 @@ The next step is to determine how to select the top \( u \) ``active'' queries t
 In practical terms, the measurement is defined as:
 
 \begin{equation}
-M(q_i, K) = \max_j \left( \frac{q_i k_j^T}{\sqrt{d}} \right) - \frac{1}{L_k} \sum_{j=1}^{L_k} \left( \frac{q_i k_j^T}{\sqrt{d}} \right)
+M(q_i, K) = \max_j \left( \frac{q_i k_j^T}{\sqrt{d}} \right) - \frac{1}{L_k} \sum_{j=1}^{L_k} \left( \frac{q_i k_j^T}{\sqrt{d}} \right) \text{ .}
 \end{equation}
 
 The key insight here is that a larger \( M(q_i, K) \) value indicates that the query \( q_i \) should be included in \( Q_{\text{reduced}} \), while a smaller value suggests otherwise.

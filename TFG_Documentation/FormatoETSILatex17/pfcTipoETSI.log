@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.7)  24 AUG 2024 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.7)  25 AUG 2024 14:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1915,7 +1915,7 @@ LaTeX Warning: Label `fig:FIG' multiply defined.
 
 LaTeX Warning: Label `fig:FIG' multiply defined.
 
-) (./5_ChapterDesign/5_ChapterDesign.aux) (./6_ChapterResults/6_ChapterResults.aux) (./7_ChapterConclusions/7_ChapterConclusions.aux))
+) (./5_ChapterDesign/5_ChapterDesign.aux) (./6_ChapterResults/6_ChapterResults.aux) (./7_ChapterConclusions/7_ChapterConclusions.aux) (./apendices/apendices.aux))
 \openout1 = `pfcTipoETSI.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
@@ -2308,30 +2308,30 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              that will remove this deprecated code.
 
 [15]
-<3_ChapterTranformerVariants/figuras/Transformer_architecture.png, id=717, 366.168pt x 539.3751pt>
+<3_ChapterTranformerVariants/figuras/Transformer_architecture.png, id=752, 366.168pt x 539.3751pt>
 File: 3_ChapterTranformerVariants/figuras/Transformer_architecture.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/Transformer_architecture.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Transformer_architecture.png  used on input line 30.
 (pdftex.def)             Requested size: 170.71652pt x 251.47348pt.
  [16 <./3_ChapterTranformerVariants/figuras/Transformer_architecture.png>]
-<3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png, id=728, 107.2005pt x 212.9556pt>
+<3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png, id=763, 107.2005pt x 212.9556pt>
 File: 3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png  used on input line 81.
 (pdftex.def)             Requested size: 85.35826pt x 169.57182pt.
  [17 <./3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png>]
-<3_ChapterTranformerVariants/figuras/MultiHeadAttention.png, id=744, 201.1515pt x 271.2534pt>
+<3_ChapterTranformerVariants/figuras/MultiHeadAttention.png, id=779, 201.1515pt x 271.2534pt>
 File: 3_ChapterTranformerVariants/figuras/MultiHeadAttention.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/MultiHeadAttention.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/MultiHeadAttention.png  used on input line 102.
 (pdftex.def)             Requested size: 142.26378pt x 191.85037pt.
-<3_ChapterTranformerVariants/figuras/IMS.pdf, id=747, 2599.46156pt x 1592.19844pt>
+<3_ChapterTranformerVariants/figuras/IMS.pdf, id=782, 2599.46156pt x 1592.19844pt>
 File: 3_ChapterTranformerVariants/figuras/IMS.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/IMS.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/IMS.pdf  used on input line 136.
 (pdftex.def)             Requested size: 369.88582pt x 226.5505pt.
  [18 <./3_ChapterTranformerVariants/figuras/MultiHeadAttention.png>]
-<3_ChapterTranformerVariants/figuras/DMS.pdf, id=758, 2599.46156pt x 1592.19844pt>
+<3_ChapterTranformerVariants/figuras/DMS.pdf, id=793, 2599.46156pt x 1592.19844pt>
 File: 3_ChapterTranformerVariants/figuras/DMS.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/DMS.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/DMS.pdf  used on input line 144.
@@ -2343,19 +2343,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 pdfTeX warning: pdflatex.exe (file ./3_ChapterTranformerVariants/figuras/DMS.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<3_ChapterTranformerVariants/figuras/ChannelProjection.png, id=857, 839.135pt x 431.6125pt>
+<3_ChapterTranformerVariants/figuras/ChannelProjection.png, id=893, 839.135pt x 431.6125pt>
 File: 3_ChapterTranformerVariants/figuras/ChannelProjection.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/ChannelProjection.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/ChannelProjection.png  used on input line 160.
 (pdftex.def)             Requested size: 369.88582pt x 190.25255pt.
  [20 <./3_ChapterTranformerVariants/figuras/ChannelProjection.png>]
-<3_ChapterTranformerVariants/figuras/Embbeding.pdf, id=868, 382.42876pt x 304.88907pt>
+<3_ChapterTranformerVariants/figuras/Embbeding.pdf, id=903, 382.42876pt x 304.88907pt>
 File: 3_ChapterTranformerVariants/figuras/Embbeding.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/Embbeding.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Embbeding.pdf  used on input line 180.
 (pdftex.def)             Requested size: 284.52756pt x 226.84721pt.
  [21 <./3_ChapterTranformerVariants/figuras/Embbeding.pdf>]
-<3_ChapterTranformerVariants/figuras/Probabilistic.png, id=889, 441.14813pt x 249.18094pt>
+<3_ChapterTranformerVariants/figuras/Probabilistic.png, id=924, 441.14813pt x 249.18094pt>
 File: 3_ChapterTranformerVariants/figuras/Probabilistic.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/Probabilistic.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Probabilistic.png  used on input line 240.
@@ -2363,13 +2363,13 @@ Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Probabilistic.png  
  [22 <./3_ChapterTranformerVariants/figuras/Probabilistic.png>]
 
 pdfTeX warning: pdflatex.exe (file ./3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf, id=900, 1412.17688pt x 289.81274pt>
+<3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf, id=935, 1412.17688pt x 289.81274pt>
 File: 3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf  used on input line 262.
 (pdftex.def)             Requested size: 426.79134pt x 87.58571pt.
 [23 <./3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf>]
-<3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png, id=948, 1149.5447pt x 619.56468pt>
+<3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png, id=984, 1149.5447pt x 619.56468pt>
 File: 3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png Graphic file (type png)
 <use 3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png  used on input line 303.
@@ -2378,7 +2378,7 @@ Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/Queries_ProbSparceA
 Underfull \vbox (badness 1005) has occurred while \output is active []
 
  [24 <./3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png>]
-<3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf, id=958, 3826.76036pt x 1510.4221pt>
+<3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf, id=994, 3826.76036pt x 1510.4221pt>
 File: 3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf  used on input line 350.
@@ -2387,18 +2387,18 @@ Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/AutoformerArchitect
 Underfull \vbox (badness 5548) has occurred while \output is active []
 
  [25 <./3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf>]
-<3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf, id=1024, 3038.35126pt x 636.12656pt>
+<3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf, id=1059, 3038.35126pt x 636.12656pt>
 File: 3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf  used on input line 382.
 (pdftex.def)             Requested size: 426.79134pt x 89.3483pt.
-<3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf, id=1027, 355.3275pt x 355.3275pt>
+<3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf, id=1062, 355.3275pt x 355.3275pt>
 File: 3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf  used on input line 401.
 (pdftex.def)             Requested size: 227.62204pt x 227.62569pt.
  [26 <./3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf>]
-<3_ChapterTranformerVariants/figuras/TimeDelay.pdf, id=1095, 1284.79988pt x 685.56119pt>
+<3_ChapterTranformerVariants/figuras/TimeDelay.pdf, id=1131, 1284.79988pt x 685.56119pt>
 File: 3_ChapterTranformerVariants/figuras/TimeDelay.pdf Graphic file (type pdf)
 <use 3_ChapterTranformerVariants/figuras/TimeDelay.pdf>
 Package pdftex.def Info: 3_ChapterTranformerVariants/figuras/TimeDelay.pdf  used on input line 438.
@@ -2419,7 +2419,7 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-<4_ChapterMaterials/figuras/DCDornavera.pdf, id=1296, 217.74857pt x 313.48285pt>
+<4_ChapterMaterials/figuras/DCDornavera.pdf, id=1331, 217.74857pt x 313.48285pt>
 File: 4_ChapterMaterials/figuras/DCDornavera.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/DCDornavera.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/DCDornavera.pdf  used on input line 15.
@@ -2430,82 +2430,82 @@ Package pdftex.def Info: 4_ChapterMaterials/figuras/DCDornavera.pdf  used on inp
 
 
  <./4_ChapterMaterials/figuras/DCDornavera.pdf>]
-<4_ChapterMaterials/figuras/SHT20.jpg, id=1312, 642.4pt x 642.4pt>
+<4_ChapterMaterials/figuras/SHT20.jpg, id=1347, 642.4pt x 642.4pt>
 File: 4_ChapterMaterials/figuras/SHT20.jpg Graphic file (type jpg)
 <use 4_ChapterMaterials/figuras/SHT20.jpg>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/SHT20.jpg  used on input line 35.
 (pdftex.def)             Requested size: 85.35826pt x 85.35774pt.
-<4_ChapterMaterials/figuras/MEC10.png, id=1315, 803.0pt x 803.0pt>
+<4_ChapterMaterials/figuras/MEC10.png, id=1350, 803.0pt x 803.0pt>
 File: 4_ChapterMaterials/figuras/MEC10.png Graphic file (type png)
 <use 4_ChapterMaterials/figuras/MEC10.png>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/MEC10.png  used on input line 43.
 (pdftex.def)             Requested size: 85.35826pt x 85.35284pt.
-<4_ChapterMaterials/figuras/VEML7700.jpeg, id=1318, 642.4pt x 642.4pt>
+<4_ChapterMaterials/figuras/VEML7700.jpeg, id=1353, 642.4pt x 642.4pt>
 File: 4_ChapterMaterials/figuras/VEML7700.jpeg Graphic file (type jpg)
 <use 4_ChapterMaterials/figuras/VEML7700.jpeg>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/VEML7700.jpeg  used on input line 51.
 (pdftex.def)             Requested size: 85.35826pt x 85.35774pt.
  [30 <./4_ChapterMaterials/figuras/SHT20.jpg> <./4_ChapterMaterials/figuras/MEC10.png> <./4_ChapterMaterials/figuras/VEML7700.jpeg>]
-<4_ChapterMaterials/figuras/train_data_Temperature.pdf, id=1331, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Temperature.pdf, id=1366, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Temperature.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Temperature.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Temperature.pdf  used on input line 73.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
-<4_ChapterMaterials/figuras/train_data_Relative_humidity.pdf, id=1332, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Relative_humidity.pdf, id=1367, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Relative_humidity.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Relative_humidity.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Relative_humidity.pdf  used on input line 84.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
  [31 <./4_ChapterMaterials/figuras/train_data_Temperature.pdf> <./4_ChapterMaterials/figuras/train_data_Relative_humidity.pdf>]
-<4_ChapterMaterials/figuras/train_data_Vapor_Pressure_Deficit.pdf, id=1400, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Vapor_Pressure_Deficit.pdf, id=1436, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Vapor_Pressure_Deficit.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Vapor_Pressure_Deficit.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Vapor_Pressure_Deficit.pdf  used on input line 95.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
-<4_ChapterMaterials/figuras/train_data_Light.pdf, id=1401, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Light.pdf, id=1437, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Light.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Light.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Light.pdf  used on input line 106.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
-<4_ChapterMaterials/figuras/train_data_Soil_temperature.pdf, id=1402, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Soil_temperature.pdf, id=1438, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Soil_temperature.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Soil_temperature.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Soil_temperature.pdf  used on input line 117.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
  [32 <./4_ChapterMaterials/figuras/train_data_Vapor_Pressure_Deficit.pdf> <./4_ChapterMaterials/figuras/train_data_Light.pdf> <./4_ChapterMaterials/figuras/train_data_Soil_temperature.pdf>]
-<4_ChapterMaterials/figuras/train_data_Permittivity.pdf, id=1502, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Permittivity.pdf, id=1537, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Permittivity.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Permittivity.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Permittivity.pdf  used on input line 128.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
-<4_ChapterMaterials/figuras/train_data_Electroconductivity.pdf, id=1503, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Electroconductivity.pdf, id=1538, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Electroconductivity.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Electroconductivity.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Electroconductivity.pdf  used on input line 139.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
-<4_ChapterMaterials/figuras/train_data_Volumetric_water_content.pdf, id=1504, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Volumetric_water_content.pdf, id=1539, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Volumetric_water_content.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Volumetric_water_content.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Volumetric_water_content.pdf  used on input line 150.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
  [33 <./4_ChapterMaterials/figuras/train_data_Permittivity.pdf> <./4_ChapterMaterials/figuras/train_data_Electroconductivity.pdf> <./4_ChapterMaterials/figuras/train_data_Volumetric_water_content.pdf>]
-<4_ChapterMaterials/figuras/train_data_Diameter.pdf, id=1613, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Diameter.pdf, id=1648, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Diameter.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Diameter.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Diameter.pdf  used on input line 161.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
-<4_ChapterMaterials/figuras/train_data_Photosynthetically_Active_Radiation.pdf, id=1614, 1734.48pt x 289.08pt>
+<4_ChapterMaterials/figuras/train_data_Photosynthetically_Active_Radiation.pdf, id=1649, 1734.48pt x 289.08pt>
 File: 4_ChapterMaterials/figuras/train_data_Photosynthetically_Active_Radiation.pdf Graphic file (type pdf)
 <use 4_ChapterMaterials/figuras/train_data_Photosynthetically_Active_Radiation.pdf>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/train_data_Photosynthetically_Active_Radiation.pdf  used on input line 172.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
-<4_ChapterMaterials/figuras/Correlation_matrix.png, id=1615, 127.9179pt x 108.405pt>
+<4_ChapterMaterials/figuras/Correlation_matrix.png, id=1650, 127.9179pt x 108.405pt>
 File: 4_ChapterMaterials/figuras/Correlation_matrix.png Graphic file (type png)
 <use 4_ChapterMaterials/figuras/Correlation_matrix.png>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/Correlation_matrix.png  used on input line 183.
 (pdftex.def)             Requested size: 284.52756pt x 241.14493pt.
  [34 <./4_ChapterMaterials/figuras/train_data_Diameter.pdf> <./4_ChapterMaterials/figuras/train_data_Photosynthetically_Active_Radiation.pdf>] [35 <./4_ChapterMaterials/figuras/Correlation_matrix.png>]
-<4_ChapterMaterials/figuras/T4.png, id=1692, 803.0pt x 410.53375pt>
+<4_ChapterMaterials/figuras/T4.png, id=1727, 803.0pt x 410.53375pt>
 File: 4_ChapterMaterials/figuras/T4.png Graphic file (type png)
 <use 4_ChapterMaterials/figuras/T4.png>
 Package pdftex.def Info: 4_ChapterMaterials/figuras/T4.png  used on input line 225.
@@ -2534,12 +2534,12 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-<5_ChapterDesign/figuras/1_DatasetIssues/Diameter_Sand_1.pdf, id=1725, 1734.48pt x 289.08pt>
+<5_ChapterDesign/figuras/1_DatasetIssues/Diameter_Sand_1.pdf, id=1761, 1734.48pt x 289.08pt>
 File: 5_ChapterDesign/figuras/1_DatasetIssues/Diameter_Sand_1.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/1_DatasetIssues/Diameter_Sand_1.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/1_DatasetIssues/Diameter_Sand_1.pdf  used on input line 20.
 (pdftex.def)             Requested size: 426.79134pt x 71.13177pt.
-<5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf, id=1726, 1734.48pt x 289.08pt>
+<5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf, id=1762, 1734.48pt x 289.08pt>
 File: 5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf  used on input line 27.
@@ -2557,37 +2557,37 @@ LaTeX Font Warning: Font shape `T1/cmtt/b/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 40.
 
 [40 <./5_ChapterDesign/figuras/1_DatasetIssues/Light_Sand_2.pdf>]
-<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Temperature.pdf, id=1841, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Temperature.pdf, id=1876, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Temperature.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Temperature.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Temperature.pdf  used on input line 73.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Relative_humidity.pdf, id=1842, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Relative_humidity.pdf, id=1877, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Relative_humidity.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Relative_humidity.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Relative_humidity.pdf  used on input line 80.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Light.pdf, id=1843, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Light.pdf, id=1878, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Light.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Light.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Light.pdf  used on input line 87.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Soil_temperature.pdf, id=1844, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Soil_temperature.pdf, id=1879, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Soil_temperature.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Soil_temperature.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Soil_temperature.pdf  used on input line 94.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Permittivity.pdf, id=1845, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Permittivity.pdf, id=1880, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Permittivity.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Permittivity.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Permittivity.pdf  used on input line 101.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Electroconductivity.pdf, id=1846, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Electroconductivity.pdf, id=1881, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Electroconductivity.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Electroconductivity.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Electroconductivity.pdf  used on input line 108.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Diameter.pdf, id=1847, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/2_Smoothing/Smoothing_Diameter.pdf, id=1882, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Diameter.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Diameter.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Diameter.pdf  used on input line 115.
@@ -2596,48 +2596,48 @@ Package pdftex.def Info: 5_ChapterDesign/figuras/2_Smoothing/Smoothing_Diameter.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41 <./5_ChapterDesign/figuras/2_Smoothing/Smoothing_Temperature.pdf> <./5_ChapterDesign/figuras/2_Smoothing/Smoothing_Relative_humidity.pdf> <./5_ChapterDesign/figuras/2_Smoothing/Smoothing_Light.pdf>] [42 <./5_ChapterDesign/figuras/2_Smoothing/Smoothing_Soil_temperature.pdf> <./5_ChapterDesign/figuras/2_Smoothing/Smoothing_Permittivity.pdf> <./5_ChapterDesign/figuras/2_Smoothing/Smoothing_Electroconductivity.pdf>] [43 <./5_ChapterDesign/figuras/2_Smoothing/Smoothing_Diameter.pdf>]
-<5_ChapterDesign/figuras/3_Trend/WithoutTrend_Diameter.pdf, id=2138, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/3_Trend/WithoutTrend_Diameter.pdf, id=2174, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/3_Trend/WithoutTrend_Diameter.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/3_Trend/WithoutTrend_Diameter.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/3_Trend/WithoutTrend_Diameter.pdf  used on input line 162.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/4_IndexNan/nan_index_distribution.pdf, id=2140, 722.7pt x 144.54pt>
+<5_ChapterDesign/figuras/4_IndexNan/nan_index_distribution.pdf, id=2176, 722.7pt x 144.54pt>
 File: 5_ChapterDesign/figuras/4_IndexNan/nan_index_distribution.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/4_IndexNan/nan_index_distribution.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/4_IndexNan/nan_index_distribution.pdf  used on input line 178.
 (pdftex.def)             Requested size: 426.79134pt x 85.35945pt.
  [44 <./5_ChapterDesign/figuras/3_Trend/WithoutTrend_Diameter.pdf> <./5_ChapterDesign/figuras/4_IndexNan/nan_index_distribution.pdf>]
-<5_ChapterDesign/figuras/5_Irregular/comparison_Temperature.pdf, id=2226, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/5_Irregular/comparison_Temperature.pdf, id=2261, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/5_Irregular/comparison_Temperature.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/5_Irregular/comparison_Temperature.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/5_Irregular/comparison_Temperature.pdf  used on input line 212.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/5_Irregular/comparison_Relative_humidity.pdf, id=2227, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/5_Irregular/comparison_Relative_humidity.pdf, id=2262, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/5_Irregular/comparison_Relative_humidity.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/5_Irregular/comparison_Relative_humidity.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/5_Irregular/comparison_Relative_humidity.pdf  used on input line 219.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/5_Irregular/comparison_Light.pdf, id=2228, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/5_Irregular/comparison_Light.pdf, id=2263, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/5_Irregular/comparison_Light.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/5_Irregular/comparison_Light.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/5_Irregular/comparison_Light.pdf  used on input line 226.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/5_Irregular/comparison_Soil_temperature.pdf, id=2229, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/5_Irregular/comparison_Soil_temperature.pdf, id=2264, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/5_Irregular/comparison_Soil_temperature.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/5_Irregular/comparison_Soil_temperature.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/5_Irregular/comparison_Soil_temperature.pdf  used on input line 233.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/5_Irregular/comparison_Permittivity.pdf, id=2230, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/5_Irregular/comparison_Permittivity.pdf, id=2265, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/5_Irregular/comparison_Permittivity.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/5_Irregular/comparison_Permittivity.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/5_Irregular/comparison_Permittivity.pdf  used on input line 240.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/5_Irregular/comparison_Electroconductivity.pdf, id=2231, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/5_Irregular/comparison_Electroconductivity.pdf, id=2266, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/5_Irregular/comparison_Electroconductivity.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/5_Irregular/comparison_Electroconductivity.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/5_Irregular/comparison_Electroconductivity.pdf  used on input line 247.
 (pdftex.def)             Requested size: 426.79134pt x 142.26357pt.
-<5_ChapterDesign/figuras/5_Irregular/comparison_Diameter.pdf, id=2232, 1734.48pt x 578.16pt>
+<5_ChapterDesign/figuras/5_Irregular/comparison_Diameter.pdf, id=2267, 1734.48pt x 578.16pt>
 File: 5_ChapterDesign/figuras/5_Irregular/comparison_Diameter.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/5_Irregular/comparison_Diameter.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/5_Irregular/comparison_Diameter.pdf  used on input line 254.
@@ -2645,7 +2645,7 @@ Package pdftex.def Info: 5_ChapterDesign/figuras/5_Irregular/comparison_Diameter
  [45 <./5_ChapterDesign/figuras/5_Irregular/comparison_Temperature.pdf>] [46 <./5_ChapterDesign/figuras/5_Irregular/comparison_Relative_humidity.pdf> <./5_ChapterDesign/figuras/5_Irregular/comparison_Light.pdf> <./5_ChapterDesign/figuras/5_Irregular/comparison_Soil_temperature.pdf>] [47 <./5_ChapterDesign/figuras/5_Irregular/comparison_Permittivity.pdf> <./5_ChapterDesign/figuras/5_Irregular/comparison_Electroconductivity.pdf> <./5_ChapterDesign/figuras/5_Irregular/comparison_Diameter.pdf>] [48]
 
 pdfTeX warning: pdflatex.exe (file ./5_ChapterDesign/figuras/Diagrams/D1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<5_ChapterDesign/figuras/Diagrams/D1.pdf, id=2524, 551.1792pt x 372.43138pt>
+<5_ChapterDesign/figuras/Diagrams/D1.pdf, id=2559, 551.1792pt x 372.43138pt>
 File: 5_ChapterDesign/figuras/Diagrams/D1.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/Diagrams/D1.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/Diagrams/D1.pdf  used on input line 330.
@@ -2653,23 +2653,23 @@ Package pdftex.def Info: 5_ChapterDesign/figuras/Diagrams/D1.pdf  used on input 
 [49 <./5_ChapterDesign/figuras/Diagrams/D1.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./5_ChapterDesign/figuras/Diagrams/D2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<5_ChapterDesign/figuras/Diagrams/D2.pdf, id=2546, 582.25531pt x 271.97609pt>
+<5_ChapterDesign/figuras/Diagrams/D2.pdf, id=2582, 608.2725pt x 271.97609pt>
 File: 5_ChapterDesign/figuras/Diagrams/D2.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/Diagrams/D2.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/Diagrams/D2.pdf  used on input line 368.
-(pdftex.def)             Requested size: 426.79134pt x 199.35843pt.
+(pdftex.def)             Requested size: 426.79134pt x 190.83429pt.
 [50 <./5_ChapterDesign/figuras/Diagrams/D2.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./5_ChapterDesign/figuras/Diagrams/D3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<5_ChapterDesign/figuras/Diagrams/D3.pdf, id=2563, 401.58029pt x 248.8497pt>
+<5_ChapterDesign/figuras/Diagrams/D3.pdf, id=2598, 401.58029pt x 212.71469pt>
 File: 5_ChapterDesign/figuras/Diagrams/D3.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/Diagrams/D3.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/Diagrams/D3.pdf  used on input line 381.
-(pdftex.def)             Requested size: 369.88582pt x 229.21788pt.
+(pdftex.def)             Requested size: 369.88582pt x 195.93356pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./5_ChapterDesign/figuras/Diagrams/D4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<5_ChapterDesign/figuras/Diagrams/D4.pdf, id=2565, 217.77359pt x 298.23419pt>
+<5_ChapterDesign/figuras/Diagrams/D4.pdf, id=2600, 217.77359pt x 298.23419pt>
 File: 5_ChapterDesign/figuras/Diagrams/D4.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/Diagrams/D4.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/Diagrams/D4.pdf  used on input line 402.
@@ -2677,7 +2677,7 @@ Package pdftex.def Info: 5_ChapterDesign/figuras/Diagrams/D4.pdf  used on input 
 
 
 pdfTeX warning: pdflatex.exe (file ./5_ChapterDesign/figuras/Diagrams/D5.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<5_ChapterDesign/figuras/Diagrams/D5.pdf, id=2567, 158.51219pt x 202.8378pt>
+<5_ChapterDesign/figuras/Diagrams/D5.pdf, id=2602, 158.51219pt x 202.8378pt>
 File: 5_ChapterDesign/figuras/Diagrams/D5.pdf Graphic file (type pdf)
 <use 5_ChapterDesign/figuras/Diagrams/D5.pdf>
 Package pdftex.def Info: 5_ChapterDesign/figuras/Diagrams/D5.pdf  used on input line 420.
@@ -2710,7 +2710,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 61.
 
-<6_ChapterResults/figuras/T3.png, id=2622, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/T3.png, id=2657, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/T3.png Graphic file (type png)
 <use 6_ChapterResults/figuras/T3.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/T3.png  used on input line 82.
@@ -2729,7 +2729,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 140.
 
-<6_ChapterResults/figuras/I3.png, id=2640, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/I3.png, id=2675, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/I3.png Graphic file (type png)
 <use 6_ChapterResults/figuras/I3.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/I3.png  used on input line 161.
@@ -2747,7 +2747,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 222.
 
-<6_ChapterResults/figuras/A3.png, id=2661, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/A3.png, id=2697, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/A3.png Graphic file (type png)
 <use 6_ChapterResults/figuras/A3.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/A3.png  used on input line 243.
@@ -2765,7 +2765,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 302.
 
-<6_ChapterResults/figuras/T13.png, id=2677, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/T13.png, id=2713, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/T13.png Graphic file (type png)
 <use 6_ChapterResults/figuras/T13.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/T13.png  used on input line 318.
@@ -2783,7 +2783,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 364.
 
-<6_ChapterResults/figuras/I13.png, id=2698, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/I13.png, id=2733, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/I13.png Graphic file (type png)
 <use 6_ChapterResults/figuras/I13.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/I13.png  used on input line 380.
@@ -2801,7 +2801,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 426.
 
-<6_ChapterResults/figuras/A11.png, id=2718, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/A11.png, id=2753, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/A11.png Graphic file (type png)
 <use 6_ChapterResults/figuras/A11.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/A11.png  used on input line 443.
@@ -2818,7 +2818,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 490.
 
-<6_ChapterResults/figuras/T15.png, id=2723, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/T15.png, id=2758, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/T15.png Graphic file (type png)
 <use 6_ChapterResults/figuras/T15.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/T15.png  used on input line 504.
@@ -2873,7 +2873,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 735.
 
-<6_ChapterResults/figuras/I20.png, id=2766, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/I20.png, id=2801, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/I20.png Graphic file (type png)
 <use 6_ChapterResults/figuras/I20.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/I20.png  used on input line 754.
@@ -2891,7 +2891,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 812.
 
-<6_ChapterResults/figuras/A21.png, id=2794, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/A21.png, id=2830, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/A21.png Graphic file (type png)
 <use 6_ChapterResults/figuras/A21.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/A21.png  used on input line 831.
@@ -2912,7 +2912,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 891.
 
-<6_ChapterResults/figuras/T30.png, id=2811, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/T30.png, id=2846, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/T30.png Graphic file (type png)
 <use 6_ChapterResults/figuras/T30.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/T30.png  used on input line 908.
@@ -2930,7 +2930,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 962.
 
-<6_ChapterResults/figuras/I30.png, id=2832, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/I30.png, id=2867, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/I30.png Graphic file (type png)
 <use 6_ChapterResults/figuras/I30.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/I30.png  used on input line 979.
@@ -2948,7 +2948,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 1034.
 
-<6_ChapterResults/figuras/A29.png, id=2851, 370.548pt x 555.165pt>
+<6_ChapterResults/figuras/A29.png, id=2886, 370.548pt x 555.165pt>
 File: 6_ChapterResults/figuras/A29.png Graphic file (type png)
 <use 6_ChapterResults/figuras/A29.png>
 Package pdftex.def Info: 6_ChapterResults/figuras/A29.png  used on input line 1051.
@@ -2978,6 +2978,56 @@ Class scrbook Warning: Redefinition of \@makechapterhead detected.
 Underfull \vbox (badness 4543) has occurred while \output is active []
 
  [79]) [80]
+\openout2 = `apendices/apendices.aux'.
+
+ (./apendices/apendices.tex
+chapter A.
+
+Class scrbook Warning: Redefinition of \@makechapterhead detected.
+(scrbook)              Note: KOMA-Script does use styles for commands like
+(scrbook)              \chapter. Currently it internally still provides and
+(scrbook)              uses \@makechapterhead, but a completely different
+(scrbook)              definition compared to the standard classes.
+(scrbook)              So redefining or using internal \@makechapterhead
+(scrbook)              by users or package authors may already break
+(scrbook)              KOMA-Script and will not work with a coming version,
+(scrbook)              that will remove this deprecated code.
+
+(c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/03/11 1.10a listings language file
+) [81
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [82] [83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86] [87]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [88] [89] [90]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91] [92]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [93]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [94]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]) [96]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -2993,18 +3043,18 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 209
 (./pfcTipoETSI.lof
 LaTeX Font Info:    Font shape `T1/phv/c/it' in size <10> not available
 (Font)              Font shape `T1/phv/c/sl' tried instead on input line 6.
- [81
+ [97
 
 
 
 
 
 
-] [82])
+] [98])
 \tf@lof=\write10
 \openout10 = `pfcTipoETSI.lof'.
 
- [83] [84
+ [99] [100
 
 ]
 
@@ -3028,13 +3078,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [85
+ [101
 
 ])
 \tf@lot=\write11
 \openout11 = `pfcTipoETSI.lot'.
 
- [86]
+ [102]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -3051,10 +3101,10 @@ Package tocbasic Info: character protrusion at lol deactivated on input line 223
 \tf@lol=\write12
 \openout12 = `pfcTipoETSI.lol'.
 
- [87
+ [103
 
 
-] [88
+] [104
 
 ] (./pfcTipoETSI.bbl
 
@@ -3068,9 +3118,9 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              KOMA-Script and will not work with a coming version,
 (scrbook)              that will remove this deprecated code.
 
-[89
+[105
 
-] [90]) [91] [92
+] [106]) [107] [108
 
 ] (./pfcTipoETSI.ind)
 No file pfcTipoETSI.gls.
@@ -3079,7 +3129,7 @@ No file pfcTipoETSI.acr.
 Package caption Warning: Unused \captionsetup[subfigure] on input line 1036.
 See the caption package documentation for explanation.
 
-[93
+[109
 
 
 ]
@@ -3091,7 +3141,7 @@ See the caption package documentation for explanation.
 Package imakeidx Warning: Remember to run (pdf)latex again after calling
 (imakeidx)                `texindy pfcTipoETSI.idx'.
 
-(./pfcTipoETSI.aux (./1_ChapterIntroduction/1_ChapterIntroduction.aux) (./2_ChapterHistory/2_ChapterHistory.aux) (./3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux) (./4_ChapterMaterials/4_ChapterMaterials.aux) (./5_ChapterDesign/5_ChapterDesign.aux) (./6_ChapterResults/6_ChapterResults.aux) (./7_ChapterConclusions/7_ChapterConclusions.aux))
+(./pfcTipoETSI.aux (./1_ChapterIntroduction/1_ChapterIntroduction.aux) (./2_ChapterHistory/2_ChapterHistory.aux) (./3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux) (./4_ChapterMaterials/4_ChapterMaterials.aux) (./5_ChapterDesign/5_ChapterDesign.aux) (./6_ChapterResults/6_ChapterResults.aux) (./7_ChapterConclusions/7_ChapterConclusions.aux) (./apendices/apendices.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -3103,18 +3153,18 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \ifx on line 15 was incomplete) 
 Here is how much of TeX's memory you used:
- 66676 strings out of 474103
- 1536624 string characters out of 5747482
- 2634849 words of memory out of 5000000
- 86756 multiletter control sequences out of 15000+600000
- 662735 words of font info for 347 fonts, out of 8000000 for 9000
+ 68059 strings out of 474103
+ 1563869 string characters out of 5747482
+ 2761524 words of memory out of 5000000
+ 87452 multiletter control sequences out of 15000+600000
+ 665662 words of font info for 353 fonts, out of 8000000 for 9000
  1162 hyphenation exceptions out of 8191
- 118i,11n,136p,10986b,1875s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 118i,11n,136p,10986b,2569s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfit1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pfcTipoETSI.pdf (105 pages, 22283247 bytes).
+Output written on pfcTipoETSI.pdf (121 pages, 22350721 bytes).
 PDF statistics:
- 3824 PDF objects out of 4296 (max. 8388607)
- 2541 compressed objects within 26 object streams
- 461 named destinations out of 1000 (max. 500000)
- 76670 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 4748 PDF objects out of 5155 (max. 8388607)
+ 3440 compressed objects within 35 object streams
+ 1129 named destinations out of 1200 (max. 500000)
+ 80822 words of extra memory for PDF output out of 89155 (max. 10000000)
 

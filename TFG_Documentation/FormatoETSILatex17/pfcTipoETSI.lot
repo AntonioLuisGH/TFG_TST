@@ -52,4 +52,5 @@
 \contentsline {table}{\numberline {6.44}{\ignorespaces R-squared (R²) for different Autoformer models obtained by varying the Batch Size and Number of Epochs values, sorted by model}}{76}{table.caption.138}%
 \contentsline {table}{\numberline {6.45}{\ignorespaces Training times for different Autoformer models obtained by varying the Batch Size and Number of Epochs values, sorted by model and training time values}}{76}{table.caption.139}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
