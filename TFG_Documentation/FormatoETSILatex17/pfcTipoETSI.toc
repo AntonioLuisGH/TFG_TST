@@ -85,8 +85,8 @@
 \contentsline {section}{\numberline {5.3}Hyperparameter Tuning}{48}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Prediction Length and Context Length}{48}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}Lags Sequence}{49}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Dropout}{49}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers}{50}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.3}Dropout}{50}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers}{51}{subsection.5.3.4}%
 \contentsline {subsection}{\numberline {5.3.5}Batch Size and Number of Epochs}{51}{subsection.5.3.5}%
 \contentsline {chapter}{\numberline {6}Experimental Results}{53}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Results Changing the Prediction Length and Context Length}{53}{section.6.1}%

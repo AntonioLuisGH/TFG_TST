@@ -258,12 +258,12 @@ Figures \ref{comparison_Temperature}, \ref{comparison_Relative_humidity}, \ref{c
 
 \section{Error Metrics}
 
-This section focuses on using error measures, such as MSE and \( R^2 \), to evaluate and compare the results obtained in our study. These metrics provide a quantitative assessment of the model's accuracy and its ability to explain the variability in the observed data.
+This section focuses on using three key metrics (MSE, \( R^2 \), and Training Time) to evaluate and compare the results obtained in our study. These metrics provide a quantitative assessment of the model's accuracy, its ability to explain the variability in the observed data, and its computational efficiency.
 
 The Mean Squared Error (MSE) is a metric that quantifies the difference between the values predicted by our model and the actual observed values. It calculates the average of the squared errors and offers a measure of prediction accuracy and quality. In this context, it is transformed to a logarithmic scale to facilitate easier comparison, expressed in decibels. A more negative MSE indicates a better model. The MSE is defined as follows:
 
 \begin{equation}
-    \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( \text{y}_{\text{pred}_i} - \text{y}_{\text{real}_i} \right)^2
+    \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( \text{y}_{\text{pred}_i} - \text{y}_{\text{real}_i} \right)^2  \text{ ,}
 \end{equation}
     
 where \( n \) represents the number of observations, \( \text{y}_{\text{pred}_i} \) is the model's predicted value for observation \( i \), and \( \text{y}_{\text{real}_i} \) is the actual observed value for observation \( i \).
@@ -271,7 +271,7 @@ where \( n \) represents the number of observations, \( \text{y}_{\text{pred}_i}
 On the other hand, the coefficient of determination, \( R^2 \), provides insight into the model's ability to explain the variability in the observed data. This measure is calculated by comparing the sum of squared residuals with the total sum of squares. An \( R^2 \) value close to 1 indicates a good model fit and high explanatory power, while a value near 0 suggests that the model does not adequately explain the data. The calculation of \( R^2 \) is given by:
 
 \begin{equation}
-R^2 = 1 - \frac{\text{SSE}}{\text{SST}}
+R^2 = 1 - \frac{\text{SSE}}{\text{SST}}  \text{ ,}
 \end{equation}
 
 where SSE (Sum of Squared Errors) is the sum of the squared errors between the model's predictions and the actual observed values, and SST (Total Sum of Squares) is the sum of the squared errors between the actual values and their mean.
@@ -279,20 +279,18 @@ where SSE (Sum of Squared Errors) is the sum of the squared errors between the m
 Relating both errors, we have:
 
 \begin{equation}
-R^2 = 1 - \frac{\text{MSE} \cdot n}{\text{SST}}
+R^2 = 1 - \frac{\text{MSE} \cdot n}{\text{SST}}  \text{ .}
 \end{equation}
 
-Additionally, training time and the number of parameters are critical aspects in the development of neural networks. Training time impacts the model's efficiency and practical viability, affecting processing capacity, scalability, and hyperparameter optimization.
+To provide a comprehensive assessment of model performance, we also consider Training Time as a metric. Training Time refers to the total time required for a model to learn from the training data until it completes all the training iterations.
 
-Finally, the number of parameters indicates the model's capacity to learn complex patterns but can influence overfitting, storage efficiency, and inference time. Balancing training time and the number of parameters is crucial for achieving efficient and high-performance models according to the application’s requirements and constraints.
+Training Time is a crucial metric as it directly reflects the computational efficiency of a model. In time series forecasting, where models are often trained on large datasets and require multiple iterations to achieve optimal performance, a shorter training time can be particularly advantageous. It allows for faster experimentation, model iteration, and deployment, which is especially valuable in real-world applications where timely insights are critical.
 
 \section{Hyperparameter Tuning}
 
-To design an experiment for identifying a suitable time series forecasting model and analyzing various hyperparameters, we have chosen the technique known as sequential hyperparameter tuning or manual hyperparameter tuning. In this approach, we adjust one hyperparameter at a time, selecting the best model at each step before proceeding to the next hyperparameter.
+To design an experiment for identifying a suitable time series forecasting model and analyzing various hyperparameters, we have chosen the technique known as "sequential hyperparameter tuning" or "manual hyperparameter tuning". In this approach, we adjust one hyperparameter at a time, selecting the best model at each step before proceeding to the next hyperparameter.
 
 This method is intuitive and offers finer control over the tuning process, which can be particularly beneficial if you have a good intuition about the relative importance of each hyperparameter. It allows for a deeper understanding of how each hyperparameter impacts the model's performance. While sequential tuning can be slower and less efficient than automated methods like grid search or random search, it simplifies the exploration of the hyperparameter space by focusing on one parameter at a time.
-
-Sequential hyperparameter tuning is a systematic process that iteratively optimizes the parameters of a machine learning model. By keeping other parameters constant and adjusting one at a time, it helps to identify the optimal value for each hyperparameter, providing clear insights into their influence on the model's performance. This clarity is particularly valuable in applications like time series forecasting, where understanding the impact of each hyperparameter is crucial.
 
 In this study, we conducted an experimental design involving 30 different models, changing a series of hyperparameters one by one and selecting the best at each step. Given that the study focuses on the Vanilla Transformer, Informer, and Autoformer, a total of 90 experiments were performed.
 
@@ -317,6 +315,14 @@ Below, the selected hyperparameters are described, along with how their values c
 
 \noindent\textbf{Context Length:} This determines the number of past time steps the model uses to make future predictions. By default, it is equal to the prediction length but can be adjusted according to the complexity of the time series. A longer context can provide more historical information, improving prediction accuracy but also increasing computational complexity.
 
+In our case, measurements are taken every 7 minutes and 52 seconds. To interpret the time series data, we need to know the number of measurements that occur in a day. A full day has 24 hours, which equates to a total of 86,400 seconds (calculated as \(24 \, \text{hours} \times 60 \, \text{minutes per hour} \times 60 \, \text{seconds per minute}\)). Since each measurement is taken every 472 seconds (i.e., every 7 minutes and 52 seconds), we calculate the number of daily measurements by dividing the total seconds in a day by the time interval between measurements:
+
+\[
+\frac{86,400}{472} \approx 183 \text{ .}
+\]
+
+This means that approximately 183 measurements are made in a day. This specific frequency implies that to capture a complete daily cycle, we should consider 183 steps in our time series. 
+
 Figure~\ref{D1} presents the part of the experimental diagram where these values are varied, creating different configurations of these hyperparameters.
 
 \begin{figure}[htbp]
@@ -326,21 +332,34 @@ Figure~\ref{D1} presents the part of the experimental diagram where these values
     \label{D1}
 \end{figure}
 
-
-
 \subsection{Lags Sequence}
 
-\textbf{Lags Sequence:} This defines the lags of the input time series used as covariates. This sequence is generally determined by the data's frequency. For example, if the data is daily, a common lag sequence might be [1, 2, 3, 4, 5, 6, 7], indicating that the data from the previous seven days will be used as inputs to predict the next day's value.
+\textbf{Lags Sequence:} The lags sequence defines which past observations of the input time series are included as features (covariates) for predicting future values. This selection is crucial for capturing temporal dependencies and patterns in the data, particularly when dealing with time series that exhibit seasonality or other periodic behaviors.
 
-In our case, measurements are taken every 7 minutes and 52 seconds, so it is important to calculate the number of measurements that occur in a day. A full day has 24 hours, which equates to a total of 86,400 seconds (calculated as \(24 \, \text{hours} \times 60 \, \text{minutes per hour} \times 60 \, \text{seconds per minute}\)). Since each measurement is taken every 472 seconds (i.e., every 7 minutes and 52 seconds), we can calculate the number of daily measurements by dividing the total seconds in a day by the time interval between measurements: 
+For example, when working with monthly data, a common lags sequence might include lags such as [1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 23, 24, 25, 35, 36, 37]. This means that, for any given month, the model not only considers the data from the current month but also includes data from various months in the past (such as 1 month ago, 2 months ago, and so on, up to 37 months ago). These past values provide additional context that can help the model learn patterns and dependencies over time.
 
-\[
-\frac{86,400}{472} \approx 183
-\]
+To explore the impact of different historical contexts on model performance, several lag sequences are tested in this phase of the experimental design:
 
-This means that approximately 183 measurements are made in a day.
+\begin{itemize}
+    \item Lags Sequence = [1, 2, 3, 4, 5]:  
+    This configuration includes the immediate past 5 data points as features. Given our frequency, these correspond to the past 5 measurements within the last hour. This setup aims to capture very short-term dependencies in the time series.
+    
+    \item Lags Sequence = [1, 2, 3, 4, 5, 183+1, 183+2, 183+3, 183+4, 183+5]:  
+    Here, we extend the lags sequence to include not only the immediate past 5 data points but also the 5 data points from exactly one day ago (since 183 points correspond to a full day). This configuration helps the model capture daily patterns, considering both short-term changes and the same time on the previous day.
+    
+    \item Lags Sequence = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 183+1, 183+2, 183+3, 183+4, 183+5, 183+6, 183+7, 183+8, 183+9, 183+10]:  
+    This configuration further extends the lags to the past 10 points and includes 10 points from one day ago. It aims to capture more detailed short-term dynamics and daily seasonality by providing the model with more data points both from the immediate past and the same period on the previous day.
+    
+    \item Lags Sequence = [1, 2, 3, 4, 5, 183+1, 183+2, 183+3, 183+4, 183+5, 366+1, 366+2, 366+3, 366+4, 366+5]:  
+    In this setup, the lags sequence includes the immediate past 5 data points, 5 data points from one day ago, and 5 data points from two days ago (since \(2 \times 183 = 366\)). This configuration is designed to capture patterns across two days, allowing the model to learn from both daily and bi-daily temporal dependencies.
+    
+    \item Lags Sequence = [1, 2, 3, 4, 5, 183+1, 183+2, 183+3, 183+4, 183+5, 366+1, 366+2, 366+3, 366+4, 366+5, 549+1, 549+2, 549+3, 549+4, 549+5]:  
+    This final configuration includes the immediate past 5 data points, 5 data points from one day ago, 5 data points from two days ago, and 5 data points from three days ago (since \(3 \times 183 = 549\)). By including multiple daily lags, this sequence allows the model to capture even longer-term patterns, potentially useful for recognizing trends that recur across several days.
+\end{itemize}
 
-This specific frequency implies that to capture a complete daily cycle, we should consider a lag covering approximately 183 intervals. By adjusting the lag sequence, we can ensure that the model has enough historical information to capture complete daily patterns. Changing this sequence can affect the model's ability to capture important temporal patterns. Using appropriate lags allows the model to consider recurrent patterns in the time series, improving forecast accuracy.
+By varying the lags sequence, we can examine how different temporal contexts influence the model's ability to learn and predict. A well-chosen lags sequence enables the model to incorporate relevant historical information, such as daily or multi-day patterns, thus improving forecasting accuracy. Conversely, a poorly chosen sequence might either neglect important temporal patterns or introduce unnecessary data, both of which can degrade model performance.
+
+Each of these configurations is designed to help the model understand the temporal structure of the data better, leveraging both short-term dependencies and longer-term periodic patterns. These variations in lag sequences are particularly relevant when dealing with high-frequency data, as they allow the model to generalize effectively across different time scales.
 
 Figure~\ref{D2} presents the part of the experimental diagram where these values are varied, creating different configurations of these hyperparameters.
 
@@ -350,6 +369,7 @@ Figure~\ref{D2} presents the part of the experimental diagram where these values
     \caption{Second Phase of the Experimental Diagram with the different Lags sequence configurations}
     \label{D2}
 \end{figure}
+
 
 \subsection{Dropout}
 \textbf{Dropout:}  This is a regularization technique used to prevent overfitting in transformers. During training, a certain percentage of nodes in the attention layers or feed-forward layers are randomly “dropped out,” meaning they are deactivated in each iteration. This means that in each training step, a different subset of nodes is turned off, which helps prevent the model from relying too heavily on any specific feature and promotes model robustness. The dropout value is specified as a fraction between 0 and 1, where higher values indicate a greater percentage of nodes being deactivated. Although too high a value can lead to poor model performance due to excessive loss of information, an appropriate value helps improve the model’s ability to generalize to unseen data.
