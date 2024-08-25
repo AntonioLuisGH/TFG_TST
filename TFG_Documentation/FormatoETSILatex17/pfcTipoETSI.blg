@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: pfcTipoETSI.aux
+A level-1 auxiliary file: resumen/resumen.aux
 A level-1 auxiliary file: 1_ChapterIntroduction/1_ChapterIntroduction.aux
 A level-1 auxiliary file: 2_ChapterHistory/2_ChapterHistory.aux
 A level-1 auxiliary file: 3_ChapterTranformerVariants/3_ChapterTranformerVariants.aux
@@ -17,9 +18,9 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliografiaLibroETSI.bib
 Warning--entry type for "FernandezYepes2022" isn't style-file defined
---line 422 of file bibliografiaLibroETSI.bib
-Warning--entry type for "BenitezGonzalez2023" isn't style-file defined
 --line 432 of file bibliografiaLibroETSI.bib
+Warning--entry type for "BenitezGonzalez2023" isn't style-file defined
+--line 442 of file bibliografiaLibroETSI.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -27,45 +28,45 @@ Warning--missing publisher in vaswani2023attention
 Warning--empty booktitle in inproceedings
 
 Done.
-You've used 35 entries,
+You've used 36 entries,
             4087 wiz_defined-function locations,
-            1003 strings with 15033 characters,
-and the built_in function-call counts, 19255 in all, are:
-= -- 1443
-> -- 596
+            1009 strings with 15225 characters,
+and the built_in function-call counts, 19641 in all, are:
+= -- 1478
+> -- 600
 < -- 37
-+ -- 294
-- -- 136
-* -- 885
-:= -- 3091
-add.period$ -- 70
-call.type$ -- 35
-change.case$ -- 37
++ -- 296
+- -- 137
+* -- 902
+:= -- 3174
+add.period$ -- 72
+call.type$ -- 36
+change.case$ -- 38
 chr.to.int$ -- 75
-cite$ -- 37
-duplicate$ -- 1475
-empty$ -- 1661
-format.name$ -- 163
-if$ -- 4354
+cite$ -- 38
+duplicate$ -- 1508
+empty$ -- 1696
+format.name$ -- 164
+if$ -- 4437
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 354
-newline$ -- 182
-num.names$ -- 35
-pop$ -- 1032
+int.to.str$ -- 36
+missing$ -- 359
+newline$ -- 187
+num.names$ -- 36
+pop$ -- 1044
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1450
+skip$ -- 1481
 stack$ -- 0
-substring$ -- 257
-swap$ -- 1006
+substring$ -- 258
+swap$ -- 1023
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 35
+type$ -- 36
 warning$ -- 2
-while$ -- 46
-width$ -- 37
-write$ -- 375
+while$ -- 47
+width$ -- 38
+write$ -- 386
 (There were 4 warnings)

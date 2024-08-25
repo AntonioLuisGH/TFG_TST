@@ -238,7 +238,7 @@ According to the paper \textit{"Use and Communication of Probabilistic Forecasts
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=10cm]{3_ChapterTranformerVariants/figuras/Probabilistic.png}
-    \caption{Ilustration of Probabilistic Forecasting}
+    \caption{Ilustration of Probabilistic Forecasting\cite{hyndman2014visualization}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -336,11 +336,11 @@ Autoformer incorporates a decomposition block within its architecture. This bloc
 Formally, for an input series \( X \in \mathbb{R}^{L \times d} \) with length \( L \), the decomposition layer returns \( X_{\text{trend}} \) and \( X_{\text{seasonal}} \) defined as:
 
 \begin{equation}
-X_{\text{trend}} = \text{AvgPool}(\text{Padding}(X))
+X_{\text{trend}} = \text{AvgPool}(\text{Padding}(X)) \text{ ,}
 \end{equation}
 
 \begin{equation}
-X_{\text{seasonal}} = X - X_{\text{trend}}
+X_{\text{seasonal}} = X - X_{\text{trend}} \text{ .}
 \end{equation}
 
 This decomposition layer allows Autoformer to explicitly model the trend and seasonal components, which has proven beneficial in various time series forecasting applications.

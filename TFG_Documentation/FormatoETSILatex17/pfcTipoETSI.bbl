@@ -156,6 +156,11 @@ C.~T. Do, A.~Douzal, S.~Marie, and M.~Rombaut, ``Multiple metric learning for la
 A.~E. Raftery, ``Use and communication of probabilistic forecasts,'' 2014. [Online]. Available: \url{https://arxiv.org/abs/1408.4812}
 \BIBentrySTDinterwordspacing
 
+\bibitem{hyndman2014visualization}
+\BIBentryALTinterwordspacing
+R.~J. Hyndman, ``Visualization of probabilistic forecasts,'' \emph{Hyndsight}, 2014. [Online]. Available: \url{https://robjhyndman.com/hyndsight/visualization-of-probabilistic-forecasts/index.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{ornavera2020dcd}
 \BIBentryALTinterwordspacing
 Ornavera, ``Ornavera data collection device (dcd) datasheet,'' 2020, accessed: 2024-07-26. [Online]. Available: \url{https://ornavera.com/wp-content/uploads/dcd-ornavera.pdf}
