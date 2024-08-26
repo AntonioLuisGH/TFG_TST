@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.7)  25 AUG 2024 19:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.7)  27 AUG 2024 01:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2081,6 +2081,11 @@ File: figuras/LogoTSC.pdf Graphic file (type pdf)
 <use figuras/LogoTSC.pdf>
 Package pdftex.def Info: figuras/LogoTSC.pdf  used on input line 138.
 (pdftex.def)             Requested size: 112.44865pt x 71.13188pt.
+
+Overfull \hbox (14.97043pt too wide) in paragraph at lines 138--138
+[] 
+ []
+
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 138.
 (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
@@ -3198,13 +3203,13 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  68109 strings out of 474103
  1564937 string characters out of 5747482
- 2763521 words of memory out of 5000000
+ 2763586 words of memory out of 5000000
  87477 multiletter control sequences out of 15000+600000
  671790 words of font info for 359 fonts, out of 8000000 for 9000
  1162 hyphenation exceptions out of 8191
  118i,11n,136p,10986b,2569s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfit1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8ac.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pfcTipoETSI.pdf (125 pages, 22356706 bytes).
+Output written on pfcTipoETSI.pdf (125 pages, 22355991 bytes).
 PDF statistics:
  4788 PDF objects out of 5155 (max. 8388607)
  3475 compressed objects within 35 object streams

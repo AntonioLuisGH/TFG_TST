@@ -2,22 +2,22 @@
 
 %:Para poner la marca de agua
 \ifdraft{
-\makeatletter		
-\SetBgContents{} 
-\SetBgOpacity{1} 
-\SetBgScale{1} 
-\AddEverypageHook{%
-\ifthenelse{\isodd{\thepage}}
-{\SetBgAngle{0}%
-\SetBgHshift{0} 
-\SetBgColor{gray!75}%
- \SetBgContents{\copyright\ \afiliafont \elautor\;\afiliafont \eldepartamento\;\afiliafont\launiversidad\; \today  \; \timestring}}%
-{\SetBgAngle{0}
-\SetBgColor{gray!75}%
-\SetBgHshift{0} 
-   \SetBgContents{\afiliafont \timestring\; \today \; \afiliafont \eldepartamento\;\afiliafont\launiversidad \; \copyright\ \afiliafont \elautor}}%
-\bg@material} 
-\makeatother
+	\makeatletter
+	\SetBgContents{}
+	\SetBgOpacity{1}
+	\SetBgScale{1}
+	\AddEverypageHook{%
+		\ifthenelse{\isodd{\thepage}}
+		{\SetBgAngle{0}%
+			\SetBgHshift{0}
+			\SetBgColor{gray!75}%
+			\SetBgContents{\copyright\ \afiliafont \elautor\;\afiliafont \eldepartamento\;\afiliafont\launiversidad\; \today  \; \timestring}}%
+		{\SetBgAngle{0}
+			\SetBgColor{gray!75}%
+			\SetBgHshift{0}
+			\SetBgContents{\afiliafont \timestring\; \today \; \afiliafont \eldepartamento\;\afiliafont\launiversidad \; \copyright\ \afiliafont \elautor}}%
+		\bg@material}
+	\makeatother
 }{}
 %:Fin de la marca de agua
 
@@ -52,12 +52,12 @@
 
 
 %:Construcción de la cubierta
-\makeatletter		
+\makeatletter
 \def\cubiertalibro#1{%
 	\pgfdeclarelayer{background}
 	\pgfdeclarelayer{foreground}
 	\pgfsetlayers{background,main,foreground}
-	
+
 	\pagestyle{empty}
 	\definecolor{etsi}{RGB}{83,16,12}
 	\definecolor{fondo}{RGB}{136,18,1}
@@ -66,56 +66,56 @@
 	\begin{tikzpicture}[remember picture,overlay]
 		\begin{pgfonlayer}{background}
 			\filldraw[fondo] (current page.north west) rectangle (current page.south east);
-		\filldraw[etsi] (current page.north west) rectangle ([xshift=30mm]current page.south west);
-		\filldraw[etsi] ([yshift=-165mm] current page.north west) rectangle ([yshift=-210mm]current page.north east);
-		\node[anchor=north west, %anchor is upper left corner of the graphic
-		      	xshift=-1.2mm, %shifting around
-		      	yshift=-164mm] 
-		     	at (current page.north west) %left upper corner of the page
-		     	{\includegraphics[width=30mm, height=45mm]{figuras/edificio01.pdf}}; 
-				
-		\node[anchor=north west, %anchor is upper left corner of the graphic
-		      	xshift=142mm, %shifting around
-		      	yshift=-172.5mm] 
-		     	at (current page.north west) %left upper corner of the page
-		     	{\includegraphics[height=25mm]{figuras/etsi.pdf}}; 
-		
-		\node[align=right, anchor=north east] 
+			\filldraw[etsi] (current page.north west) rectangle ([xshift=30mm]current page.south west);
+			\filldraw[etsi] ([yshift=-165mm] current page.north west) rectangle ([yshift=-210mm]current page.north east);
+			\node[anchor=north west, %anchor is upper left corner of the graphic
+				xshift=-1.2mm, %shifting around
+				yshift=-164mm]
+			at (current page.north west) %left upper corner of the page
+			{\includegraphics[width=30mm, height=45mm]{figuras/edificio01.pdf}};
+
+			\node[anchor=north west, %anchor is upper left corner of the graphic
+				xshift=142mm, %shifting around
+				yshift=-172.5mm]
+			at (current page.north west) %left upper corner of the page
+			{\includegraphics[height=25mm]{figuras/etsi.pdf}};
+
+			\node[align=right, anchor=north east]
 			at ([xshift=-30mm,yshift=-75mm]current page.north east)
-			{\includegraphics[height=65mm]{#1} 
+			{\includegraphics[height=65mm]{#1}
 			};
-			
+
 		\end{pgfonlayer}
-		
+
 		% Todo el texto 
 		\begin{pgfonlayer}{foreground}
 
-		\node[align=right, anchor=north east, color=texto] 
-			at ([xshift=-30mm,yshift=-20mm]current page.north east) 
+			\node[align=right, anchor=north east, color=texto]
+			at ([xshift=-30mm,yshift=-20mm]current page.north east)
 			{\begin{minipage}{0.75\textwidth}
-				\hyphenpenalty10000
-				\filleft
-				\titulofont\eltitulo
-				\ifx\subtitulo\empty\else\vskip10pt\baselineskip24pt\vrule height2pc width0pt\elsubtitulo\vskip1sp\fi
-			\end{minipage}};
-  
-		\node[align=left, anchor=north east, color=texto] 
-			at ([xshift=-30mm,yshift=-175mm]current page.north east) 
+					\hyphenpenalty10000
+					\filleft
+					\titulofont\eltitulo
+					\ifx\subtitulo\empty\else\vskip10pt\baselineskip24pt\vrule height2pc width0pt\elsubtitulo\vskip1sp\fi
+				\end{minipage}};
+
+			\node[align=left, anchor=north east, color=texto]
+			at ([xshift=-30mm,yshift=-175mm]current page.north east)
 			{\begin{minipage}{0.85\textwidth}
-				\hyphenpenalty10000
-				\filleft
-				\autorfont \elautor
-				\vskip 4pt
-				\setstretch{.05}
-				\eldepartamento
-				\vskip 1pt
-				\elcentro
-				\vskip 1pt
-				\launiversidad
-			\end{minipage}};
+					\hyphenpenalty10000
+					\filleft
+					\autorfont \elautor
+					\vskip 4pt
+					\setstretch{.05}
+					\eldepartamento
+					\vskip 1pt
+					\elcentro
+					\vskip 1pt
+					\launiversidad
+				\end{minipage}};
 		\end{pgfonlayer}
-  
-		
+
+
 	\end{tikzpicture}
 	\newpage\mbox{}
 	\newpage\mbox{}
@@ -130,31 +130,31 @@
 	\pgfdeclarelayer{background}
 	\pgfdeclarelayer{foreground}
 	\pgfsetlayers{background,main,foreground}
-	
+
 	\pagestyle{empty}
 	\begin{tikzpicture}[remember picture,overlay]
 		\begin{pgfonlayer}{foreground}
 
-		\node[align=right, anchor=north east] 
-			at ([xshift=-30mm,yshift=-30mm]current page.north east)  
+			\node[align=right, anchor=north east]
+			at ([xshift=-30mm,yshift=-30mm]current page.north east)
 			{\begin{minipage}{0.75\textwidth}
-				\hyphenpenalty10000
-				\filleft
-				\titulofont\eltitulo
-			\end{minipage}};
-			
-		\node[align=right, anchor=north east] 
-			at ([xshift=-30mm,yshift=-65mm]current page.north east)  
-			{\begin{minipage}{\textwidth}
-				\hyphenpenalty10000
-				\filleft
-				\ifx\subtitulo\empty\else\vskip10pt\baselineskip24pt\vrule height2pc width0pt\elsubtitulo\vskip1sp\fi
-				{\color{gray!75}\rule[10pt]{\linewidth}{2.5pt}}
-				%{\color{gray!75}\hrule height3pt}
-				\ifx\editionfont\laedicion\empty\else\vskip48pt\editionfont\laedicion\fi
-			\end{minipage}};
+					\hyphenpenalty10000
+					\filleft
+					\titulofont\eltitulo
+				\end{minipage}};
 
-		\end{pgfonlayer}		
+			\node[align=right, anchor=north east]
+			at ([xshift=-30mm,yshift=-65mm]current page.north east)
+			{\begin{minipage}{\textwidth}
+					\hyphenpenalty10000
+					\filleft
+					\ifx\subtitulo\empty\else\vskip10pt\baselineskip24pt\vrule height2pc width0pt\elsubtitulo\vskip1sp\fi
+					{\color{gray!75}\rule[10pt]{\linewidth}{2.5pt}}
+					%{\color{gray!75}\hrule height3pt}
+					\ifx\editionfont\laedicion\empty\else\vskip48pt\editionfont\laedicion\fi
+				\end{minipage}};
+
+		\end{pgfonlayer}
 	\end{tikzpicture}
 	\newpage\mbox{}
 }
@@ -167,52 +167,52 @@
 	\pgfdeclarelayer{background}
 	\pgfdeclarelayer{foreground}
 	\pgfsetlayers{background,main,foreground}
-	
+
 	\pagestyle{empty}
 	\begin{tikzpicture}[remember picture,overlay]
 		\begin{pgfonlayer}{foreground}
 
-		\node[align=right, anchor=north east] 
-			at ([xshift=-30mm,yshift=-30mm]current page.north east) 
+			\node[align=right, anchor=north east]
+			at ([xshift=-30mm,yshift=-30mm]current page.north east)
 			{\begin{minipage}{0.75\textwidth}
-				\hyphenpenalty10000
-				\filleft
-				\titulofont\eltitulo
-			\end{minipage}};
-			
-		\node[align=right, anchor=north east] 
+					\hyphenpenalty10000
+					\filleft
+					\titulofont\eltitulo
+				\end{minipage}};
+
+			\node[align=right, anchor=north east]
 			at ([xshift=-30mm,yshift=-65mm]current page.north east)
 			{\begin{minipage}{\textwidth}
-				\hyphenpenalty10000
-				\filleft
-				\ifx\subtitulo\empty\else\vskip10pt\baselineskip24pt\vrule height2pc width0pt\elsubtitulo\vskip1sp\fi
-				{\color{gray!75}\rule[10pt]{\linewidth}{2.5pt}}
-				%{\color{gray!75}\hrule height3pt}
-				\ifx\editionfont\laedicion\empty\else\vskip48pt\editionfont\laedicion\fi
-			\end{minipage}};
+					\hyphenpenalty10000
+					\filleft
+					\ifx\subtitulo\empty\else\vskip10pt\baselineskip24pt\vrule height2pc width0pt\elsubtitulo\vskip1sp\fi
+					{\color{gray!75}\rule[10pt]{\linewidth}{2.5pt}}
+					%{\color{gray!75}\hrule height3pt}
+					\ifx\editionfont\laedicion\empty\else\vskip48pt\editionfont\laedicion\fi
+				\end{minipage}};
 
-		\node[align=left, anchor=north east] 
+			\node[align=left, anchor=north east]
 			at ([xshift=-30mm,yshift=-130mm]current page.north east)
 			{\begin{minipage}{0.85\textwidth}
-				\hyphenpenalty10000
-				\filleft
-				\autorfont \elautor
-				\vskip 4pt
-				\setstretch{.05}
-				\eldepartamento
-				\vskip 1pt
-				\elcentro
-				\vskip 1pt
-				\launiversidad
-			\end{minipage}};
-			
-		\node[anchor=north east, %anchor is upper left corner of the graphic
-		      	xshift=-30mm, %shifting around
-		      	yshift=-205mm] 
-		     	at (current page.north east) %left upper corner of the page
-		     	{\includegraphics[width=40mm]{#1}}; 
-		
-		\end{pgfonlayer}		
+					\hyphenpenalty10000
+					\filleft
+					\autorfont \elautor
+					\vskip 4pt
+					\setstretch{.05}
+					\eldepartamento
+					\vskip 1pt
+					\elcentro
+					\vskip 1pt
+					\launiversidad
+				\end{minipage}};
+
+			\node[anchor=north east, %anchor is upper left corner of the graphic
+				xshift=-30mm, %shifting around
+				yshift=-205mm]
+			at (current page.north east) %left upper corner of the page
+			{\includegraphics[width=40mm]{#1}};
+
+		\end{pgfonlayer}
 	\end{tikzpicture}
 	\newpage\mbox{}
 }
@@ -226,7 +226,7 @@
 %%%%%%%%%%%
 
 %:Página copyright
-\makeatletter			
+\makeatletter
 \def\copyright
 {
 \pagestyle{empty}
@@ -236,13 +236,13 @@
 \setlength{\parskip}{\baselineskip}
 {\large \textcopyright{} \afiliafont \lafecha. \elautor }\\
 
-\textcopyright{} 
+\textcopyright{}
 Escuela Técnica Superior de Ingeniería\\
 %SECRETARIADO DE PUBLICACIONES DE LA UNIVERSIDAD DE SEVILLA \\
 Camino de los Descubrimientos sn\\
 41092 Sevilla \\
 www.etsi.us.es\\
-Sevilla, \afiliafont \lafecha
+Seville, \afiliafont \lafecha
 %
 %
 %Universidad de Sevilla\\
@@ -260,7 +260,7 @@ Sevilla, \afiliafont \lafecha
 Impreso en España - Printed in Spain\\
 Registro de la propiedad intelectual \hspace{2em} { \elrpintelectual}\\
 ISBN \hspace{2em} { \elisbn}\\
- 
+
 {\laedicion} %Primera edición. Compilado el  \today\ a las \timestring
 
 \vspace{4 cm}
@@ -268,9 +268,9 @@ ISBN \hspace{2em} { \elisbn}\\
 No está permitida la distribución de este texto, ni el código asociado, a terceras personas, por cualquier medio. El uso de este texto y el código asociado está restringido al Servicio de Publicaciones de la Universidad de Sevilla, así como a los proyectos final de carrera, máster, tesis y documentos similares que se defiendan en la misma.\\
 
 \vspace{1 cm}{\small
-Diseño de cubierta: Fernando García García.  \\
-Imagen central de cubierta: Postal de Maxwell a Tait.\\
-Diseño de maquetación (\LaTeX): F. Javier Payán Somet \textcopyright{} 2014. }
+	Diseño de cubierta: Fernando García García.  \\
+	Imagen central de cubierta: Postal de Maxwell a Tait.\\
+	Diseño de maquetación (\LaTeX): F. Javier Payán Somet \textcopyright{} 2014. }
 \endgroup
 }
 \makeatother

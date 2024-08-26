@@ -2,22 +2,22 @@
 
 %:Para poner la marca de agua
 \ifdraft{
-\makeatletter		
-\SetBgContents{} 
-\SetBgOpacity{1} 
-\SetBgScale{1} 
-\AddEverypageHook{%
-\ifthenelse{\isodd{\thepage}}
-{\SetBgAngle{0}%
-\SetBgHshift{0} 
-\SetBgColor{gray!75}%
- \SetBgContents{\copyright\ \afiliafont \elautor\;\afiliafont \eldepartamento\;\afiliafont\launiversidad\; \today  \; \timestring}}%
-{\SetBgAngle{0}
-\SetBgColor{gray!75}%
-\SetBgHshift{0} 
-   \SetBgContents{\afiliafont \timestring\; \today \; \afiliafont \eldepartamento\;\afiliafont\launiversidad \; \copyright\ \afiliafont \elautor}}%
-\bg@material} 
-\makeatother
+	\makeatletter
+	\SetBgContents{}
+	\SetBgOpacity{1}
+	\SetBgScale{1}
+	\AddEverypageHook{%
+		\ifthenelse{\isodd{\thepage}}
+		{\SetBgAngle{0}%
+			\SetBgHshift{0}
+			\SetBgColor{gray!75}%
+			\SetBgContents{\copyright\ \afiliafont \elautor\;\afiliafont \eldepartamento\;\afiliafont\launiversidad\; \today  \; \timestring}}%
+		{\SetBgAngle{0}
+			\SetBgColor{gray!75}%
+			\SetBgHshift{0}
+			\SetBgContents{\afiliafont \timestring\; \today \; \afiliafont \eldepartamento\;\afiliafont\launiversidad \; \copyright\ \afiliafont \elautor}}%
+		\bg@material}
+	\makeatother
 }{}
 %:Fin de la marca de agua
 
@@ -57,12 +57,12 @@
 \rpintelectual{}
 
 %:Construcción de la portada
-\makeatletter		
+\makeatletter
 \def\portadaTesis#1{%
 	\pgfdeclarelayer{background}
 	\pgfdeclarelayer{foreground}
 	\pgfsetlayers{background,main,foreground}
-	
+
 	\pagestyle{empty}
 	\definecolor{etsi}{RGB}{83,16,12}
 	\definecolor{fondo}{RGB}{136,18,1}
@@ -71,74 +71,74 @@
 	\begin{tikzpicture}[remember picture,overlay]
 		\begin{pgfonlayer}{background}
 			\filldraw[fondo] (current page.north west) rectangle (current page.south east);
-		\filldraw[etsi] (current page.north west) rectangle ([xshift=30mm]current page.south west);
-		\filldraw[etsi] ([yshift=-165mm] current page.north west) rectangle ([yshift=-210mm]current page.north east);
-		\node[anchor=north west, %anchor is upper left corner of the graphic
-		      	xshift=-1.2mm, %shifting around
-		      	yshift=-164mm] 
-		     	at (current page.north west) %left upper corner of the page
-		     	{\includegraphics[width=30mm, height=45mm]{figuras/edificio01.pdf}}; 
-				
-		\node[anchor=north west, %anchor is upper left corner of the graphic
-		      	xshift=140mm, %shifting around
-		      	yshift=-172.5mm] 
-		     	at (current page.north west) %left upper corner of the page
-		     	{\includegraphics[height=25mm]{figuras/etsi.pdf}}; 
-		
-		\node[align=right, anchor=north west] 
+			\filldraw[etsi] (current page.north west) rectangle ([xshift=30mm]current page.south west);
+			\filldraw[etsi] ([yshift=-165mm] current page.north west) rectangle ([yshift=-210mm]current page.north east);
+			\node[anchor=north west, %anchor is upper left corner of the graphic
+				xshift=-1.2mm, %shifting around
+				yshift=-164mm]
+			at (current page.north west) %left upper corner of the page
+			{\includegraphics[width=30mm, height=45mm]{figuras/edificio01.pdf}};
+
+			\node[anchor=north west, %anchor is upper left corner of the graphic
+				xshift=140mm, %shifting around
+				yshift=-172.5mm]
+			at (current page.north west) %left upper corner of the page
+			{\includegraphics[height=25mm]{figuras/etsi.pdf}};
+
+			\node[align=right, anchor=north west]
 			at ([xshift=40mm,yshift=-70mm]current page.north west)
-			{\includegraphics[height=65mm]{#1} 
+			{\includegraphics[height=65mm]{#1}
 			};
-			
+
 		\end{pgfonlayer}
-		
+
 		% Todo el texto 
 		\begin{pgfonlayer}{foreground}
 
-		\node[align=right, anchor=north west, color=texto] 
-			at ([xshift=40mm,yshift=-15mm]current page.north west) 
+			\node[align=right, anchor=north west, color=texto]
+			at ([xshift=40mm,yshift=-15mm]current page.north west)
 			{\begin{minipage}{0.9\textwidth}
-				\hyphenpenalty10000
-				\filright
-				\fontsize{19}{21}\titulart Tesis Doctoral\\
-				\latitulacion
-			\end{minipage}};
-  
-		\node[align=right, anchor=north west, color=texto] 
-			at ([xshift=40mm,yshift=-45mm]current page.north west) 
+					\hyphenpenalty10000
+					\filright
+					\fontsize{19}{21}\titulart Tesis Doctoral\\
+					\latitulacion
+				\end{minipage}};
+
+			\node[align=right, anchor=north west, color=texto]
+			at ([xshift=40mm,yshift=-45mm]current page.north west)
 			{\begin{minipage}{0.9\textwidth}
-				\hyphenpenalty10000
-				\filright
-				\fontsize{21}{23}\titulart \eltitulo
-			\end{minipage}};
-  
-		\node[align=right, anchor=north west, color=texto] 
-			at ([xshift=40mm,yshift=-145mm]current page.north west) 
+					\hyphenpenalty10000
+					\filright
+					\fontsize{21}{23}\titulart \eltitulo
+				\end{minipage}};
+
+			\node[align=right, anchor=north west, color=texto]
+			at ([xshift=40mm,yshift=-145mm]current page.north west)
 			{\begin{minipage}{0.9\textwidth}
-				\hyphenpenalty10000
-				\filright
-				\fontsize{17}{20}\titulart Autor: \elautor\\
-				Director: \eldirector
-			\end{minipage}};
-  
-		\node[align=left, anchor=north west, color=texto] 
-			at ([xshift=40mm,yshift=-175mm]current page.north west) 
+					\hyphenpenalty10000
+					\filright
+					\fontsize{17}{20}\titulart Autor: \elautor\\
+					Director: \eldirector
+				\end{minipage}};
+
+			\node[align=left, anchor=north west, color=texto]
+			at ([xshift=40mm,yshift=-175mm]current page.north west)
 			{\begin{minipage}{0.85\textwidth}
-				\hyphenpenalty10000
-				\filright
-				\fontsize{\lcatorce}{\lcatorce}\titulartoc 
-				\eldepartamento\\
-				\elcentro\\
-				\launiversidad\\
-				\vskip 20pt
-				Sevilla, \lafecha
-			\end{minipage}};
+					\hyphenpenalty10000
+					\filright
+					\fontsize{\lcatorce}{\lcatorce}\titulartoc
+					\eldepartamento\\
+					\elcentro\\
+					\launiversidad\\
+					\vskip 20pt
+					Seville, \lafecha
+				\end{minipage}};
 		\end{pgfonlayer}
-  	\end{tikzpicture}
-\newpage\thispagestyle{empty}\mbox{}
-\clearpage
-\firstpage
-\secondpage
+	\end{tikzpicture}
+	\newpage\thispagestyle{empty}\mbox{}
+	\clearpage
+	\firstpage
+	\secondpage
 }
 \makeatother
 %:Fin de construcción de la cubierta del libro 
@@ -216,51 +216,51 @@
 %}
 %\makeatother
 
-\makeatletter			
+\makeatletter
 
 
 %%%%%%primera pagina TESIS %%%%%%%%%
 \def\firstpage{%%%%%%%%%%%%%%%%%%%%
-	
-    \thispagestyle{empty}%
- %   \null\vfill
-    \begin{center}
-       \setstretch{1.5}
- 	{\Large Tesis Doctoral\\ \latitulacion}
-    \end{center}
-    \vskip 2cm
-    \begin{center}
-          \setstretch{1.5}
-	{\Large \eltitulo}
-    \end{center}
-    \vspace{2cm}
-    \begin{center}
-        \textrm{Autor:}\\
-        \par \vspace{0.2cm}
-        {\large \bfseries{\elautor}}\\
-        \par \vspace{0.1cm}
-      %  \autortitulo\\  %Poner si es para un máster, tesis...
-    \end{center}
-    \vspace{.5cm}
-    \begin{center}
-        \textrm{Director:}\\
-        \par \vspace{.2cm}
-        {\large \bfseries{\eldirector}}\\
-        \par \vspace{.1cm}
-        \eltitulodirector\\
-        %\par \vspace{.2cm}
-    \end{center}
-    \par
-    \vspace{1.5cm}
-    \begin{center}
-         {\afiliafont \eldepartamento\\ \afiliafont\elcentro \\ \afiliafont\launiversidad}
-    \end{center}
-    \vspace{.1cm}
-    \begin{center}
-        \afiliafont \lafecha
-    \end{center}
-    \vfill
-    \newpage\thispagestyle{empty}\mbox{}\clearpage %Trick to create an empty page
+
+	\thispagestyle{empty}%
+	%   \null\vfill
+	\begin{center}
+		\setstretch{1.5}
+		{\Large Tesis Doctoral\\ \latitulacion}
+	\end{center}
+	\vskip 2cm
+	\begin{center}
+		\setstretch{1.5}
+		{\Large \eltitulo}
+	\end{center}
+	\vspace{2cm}
+	\begin{center}
+		\textrm{Author:}\\
+		\par \vspace{0.2cm}
+		{\large \bfseries{\elautor}}\\
+		\par \vspace{0.1cm}
+		%  \autortitulo\\  %Poner si es para un máster, tesis...
+	\end{center}
+	\vspace{.5cm}
+	\begin{center}
+		\textrm{Director:}\\
+		\par \vspace{.2cm}
+		{\large \bfseries{\eldirector}}\\
+		\par \vspace{.1cm}
+		\eltitulodirector\\
+		%\par \vspace{.2cm}
+	\end{center}
+	\par
+	\vspace{1.5cm}
+	\begin{center}
+		{\afiliafont \eldepartamento\\ \afiliafont\elcentro \\ \afiliafont\launiversidad}
+	\end{center}
+	\vspace{.1cm}
+	\begin{center}
+		\afiliafont \lafecha
+	\end{center}
+	\vfill
+	\newpage\thispagestyle{empty}\mbox{}\clearpage %Trick to create an empty page
 }% First page
 \makeatother
 
@@ -268,45 +268,45 @@
 %
 %%%%%%segunda pagina TESIS %%%%%%%%%
 \def\secondpage{%
-    \thispagestyle{empty}%
-  %  \null\vfill %vskip1in%
-     Tesis Doctoral:\hspace{.5cm}  \parbox[t]{10cm}{\eltitulo}
-    \vspace{0.5cm}
- %   \vspace{.5cm}
-    \begin{tabbing}
-    \hspace{.5cm} Autor:    \hspace{0.8cm} \elautor
-    \\
-    \hspace{.5cm} Director: \hspace{0.45cm}  \eldirector %\\ \hspace{5.18cm}  %\directorb \\
-    \end{tabbing}
-    \vspace{.5cm}
-    El tribunal nombrado para juzgar la Tesis arriba indicada, compuesto por los siguientes
-doctores:
-    \\
-    \par
-    \vspace*{.5cm}
-    \hspace{2cm}  Presidente:\\
-    \par
-    \vspace*{.7cm}
-    \hspace{2cm}  Vocales:\\
-    \par
-    \vspace*{2.5cm}
-    \hspace{2cm}  Secretario:\\
-    \par
-    \vspace*{1cm}
-    acuerdan otorgarle la calificación de:\\
-    \par
-    \vspace*{1.5cm}
-    \hspace{7cm}%\fecha
-    \\
-    \par
-    \vspace*{1.0cm}
-    \hspace{8cm} El Secretario del Tribunal
-        \vskip 2 cm
-    \hspace{8cm} Fecha:
-%        \begin{center}
-    \vfill
-    \newpage\thispagestyle{empty}\mbox{}%\clearpage %Trick to create an empty page
-       \lettrine[lraise=-0.1, lines=2, loversize=0.25]{ }{ }   %Este comando, inocuo, lo metemos porque no hacerlo da fallos \f@size
+	\thispagestyle{empty}%
+	%  \null\vfill %vskip1in%
+	Tesis Doctoral:\hspace{.5cm}  \parbox[t]{10cm}{\eltitulo}
+	\vspace{0.5cm}
+	%   \vspace{.5cm}
+	\begin{tabbing}
+		\hspace{.5cm} Autor:    \hspace{0.8cm} \elautor
+		\\
+		\hspace{.5cm} Director: \hspace{0.45cm}  \eldirector %\\ \hspace{5.18cm}  %\directorb \\
+	\end{tabbing}
+	\vspace{.5cm}
+	El tribunal nombrado para juzgar la Tesis arriba indicada, compuesto por los siguientes
+	doctores:
+	\\
+	\par
+	\vspace*{.5cm}
+	\hspace{2cm}  Presidente:\\
+	\par
+	\vspace*{.7cm}
+	\hspace{2cm}  Vocales:\\
+	\par
+	\vspace*{2.5cm}
+	\hspace{2cm}  Secretario:\\
+	\par
+	\vspace*{1cm}
+	acuerdan otorgarle la calificación de:\\
+	\par
+	\vspace*{1.5cm}
+	\hspace{7cm}%\fecha
+	\\
+	\par
+	\vspace*{1.0cm}
+	\hspace{8cm} El Secretario del Tribunal
+	\vskip 2 cm
+	\hspace{8cm} Fecha:
+	%        \begin{center}
+	\vfill
+	\newpage\thispagestyle{empty}\mbox{}%\clearpage %Trick to create an empty page
+	\lettrine[lraise=-0.1, lines=2, loversize=0.25]{ }{ }   %Este comando, inocuo, lo metemos porque no hacerlo da fallos \f@size
 }% Second Page
 %
 
@@ -319,8 +319,8 @@ doctores:
 
 \makeatletter
 \def\xy#1#2#3{\setbox0=\hbox to\z@{%
-\kern#1\raise#2\hbox{#3}\hss}%
-\ht0=\z@\dp0=\z@\box0}
+		\kern#1\raise#2\hbox{#3}\hss}%
+	\ht0=\z@\dp0=\z@\box0}
 \makeatother
 
 
@@ -396,75 +396,75 @@ doctores:
 
 	\begin{tikzpicture}[remember picture,overlay]
 		\begin{pgfonlayer}{background}
-		\filldraw[etsi] (current page.north west) rectangle ([xshift=3cm]current page.south west);
-		\filldraw[etsi] ([yshift=-20cm] current page.north west) rectangle ([yshift=-25.6cm]current page.north east);
+			\filldraw[etsi] (current page.north west) rectangle ([xshift=3cm]current page.south west);
+			\filldraw[etsi] ([yshift=-20cm] current page.north west) rectangle ([yshift=-25.6cm]current page.north east);
 
-		\node[anchor=north west, %anchor is upper left corner of the graphic
-		      	xshift=-1.2mm, %shifting around
-		      	yshift=-199mm] 
-		     	at (current page.north west) %left upper corner of the page
-		     	{\includegraphics[width=30mm, height=5.6cm]{figuras/edificio01.pdf}}; 
-				
-		\node[anchor=north west, %anchor is upper left corner of the graphic
-		      	xshift=175mm, %shifting around
-		      	yshift=-210mm] 
-		     	at (current page.north west) %left upper corner of the page
-		     	{\includegraphics[height=2.8cm]{figuras/etsi.pdf}}; 
-				
-		\node[anchor=north west, %anchor is upper left corner of the graphic
-		      	xshift=5.7cm, %shifting around
-		      	yshift=-26.5cm] 
-		     	at (current page.north west) %left upper corner of the page
-		     	{\includegraphics[width=2.5cm]{#1}}; % Logo de la Universidad
-	
-		\node[anchor=north west, %anchor is upper left corner of the graphic
-		      	xshift=14.1cm, %shifting around
-		      	yshift=-26.5cm] 
-		     	at (current page.north west) %left upper corner of the page
+			\node[anchor=north west, %anchor is upper left corner of the graphic
+				xshift=-1.2mm, %shifting around
+				yshift=-199mm]
+			at (current page.north west) %left upper corner of the page
+			{\includegraphics[width=30mm, height=5.6cm]{figuras/edificio01.pdf}};
+
+			\node[anchor=north west, %anchor is upper left corner of the graphic
+				xshift=175mm, %shifting around
+				yshift=-210mm]
+			at (current page.north west) %left upper corner of the page
+			{\includegraphics[height=2.8cm]{figuras/etsi.pdf}};
+
+			\node[anchor=north west, %anchor is upper left corner of the graphic
+				xshift=5.7cm, %shifting around
+				yshift=-26.5cm]
+			at (current page.north west) %left upper corner of the page
+			{\includegraphics[width=2.5cm]{#1}}; % Logo de la Universidad
+
+			\node[anchor=north west, %anchor is upper left corner of the graphic
+				xshift=14.1cm, %shifting around
+				yshift=-26.5cm]
+			at (current page.north west) %left upper corner of the page
 			{\includegraphics[height=2.5cm]{#2}}; % Logo del Departamento, si lo hubiera
-		\end{pgfonlayer} 
+		\end{pgfonlayer}
 
 		% Todo el texto 
 		\begin{pgfonlayer}{foreground}
 
-		\node[align=left, anchor=north west] 
-			at ([xshift=3.5cm,yshift=-25mm]current page.north west) (name) 
+			\node[align=left, anchor=north west]
+			at ([xshift=3.5cm,yshift=-25mm]current page.north west) (name)
 			{\begin{minipage}{\textwidth}
-				{\huge \elnombretrabajo}\\
-				{\huge \latitulacion}
-			\end{minipage}};
-  
-		\node[align=left, anchor=north west] 
-			at ([xshift=3.5cm,yshift=-127mm]current page.north west) (name) 
+					{\huge \elnombretrabajo}\\
+					{\huge \latitulacion}
+				\end{minipage}};
+
+			\node[align=left, anchor=north west]
+			at ([xshift=3.5cm,yshift=-127mm]current page.north west) (name)
 			{\begin{minipage}{0.85\textwidth}
-				\setstretch{2}
-				{\huge \eltitulo}
-			\end{minipage}};
-  
-		\node[align=left, anchor=north west] 
-			at ([xshift=3.5cm,yshift=-165mm]current page.north west) (name) 
+					\setstretch{2}
+					{\huge \eltitulo}
+				\end{minipage}};
+
+			\node[align=left, anchor=north west]
+			at ([xshift=3.5cm,yshift=-165mm]current page.north west) (name)
 			{\begin{minipage}{0.90\textwidth}
-				\setstretch{2}
-				{\Large Autor:\elautor}\newline
-				{\Large Tutor:\eldirector}
-			\end{minipage}};
-  
-		\node[align=center, anchor=north west] 
-			at ([xshift=3.5cm,yshift=-215mm]current page.north west) (name) 
-  			{\begin{minipage}{0.80\textwidth}
-				\centering
-				\color[rgb]{1,1,1}%{0.801,0.58627,0.47647}
-				\normalfont\bfseries\fontsize{\lcatorce}{\lbcatorce}\selectfont
-				\eldepartamento\\
-				\elcentro\\
-				\launiversidad\\
-				\vspace{0.5cm}
-				\normalfont\fontsize{\lnormal}{\lbnormal}\selectfont Sevilla, \lafecha		
-			\end{minipage}};
+					\setstretch{2}
+					{\Large Autor:\elautor}\newline
+					{\Large Tutor:\eldirector}
+				\end{minipage}};
+
+			\node[align=center, anchor=north west]
+			at ([xshift=3.5cm,yshift=-215mm]current page.north west) (name)
+			{\begin{minipage}{0.80\textwidth}
+					\centering
+					\color[rgb]{1,1,1}%{0.801,0.58627,0.47647}
+					\normalfont\bfseries\fontsize{\lcatorce}{\lbcatorce}\selectfont
+					\eldepartamento\\
+					\elcentro\\
+					\launiversidad\\
+					\vspace{0.5cm}
+					\normalfont\fontsize{\lnormal}{\lbnormal}\selectfont Seville, \lafecha
+				\end{minipage}};
 
 		\end{pgfonlayer}
-		\end{tikzpicture}
-	
+	\end{tikzpicture}
+
 	\newpage\thispagestyle{empty}\mbox{}
 	\clearpage
 	\firstpagePFC
@@ -487,11 +487,11 @@ doctores:
 	\end{center}
 	\vspace{2cm}
 	\begin{center}
-		Autor:\par
-        	\vspace{0.2cm}
-        	{\large \elautor} \par
-       	 \vspace{0.2cm}
-      		%  \autortitulo\\  %Poner si es para un máster, tesis...
+		Author:\par
+		\vspace{0.2cm}
+		{\large \elautor} \par
+		\vspace{0.2cm}
+		%  \autortitulo\\  %Poner si es para un máster, tesis...
 	\end{center}
 	\vspace{.5cm}
 	\begin{center}
@@ -508,11 +508,11 @@ doctores:
 		{\normalfont\fontsize{\lcatorce}{\lbcatorce}\selectfont \elcentro}\par
 		{\normalfont\fontsize{\lcatorce}{\lbcatorce}\selectfont \launiversidad}\par
 		\vskip 5pt
-		\normalfont\fontsize{\lnormal}{\lbnormal}\selectfont Sevilla, \lafecha
+		\normalfont\fontsize{\lnormal}{\lbnormal}\selectfont Seville, \lafecha
 	\end{center}
- 
+
 	\vfill
-	\newpage\mbox{}\clearpage 
+	\newpage\mbox{}\clearpage
 }% First page
 
 %
@@ -523,7 +523,7 @@ doctores:
 	\vspace{0.5cm}
 	\begin{tabbing}
 		\hspace{.5cm} Autor: \hspace{0.8cm} \elautor\\
-    		\hspace{.5cm} Tutor: \hspace{0.8cm}  \eldirector %\\ \hspace{5.18cm}  %\directorb \\
+		\hspace{.5cm} Tutor: \hspace{0.8cm}  \eldirector %\\ \hspace{5.18cm}  %\directorb \\
 	\end{tabbing}
 	\vspace{.5cm}
 	El tribunal nombrado para juzgar el trabajo arriba indicado, compuesto por los siguientes profesores: \\
@@ -559,52 +559,52 @@ doctores:
 %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%CUBIERTA MANUAL
 %:Construcción de la portada
-\makeatletter			
+\makeatletter
 \def\portadaManual#1{%
 
-\AddToShipoutPicture*{\BackgroundPicPFC{#1}}
-\thispagestyle{empty}
-\vbox to\vsize{
-\vskip0pc
-\parindent \z@ 
-	\interlinepenalty\@M
-\hyphenpenalty10000
+	\AddToShipoutPicture*{\BackgroundPicPFC{#1}}
+	\thispagestyle{empty}
+	\vbox to\vsize{
+		\vskip0pc
+		\parindent \z@
+		\interlinepenalty\@M
+		\hyphenpenalty10000
 
-%\begin{tikzpicture}[overlay, remember picture]
-%\node[anchor=north west, %anchor is upper left corner of the graphic
-%      xshift=6.5cm, %shifting around
-%      yshift=-3.5cm] 
-%     at (current page.north west) %left upper corner of the page
-%     {\includegraphics[width=10cm]{figuras/imagenlibro.png}}; 
-%\end{tikzpicture}
+		%\begin{tikzpicture}[overlay, remember picture]
+		%\node[anchor=north west, %anchor is upper left corner of the graphic
+		%      xshift=6.5cm, %shifting around
+		%      yshift=-3.5cm] 
+		%     at (current page.north west) %left upper corner of the page
+		%     {\includegraphics[width=10cm]{figuras/imagenlibro.png}}; 
+		%\end{tikzpicture}
 
-\hspace*{1.75cm}\begin{minipage}{0.90\textwidth}
+		\hspace*{1.75cm}\begin{minipage}{0.90\textwidth}
 
-\color[rgb]{.6,0.0,0.0} 
-{\begin{center} {\fontsize{24}{28}\titulart\eltitulo}\end{center}}
+			\color[rgb]{.6,0.0,0.0}
+			{\begin{center} {\fontsize{24}{28}\titulart\eltitulo}\end{center}}
 
-\ifx\subtitulo\empty\else
-{\vskip5pt\baselineskip24pt \vrule height2pc width0pt\elsubtitulo\vskip1sp}\fi
+			\ifx\subtitulo\empty\else
+				{\vskip5pt\baselineskip24pt \vrule height2pc width0pt\elsubtitulo\vskip1sp}\fi
 
-\ifx\laedicion\empty\else \vskip4pt \laedicion \fi
+			\ifx\laedicion\empty\else \vskip4pt \laedicion \fi
 
-\vskip290pt
+			\vskip290pt
 
 
-\setstretch{.05}
-\Large\elautor
-\vskip 60pt
-\afiliafont \eldepartamento
-\vskip 1pt
-\afiliafont\elcentro
-\vskip 1pt
-\afiliafont\launiversidad
-\end{minipage}
-\vskip20cm
- \vfill
-}
-\newpage\thispagestyle{empty}\mbox{}
-\newpage\null\thispagestyle{empty}\newpage
+			\setstretch{.05}
+			\Large\elautor
+			\vskip 60pt
+			\afiliafont \eldepartamento
+			\vskip 1pt
+			\afiliafont\elcentro
+			\vskip 1pt
+			\afiliafont\launiversidad
+		\end{minipage}
+		\vskip20cm
+		\vfill
+	}
+	\newpage\thispagestyle{empty}\mbox{}
+	\newpage\null\thispagestyle{empty}\newpage
 
 }
 \makeatother
