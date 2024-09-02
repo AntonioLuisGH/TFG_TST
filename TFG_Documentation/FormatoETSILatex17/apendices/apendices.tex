@@ -427,6 +427,314 @@ These functions ensure that the data is properly formatted and split for model t
 
 \begin{lstlisting}[language=Python, caption={Code for creating data loaders for efficient training and evaluation}, breaklines=true, label=code4]
 
+    # %% LIBRARIES
+
+    from typing import Iterable, Optional
+    from transformers import PretrainedConfig
+    import torch
+    from gluonts.itertools import Cached, Cyclic
+    from gluonts.dataset.loader import as_stacked_batches
+    from gluonts.time_feature import time_features_from_frequency_str, TimeFeature, get_lags_for_frequency
+    from gluonts.dataset.field_names import FieldName
+    from gluonts.transform import (
+        AddAgeFeature,
+        AddObservedValuesIndicator,
+        AddTimeFeatures,
+        AsNumpyArray,
+        Chain,
+        ExpectedNumInstanceSampler,
+        InstanceSplitter,
+        RemoveFields,
+        SelectFields,
+        SetField,
+        TestSplitSampler,
+        Transformation,
+        ValidationSplitSampler,
+        VstackFeatures,
+        RenameFields,
+    )
+    from gluonts.transform.sampler import InstanceSampler
+    
+    
+    def create_train_dataloader(
+        config: PretrainedConfig,
+        freq: str,
+        data,
+        batch_size: int,
+        num_batches_per_epoch: int,
+        shuffle_buffer_length: Optional[int] = None,
+        cache_data: bool = True,
+        **kwargs,
+    ) -> Iterable:
+        """
+        Creates a data loader for training.
+    
+        Parameters:
+            config (PretrainedConfig): Configuration for the model.
+            freq (str): Frequency of the time series data.
+            data: Input data for training.
+            batch_size (int): Size of each batch.
+            num_batches_per_epoch (int): Number of batches per epoch.
+            shuffle_buffer_length (Optional[int]): Buffer length for shuffling the data.
+            cache_data (bool): Whether to cache the data.
+    
+        Returns:
+            Iterable: A data loader for training.
+        """
+        # Define input names based on configuration
+        prediction_input_names = [
+            "past_time_features",
+            "past_values",
+            "past_observed_mask",
+            "future_time_features",
+        ]
+        if config.num_static_categorical_features > 0:
+            prediction_input_names.append("static_categorical_features")
+        if config.num_static_real_features > 0:
+            prediction_input_names.append("static_real_features")
+    
+        training_input_names = prediction_input_names + [
+            "future_values",
+            "future_observed_mask",
+        ]
+    
+        # Create and apply transformations
+        transformation = create_transformation(freq, config)
+        transformed_data = transformation.apply(data, is_train=True)
+        if cache_data:
+            transformed_data = Cached(transformed_data)
+    
+        # Initialize the instance splitter for training
+        instance_splitter = create_instance_splitter(config, "train")
+        stream = Cyclic(transformed_data).stream()
+        training_instances = instance_splitter.apply(stream)
+    
+        return as_stacked_batches(
+            training_instances,
+            batch_size=batch_size,
+            shuffle_buffer_length=shuffle_buffer_length,
+            field_names=training_input_names,
+            output_type=torch.tensor,
+            num_batches_per_epoch=num_batches_per_epoch,
+        )
+    
+    
+    def create_backtest_dataloader(
+        config: PretrainedConfig,
+        freq: str,
+        data,
+        batch_size: int,
+        **kwargs,
+    ) -> Iterable:
+        """
+        Creates a data loader for backtesting.
+    
+        Parameters:
+            config (PretrainedConfig): Configuration for the model.
+            freq (str): Frequency of the time series data.
+            data: Input data for backtesting.
+            batch_size (int): Size of each batch.
+    
+        Returns:
+            Iterable: A data loader for backtesting.
+        """
+        prediction_input_names = [
+            "past_time_features",
+            "past_values",
+            "past_observed_mask",
+            "future_time_features",
+        ]
+        if config.num_static_categorical_features > 0:
+            prediction_input_names.append("static_categorical_features")
+        if config.num_static_real_features > 0:
+            prediction_input_names.append("static_real_features")
+    
+        # Create and apply transformations
+        transformation = create_transformation(freq, config)
+        transformed_data = transformation.apply(data)
+    
+        # Initialize the instance splitter for validation
+        instance_sampler = create_instance_splitter(config, "validation")
+        testing_instances = instance_sampler.apply(transformed_data, is_train=True)
+    
+        return as_stacked_batches(
+            testing_instances,
+            batch_size=batch_size,
+            output_type=torch.tensor,
+            field_names=prediction_input_names,
+        )
+    
+    
+    def create_test_dataloader(
+        config: PretrainedConfig,
+        freq: str,
+        data,
+        batch_size: int,
+        **kwargs,
+    ) -> Iterable:
+        """
+        Creates a data loader for testing.
+    
+        Parameters:
+            config (PretrainedConfig): Configuration for the model.
+            freq (str): Frequency of the time series data.
+            data: Input data for testing.
+            batch_size (int): Size of each batch.
+    
+        Returns:
+            Iterable: A data loader for testing.
+        """
+        prediction_input_names = [
+            "past_time_features",
+            "past_values",
+            "past_observed_mask",
+            "future_time_features",
+        ]
+        if config.num_static_categorical_features > 0:
+            prediction_input_names.append("static_categorical_features")
+        if config.num_static_real_features > 0:
+            prediction_input_names.append("static_real_features")
+    
+        # Create and apply transformations
+        transformation = create_transformation(freq, config)
+        transformed_data = transformation.apply(data, is_train=False)
+    
+        # Initialize the instance splitter for testing
+        instance_sampler = create_instance_splitter(config, "test")
+        testing_instances = instance_sampler.apply(transformed_data, is_train=False)
+    
+        return as_stacked_batches(
+            testing_instances,
+            batch_size=batch_size,
+            output_type=torch.tensor,
+            field_names=prediction_input_names,
+        )
+    
+    
+    def create_instance_splitter(
+        config: PretrainedConfig,
+        mode: str,
+        train_sampler: Optional[InstanceSampler] = None,
+        validation_sampler: Optional[InstanceSampler] = None,
+    ) -> Transformation:
+        """
+        Creates an instance splitter for different modes (train, validation, test).
+    
+        Parameters:
+            config (PretrainedConfig): Configuration for the model.
+            mode (str): Mode for the instance splitter ("train", "validation", "test").
+            train_sampler (Optional[InstanceSampler]): Custom sampler for training.
+            validation_sampler (Optional[InstanceSampler]): Custom sampler for validation.
+    
+        Returns:
+            Transformation: An instance splitter transformation.
+        """
+        assert mode in ["train", "validation", "test"], "Invalid mode specified"
+    
+        instance_sampler = {
+            "train": train_sampler or ExpectedNumInstanceSampler(
+                num_instances=1.0, min_future=config.prediction_length
+            ),
+            "validation": validation_sampler or ValidationSplitSampler(min_future=config.prediction_length),
+            "test": TestSplitSampler(),
+        }[mode]
+    
+        return InstanceSplitter(
+            target_field="values",
+            is_pad_field=FieldName.IS_PAD,
+            start_field=FieldName.START,
+            forecast_start_field=FieldName.FORECAST_START,
+            instance_sampler=instance_sampler,
+            past_length=config.context_length + max(config.lags_sequence),
+            future_length=config.prediction_length,
+            time_series_fields=["time_features", "observed_mask"],
+        )
+    
+    
+    def create_transformation(freq: str, config: PretrainedConfig) -> Transformation:
+        """
+        Creates a transformation pipeline for data preprocessing.
+    
+        Parameters:
+            freq (str): Frequency of the time series data.
+            config (PretrainedConfig): Configuration for the model.
+    
+        Returns:
+            Transformation: A transformation pipeline.
+        """
+        remove_field_names = []
+        if config.num_static_real_features == 0:
+            remove_field_names.append(FieldName.FEAT_STATIC_REAL)
+        if config.num_dynamic_real_features == 0:
+            remove_field_names.append(FieldName.FEAT_DYNAMIC_REAL)
+        if config.num_static_categorical_features == 0:
+            remove_field_names.append(FieldName.FEAT_STATIC_CAT)
+    
+        return Chain(
+            [
+                RemoveFields(field_names=remove_field_names),
+            ]
+            + (
+                [AsNumpyArray(
+                    field=FieldName.FEAT_STATIC_CAT,
+                    expected_ndim=1,
+                    dtype=int,
+                )]
+                if config.num_static_categorical_features > 0
+                else []
+            )
+            + (
+                [AsNumpyArray(
+                    field=FieldName.FEAT_STATIC_REAL,
+                    expected_ndim=1,
+                )]
+                if config.num_static_real_features > 0
+                else []
+            )
+            + [
+                AsNumpyArray(
+                    field=FieldName.TARGET,
+                    expected_ndim=1 if config.input_size == 1 else 2,
+                ),
+                AddObservedValuesIndicator(
+                    target_field=FieldName.TARGET,
+                    output_field=FieldName.OBSERVED_VALUES,
+                ),
+                AddTimeFeatures(
+                    start_field=FieldName.START,
+                    target_field=FieldName.TARGET,
+                    output_field=FieldName.FEAT_TIME,
+                    time_features=time_features_from_frequency_str(freq),
+                    pred_length=config.prediction_length,
+                ),
+                AddAgeFeature(
+                    target_field=FieldName.TARGET,
+                    output_field=FieldName.FEAT_AGE,
+                    pred_length=config.prediction_length,
+                    log_scale=True,
+                ),
+                VstackFeatures(
+                    output_field=FieldName.FEAT_TIME,
+                    input_fields=[FieldName.FEAT_TIME, FieldName.FEAT_AGE]
+                    + (
+                        [FieldName.FEAT_DYNAMIC_REAL]
+                        if config.num_dynamic_real_features > 0
+                        else []
+                    ),
+                ),
+                RenameFields(
+                    mapping={
+                        FieldName.FEAT_STATIC_CAT: "static_categorical_features",
+                        FieldName.FEAT_STATIC_REAL: "static_real_features",
+                        FieldName.FEAT_TIME: "time_features",
+                        FieldName.TARGET: "values",
+                        FieldName.OBSERVED_VALUES: "observed_mask",
+                    }
+                ),
+            ]
+        )
+    
+
 \end{lstlisting}
 
 \section{Model Training Code}

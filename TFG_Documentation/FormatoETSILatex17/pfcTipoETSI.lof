@@ -3,74 +3,74 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The Transformer - model architecture, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{16}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Scaled Dot-Product Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{17}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Multi-Head Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{18}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Illustration of Iterated Multi-Step (IMS) Forecasting}}{19}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Illustration of Direct Multi-Step (DMS) Forecasting}}{19}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Example of embedding of time series xi from the temporal space (left) into the pairwise space (right). In this example, a pair of time series (x1, x2) is projected into the pairwise space as a vector x12 described by p = 3 basic metrics: x12 = [d1(x1, x2), d2(x1, x2), d3(x1, x2)] T, from \textit {"Multiple Metric Learning for large margin kNN Classification of time series"} \cite {inproceedings}}}{20}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces The input representation of a Time Series Transformer, from Informer (Zhou, et al., 2019)\cite {zhou2021informerefficienttransformerlong}}}{21}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustration of Probabilistic Forecasting\cite {hyndman2014visualization}}}{22}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Vanilla self attention vs ProbSparse attention, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{23}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces The illustration of ProbSparse Attention, from Informer (Zhou, et al., 2019)\cite {zhou2021informerefficienttransformerlong}}}{24}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Autoformer architecture. The encoder eliminates the long-term trend-cyclical part by series decomposition blocks (\textcolor {blue}{blue} blocks) and focuses on seasonal patterns modeling. The decoder accumulates the trend part extracted from hidden variables progressively. The past seasonal information from encoder is utilized by the encoder-decoder Auto-Correlation (center \textcolor [rgb]{0.15,0.7,0.15}{green} block in decoder), from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{25}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Vanilla self attention vs Autocorrelation mechanism, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{26}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Attention weights computation in frequency domain using FFT, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{27}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Aggregation by time delay, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{28}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The Transformer - model architecture, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{16}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Scaled Dot-Product Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{17}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Multi-Head Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{18}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Illustration of Iterated Multi-Step (IMS) Forecasting}}{19}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Illustration of Direct Multi-Step (DMS) Forecasting}}{19}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Example of embedding of time series xi from the temporal space (left) into the pairwise space (right). In this example, a pair of time series (x1, x2) is projected into the pairwise space as a vector x12 described by p = 3 basic metrics: x12 = [d1(x1, x2), d2(x1, x2), d3(x1, x2)] T, from \textit {"Multiple Metric Learning for large margin kNN Classification of time series"} \cite {inproceedings}}}{20}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The input representation of a Time Series Transformer, from Informer (Zhou, et al., 2019)\cite {zhou2021informerefficienttransformerlong}}}{21}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustration of Probabilistic Forecasting\cite {hyndman2014visualization}}}{22}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Vanilla self attention vs ProbSparse attention, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{23}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces The illustration of ProbSparse Attention, from Informer (Zhou, et al., 2019)\cite {zhou2021informerefficienttransformerlong}}}{24}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Autoformer architecture. The encoder eliminates the long-term trend-cyclical part by series decomposition blocks (\textcolor {blue}{blue} blocks) and focuses on seasonal patterns modeling. The decoder accumulates the trend part extracted from hidden variables progressively. The past seasonal information from encoder is utilized by the encoder-decoder Auto-Correlation (center \textcolor [rgb]{0.15,0.7,0.15}{green} block in decoder), from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{25}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Vanilla self attention vs Autocorrelation mechanism, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{26}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Attention weights computation in frequency domain using FFT, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{27}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Aggregation by time delay, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{28}{figure.caption.47}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces ORNAVERA Data Collection Device (DCD)\cite {ornavera2020dcd}}}{29}{figure.caption.46}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Temperature and Humidity Probe: SHT20 from Sensirion\cite {sensirion2020sht20}}}{30}{figure.caption.47}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Soil Probe: MEC-10 from Dalian Endeavour Technology Co.\cite {endeavour2020mec10}}}{30}{figure.caption.48}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Light Sensor: VEML7700 from Vishay\cite {vishay2020veml7700}}}{30}{figure.caption.49}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Graph of Temperature Measurements of February}}{31}{figure.caption.50}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Graph of Relative Humidity Measurements of February}}{31}{figure.caption.51}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Graph of Vapor Pressure Deficit Measurements of February}}{32}{figure.caption.52}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Graph of Light Intensity Measurements of February}}{32}{figure.caption.53}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Graph of Soil Temperature Measurements of February}}{32}{figure.caption.54}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Graph of Permittivity Measurements of February}}{33}{figure.caption.55}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Graph of Electroconductivity Measurements of February}}{33}{figure.caption.56}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Graph of Volumetric Water Content Measurements of February}}{33}{figure.caption.57}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Graph of Diameter Measurements of February}}{34}{figure.caption.58}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Graph of Photosynthetically Active Radiation Measurements of February}}{34}{figure.caption.59}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Correlation Matrix from Paula Fernández Yepes thesis (2022)\cite {FernandezYepes2022}}}{35}{figure.caption.60}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces NVIDIA T4 Tensor Core GPU\cite {nvidia_t4_image}}}{36}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces ORNAVERA Data Collection Device (DCD)\cite {ornavera2020dcd}}}{29}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Temperature and Humidity Probe: SHT20 from Sensirion\cite {sensirion2020sht20}}}{30}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Soil Probe: MEC-10 from Dalian Endeavour Technology Co.\cite {endeavour2020mec10}}}{30}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Light Sensor: VEML7700 from Vishay\cite {vishay2020veml7700}}}{30}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Graph of Temperature Measurements of February}}{31}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Graph of Relative Humidity Measurements of February}}{31}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Graph of Vapor Pressure Deficit Measurements of February}}{32}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Graph of Light Intensity Measurements of February}}{32}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Graph of Soil Temperature Measurements of February}}{32}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Graph of Permittivity Measurements of February}}{33}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Graph of Electroconductivity Measurements of February}}{33}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Graph of Volumetric Water Content Measurements of February}}{33}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Graph of Diameter Measurements of February}}{34}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Graph of Photosynthetically Active Radiation Measurements of February}}{34}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Correlation Matrix from Paula Fernández Yepes thesis (2022)\cite {FernandezYepes2022}}}{35}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces NVIDIA T4 Tensor Core GPU\cite {nvidia_t4_image}}}{36}{figure.caption.66}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Example of Diameter Measurement Error in the First Sand Dataset}}{39}{figure.caption.65}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Example of Light Measurement Error in the Second Sand Dataset}}{40}{figure.caption.66}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Original Temperature data (top) versus the Temperature smoothed data (bottom) after applying a Savitzky-Golay filter}}{41}{figure.caption.67}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Original Relative humidity data (top) versus the Relative humidity smoothed data (bottom) after applying a Savitzky-Golay filter}}{41}{figure.caption.68}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Original Light data (top) versus the Light smoothed data (bottom) after applying a Savitzky-Golay filter}}{41}{figure.caption.69}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Original Soil temperature data (top) versus the Soil temperature smoothed data (bottom) after applying a Savitzky-Golay filter}}{42}{figure.caption.70}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Original Permittivity data (top) versus the Permittivity smoothed data (bottom) after applying a Savitzky-Golay filter}}{42}{figure.caption.71}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Original Electroconductivity data (top) versus the Electroconductivity smoothed data (bottom) after applying a Savitzky-Golay filter}}{42}{figure.caption.72}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Original Diameter data (top) versus the Diameter smoothed data (bottom) after applying a Savitzky-Golay filter}}{43}{figure.caption.73}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Original Diameter data (top) versus the Diameter without trend (bottom)}}{44}{figure.caption.74}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Measurements with NaN values distribution}}{44}{figure.caption.75}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Comparison of the original Temperature irregular time series and the resampled Temperature uniform time series}}{45}{figure.caption.76}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Comparison of the original Relative Humidity irregular time series and the resampled Relative Humidity uniform time series}}{46}{figure.caption.77}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Comparison of the original Light irregular time series and the resampled Light uniform time series}}{46}{figure.caption.78}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Comparison of the original Soil Temperature irregular time series and the resampled Soil Temperature uniform time series}}{46}{figure.caption.79}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Comparison of the original Permittivity irregular time series and the resampled Permittivity uniform time series}}{47}{figure.caption.80}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Comparison of the original Electroconductivity irregular time series and the resampled Electroconductivity uniform time series}}{47}{figure.caption.81}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Comparison of the original Diameter irregular time series and the resampled Diameter uniform time series}}{47}{figure.caption.82}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Initial Phase of the Experimental Diagram with the different Prediction Length and Context Length configurations}}{49}{figure.caption.83}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Second Phase of the Experimental Diagram with the different Lags sequence configurations}}{50}{figure.caption.84}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Third Phase of the Experimental Diagram with the different Dropout configurations}}{51}{figure.caption.85}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Fourth Phase of the Experimental Diagram with the different Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers configurations}}{52}{figure.caption.86}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Last Phase of the Experimental Diagram with the different Batch Size and Number of Epochs configurations}}{52}{figure.caption.87}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Example of Diameter Measurement Error in the First Sand Dataset}}{39}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Example of Light Measurement Error in the Second Sand Dataset}}{40}{figure.caption.68}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Original Temperature data (top) versus the Temperature smoothed data (bottom) after applying a Savitzky-Golay filter}}{41}{figure.caption.69}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Original Relative humidity data (top) versus the Relative humidity smoothed data (bottom) after applying a Savitzky-Golay filter}}{41}{figure.caption.70}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Original Light data (top) versus the Light smoothed data (bottom) after applying a Savitzky-Golay filter}}{41}{figure.caption.71}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Original Soil temperature data (top) versus the Soil temperature smoothed data (bottom) after applying a Savitzky-Golay filter}}{42}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Original Permittivity data (top) versus the Permittivity smoothed data (bottom) after applying a Savitzky-Golay filter}}{42}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Original Electroconductivity data (top) versus the Electroconductivity smoothed data (bottom) after applying a Savitzky-Golay filter}}{42}{figure.caption.74}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Original Diameter data (top) versus the Diameter smoothed data (bottom) after applying a Savitzky-Golay filter}}{43}{figure.caption.75}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Original Diameter data (top) versus the Diameter without trend (bottom)}}{44}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Measurements with NaN values distribution}}{44}{figure.caption.77}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Comparison of the original Temperature irregular time series and the resampled Temperature uniform time series}}{45}{figure.caption.78}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Comparison of the original Relative Humidity irregular time series and the resampled Relative Humidity uniform time series}}{46}{figure.caption.79}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Comparison of the original Light irregular time series and the resampled Light uniform time series}}{46}{figure.caption.80}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Comparison of the original Soil Temperature irregular time series and the resampled Soil Temperature uniform time series}}{46}{figure.caption.81}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Comparison of the original Permittivity irregular time series and the resampled Permittivity uniform time series}}{47}{figure.caption.82}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Comparison of the original Electroconductivity irregular time series and the resampled Electroconductivity uniform time series}}{47}{figure.caption.83}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Comparison of the original Diameter irregular time series and the resampled Diameter uniform time series}}{47}{figure.caption.84}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Initial Phase of the Experimental Diagram with the different Prediction Length and Context Length configurations}}{49}{figure.caption.85}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Second Phase of the Experimental Diagram with the different Lags sequence configurations}}{50}{figure.caption.86}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Third Phase of the Experimental Diagram with the different Dropout configurations}}{51}{figure.caption.87}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Fourth Phase of the Experimental Diagram with the different Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers configurations}}{52}{figure.caption.88}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Last Phase of the Experimental Diagram with the different Batch Size and Number of Epochs configurations}}{52}{figure.caption.89}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparison between the predicted values generated by the T3 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{54}{figure.caption.91}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Comparison between the predicted values generated by the I3 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{56}{figure.caption.95}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison between the predicted values generated by the A3 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{58}{figure.caption.99}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Comparison between the predicted values generated by the T13 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{60}{figure.caption.103}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Comparison between the predicted values generated by the I13 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{62}{figure.caption.107}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Comparison between the predicted values generated by the A11 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{64}{figure.caption.111}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Comparison between the predicted values generated by the T15 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{65}{figure.caption.115}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Comparison between the predicted values generated by the I20 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{69}{figure.caption.128}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Comparison between the predicted values generated by the A21 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{71}{figure.caption.132}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Comparison between the predicted values generated by the T30 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{73}{figure.caption.136}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Comparison between the predicted values generated by the I30 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{75}{figure.caption.140}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Comparison between the predicted values generated by the A29 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{77}{figure.caption.144}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Comparison between the predicted values generated by the T3 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{54}{figure.caption.93}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Comparison between the predicted values generated by the I3 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{56}{figure.caption.97}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison between the predicted values generated by the A3 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{58}{figure.caption.101}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Comparison between the predicted values generated by the T13 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{60}{figure.caption.105}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Comparison between the predicted values generated by the I13 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{62}{figure.caption.109}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Comparison between the predicted values generated by the A11 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{64}{figure.caption.113}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Comparison between the predicted values generated by the T15 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{65}{figure.caption.117}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Comparison between the predicted values generated by the I20 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{69}{figure.caption.130}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Comparison between the predicted values generated by the A21 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{71}{figure.caption.134}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Comparison between the predicted values generated by the T30 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{73}{figure.caption.138}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Comparison between the predicted values generated by the I30 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{75}{figure.caption.142}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Comparison between the predicted values generated by the A29 model and the actual observed values for the 7 variables over a two-day prediction horizon}}{77}{figure.caption.146}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

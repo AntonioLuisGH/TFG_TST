@@ -1,27 +1,27 @@
 \babel@toc {english}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {listasf}{Resumen}{I}{section*.2}%
-\contentsline {listasf}{Abstract}{III}{section*.4}%
-\contentsline {listasf}{Abbreviated Index}{V}{section*.5}%
+\contentsline {listasf}{Resumen}{III}{section*.4}%
+\contentsline {listasf}{Abstract}{V}{section*.6}%
+\contentsline {listasf}{Abbreviated Index}{VII}{section*.7}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Organisation of the Document}{1}{section.1.1}%
 \contentsline {chapter}{\numberline {2}History and State of the Art}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Evolution of Methods for Time Series Forecasting}{3}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Traditional Methods}{3}{subsection.2.1.1}%
-\contentsline {subsubsection}{Autoregressive and Moving Average Models (AR, MA, ARMA)}{3}{subsubsection*.9}%
-\contentsline {subsubsection}{Autoregressive Integrated Moving Average (ARIMA) and SARIMA Models}{4}{subsubsection*.10}%
-\contentsline {subsubsection}{SARIMAX models}{5}{subsubsection*.11}%
-\contentsline {subsubsection}{VARMA and VARMAX Models}{5}{subsubsection*.12}%
-\contentsline {subsubsection}{Simple Exponential Smoothing (SES) and Holt-Winters Exponential Smoothing (HWES)}{6}{subsubsection*.13}%
-\contentsline {subsubsection}{ARCH and GARCH Models}{7}{subsubsection*.14}%
+\contentsline {subsubsection}{Autoregressive and Moving Average Models (AR, MA, ARMA)}{3}{subsubsection*.11}%
+\contentsline {subsubsection}{Autoregressive Integrated Moving Average (ARIMA) and SARIMA Models}{4}{subsubsection*.12}%
+\contentsline {subsubsection}{SARIMAX models}{5}{subsubsection*.13}%
+\contentsline {subsubsection}{VARMA and VARMAX Models}{5}{subsubsection*.14}%
+\contentsline {subsubsection}{Simple Exponential Smoothing (SES) and Holt-Winters Exponential Smoothing (HWES)}{6}{subsubsection*.15}%
+\contentsline {subsubsection}{ARCH and GARCH Models}{7}{subsubsection*.16}%
 \contentsline {subsection}{\numberline {2.1.2}Modern Methods}{8}{subsection.2.1.2}%
-\contentsline {subsubsection}{Recurrent Neural Networks (RNNs) and LSTMs}{8}{subsubsection*.15}%
-\contentsline {subsubsection}{Residual Networks (ResNet) and Fully Convolutional Networks (FCN)}{8}{subsubsection*.16}%
-\contentsline {subsubsection}{ROCKET}{9}{subsubsection*.17}%
-\contentsline {subsubsection}{Matrix Factorization with DTW}{9}{subsubsection*.18}%
-\contentsline {subsubsection}{XGBoost}{9}{subsubsection*.19}%
-\contentsline {subsubsection}{Prophet}{10}{subsubsection*.20}%
-\contentsline {subsubsection}{TS-Chief and HIVE-COTE}{10}{subsubsection*.21}%
+\contentsline {subsubsection}{Recurrent Neural Networks (RNNs) and LSTMs}{8}{subsubsection*.17}%
+\contentsline {subsubsection}{Residual Networks (ResNet) and Fully Convolutional Networks (FCN)}{8}{subsubsection*.18}%
+\contentsline {subsubsection}{ROCKET}{9}{subsubsection*.19}%
+\contentsline {subsubsection}{Matrix Factorization with DTW}{9}{subsubsection*.20}%
+\contentsline {subsubsection}{XGBoost}{9}{subsubsection*.21}%
+\contentsline {subsubsection}{Prophet}{10}{subsubsection*.22}%
+\contentsline {subsubsection}{TS-Chief and HIVE-COTE}{10}{subsubsection*.23}%
 \contentsline {section}{\numberline {2.2}Evolution of Transformers as a Method for Time Series Forecasting}{10}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Introduction of Transformers (2017)}{11}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Application to Time Series (2019)}{11}{subsection.2.2.2}%
@@ -30,15 +30,15 @@
 \contentsline {subsection}{\numberline {2.2.5}Recent Advances (2023 - 2024)}{12}{subsection.2.2.5}%
 \contentsline {chapter}{\numberline {3}Transformers, Informers and Autoformers.}{15}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Transformer architecture}{15}{section.3.1}%
-\contentsline {subsubsection}{Encoder-Decoder Structure}{16}{subsubsection*.23}%
-\contentsline {subsubsection}{Self-Attention Mechanism}{17}{subsubsection*.24}%
+\contentsline {subsubsection}{Encoder-Decoder Structure}{16}{subsubsection*.25}%
+\contentsline {subsubsection}{Self-Attention Mechanism}{17}{subsubsection*.26}%
 \contentsline {section}{\numberline {3.2}Time Series Transformer}{18}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Time Series Forecasting (TSF) Problem Formulation}{18}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Embedding}{20}{subsection.3.2.2}%
-\contentsline {subsubsection}{Channel Projection}{20}{subsubsection*.29}%
-\contentsline {subsubsection}{Fixed Position Embedding}{20}{subsubsection*.31}%
-\contentsline {subsubsection}{Local Timestamp Embedding}{20}{subsubsection*.32}%
-\contentsline {subsubsection}{Global Timestamp Embedding}{20}{subsubsection*.33}%
+\contentsline {subsubsection}{Channel Projection}{20}{subsubsection*.31}%
+\contentsline {subsubsection}{Fixed Position Embedding}{20}{subsubsection*.33}%
+\contentsline {subsubsection}{Local Timestamp Embedding}{20}{subsubsection*.34}%
+\contentsline {subsubsection}{Global Timestamp Embedding}{20}{subsubsection*.35}%
 \contentsline {subsection}{\numberline {3.2.3}Encoder}{21}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Decoder}{21}{subsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.2.5}Training Methodology}{21}{subsection.3.2.5}%
@@ -48,11 +48,11 @@
 \contentsline {subsection}{\numberline {3.3.2}Distilling}{24}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}Autoformer}{24}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Decomposition Layer}{25}{subsection.3.4.1}%
-\contentsline {subsubsection}{Decomposition in Autoformer}{25}{subsubsection*.38}%
+\contentsline {subsubsection}{Decomposition in Autoformer}{25}{subsubsection*.40}%
 \contentsline {subsection}{\numberline {3.4.2}Attention (Autocorrelation) Mechanism}{25}{subsection.3.4.2}%
-\contentsline {subsubsection}{Understanding Autocorrelation}{26}{subsubsection*.40}%
-\contentsline {subsubsection}{Implementing Autocorrelation with FFT}{26}{subsubsection*.42}%
-\contentsline {subsubsection}{Time Delay Aggregation}{27}{subsubsection*.44}%
+\contentsline {subsubsection}{Understanding Autocorrelation}{26}{subsubsection*.42}%
+\contentsline {subsubsection}{Implementing Autocorrelation with FFT}{26}{subsubsection*.44}%
+\contentsline {subsubsection}{Time Delay Aggregation}{27}{subsubsection*.46}%
 \contentsline {chapter}{\numberline {4}Materials and Methods}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Datasets}{29}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}ORNAVERA Data Collection Device (DCD)}{29}{subsection.4.1.1}%
@@ -70,10 +70,10 @@
 \contentsline {section}{\numberline {4.3}Variable Selection}{34}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Software Implementation}{35}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Anaconda and Spyder}{35}{subsection.4.4.1}%
-\contentsline {subsubsection}{Anaconda}{35}{subsubsection*.61}%
-\contentsline {subsubsection}{Spyder}{35}{subsubsection*.62}%
+\contentsline {subsubsection}{Anaconda}{35}{subsubsection*.63}%
+\contentsline {subsubsection}{Spyder}{35}{subsubsection*.64}%
 \contentsline {subsection}{\numberline {4.4.2}Google Colab}{36}{subsection.4.4.2}%
-\contentsline {subsubsection}{T4 Hosted Runtime Environment}{36}{subsubsection*.63}%
+\contentsline {subsubsection}{T4 Hosted Runtime Environment}{36}{subsubsection*.65}%
 \contentsline {section}{\numberline {4.5}Python Libraries}{37}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Experimental Design}{39}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Dataset Preprocessing}{39}{section.5.1}%
@@ -118,13 +118,13 @@
 \contentsline {section}{\numberline {A.2}Data Preprocessing Code}{83}{section.a.A.2}%
 \contentsline {section}{\numberline {A.3}Model Definition Code}{87}{section.a.A.3}%
 \contentsline {section}{\numberline {A.4}Data Loader Creation Code}{89}{section.a.A.4}%
-\contentsline {section}{\numberline {A.5}Model Training Code}{90}{section.a.A.5}%
-\contentsline {section}{\numberline {A.6}Model Evaluation Code}{92}{section.a.A.6}%
+\contentsline {section}{\numberline {A.5}Model Training Code}{95}{section.a.A.5}%
+\contentsline {section}{\numberline {A.6}Model Evaluation Code}{98}{section.a.A.6}%
 \mbox {}\hspace *{0pt}\par 
-\contentsline {listasb}{List of Figures}{97}{section*.145}%
-\contentsline {listasb}{List of Tables}{101}{section*.147}%
-\contentsline {listasb}{List of Codes}{103}{section*.149}%
-\contentsline {listasb}{Bibliography}{105}{section*.151}%
-\contentsline {listasb}{Index}{109}{section*.153}%
-\contentsline {listasb}{Glossary}{109}{section*.154}%
+\contentsline {listasb}{List of Figures}{103}{section*.147}%
+\contentsline {listasb}{List of Tables}{107}{section*.149}%
+\contentsline {listasb}{List of Codes}{109}{section*.151}%
+\contentsline {listasb}{Bibliography}{111}{section*.153}%
+\contentsline {listasb}{Index}{115}{section*.155}%
+\contentsline {listasb}{Glossary}{115}{section*.156}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
