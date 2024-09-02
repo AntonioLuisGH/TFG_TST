@@ -3,7 +3,7 @@
 
 In this chapter, we present the experimental results obtained from the application of the different hyperparameter configurations for our models. The results are summarized in a series of tables, detailing the R-squared (R²), Mean Squared Error (MSE), and training time for each stage of the experimental development. These metrics provide a comprehensive comparison of the models' effectiveness and efficiency across different configurations.
 
-\section{Results Changing the Prediction Length and Context Length}
+\section{Effect of the Prediction Length and Context Length}
 This section presents the results obtained by varying the Prediction Length and Context Length parameters. These experiments aim to assess how different input and output sequence lengths impact the performance of the models.
 In this initial phase, we do not select the best model solely based on error metrics; instead, we also consider the practical utility of the predicted information. For instance, while some early models achieved favorable error indices, predicting only half a day into the future is not practically useful for our purposes (we require predictions that extend several days ahead). Consequently, in this phase, we chose Models T3, I3, and A3 as the best options, as they provide the most useful predictions in practice, despite not having the lowest error indices.
 
@@ -250,7 +250,7 @@ In Figure \ref{A3}, the predictions of the A3 model are compared with the actual
 
 
 
-\section{Results Changing the Lags Sequence}
+\section{Effect of Lags Sequence}
 In this section, we advance to the next phase of experimentation by focusing on models T3, I3, and A3, which were identified as the most practical in the previous phase. Here, we test these models with different values of Lags sequence to evaluate how variations in the lagged input data affect their predictive performance. This analysis aims to determine the optimal lag configuration that enhances model accuracy and utility, further refining our approach to time series forecasting.
 
 \subsection{Transformer}
@@ -445,7 +445,7 @@ However, as observed in Table \ref{A2_T}, there is an increase in computational 
     \label{A11}
 \end{figure}
 
-\section{Results Changing the Dropout}
+\section{Effect of Dropout}
 In this section, we examine the results of experiments that involved varying the Dropout rates across different models. Dropout is a regularization technique used to prevent overfitting by randomly dropping units during training, and its impact on model performance can be significant. By adjusting Dropout rates, we aim to understand how this parameter influences the models' ability to generalize, specifically in terms of their predictive accuracy and stability.
 
 \subsection{Transformer}
@@ -606,7 +606,7 @@ Additionally, as seen in Table \ref{A3_T}, training times were reduced when Drop
     \label{A3_T}
     \end{table}
 
-\section{Results Changing the Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers}
+\section{Effect of Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers}
 
 In this section, we present the results of experiments involving changes to the Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers across various model variants. This phase of experimentation aims to explore how modifications in these architectural parameters impact the performance of the Transformer, Informer, and Autoformer models. By systematically adjusting these key aspects of the model architecture, we seek to identify configurations that optimize predictive accuracy while balancing computational efficiency.
 
@@ -833,7 +833,7 @@ Additionally, as seen in Table \ref{A4_T}, increasing the number of layers leads
     \label{A21}
 \end{figure}
 
-\section{Results Changing the Batch Size and Number of Epochs}
+\section{Effect of Batch Size and Number of Epochs}
 In this section, we present the results of experiments conducted by altering the Batch Size and Number of Epochs across different model variants. These hyperparameters play a crucial role in determining the model's learning process, with Batch Size influencing the number of samples processed before the model’s weights are updated, and Number of Epochs determining the number of times the model iterates over the entire training dataset.
 
 \subsection{Transformer}

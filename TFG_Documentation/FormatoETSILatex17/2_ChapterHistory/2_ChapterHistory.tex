@@ -23,9 +23,7 @@ Autoregressive Models (AR) of order \( p \) (AR(p)) uses the \( p \) previous va
 
 \begin{equation}
 X_t = c + \sum_{i=1}^{p} \phi_i X_{t-i} + \epsilon_t \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( X_t \) is the value of the time series at time \( t \).
     \item \( c \) is a constant.
@@ -37,9 +35,7 @@ Moving Average Models (MA) of order \( q \) (MA(q)) uses \( q \) previous error 
 
 \begin{equation}
 X_t = \mu + \epsilon_t + \sum_{j=1}^{q} \theta_j \epsilon_{t-j} \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( \mu \) is the mean of the time series.
     \item \( \theta_j \) are the coefficients of the model.
@@ -49,9 +45,7 @@ where:
 Autoregressive Moving Average (ARMA) models combines both approaches to capture both autoregressive and moving average dependence. The general formula for an ARMA(p,q) model is:
 \begin{equation}
 X_t = c + \sum_{i=1}^{p} \phi_i X_{t-i} + \epsilon_t + \sum_{j=1}^{q} \theta_j \epsilon_{t-j} \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( X_t \) is the value of the time series at time \( t \).
     \item \( c \) is a constant.
@@ -69,9 +63,7 @@ Autoregressive Moving Average Integrated Models (ARIMA) combines the autoregress
 
 \begin{equation}
 \Delta^d X_t = c + \sum_{i=1}^{p} \phi_i \Delta^d X_{t-i} + \epsilon_t + \sum_{j=1}^{q} \theta_j \epsilon_{t-j} \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( X_t \) is the value of the time series at time \( t \).
     \item \( \Delta^d \) represents the order differentiation \( d \).
@@ -85,9 +77,7 @@ The SARIMA model extends the ARIMA model by including seasonal components. The g
 
 \begin{equation}
 \Delta^d \Delta_m^D X_t = c + \sum_{i=1}^{p} \phi_i \Delta^d \Delta_m^D X_{t-i} + \sum_{j=1}^{q} \theta_j \epsilon_{t-j} + \sum_{k=1}^{P} \Phi_k \Delta_m^D X_{t-km} + \sum_{l=1}^{Q} \Theta_l \epsilon_{t-lm} \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( X_t \) is the value of the time series at time \( t \).
     \item \( \Delta^d \) represents the differencing of order \( d \).
@@ -107,9 +97,7 @@ SARIMAX models (Seasonal ARIMA with eXogenous regressors) are an extension of SA
 
 \begin{equation}
 Y_t = \phi_1 Y_{t-1} + \phi_2 Y_{t-2} + \cdots + \phi_p Y_{t-p} + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots + \theta_q \epsilon_{t-q} + \beta_1 X_{1,t} + \beta_2 X_{2,t} + \cdots + \beta_k X_{k,t} + \epsilon_t \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( Y_t \) is the value of the time series at time \( t \).
     \item \( \phi_i \) are the autoregressive coefficients.
@@ -126,9 +114,7 @@ VARMA (Vector AutoRegressive Moving Average) models are a multivariate extension
 
 \begin{equation}
 Y_t = \Phi_1 Y_{t-1} + \Phi_2 Y_{t-2} + \cdots + \Phi_p Y_{t-p} + \Theta_1 \epsilon_{t-1} + \Theta_2 \epsilon_{t-2} + \cdots + \Theta_q \epsilon_{t-q} + \epsilon_t \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( Y_t \) is a vector of time series values at time \( t \).
     \item \( \Phi_i \) are autoregressive coefficient matrices.
@@ -146,9 +132,7 @@ Simple Exponential Smoothing (SES) is a forecasting technique that assigns expon
 
 \begin{equation}
 \hat{Y}_{t+1} = \alpha Y_t + (1-\alpha) \hat{Y}_t \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( \hat{Y}_{t+1} \) is the forecast for time \( t+1 \).
     \item \( Y_t \) is the observed value at time \( t \).
@@ -177,9 +161,7 @@ The Additive Method is suitable for time series with constant seasonality over t
     \begin{equation}
     \hat{Y}_{t+h} = L_t + h T_t + S_{t+h-m(k+1)}
     \end{equation}
-\end{itemize}
-
-where:
+\end{itemize}where:
 \begin{itemize}
     \item \( L_t \) is the level at time \( t \).
     \item \( T_t \) is the trend at time \( t \).
@@ -228,9 +210,7 @@ Y_t = \mu + \epsilon_t \text{ ,}
 
 \begin{equation}
 \sigma_t^2 = \alpha_0 + \alpha_1 \epsilon_{t-1}^2 + \alpha_2 \epsilon_{t-2}^2 + \cdots + \alpha_p \epsilon_{t-p}^2 \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( Y_t \) is the value of the time series at time \( t \).
     \item \( \mu \) is the mean of the time series.
@@ -246,9 +226,7 @@ The general structure of a GARCH(p, q) model can be expressed as:
 
 \begin{equation}
 \sigma_t^2 = \alpha_0 + \sum_{i=1}^p \alpha_i \epsilon_{t-i}^2 + \sum_{j=1}^q \beta_j \sigma_{t-j}^2 \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \( \sigma_t^2 \) is the conditional variance at time \( t \).
     \item \( \alpha_0 \) is a constant.
@@ -277,7 +255,7 @@ Recurrent Neural Networks (RNN) and their Long Short-Term Memory (LSTM) variants
 RNNs are used in a variety of time series applications, such as stock price forecasting, energy demand, and weather data analysis. However, traditional RNNs have limitations when it comes to capturing long-term dependencies due to the gradient fading problem.
 \vspace{10pt}
 
-To overcome the limitations of traditional RNNs, Sepp Hochreiter and Jürgen Schmidhuber proposed \textbf{LSTMs} in 1997\cite{LSTM}. LSTMs are a variant of RNNs that include a memory architecture designed to handle long-term dependencies more efficiently. The key to LSTMs is their structure of memory cells, which can maintain and update information over many time steps. LSTMs are composed of memory cells that have three gates: the input gate, the forget gate, and the output gate. These gates control the flow of information in and out of the memory cell, allowing the network to remember or ignore information as needed.
+To overcome the limitations of traditional RNNs, Sepp Hochreiter and Jürgen Schmidhuber proposed \textbf{LSTMs} in 1997~\cite{LSTM}. LSTMs are a variant of RNNs that include a memory architecture designed to handle long-term dependencies more efficiently. The key to LSTMs is their structure of memory cells, which can maintain and update information over many time steps. LSTMs are composed of memory cells that have three gates: the input gate, the forget gate, and the output gate. These gates control the flow of information in and out of the memory cell, allowing the network to remember or ignore information as needed.
 
 LSTMs have proven to be extremely effective in time series forecasting. They are used in applications such as traffic forecasting, financial data anomaly detection, and sales forecasting. Thanks to their ability to handle long-term dependencies, LSTMs outperform traditional RNNs in many time series tasks.
 \vspace{10pt}
@@ -295,13 +273,13 @@ These architectures have proven to be powerful tools in time series analysis and
 These skip connections facilitate the training of very deep networks, allowing the construction of models with hundreds of layers without significant degradation in performance. ResNets have proven effective in a wide range of applications, including time series forecasting, where their ability to handle complex, multivariate data is particularly valuable.
 \vspace{10pt}
 
-\textbf{Fully Convolutional Networks (FCNs)}\cite{long2015fullyconvolutionalnetworkssemantic} were proposed by Jonathan Long, Evan Shelhamer, and Trevor Darrell in 2015 as an extension of traditional CNNs for semantic segmentation tasks. Unlike conventional CNNs, FCNs replace fully connected layers with convolutional layers, allowing the network to process inputs of arbitrary size and produce outputs of corresponding size.
+\textbf{Fully Convolutional Networks (FCNs)}~\cite{long2015fullyconvolutionalnetworkssemantic} were proposed by Jonathan Long, Evan Shelhamer, and Trevor Darrell in 2015 as an extension of traditional CNNs for semantic segmentation tasks. Unlike conventional CNNs, FCNs replace fully connected layers with convolutional layers, allowing the network to process inputs of arbitrary size and produce outputs of corresponding size.
 
 This architecture has been adapted for time series forecasting, taking advantage of its ability to capture spatial and temporal patterns in the data. FCNs are especially useful in scenarios where dense and detailed forecasting is required, such as in the case of multivariate time series.
 \vspace{10pt}
 
 \subsubsection{ROCKET}
-ROCKET (Random Convolutional Kernel Transform)\cite{Dempster_2020} is an innovative and recent method in the field of time series analysis. It was introduced by Angus Dempster, François Petitjean, and Geoffrey I. Webb in 2019. This method is notable for its ability to apply random convolutional transformations to time series data, extracting useful features that can be used by simple linear classifiers.
+ROCKET (Random Convolutional Kernel Transform)~\cite{Dempster_2020} is an innovative and recent method in the field of time series analysis. It was introduced by Angus Dempster, François Petitjean, and Geoffrey I. Webb in 2019. This method is notable for its ability to apply random convolutional transformations to time series data, extracting useful features that can be used by simple linear classifiers.
 
 The fundamental principle of ROCKET is the use of a large number of one-dimensional (1-D) convolutional kernels that are randomly initialized. These kernels are applied to the time series to generate a transformed representation of the data. Unlike other methods that require extensive training of the kernels, in ROCKET the kernels are not trained, which significantly reduces the computational time.
 
@@ -313,7 +291,7 @@ ROCKET has proven to be highly effective in a variety of time series classificat
 \subsubsection{Matrix Factorization with DTW}
 Matrix factorization is a fundamental technique in linear algebra that decomposes a matrix into products of simpler matrices. When combined with Dynamic Time Warping (DTW), a time alignment technique, it becomes a powerful tool for multivariate time series analysis.
 
-Dynamic Time Warping (DTW)\cite{bringmann2023dynamicdynamictimewarping} is an algorithm that allows two time series to be aligned nonlinearly by adjusting for differences in the speed of the sequences. This is particularly useful in time series analysis where events may occur at different times but follow a similar pattern. Combining DTW with matrix factorization allows for improved temporal alignment between different series, facilitating the identification of common patterns.
+Dynamic Time Warping (DTW)~\cite{bringmann2023dynamicdynamictimewarping} is an algorithm that allows two time series to be aligned nonlinearly by adjusting for differences in the speed of the sequences. This is particularly useful in time series analysis where events may occur at different times but follow a similar pattern. Combining DTW with matrix factorization allows for improved temporal alignment between different series, facilitating the identification of common patterns.
 
 Matrix factorization, on the other hand, decomposes a matrix into simpler matrix products, which facilitates data analysis and manipulation. By applying DTW in the context of matrix factorization, more accurate and aligned representations of multivariate time series can be obtained.
 
@@ -321,7 +299,7 @@ Matrix factorization combined with DTW represents an advanced and efficient tech
 \vspace{10pt}
 
 \subsubsection{XGBoost}
-XGBoost\cite{Chen_2016}, short for eXtreme Gradient Boosting, is a decision tree-based boosting algorithm that has gained popularity in the machine learning field due to its efficiency and accuracy. It was developed by Tianqi Chen and Carlos Guestrin in 2016. This algorithm has proven to be extremely effective for time series forecasting, especially because of its ability to handle tabular data efficiently.
+XGBoost~\cite{Chen_2016}, short for eXtreme Gradient Boosting, is a decision tree-based boosting algorithm that has gained popularity in the machine learning field due to its efficiency and accuracy. It was developed by Tianqi Chen and Carlos Guestrin in 2016. This algorithm has proven to be extremely effective for time series forecasting, especially because of its ability to handle tabular data efficiently.
 
 XGBoost is an optimized implementation of the gradient boosting algorithm, which combines multiple weak decision trees to form a strong model. The boosting process involves the sequential construction of trees, where each new tree attempts to correct errors made by previous trees. This is achieved by minimizing a loss function, which allows the model to iteratively improve its accuracy.
 
@@ -329,14 +307,12 @@ One of the distinguishing features of XGBoost is its ability to handle tabular d
 \vspace{10pt}
 
 \subsubsection{Prophet}
-Prophet\cite{prophet} is an open source tool developed by Facebook's Data Science team in 2017. It is designed for time series forecasting and is based on an additive component model, which facilitates the inclusion of trends and seasonalities automatically.
+Prophet~\cite{prophet} is an open source tool developed by Facebook's Data Science team in 2017. It is designed for time series forecasting and is based on an additive component model, which facilitates the inclusion of trends and seasonalities automatically.
 
 Prophet uses an additive model where the time series observations are decomposed into three main components: trend, seasonality, and holidays. The basic formula of the model is:
 \begin{equation}
 y(t) = g(t) + s(t) + h(t) + \epsilon_t \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item \textbf{Trend} \(g(t)\): Captures the long-term evolution of the time series. It can be linear or logarithmic, and Prophet allows the inclusion of change points to model sudden changes in the trend.
     \item \textbf{Seasonality} \(s(t)\): Models recurring patterns over different time periods, such as annual, weekly, or daily.
@@ -350,7 +326,7 @@ Prophet represents a powerful and accessible tool for time series forecasting. I
 \vspace{10pt}
 
 \subsubsection{TS-Chief and HIVE-COTE}
-TS-Chief\cite{Shifaz_2020} and HIVE-COTE\cite{7837946} are advanced time series classification techniques based on ensemble learning. These techniques combine multiple classifiers to improve the accuracy and robustness of predictions by leveraging the strengths of different approaches.
+TS-Chief~\cite{Shifaz_2020} and HIVE-COTE~\cite{7837946} are advanced time series classification techniques based on ensemble learning. These techniques combine multiple classifiers to improve the accuracy and robustness of predictions by leveraging the strengths of different approaches.
 \vspace{10pt}
 
 \textbf{TS-Chief} is a time series classification technique that uses an approach based on decision trees and time series transformations. This method stands out for its ability to handle multivariate data and capture complex patterns in the time series. TSChef applies specific transformations to the time series to extract relevant features, which are then used by an ensemble of classifiers to make accurate predictions.
@@ -364,17 +340,17 @@ TS-Chief\cite{Shifaz_2020} and HIVE-COTE\cite{7837946} are advanced time series 
 
 \section{Evolution of Transformers as a Method for Time Series Forecasting}
 
-The advent of Transformer models has revolutionized various fields of artificial intelligence, particularly natural language processing (NLP). Introduced by Vaswani et al. in 2017\cite{vaswani2023attention}, the original Transformer architecture demonstrated unprecedented capabilities in handling sequential data, leading to significant advancements in machine translation, text generation, and more. 
+The advent of Transformer models has revolutionized various fields of artificial intelligence, particularly natural language processing (NLP). Introduced by Vaswani et al. in 2017~\cite{vaswani2023attention}, the original Transformer architecture demonstrated unprecedented capabilities in handling sequential data, leading to significant advancements in machine translation, text generation, and more. 
 
-Initially, some researchers concluded that Transformers might not be well-suited for time series forecasting. For instance, the article “Are Transformers Effective for Time Series Forecasting?”\cite{zeng2022transformerseffectivetimeseries} argues that simpler models, like the one-layer linear model LTSF-Linear, often outperform Transformer-based models in this specific task. The authors suggest that the permutation-invariant nature of the self-attention mechanism in Transformers can lead to a loss of temporal information, which is crucial for time series forecasting.
+Initially, some researchers concluded that Transformers might not be well-suited for time series forecasting. For instance, the article “Are Transformers Effective for Time Series Forecasting?”~\cite{zeng2022transformerseffectivetimeseries} argues that simpler models, like the one-layer linear model LTSF-Linear, often outperform Transformer-based models in this specific task. The authors suggest that the permutation-invariant nature of the self-attention mechanism in Transformers can lead to a loss of temporal information, which is crucial for time series forecasting.
 
-However, this perspective has been evolving with the development of new models and advancements in the field. The application of Transformers to time series forecasting began to gain traction around 2019, with researchers exploring how the self-attention mechanism could be leveraged to model temporal dependencies more effectively. Since then, a variety of Transformer-based models have been proposed, each addressing specific challenges associated with time series data, such as scalability, interpretability, and handling of seasonality and trends. Much of this information is compiled in the article “Transformers in Time Series: A Survey”\cite{wen2023transformerstimeseriessurvey}, which provides a comprehensive overview of the evolution of Transformers in time series analysis.
+However, this perspective has been evolving with the development of new models and advancements in the field. The application of Transformers to time series forecasting began to gain traction around 2019, with researchers exploring how the self-attention mechanism could be leveraged to model temporal dependencies more effectively. Since then, a variety of Transformer-based models have been proposed, each addressing specific challenges associated with time series data, such as scalability, interpretability, and handling of seasonality and trends. Much of this information is compiled in the article “Transformers in Time Series: A Survey”~\cite{wen2023transformerstimeseriessurvey}, which provides a comprehensive overview of the evolution of Transformers in time series analysis.
 
 This section delves into the evolution of Transformers in the context of time series forecasting. We will explore the chronological development of key Transformer variants, highlighting their unique contributions and innovations. From the Original Transformer to recent advancements like Crossformer and PatchTST, this section provides a comprehensive overview of how Transformers have been adapted and enhanced to meet the demands of time series forecasting.
 
 \subsection{Introduction of Transformers (2017)}
 
-Introduced by Vaswani et al.\cite{vaswani2023attention}, the original Transformer architecture was primarily designed for natural language processing (NLP) tasks. It revolutionized the field by using a self-attention mechanism, which allowed the model to weigh the importance of different words in a sentence, regardless of their position. This architecture enabled parallel processing of data, significantly improving efficiency and performance in tasks like machine translation and text generation.
+Introduced by Vaswani et al.~\cite{vaswani2023attention}, the original Transformer architecture was primarily designed for natural language processing (NLP) tasks. It revolutionized the field by using a self-attention mechanism, which allowed the model to weigh the importance of different words in a sentence, regardless of their position. This architecture enabled parallel processing of data, significantly improving efficiency and performance in tasks like machine translation and text generation.
 \vspace{10pt}
 
 
@@ -382,14 +358,14 @@ Introduced by Vaswani et al.\cite{vaswani2023attention}, the original Transforme
 \noindent\textbf
 {Temporal Fusion Transformer (TFT)}
 
-\noindent Proposed by Lim et al.\cite{lim2020temporalfusiontransformersinterpretable}, the Temporal Fusion Transformer was designed specifically for interpretable multi-horizon time series forecasting. TFT integrates both static and time-varying covariates, allowing it to handle complex temporal patterns and provide insights into the importance of different features over time. Its interpretability makes it particularly useful in domains where understanding the model’s decision-making process is crucial.
+\noindent Proposed by Lim et al.~\cite{lim2020temporalfusiontransformersinterpretable}, the Temporal Fusion Transformer was designed specifically for interpretable multi-horizon time series forecasting. TFT integrates both static and time-varying covariates, allowing it to handle complex temporal patterns and provide insights into the importance of different features over time. Its interpretability makes it particularly useful in domains where understanding the model’s decision-making process is crucial.
 \vspace{10pt}
 
 
 \noindent\textbf
 {Informer}
 
-\noindent Introduced by Zhou et al.\cite{zhou2021informerefficienttransformerlong}, the Informer model aimed to improve the efficiency and scalability of Transformers for long sequence time-series forecasting. It introduced a ProbSparse self-attention mechanism, which reduces the computational complexity by focusing on the most informative parts of the input sequence. This makes Informer more suitable for handling long sequences of time series data, where traditional Transformers would be computationally expensive.
+\noindent Introduced by Zhou et al.~\cite{zhou2021informerefficienttransformerlong}, the Informer model aimed to improve the efficiency and scalability of Transformers for long sequence time-series forecasting. It introduced a ProbSparse self-attention mechanism, which reduces the computational complexity by focusing on the most informative parts of the input sequence. This makes Informer more suitable for handling long sequences of time series data, where traditional Transformers would be computationally expensive.
 \vspace{10pt}
 
 
@@ -397,14 +373,14 @@ Introduced by Vaswani et al.\cite{vaswani2023attention}, the original Transforme
 \noindent\textbf
 {LogTrans}
 
-\noindent Developed by Li et al.\cite{li2020enhancinglocalitybreakingmemory}, LogTrans focuses on capturing long-term dependencies in time series data. It introduces a logarithmic self-attention mechanism, which scales the attention scores logarithmically with the distance between elements in the sequence. This allows LogTrans to effectively model long-range dependencies without the quadratic complexity of standard self-attention, making it more efficient for long-term forecasting.
+\noindent Developed by Li et al.~\cite{li2020enhancinglocalitybreakingmemory}, LogTrans focuses on capturing long-term dependencies in time series data. It introduces a logarithmic self-attention mechanism, which scales the attention scores logarithmically with the distance between elements in the sequence. This allows LogTrans to effectively model long-range dependencies without the quadratic complexity of standard self-attention, making it more efficient for long-term forecasting.
 \vspace{10pt}
 
 
 \noindent\textbf
 {Reformer}
  
-\noindent Proposed by Kitaev et al.\cite{kitaev2020reformerefficienttransformer}, the Reformer model aims to reduce the computational complexity of Transformers. It achieves this by using locality-sensitive hashing (LSH) to approximate the self-attention mechanism, significantly reducing the memory and computational requirements. Reformer also introduces reversible layers, which further decrease memory usage by allowing intermediate activations to be recomputed during backpropagation. This makes Reformer highly efficient and scalable for large-scale time series forecasting tasks.
+\noindent Proposed by Kitaev et al.~\cite{kitaev2020reformerefficienttransformer}, the Reformer model aims to reduce the computational complexity of Transformers. It achieves this by using locality-sensitive hashing (LSH) to approximate the self-attention mechanism, significantly reducing the memory and computational requirements. Reformer also introduces reversible layers, which further decrease memory usage by allowing intermediate activations to be recomputed during backpropagation. This makes Reformer highly efficient and scalable for large-scale time series forecasting tasks.
 \vspace{10pt}
 
 
@@ -412,67 +388,67 @@ Introduced by Vaswani et al.\cite{vaswani2023attention}, the original Transforme
 \noindent\textbf
 {Autoformer}
  
-\noindent Introduced by Wu et al.\cite{wu2022autoformerdecompositiontransformersautocorrelation}, Autoformer is designed for the automatic decomposition of time series into trend and seasonal components. This model leverages a decomposition block that separates the input time series into trend and seasonal parts, allowing the model to handle these components independently. By focusing on these distinct aspects of the data, Autoformer can achieve more accurate and interpretable forecasts, particularly in scenarios where understanding the underlying patterns is crucial.
+\noindent Introduced by Wu et al.~\cite{wu2022autoformerdecompositiontransformersautocorrelation}, Autoformer is designed for the automatic decomposition of time series into trend and seasonal components. This model leverages a decomposition block that separates the input time series into trend and seasonal parts, allowing the model to handle these components independently. By focusing on these distinct aspects of the data, Autoformer can achieve more accurate and interpretable forecasts, particularly in scenarios where understanding the underlying patterns is crucial.
 \vspace{10pt}
 
 
 \noindent\textbf
 {FEDformer}
  
-\noindent Proposed by Zhou et al.\cite{zhou2022fedformerfrequencyenhanceddecomposed}, FEDformer (Frequency Enhanced Decomposition Transformer) focuses on frequency domain decomposition for time series forecasting. This model applies a Fourier transform to decompose the time series into different frequency components, which are then processed separately by the Transformer. By working in the frequency domain, FEDformer can capture periodic patterns more effectively and improve the accuracy of forecasts, especially for data with strong seasonal or cyclical behavior.
+\noindent Proposed by Zhou et al.~\cite{zhou2022fedformerfrequencyenhanceddecomposed}, FEDformer (Frequency Enhanced Decomposition Transformer) focuses on frequency domain decomposition for time series forecasting. This model applies a Fourier transform to decompose the time series into different frequency components, which are then processed separately by the Transformer. By working in the frequency domain, FEDformer can capture periodic patterns more effectively and improve the accuracy of forecasts, especially for data with strong seasonal or cyclical behavior.
 \vspace{10pt}
 
 
 \noindent\textbf
 {Pyraformer}
 
-\noindent Developed by Liu et al.\cite{liu2022pyraformer}, Pyraformer aims to improve the efficiency of Transformers for long sequence time series forecasting. It introduces a pyramidal attention mechanism that progressively reduces the sequence length at each layer, focusing on the most relevant parts of the input. This hierarchical approach allows Pyraformer to handle long sequences more efficiently, reducing computational complexity while maintaining high forecasting accuracy.
+\noindent Developed by Liu et al.~\cite{liu2022pyraformer}, Pyraformer aims to improve the efficiency of Transformers for long sequence time series forecasting. It introduces a pyramidal attention mechanism that progressively reduces the sequence length at each layer, focusing on the most relevant parts of the input. This hierarchical approach allows Pyraformer to handle long sequences more efficiently, reducing computational complexity while maintaining high forecasting accuracy.
 \vspace{10pt}
 
 
 \noindent\textbf
 {ETSformer}
- Introduced by Zhou et al.\cite{woo2022etsformerexponentialsmoothingtransformers}, ETSformer combines exponential smoothing with Transformer architecture to better handle seasonality and trend in time series data. By integrating exponential smoothing, which is effective for capturing trends and seasonal patterns, with the powerful self-attention mechanism of Transformers, ETSformer can provide more accurate and robust forecasts. This hybrid approach leverages the strengths of both methods, making it particularly useful for time series with pronounced seasonal and trend components.
+ Introduced by Zhou et al.~\cite{woo2022etsformerexponentialsmoothingtransformers}, ETSformer combines exponential smoothing with Transformer architecture to better handle seasonality and trend in time series data. By integrating exponential smoothing, which is effective for capturing trends and seasonal patterns, with the powerful self-attention mechanism of Transformers, ETSformer can provide more accurate and robust forecasts. This hybrid approach leverages the strengths of both methods, making it particularly useful for time series with pronounced seasonal and trend components.
 \vspace{10pt}
 
 
 \subsection{Recent Advances (2023 - 2024)}
 \noindent\textbf
 {Crossformer}
- Proposed by Zhang et al.\cite{wang2021crossformerversatilevisiontransformer}, Crossformer focuses on cross-dimension dependency modeling for multivariate time series. This model introduces a cross-dimension attention mechanism that captures dependencies between different dimensions of the data, allowing for more accurate and holistic forecasting in multivariate settings. By effectively modeling the interactions between various time series, Crossformer enhances the predictive performance for complex datasets.
+ Proposed by Zhang et al.~\cite{wang2021crossformerversatilevisiontransformer}, Crossformer focuses on cross-dimension dependency modeling for multivariate time series. This model introduces a cross-dimension attention mechanism that captures dependencies between different dimensions of the data, allowing for more accurate and holistic forecasting in multivariate settings. By effectively modeling the interactions between various time series, Crossformer enhances the predictive performance for complex datasets.
 \vspace{10pt}
 
 
 \noindent\textbf
 {PatchTST}
- Developed by Nie et al.\cite{nie2023timeseriesworth64} , PatchTST leverages patch-based input representations for time series forecasting. This approach divides the input time series into smaller patches, which are then processed independently before being aggregated. This patch-based method allows the model to capture local patterns more effectively and improves scalability for long sequences. PatchTST is particularly useful for handling large and complex time series data.
+ Developed by Nie et al.~\cite{nie2023timeseriesworth64} , PatchTST leverages patch-based input representations for time series forecasting. This approach divides the input time series into smaller patches, which are then processed independently before being aggregated. This patch-based method allows the model to capture local patterns more effectively and improves scalability for long sequences. PatchTST is particularly useful for handling large and complex time series data.
 \vspace{10pt}
 
 
 \noindent\textbf
 {CARD}
- Developed by Xue et al.\cite{xue2024cardchannelalignedrobust}, Channel Aligned Robust Blend Transformer (CARD) focuses on aligning and blending information across different channels of multivariate time series data. This model introduces a channel alignment mechanism that ensures consistent and robust integration of information from various channels, enhancing the model’s ability to capture intricate dependencies and improve forecasting accuracy.
+ Developed by Xue et al.~\cite{xue2024cardchannelalignedrobust}, Channel Aligned Robust Blend Transformer (CARD) focuses on aligning and blending information across different channels of multivariate time series data. This model introduces a channel alignment mechanism that ensures consistent and robust integration of information from various channels, enhancing the model’s ability to capture intricate dependencies and improve forecasting accuracy.
 \vspace{10pt}
 
 
 \noindent\textbf
 {SageFormer}
- Introduced by Zhang et al.\cite{zhang2023sageformerseriesawareframeworklongterm}SageFormer is a Series-Aware Framework designed for long-term multivariate time series forecasting. This model incorporates series-aware attention mechanisms that specifically account for the unique characteristics of each time series in the dataset. By tailoring the attention mechanism to the properties of individual series, SageFormer achieves more accurate and reliable long-term forecasts.
+ Introduced by Zhang et al.~\cite{zhang2023sageformerseriesawareframeworklongterm}SageFormer is a Series-Aware Framework designed for long-term multivariate time series forecasting. This model incorporates series-aware attention mechanisms that specifically account for the unique characteristics of each time series in the dataset. By tailoring the attention mechanism to the properties of individual series, SageFormer achieves more accurate and reliable long-term forecasts.
 \vspace{10pt}
 
 
 \noindent\textbf
 {InParformer}
- Developed by Cao et al.\cite{Cao_Huang_Yao_Wang_He_Wang_2023}, InParformer (Interactive Parallel Attention Transformer) introduces evolutionary decomposition with interactive parallel attention for long-term time series forecasting. This model decomposes the input time series into multiple components and applies parallel attention mechanisms to each component. The interactive nature of the attention mechanisms allows for better integration of information across components, leading to improved forecasting performance.
+ Developed by Cao et al.~\cite{Cao_Huang_Yao_Wang_He_Wang_2023}, InParformer (Interactive Parallel Attention Transformer) introduces evolutionary decomposition with interactive parallel attention for long-term time series forecasting. This model decomposes the input time series into multiple components and applies parallel attention mechanisms to each component. The interactive nature of the attention mechanisms allows for better integration of information across components, leading to improved forecasting performance.
 \vspace{10pt}
 
 
 \noindent\textbf
 {Stecformer}
- Proposed by Sun et al.\cite{sun2023stecformerspatiotemporalencodingcascaded} Stecformer (Spatio-temporal Encoding Cascaded Transformer) is designed for multivariate long-term time series forecasting. This model employs spatio-temporal encoding to capture both spatial and temporal dependencies in the data. The cascaded architecture allows for hierarchical processing of information, enhancing the model’s ability to handle complex multivariate time series and produce accurate long-term forecasts.
+ Proposed by Sun et al.~\cite{sun2023stecformerspatiotemporalencodingcascaded} Stecformer (Spatio-temporal Encoding Cascaded Transformer) is designed for multivariate long-term time series forecasting. This model employs spatio-temporal encoding to capture both spatial and temporal dependencies in the data. The cascaded architecture allows for hierarchical processing of information, enhancing the model’s ability to handle complex multivariate time series and produce accurate long-term forecasts.
 \vspace{10pt}
 
 
 \noindent\textbf
 {SAMformer}
- Designed by Ilbert et al.\cite{ilbert2024samformerunlockingpotentialtransformers}, SAMformer (Sharpness-Aware Minimization and Channel-Wise Attention Transformer) aims to unlock the potential of Transformers in time series forecasting by incorporating sharpness-aware minimization and channel-wise attention mechanisms. Sharpness-aware minimization helps in optimizing the model’s parameters for better generalization, while channel-wise attention focuses on capturing the importance of different channels in the data. This combination results in more robust and accurate forecasts.
+ Designed by Ilbert et al.~\cite{ilbert2024samformerunlockingpotentialtransformers}, SAMformer (Sharpness-Aware Minimization and Channel-Wise Attention Transformer) aims to unlock the potential of Transformers in time series forecasting by incorporating sharpness-aware minimization and channel-wise attention mechanisms. Sharpness-aware minimization helps in optimizing the model’s parameters for better generalization, while channel-wise attention focuses on capturing the importance of different channels in the data. This combination results in more robust and accurate forecasts.

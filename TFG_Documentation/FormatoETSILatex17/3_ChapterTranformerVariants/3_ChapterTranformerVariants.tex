@@ -1,8 +1,8 @@
 % !TEX root =../LibroTipoETSI.tex
-\chapter{Transformers, Informers and Autoformers.}\LABCHAP{CAP3}
+\chapter{Transformers, Informers and Autoformers}\LABCHAP{CAP3}
 \pagestyle{esitscCD}
 
-Of the Transformer variants that have been previously exposed, three pivotal models have been selected for this thesis: the Original Transformer, the Informer, and the Autoformer. These models have been chosen due to their foundational impact and the significant advancements they introduced in the field of time series forecasting.
+Within the Transformer variants that have been previously exposed, three pivotal models have been selected for this thesis: the Original Transformer, the Informer, and the Autoformer. These models have been chosen due to their foundational impact and the significant advancements they introduced in the field of time series forecasting.
 
 Firstly, analyzing the Original Transformer is crucial because it laids the groundwork for all subsequent Transformer models. Understanding its architecture and innovations provides essential insights into the core principles that underpin all Transformer-based models.
 
@@ -16,7 +16,7 @@ In this chapter, we are going to first explain what the Transformer architecture
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Transformer architecture}
+\section{Transformer Architecture}
 
 The introduction of the Transformer architecture by Vaswani et al. in 2017 marked a significant breakthrough in the field of natural language processing (NLP), fundamentally altering how machines process and understand human language. By leveraging a novel approach centered around self-attention mechanisms, the Transformer model overcame the limitations of traditional neural networks, such as recurrent neural networks (RNNs) and convolutional neural networks (CNNs), which struggled with parallelization and long-range dependencies.
 
@@ -28,7 +28,7 @@ Next, we will delve into the intricacies of the Transformer's encoder-decoder ar
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=6 cm]{3_ChapterTranformerVariants/figuras/Transformer_architecture.png}
-    \caption{The Transformer - model architecture, from \textit{"Attention Is All You Need"} (Vaswani, et al., 2017) \cite{vaswani2023attention}}
+    \caption{The Transformer - model architecture, from \textit{"Attention Is All You Need"} (Vaswani, et al., 2017)~\cite{vaswani2023attention}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -79,7 +79,7 @@ The entire process is summarized by the following formula:
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=3 cm]{3_ChapterTranformerVariants/figuras/ScaledDotProductAttention.png}
-    \caption{Scaled Dot-Product Attention, from \textit{"Attention Is All You Need"} (Vaswani, et al., 2017) \cite{vaswani2023attention}}
+    \caption{Scaled Dot-Product Attention, from \textit{"Attention Is All You Need"} (Vaswani, et al., 2017)~\cite{vaswani2023attention}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -89,9 +89,7 @@ The entire process is summarized by the following formula:
 
 \begin{equation}
 \text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h) W^O \text{ ,}
-\end{equation}
-
-\noindent where each head is defined as:
+\end{equation}where each head is defined as:
 
 \begin{equation}
 \text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V) \text{ .}
@@ -100,7 +98,7 @@ The entire process is summarized by the following formula:
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=5cm]{3_ChapterTranformerVariants/figuras/MultiHeadAttention.png}
-    \caption{Multi-Head Attention, from \textit{"Attention Is All You Need"} (Vaswani, et al., 2017) \cite{vaswani2023attention}}
+    \caption{Multi-Head Attention, from \textit{"Attention Is All You Need"} (Vaswani, et al., 2017)~\cite{vaswani2023attention}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -118,15 +116,11 @@ Time series forecasting (TSF) involves predicting future values based on previou
 
 \begin{equation}
 X = \{X^t_1, \ldots, X^t_C\}_{t=1}^L \text{ ,}
-\end{equation}
-
-where \(L\) is the look-back window size and \(X^t_i\) is the value of the \(i\)-th variate at the \(t\)-th time step. The goal of TSF is to predict the future values:
+\end{equation}where \(L\) is the look-back window size and \(X^t_i\) is the value of the \(i\)-th variate at the \(t\)-th time step. The goal of TSF is to predict the future values:
 
 \begin{equation}
 \hat{X} = \{\hat{X}^t_1, \ldots, \hat{X}^t_C\}_{t=L+1}^{L+T}
-\end{equation}
-
-for the next \(T\) time steps.
+\end{equation}for the next \(T\) time steps.
 
 When \(T > 1\), there are two main approaches to multi-step forecasting:
 \begin{itemize}
@@ -158,7 +152,7 @@ Channel projection is the process of transforming the input time series data int
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=13cm]{3_ChapterTranformerVariants/figuras/ChannelProjection.png}
-    \caption{Example of embedding of time series xi from the temporal space (left) into the pairwise space (right). In this example, a pair of time series (x1, x2) is projected into the pairwise space as a vector x12 described by p = 3 basic metrics: x12 = [d1(x1, x2), d2(x1, x2), d3(x1, x2)] T, from \textit{"Multiple Metric Learning for large margin kNN Classification of time series"} \cite{inproceedings}}
+    \caption{Example of embedding of time series xi from the temporal space (left) into the pairwise space (right). In this example, a pair of time series (x1, x2) is projected into the pairwise space as a vector x12 described by p = 3 basic metrics: x12 = [d1(x1, x2), d2(x1, x2), d3(x1, x2)] T, from \textit{"Multiple Metric Learning for large margin kNN Classification of time series"}~\cite{inproceedings}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -178,7 +172,7 @@ For example, imagine a data point recorded in July 2024. The global timestamp em
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=10cm]{3_ChapterTranformerVariants/figuras/Embbeding.pdf}
-    \caption{The input representation of a Time Series Transformer, from Informer (Zhou, et al., 2019)\cite{zhou2021informerefficienttransformerlong}}
+    \caption{The input representation of a Time Series Transformer, from Informer (Zhou, et al., 2019)~\cite{zhou2021informerefficienttransformerlong}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -233,12 +227,12 @@ Unlike classical point forecasting methods that output a single value per time s
 
 Deep learning models, including Transformers, excel in this context by learning from multiple related time series and modeling data uncertainty effectively. Probabilistic forecasting can be implemented by learning future parameters of a parametric distribution or using techniques like conformal prediction adapted for time series.
 
-According to the paper \textit{"Use and Communication of Probabilistic Forecasts"} (Adrian E. Raftery)\cite{raftery2014usecommunicationprobabilisticforecasts}, probabilistic forecasts are becoming increasingly available and are essential for various types of users, including general assessors, change assessors, risk avoiders, and decision theorists. These forecasts provide valuable insights by quantifying the uncertainty and offering a range of possible outcomes, which can be summarized using probabilities of adverse events and percentiles of the predictive distribution. Effective communication of probabilistic forecasts involves interacting with users to understand their goals and minimizing cognitive load by presenting the information in a clear and concise manner. This ensures that the forecasts are not only accurate but also trusted and actionable in practical applications.
+According to the paper \textit{"Use and Communication of Probabilistic Forecasts"} (Adrian E. Raftery)~\cite{raftery2014usecommunicationprobabilisticforecasts}, probabilistic forecasts are becoming increasingly available and are essential for various types of users, including general assessors, change assessors, risk avoiders, and decision theorists. These forecasts provide valuable insights by quantifying the uncertainty and offering a range of possible outcomes, which can be summarized using probabilities of adverse events and percentiles of the predictive distribution. Effective communication of probabilistic forecasts involves interacting with users to understand their goals and minimizing cognitive load by presenting the information in a clear and concise manner. This ensures that the forecasts are not only accurate but also trusted and actionable in practical applications.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=10cm]{3_ChapterTranformerVariants/figuras/Probabilistic.png}
-    \caption{Ilustration of Probabilistic Forecasting\cite{hyndman2014visualization}}
+    \caption{Ilustration of Probabilistic Forecasting~\cite{hyndman2014visualization}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -260,7 +254,7 @@ Given the distinction between ``active'' and ``lazy'' queries, ProbSparse attent
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{3_ChapterTranformerVariants/figuras/ProbSparceAttention.pdf}
-    \caption{Vanilla self attention vs ProbSparse attention, from Autoformer (Wu, Haixu, et al., 2021)\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
+    \caption{Vanilla self attention vs ProbSparse attention, from Autoformer (Wu, Haixu, et al., 2021)~\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -268,9 +262,7 @@ To illustrate this, let’s revisit the canonical self-attention formula:
 
 \begin{equation}
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V \text{ ,}
-\end{equation}
-
-where \( Q \in \mathbb{R}^{L_Q \times d} \), \( K \in \mathbb{R}^{L_K \times d} \), and \( V \in \mathbb{R}^{L_V \times d} \). In practice, the input lengths of queries and keys are typically equivalent in self-attention computation, i.e., \( L_Q = L_K = T \), where \( T \) is the time series length. Consequently, the \( QK^T \) multiplication has a computational complexity of \( O(T^2 \cdot d) \).
+\end{equation}where \( Q \in \mathbb{R}^{L_Q \times d} \), \( K \in \mathbb{R}^{L_K \times d} \), and \( V \in \mathbb{R}^{L_V \times d} \). In practice, the input lengths of queries and keys are typically equivalent in self-attention computation, i.e., \( L_Q = L_K = T \), where \( T \) is the time series length. Consequently, the \( QK^T \) multiplication has a computational complexity of \( O(T^2 \cdot d) \).
 
 In ProbSparse attention, the goal is to create a new \( Q_{\text{reduced}} \) matrix and define:
 
@@ -301,7 +293,7 @@ To efficiently compute this measurement, it is important to note that most dot-p
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=12cm]{3_ChapterTranformerVariants/figuras/Queries_ProbSparceAttention.png}
-    \caption{The illustration of ProbSparse Attention, from Informer (Zhou, et al., 2019)\cite{zhou2021informerefficienttransformerlong}}
+    \caption{The illustration of ProbSparse Attention, from Informer (Zhou, et al., 2019)~\cite{zhou2021informerefficienttransformerlong}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -348,7 +340,7 @@ This decomposition layer allows Autoformer to explicitly model the trend and sea
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{3_ChapterTranformerVariants/figuras/AutoformerArchitecture.pdf}
-    \caption{Autoformer architecture. The encoder eliminates the long-term trend-cyclical part by series decomposition blocks (\textcolor{blue}{blue} blocks) and focuses on seasonal patterns modeling. The decoder accumulates the trend part extracted from hidden variables progressively. The past seasonal information from encoder is utilized by the encoder-decoder Auto-Correlation (center \textcolor[rgb]{0.15,0.7,0.15}{green} block in decoder), from Autoformer (Wu, Haixu, et al., 2021)\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
+    \caption{Autoformer architecture. The encoder eliminates the long-term trend-cyclical part by series decomposition blocks (\textcolor{blue}{blue} blocks) and focuses on seasonal patterns modeling. The decoder accumulates the trend part extracted from hidden variables progressively. The past seasonal information from encoder is utilized by the encoder-decoder Auto-Correlation (center \textcolor[rgb]{0.15,0.7,0.15}{green} block in decoder), from Autoformer (Wu, Haixu, et al., 2021)~\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -364,9 +356,7 @@ For a given time lag \( \tau \), autocorrelation quantifies the relationship (of
 
 \begin{equation}
 \text{Autocorrelation}(\tau) = \text{Corr}(y_t, y_{t-\tau}) \text{ ,}
-\end{equation}
-
-where \( y_t \) represents the value of the time series at time \( t \), and \( y_{t-\tau} \) represents the value at time \( t - \tau \).
+\end{equation}where \( y_t \) represents the value of the time series at time \( t \), and \( y_{t-\tau} \) represents the value at time \( t - \tau \).
 
 Autocorrelation values range from -1 to 1:
 \begin{itemize}
@@ -380,7 +370,7 @@ In the context of Autoformer, this concept replaces the traditional dot-product 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=15cm]{3_ChapterTranformerVariants/figuras/FullAttentionAutoCorrelation.pdf}
-    \caption{Vanilla self attention vs Autocorrelation mechanism, from Autoformer (Wu, Haixu, et al., 2021)\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
+    \caption{Vanilla self attention vs Autocorrelation mechanism, from Autoformer (Wu, Haixu, et al., 2021)~\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -399,7 +389,7 @@ Here’s how it works in practice:
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=8cm]{3_ChapterTranformerVariants/figuras/AttentionWeightsComputation.pdf}
-    \caption{Attention weights computation in frequency domain using FFT, from Autoformer (Wu, Haixu, et al., 2021)\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
+    \caption{Attention weights computation in frequency domain using FFT, from Autoformer (Wu, Haixu, et al., 2021)~\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
     \LABFIG{FIG}
     \end{figure}
 
@@ -436,7 +426,7 @@ The aggregation process can be formalized with the following equations:
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=12cm]{3_ChapterTranformerVariants/figuras/TimeDelay.pdf}
-    \caption{Aggregation by time delay, from Autoformer (Wu, Haixu, et al., 2021)\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
+    \caption{Aggregation by time delay, from Autoformer (Wu, Haixu, et al., 2021)~\cite{wu2022autoformerdecompositiontransformersautocorrelation}}
     \LABFIG{FIG}
     \end{figure}
 

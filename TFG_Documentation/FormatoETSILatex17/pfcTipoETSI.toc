@@ -28,8 +28,8 @@
 \contentsline {subsection}{\numberline {2.2.3}Enhancements and New Variants (2020)}{11}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Further Innovations (2021 - 2022)}{12}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Recent Advances (2023 - 2024)}{12}{subsection.2.2.5}%
-\contentsline {chapter}{\numberline {3}Transformers, Informers and Autoformers.}{15}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Transformer architecture}{15}{section.3.1}%
+\contentsline {chapter}{\numberline {3}Transformers, Informers and Autoformers}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Transformer Architecture}{15}{section.3.1}%
 \contentsline {subsubsection}{Encoder-Decoder Structure}{16}{subsubsection*.25}%
 \contentsline {subsubsection}{Self-Attention Mechanism}{17}{subsubsection*.26}%
 \contentsline {section}{\numberline {3.2}Time Series Transformer}{18}{section.3.2}%
@@ -91,23 +91,23 @@
 \contentsline {subsection}{\numberline {5.3.4}Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers}{51}{subsection.5.3.4}%
 \contentsline {subsection}{\numberline {5.3.5}Batch Size and Number of Epochs}{51}{subsection.5.3.5}%
 \contentsline {chapter}{\numberline {6}Experimental Results}{53}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Results Changing the Prediction Length and Context Length}{53}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Effect of the Prediction Length and Context Length}{53}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Transformer}{53}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}Informer}{55}{subsection.6.1.2}%
 \contentsline {subsection}{\numberline {6.1.3}Autoformer}{55}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Results Changing the Lags Sequence}{59}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Effect of Lags Sequence}{59}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Transformer}{59}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Informer}{59}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Autoformer}{61}{subsection.6.2.3}%
-\contentsline {section}{\numberline {6.3}Results Changing the Dropout}{63}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Effect of Dropout}{63}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Transformer}{63}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Informer}{63}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Autoformer}{66}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Results Changing the Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers}{66}{section.6.4}%
+\contentsline {section}{\numberline {6.4}Effect of Encoder Layers, Decoder Layers, and Dimensionality of the Transformer Layers}{66}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Transformer}{67}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Informer}{67}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Autoformer}{67}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Results Changing the Batch Size and Number of Epochs}{70}{section.6.5}%
+\contentsline {section}{\numberline {6.5}Effect of Batch Size and Number of Epochs}{70}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Transformer}{72}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Informer}{72}{subsection.6.5.2}%
 \contentsline {subsection}{\numberline {6.5.3}Autoformer}{74}{subsection.6.5.3}%

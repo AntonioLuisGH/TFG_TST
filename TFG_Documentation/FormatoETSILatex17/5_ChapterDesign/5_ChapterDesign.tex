@@ -145,9 +145,7 @@ To remove the trend in the \textbf{Diameter} variable, we applied a smoothing me
 
 \begin{equation}
 D_t^{\text{adjusted}} = D_t - \frac{1}{n} \sum_{i=t-n+1}^{t} D_i \text{ ,}
-\end{equation}
-
-where:
+\end{equation}where:
 \begin{itemize}
     \item $D_t^{\text{adjusted}}$ is the adjusted diameter value at time $t$.
     \item $D_t$ is the original diameter value at time $t$.
@@ -264,17 +262,13 @@ The Mean Squared Error (MSE) is a metric that quantifies the difference between 
 
 \begin{equation}
     \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( \text{y}_{\text{pred}_i} - \text{y}_{\text{real}_i} \right)^2  \text{ ,}
-\end{equation}
-    
-where \( n \) represents the number of observations, \( \text{y}_{\text{pred}_i} \) is the model's predicted value for observation \( i \), and \( \text{y}_{\text{real}_i} \) is the actual observed value for observation \( i \).
+\end{equation}where \( n \) represents the number of observations, \( \text{y}_{\text{pred}_i} \) is the model's predicted value for observation \( i \), and \( \text{y}_{\text{real}_i} \) is the actual observed value for observation \( i \).
 
 On the other hand, the coefficient of determination, \( R^2 \), provides insight into the model's ability to explain the variability in the observed data. This measure is calculated by comparing the sum of squared residuals with the total sum of squares. An \( R^2 \) value close to 1 indicates a good model fit and high explanatory power, while a value near 0 suggests that the model does not adequately explain the data. The calculation of \( R^2 \) is given by:
 
 \begin{equation}
 R^2 = 1 - \frac{\text{SSE}}{\text{SST}}  \text{ ,}
-\end{equation}
-
-where SSE (Sum of Squared Errors) is the sum of the squared errors between the model's predictions and the actual observed values, and SST (Total Sum of Squares) is the sum of the squared errors between the actual values and their mean.
+\end{equation}where SSE (Sum of Squared Errors) is the sum of the squared errors between the model's predictions and the actual observed values, and SST (Total Sum of Squares) is the sum of the squared errors between the actual values and their mean.
 
 Relating both errors, we have:
 

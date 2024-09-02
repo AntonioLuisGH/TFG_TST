@@ -3,25 +3,25 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The Transformer - model architecture, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{16}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Scaled Dot-Product Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{17}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Multi-Head Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017) \cite {vaswani2023attention}}}{18}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The Transformer - model architecture, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017)~\cite {vaswani2023attention}}}{16}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Scaled Dot-Product Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017)~\cite {vaswani2023attention}}}{17}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Multi-Head Attention, from \textit {"Attention Is All You Need"} (Vaswani, et al., 2017)~\cite {vaswani2023attention}}}{18}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Illustration of Iterated Multi-Step (IMS) Forecasting}}{19}{figure.caption.29}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Illustration of Direct Multi-Step (DMS) Forecasting}}{19}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Example of embedding of time series xi from the temporal space (left) into the pairwise space (right). In this example, a pair of time series (x1, x2) is projected into the pairwise space as a vector x12 described by p = 3 basic metrics: x12 = [d1(x1, x2), d2(x1, x2), d3(x1, x2)] T, from \textit {"Multiple Metric Learning for large margin kNN Classification of time series"} \cite {inproceedings}}}{20}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces The input representation of a Time Series Transformer, from Informer (Zhou, et al., 2019)\cite {zhou2021informerefficienttransformerlong}}}{21}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustration of Probabilistic Forecasting\cite {hyndman2014visualization}}}{22}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Vanilla self attention vs ProbSparse attention, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{23}{figure.caption.38}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces The illustration of ProbSparse Attention, from Informer (Zhou, et al., 2019)\cite {zhou2021informerefficienttransformerlong}}}{24}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Autoformer architecture. The encoder eliminates the long-term trend-cyclical part by series decomposition blocks (\textcolor {blue}{blue} blocks) and focuses on seasonal patterns modeling. The decoder accumulates the trend part extracted from hidden variables progressively. The past seasonal information from encoder is utilized by the encoder-decoder Auto-Correlation (center \textcolor [rgb]{0.15,0.7,0.15}{green} block in decoder), from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{25}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Vanilla self attention vs Autocorrelation mechanism, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{26}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Attention weights computation in frequency domain using FFT, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{27}{figure.caption.45}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Aggregation by time delay, from Autoformer (Wu, Haixu, et al., 2021)\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{28}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Example of embedding of time series xi from the temporal space (left) into the pairwise space (right). In this example, a pair of time series (x1, x2) is projected into the pairwise space as a vector x12 described by p = 3 basic metrics: x12 = [d1(x1, x2), d2(x1, x2), d3(x1, x2)] T, from \textit {"Multiple Metric Learning for large margin kNN Classification of time series"}~\cite {inproceedings}}}{20}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The input representation of a Time Series Transformer, from Informer (Zhou, et al., 2019)~\cite {zhou2021informerefficienttransformerlong}}}{21}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustration of Probabilistic Forecasting~\cite {hyndman2014visualization}}}{22}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Vanilla self attention vs ProbSparse attention, from Autoformer (Wu, Haixu, et al., 2021)~\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{23}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces The illustration of ProbSparse Attention, from Informer (Zhou, et al., 2019)~\cite {zhou2021informerefficienttransformerlong}}}{24}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Autoformer architecture. The encoder eliminates the long-term trend-cyclical part by series decomposition blocks (\textcolor {blue}{blue} blocks) and focuses on seasonal patterns modeling. The decoder accumulates the trend part extracted from hidden variables progressively. The past seasonal information from encoder is utilized by the encoder-decoder Auto-Correlation (center \textcolor [rgb]{0.15,0.7,0.15}{green} block in decoder), from Autoformer (Wu, Haixu, et al., 2021)~\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{25}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Vanilla self attention vs Autocorrelation mechanism, from Autoformer (Wu, Haixu, et al., 2021)~\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{26}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Attention weights computation in frequency domain using FFT, from Autoformer (Wu, Haixu, et al., 2021)~\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{27}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Aggregation by time delay, from Autoformer (Wu, Haixu, et al., 2021)~\cite {wu2022autoformerdecompositiontransformersautocorrelation}}}{28}{figure.caption.47}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces ORNAVERA Data Collection Device (DCD)\cite {ornavera2020dcd}}}{29}{figure.caption.48}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Temperature and Humidity Probe: SHT20 from Sensirion\cite {sensirion2020sht20}}}{30}{figure.caption.49}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Soil Probe: MEC-10 from Dalian Endeavour Technology Co.\cite {endeavour2020mec10}}}{30}{figure.caption.50}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Light Sensor: VEML7700 from Vishay\cite {vishay2020veml7700}}}{30}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Temperature and Humidity Probe: SHT20 from Sensirion~\cite {sensirion2020sht20}}}{30}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Soil Probe: MEC-10 from Dalian Endeavour Technology Co.~\cite {endeavour2020mec10}}}{30}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Light Sensor: VEML7700 from Vishay~\cite {vishay2020veml7700}}}{30}{figure.caption.51}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Graph of Temperature Measurements of February}}{31}{figure.caption.52}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Graph of Relative Humidity Measurements of February}}{31}{figure.caption.53}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Graph of Vapor Pressure Deficit Measurements of February}}{32}{figure.caption.54}%
@@ -32,8 +32,8 @@
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Graph of Volumetric Water Content Measurements of February}}{33}{figure.caption.59}%
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Graph of Diameter Measurements of February}}{34}{figure.caption.60}%
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Graph of Photosynthetically Active Radiation Measurements of February}}{34}{figure.caption.61}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Correlation Matrix from Paula Fernández Yepes thesis (2022)\cite {FernandezYepes2022}}}{35}{figure.caption.62}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces NVIDIA T4 Tensor Core GPU\cite {nvidia_t4_image}}}{36}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Correlation Matrix from Paula Fernández Yepes thesis (2022)~\cite {FernandezYepes2022}}}{35}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces NVIDIA T4 Tensor Core GPU~\cite {nvidia_t4_image}}}{36}{figure.caption.66}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Example of Diameter Measurement Error in the First Sand Dataset}}{39}{figure.caption.67}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Example of Light Measurement Error in the Second Sand Dataset}}{40}{figure.caption.68}%
